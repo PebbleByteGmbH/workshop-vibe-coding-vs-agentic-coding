@@ -1,13 +1,20 @@
-hw-theme-switch {
+.page-controls {
   position: fixed;
   top: var(--space-20);
   right: var(--space-20);
   z-index: var(--z-floating-control);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-14);
+  color: var(--color-text);
+}
+
+hw-theme-switch {
   min-height: var(--size-button-sm);
   display: inline-flex;
   align-items: center;
   gap: var(--space-10);
-  color: var(--color-text);
+  color: inherit;
   font-weight: var(--font-weight-button);
 }
 
@@ -52,6 +59,59 @@ hw-theme-switch .switch-thumb {
 
 .theme-dark hw-theme-switch .switch-thumb {
   transform: translateX(var(--size-switch-thumb));
+}
+
+hw-locale-switch {
+  min-height: var(--size-button-sm);
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-weight: var(--font-weight-button);
+}
+
+hw-locale-switch .locale-switch {
+  display: inline-flex;
+  align-items: center;
+  border: var(--border-width) solid var(--color-text);
+  border-radius: var(--radius-button);
+  overflow: hidden;
+  background: var(--color-surface);
+  box-shadow: var(--space-2) var(--space-2) 0 var(--color-accent);
+}
+
+hw-locale-switch a {
+  min-width: 44px;
+  min-height: var(--size-button-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-none) var(--space-10);
+  color: var(--color-text);
+  font-size: 0.88rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+hw-locale-switch a + a {
+  border-left: var(--border-width) solid var(--color-text);
+}
+
+hw-locale-switch a[aria-current="true"] {
+  background: var(--color-text);
+  color: var(--color-button-text);
+}
+
+hw-locale-switch a:hover,
+hw-locale-switch a:focus-visible {
+  outline: none;
+  background: var(--color-accent);
+  color: var(--color-text);
+}
+
+hw-locale-switch a[aria-current="true"]:hover,
+hw-locale-switch a[aria-current="true"]:focus-visible {
+  background: var(--color-text);
+  color: var(--color-button-text);
 }
 
 .page-brand {
@@ -304,6 +364,64 @@ hw-workshop-slides-deck .slide-text {
   text-align: center;
 }
 
+hw-workshop-slides-deck .slide-profile {
+  display: grid;
+  gap: var(--space-20);
+  justify-items: center;
+  justify-self: center;
+  text-align: center;
+}
+
+hw-workshop-slides-deck .slide-profile-lines {
+  display: grid;
+  gap: var(--space-7);
+}
+
+hw-workshop-slides-deck .slide-profile-lines p {
+  max-width: none;
+  color: var(--color-text);
+  font-size: 1.35rem;
+  font-weight: var(--font-weight-button);
+  line-height: 1.2;
+}
+
+hw-workshop-slides-deck .slide-profile-contacts {
+  display: grid;
+  gap: var(--space-14);
+  justify-items: center;
+}
+
+hw-workshop-slides-deck .slide-profile-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-7);
+  color: var(--color-text);
+  font-size: 1.08rem;
+  font-weight: var(--font-weight-button);
+  line-height: 1;
+  text-decoration: none;
+}
+
+hw-workshop-slides-deck .slide-profile-contact:hover,
+hw-workshop-slides-deck .slide-profile-contact:focus-visible {
+  outline: none;
+  color: var(--color-accent);
+}
+
+hw-workshop-slides-deck .slide-profile-contact-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  border: var(--border-width) solid var(--color-text);
+  border-radius: 4px;
+  background: var(--color-text);
+  color: var(--color-button-text);
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-button);
+  line-height: 1;
+}
+
 hw-workshop-slides-deck .slide-emoji-row {
   width: var(--size-full);
   display: grid;
@@ -366,6 +484,50 @@ hw-workshop-slides-deck .slide-link:focus-visible {
   box-shadow:
     var(--shadow-button-hover-x) var(--shadow-button-hover-y) 0 var(--color-accent),
     calc(-1 * var(--shadow-button-x)) calc(-1 * var(--shadow-button-y)) 0 var(--color-surface);
+}
+
+hw-workshop-slides-deck .seminar-slide-codex-screenshot {
+  gap: var(--space-12);
+}
+
+hw-workshop-slides-deck .seminar-slide-codex-screenshot h2 {
+  font-size: 2.8rem;
+}
+
+hw-workshop-slides-deck .seminar-slide-codex-screenshot .slide-content {
+  width: min(var(--size-full), 1380px);
+  gap: var(--space-10);
+}
+
+hw-workshop-slides-deck .slide-screenshot {
+  width: fit-content;
+  max-width: var(--size-full);
+  display: grid;
+  gap: var(--space-10);
+  justify-items: center;
+  justify-self: center;
+  margin: var(--space-none);
+}
+
+hw-workshop-slides-deck .slide-screenshot img {
+  width: auto;
+  max-width: var(--size-full);
+  height: auto;
+  max-height: min(62vh, 680px);
+  display: block;
+  border: var(--border-width) solid var(--color-text);
+  border-radius: var(--radius-button);
+  background: #ffffff;
+  object-fit: contain;
+  box-shadow: var(--shadow-button-x) var(--shadow-button-y) 0 var(--color-accent);
+}
+
+hw-workshop-slides-deck .slide-screenshot figcaption {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-label);
+  line-height: 1.25;
+  text-align: center;
 }
 
 hw-workshop-slides-deck .slide-callout,
@@ -638,6 +800,32 @@ hw-workshop-slides-deck .seminar-slide-agent-flow {
   gap: var(--space-14);
 }
 
+hw-workshop-slides-deck .seminar-slide-summary {
+  gap: var(--space-12);
+}
+
+hw-workshop-slides-deck .seminar-slide-summary h2 {
+  font-size: 3.6rem;
+}
+
+hw-workshop-slides-deck .seminar-slide-summary .slide-content {
+  width: min(var(--size-full), 1180px);
+}
+
+hw-workshop-slides-deck .seminar-slide-summary .slide-table {
+  font-size: 0.76rem;
+}
+
+hw-workshop-slides-deck .seminar-slide-summary .slide-table th,
+hw-workshop-slides-deck .seminar-slide-summary .slide-table td {
+  padding: var(--space-7) var(--space-10);
+}
+
+hw-workshop-slides-deck .seminar-slide-summary .slide-table th:first-child,
+hw-workshop-slides-deck .seminar-slide-summary .slide-table td:first-child {
+  width: 28%;
+}
+
 hw-workshop-slides-deck .seminar-slide-agent-flow h2 {
   font-size: 4.4rem;
 }
@@ -668,6 +856,23 @@ hw-workshop-slides-deck .agent-flow-columns {
   align-items: center;
 }
 
+hw-workshop-slides-deck .agent-flow-count-4 .agent-flow-columns {
+  grid-template-columns:
+    minmax(150px, 1fr) 34px
+    minmax(170px, 1fr) 34px
+    minmax(190px, 1.08fr) 34px
+    minmax(150px, 1fr);
+  gap: var(--space-10);
+}
+
+hw-workshop-slides-deck .agent-flow-count-3.agent-flow-equal-columns .agent-flow-columns {
+  grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr) 40px minmax(0, 1fr);
+}
+
+hw-workshop-slides-deck .agent-flow-equal .agent-flow-columns {
+  align-items: stretch;
+}
+
 hw-workshop-slides-deck .agent-flow-panel {
   min-height: 450px;
   border: var(--border-width) solid var(--color-text);
@@ -689,6 +894,16 @@ hw-workshop-slides-deck .agent-flow-panel-compact {
   min-height: 360px;
   align-self: center;
   padding: var(--space-14);
+}
+
+hw-workshop-slides-deck .agent-flow-panel-mini {
+  min-height: 145px;
+  align-self: center;
+  padding: var(--space-14);
+}
+
+hw-workshop-slides-deck .agent-flow-panel.agent-flow-panel-mini h3 {
+  margin-bottom: var(--space-14);
 }
 
 hw-workshop-slides-deck .agent-flow-panel h3 {
@@ -728,6 +943,14 @@ hw-workshop-slides-deck .agent-flow-panel-inverted .agent-flow-item {
   border-color: var(--color-button-text);
   background: transparent;
   color: var(--color-button-text);
+}
+
+.theme-light hw-workshop-slides-deck .agent-flow-panel-inverted .agent-flow-icon {
+  filter: invert(1);
+}
+
+.theme-dark hw-workshop-slides-deck .agent-flow-panel-inverted .agent-flow-icon {
+  filter: none;
 }
 
 hw-workshop-slides-deck .agent-flow-item-list {
@@ -773,6 +996,7 @@ hw-workshop-slides-deck .agent-flow-item-grid .agent-flow-icon {
 
 hw-workshop-slides-deck .agent-flow-arrow {
   position: relative;
+  align-self: center;
   height: 4px;
   border-radius: var(--radius-pill);
   background: var(--color-text);
@@ -889,6 +1113,31 @@ hw-workshop-slides-deck .concept-card-icon {
   border-radius: var(--radius-button);
   padding: var(--space-14);
   background: var(--concept-card-accent);
+}
+
+hw-workshop-slides-deck .concept-card-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-14);
+  min-height: 72px;
+}
+
+hw-workshop-slides-deck .concept-card-icons .concept-card-icon,
+hw-workshop-slides-deck .concept-card-emoji-icon {
+  width: 72px;
+  height: 72px;
+  border: var(--border-width) solid var(--color-text);
+  border-radius: var(--radius-button);
+  padding: var(--space-14);
+  background: var(--concept-card-accent);
+}
+
+hw-workshop-slides-deck .concept-card-emoji-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  line-height: 1;
 }
 
 hw-workshop-slides-deck .concept-card strong {
@@ -1070,9 +1319,14 @@ hw-workshop-slides-deck .reveal .controls {
 }
 
 @media (max-width: 560px) {
-  hw-theme-switch {
+  .page-controls {
     top: var(--space-14);
     right: var(--space-14);
+    gap: var(--space-10);
+  }
+
+  hw-theme-switch .switch-label {
+    display: none;
   }
 
   .page-brand {
@@ -1113,6 +1367,14 @@ hw-workshop-slides-deck .reveal .controls {
     font-size: 2.4rem;
   }
 
+  hw-workshop-slides-deck .seminar-slide-summary h2 {
+    font-size: 2.2rem;
+  }
+
+  hw-workshop-slides-deck .seminar-slide-codex-screenshot h2 {
+    font-size: 1.8rem;
+  }
+
   hw-workshop-slides-deck p {
     font-size: 1rem;
   }
@@ -1137,6 +1399,10 @@ hw-workshop-slides-deck .reveal .controls {
   }
 
   hw-workshop-slides-deck .agent-flow-columns {
+    grid-template-columns: 1fr;
+  }
+
+  hw-workshop-slides-deck .agent-flow-count-4 .agent-flow-columns {
     grid-template-columns: 1fr;
   }
 
@@ -1170,6 +1436,11 @@ hw-workshop-slides-deck .reveal .controls {
   hw-workshop-slides-deck .slide-list-block,
   hw-workshop-slides-deck .slide-mini-card {
     padding: var(--space-14);
+    box-shadow: var(--space-2) var(--space-2) 0 var(--color-accent);
+  }
+
+  hw-workshop-slides-deck .slide-screenshot img {
+    max-height: 58vh;
     box-shadow: var(--space-2) var(--space-2) 0 var(--color-accent);
   }
 

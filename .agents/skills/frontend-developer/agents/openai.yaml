@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Developer"
+  short_description: "Build browser-only workshop UIs"
+  default_prompt: "Use $frontend-developer to build or review a plain HTML, CSS, and JavaScript workshop UI."

@@ -1,20 +1,15 @@
+const locale = window.HwI18n.getLocale();
+const copy = window.HwI18n.getCopy(locale);
 const page = document.body;
+const workshopPage = document.querySelector("hw-workshop-page");
+
+window.HwI18n.applyDocument("app", locale);
+applyWorkshopPageCopy(workshopPage, copy, locale);
+
 const themeSwitch = document.querySelector("hw-theme-switch");
 const ideaButton = document.querySelector("#idea-button");
 const ideaText = document.querySelector("hw-idea");
-
-const ideas = [
-  "Build a local campaign tracker: tasks, channels, owners, deadlines, and notes in IndexedDB.",
-  "Make an Excel cleanup helper: paste messy rows, tag issues, and save cleanup rules locally.",
-  "Create a design feedback board: store screens, comments, status, and decisions offline.",
-  "Build a meeting action tracker: capture decisions, owners, due dates, and follow-ups.",
-  "Make a tiny content calendar: plan posts, channels, copy drafts, and approval status.",
-  "Create a customer quote library: save useful phrases, tags, sources, and reuse notes.",
-  "Build a local asset checklist: track files, formats, usage rights, and missing exports.",
-  "Make a budget sanity checker: enter planned vs actual costs and flag weird numbers.",
-  "Create a research notes database: save observations, links, tags, and next steps.",
-  "Build a handoff checklist: store recurring project steps and mark what is done."
-];
+const ideas = copy.app.ideas;
 
 let ideaIndex = 0;
 
@@ -29,3 +24,23 @@ ideaButton.addEventListener("click", () => {
   ideaText.setAttribute("text", ideas[ideaIndex]);
   ideaButton.pop();
 });
+
+function applyWorkshopPageCopy(element, pageCopy, currentLocale) {
+  const hero = pageCopy.app.page;
+
+  element.setAttribute("eyebrow", hero.eyebrow);
+  element.setAttribute("title", hero.title);
+  element.setAttribute("button-label", hero.buttonLabel);
+  element.setAttribute("idea", hero.idea);
+  element.setAttribute("link-href", window.HwI18n.localizeHref(hero.linkHref, currentLocale));
+  element.setAttribute("link-label", hero.linkLabel);
+  element.setAttribute("dark-label", pageCopy.theme.darkLabel);
+  element.setAttribute("light-label", pageCopy.theme.lightLabel);
+  element.setAttribute("use-dark-label", pageCopy.theme.useDarkLabel);
+  element.setAttribute("use-light-label", pageCopy.theme.useLightLabel);
+  element.setAttribute("locale", currentLocale);
+  element.setAttribute("locale-aria-label", pageCopy.localeSwitch.ariaLabel);
+  element.setAttribute("locale-en-label", pageCopy.localeSwitch.enLabel);
+  element.setAttribute("locale-de-label", pageCopy.localeSwitch.deLabel);
+  element.setAttribute("brand-aria-label", pageCopy.brand.ariaLabel);
+}

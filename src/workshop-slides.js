@@ -1,3 +1,8 @@
+const locale = window.HwI18n.getLocale();
+const copy = window.HwI18n.getCopy(locale);
+
+window.HwI18n.applyDocument("slides", locale);
+applySlidesPageCopy(document.querySelector("hw-workshop-slides-page"), copy, locale);
 initializeThemeSwitch();
 initializeSlides();
 
@@ -12,6 +17,17 @@ function initializeThemeSwitch() {
     page.classList.toggle("theme-light", !darkMode);
     themeSwitch.setChecked(darkMode);
   });
+}
+
+function applySlidesPageCopy(element, pageCopy, currentLocale) {
+  element.setAttribute("dark-label", pageCopy.theme.darkLabel);
+  element.setAttribute("light-label", pageCopy.theme.lightLabel);
+  element.setAttribute("use-dark-label", pageCopy.theme.useDarkLabel);
+  element.setAttribute("use-light-label", pageCopy.theme.useLightLabel);
+  element.setAttribute("locale", currentLocale);
+  element.setAttribute("locale-aria-label", pageCopy.localeSwitch.ariaLabel);
+  element.setAttribute("locale-en-label", pageCopy.localeSwitch.enLabel);
+  element.setAttribute("locale-de-label", pageCopy.localeSwitch.deLabel);
 }
 
 function initializeSlides() {

@@ -1,6 +1,6 @@
 ---
 name: indexdb-database-developer
-description: Use this skill whenever workshop code stores, reads, updates, deletes, lists, migrates, resets, or validates local app data. This is the database skill: all local persistence must use the browser's IndexedDB API. Do not use localStorage, sessionStorage, cookies, remote databases, servers, Node.js, npm, Docker, installed databases, frameworks, build steps, or installed runtimes.
+description: "Use this skill whenever workshop code stores, reads, updates, deletes, lists, migrates, resets, or validates local app data. This is the database skill: all local persistence must use the browser's IndexedDB API. Do not use localStorage, sessionStorage, cookies, remote databases, servers, Node.js, npm, Docker, installed databases, frameworks, build steps, or installed runtimes."
 ---
 
 # IndexDB Database Developer

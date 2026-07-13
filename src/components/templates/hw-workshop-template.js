@@ -12,7 +12,12 @@ class HwWorkshopTemplate extends HTMLElement {
       "dark-label",
       "light-label",
       "use-dark-label",
-      "use-light-label"
+      "use-light-label",
+      "locale",
+      "locale-aria-label",
+      "locale-en-label",
+      "locale-de-label",
+      "brand-aria-label"
     ];
   }
 
@@ -26,15 +31,21 @@ class HwWorkshopTemplate extends HTMLElement {
 
   render() {
     const surface = document.createElement("hw-surface");
+    const controls = document.createElement("div");
     const themeSwitch = document.createElement("hw-theme-switch");
+    const localeSwitch = document.createElement("hw-locale-switch");
     const hero = document.createElement("hw-workshop-hero");
-    const brand = createPageBrand();
+    const brand = createPageBrand(this.getAttribute("brand-aria-label"));
+
+    controls.className = "page-controls";
 
     copyAttributes(this, themeSwitch, ["dark-label", "light-label", "use-dark-label", "use-light-label"]);
+    copyAttributes(this, localeSwitch, [["locale", "locale"], ["locale-aria-label", "aria-label"], ["locale-en-label", "en-label"], ["locale-de-label", "de-label"]]);
     copyAttributes(this, hero, ["eyebrow", "title", "title-level", "button-label", "button-id", "idea", "link-href", "link-label"]);
+    controls.append(themeSwitch, localeSwitch);
 
     surface.append(
-      themeSwitch,
+      controls,
       hero,
       brand
     );
@@ -43,13 +54,13 @@ class HwWorkshopTemplate extends HTMLElement {
   }
 }
 
-function createPageBrand() {
+function createPageBrand(ariaLabel) {
   const brand = document.createElement("a");
   brand.className = "page-brand";
   brand.href = "https://pebblebyte.com/";
   brand.target = "_blank";
   brand.rel = "noopener noreferrer";
-  brand.setAttribute("aria-label", "PebbleByte website");
+  brand.setAttribute("aria-label", ariaLabel || "PebbleByte website");
 
   const logo = document.createElement("img");
   logo.src = "assets/pebblebyte-logo-yellow-square.png";
@@ -66,8 +77,11 @@ function createPageBrand() {
 
 function copyAttributes(source, target, names) {
   for (const name of names) {
-    if (source.hasAttribute(name)) {
-      target.setAttribute(name, source.getAttribute(name));
+    const sourceName = Array.isArray(name) ? name[0] : name;
+    const targetName = Array.isArray(name) ? name[1] : name;
+
+    if (source.hasAttribute(sourceName)) {
+      target.setAttribute(targetName, source.getAttribute(sourceName));
     }
   }
 }

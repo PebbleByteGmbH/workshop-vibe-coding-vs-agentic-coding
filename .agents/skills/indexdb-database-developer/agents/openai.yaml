@@ -1,0 +1,4 @@
+interface:
+  display_name: "IndexedDB Database Developer"
+  short_description: "Build browser-only IndexedDB persistence"
+  default_prompt: "Use $indexdb-database-developer to add or review browser-only IndexedDB persistence for a workshop app."

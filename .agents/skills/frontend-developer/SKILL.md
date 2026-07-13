@@ -1,6 +1,6 @@
 ---
 name: frontend-developer
-description: Use this skill for every workshop task that creates, edits, or reviews the browser UI with plain HTML, CSS, and JavaScript. This is the frontend skill: use it for markup, layout, styling, DOM behavior, accessibility, and browser-only app logic. If the task stores local data, also use the indexdb-database-developer skill.
+description: "Use this skill for every workshop task that creates, edits, or reviews the browser UI with plain HTML, CSS, and JavaScript. This is the frontend skill: use it for markup, layout, styling, DOM behavior, accessibility, and browser-only app logic. If the task stores local data, also use the indexdb-database-developer skill."
 ---
 
 # Frontend Developer

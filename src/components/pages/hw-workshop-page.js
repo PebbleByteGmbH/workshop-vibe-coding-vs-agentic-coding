@@ -12,7 +12,12 @@ class HwWorkshopPage extends HTMLElement {
       "dark-label",
       "light-label",
       "use-dark-label",
-      "use-light-label"
+      "use-light-label",
+      "locale",
+      "locale-aria-label",
+      "locale-en-label",
+      "locale-de-label",
+      "brand-aria-label"
     ];
   }
 
