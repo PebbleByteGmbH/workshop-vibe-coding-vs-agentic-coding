@@ -1,6 +1,17 @@
 class HwHelloCard extends HTMLElement {
   static get observedAttributes() {
-    return ["eyebrow", "title", "title-level", "button-label", "button-id", "idea", "link-href", "link-label"];
+    return [
+      "eyebrow",
+      "title",
+      "title-level",
+      "button-label",
+      "button-id",
+      "idea",
+      "link-href",
+      "link-label",
+      "secondary-link-href",
+      "secondary-link-label"
+    ];
   }
 
   connectedCallback() {
@@ -20,8 +31,8 @@ class HwHelloCard extends HTMLElement {
       createElement("hw-idea", "text", this.idea)
     ];
 
-    if (this.linkHref) {
-      children.push(createLink(this.linkHref, this.linkLabel));
+    if (this.links.length) {
+      children.push(createLinkGroup(this.links));
     }
 
     this.append(...children);
@@ -58,6 +69,21 @@ class HwHelloCard extends HTMLElement {
   get linkLabel() {
     return this.getAttribute("link-label") || "Cheat sheet";
   }
+
+  get secondaryLinkHref() {
+    return this.getAttribute("secondary-link-href") || "";
+  }
+
+  get secondaryLinkLabel() {
+    return this.getAttribute("secondary-link-label") || "Seminar slides day 2";
+  }
+
+  get links() {
+    return [
+      { href: this.linkHref, label: this.linkLabel },
+      { href: this.secondaryLinkHref, label: this.secondaryLinkLabel }
+    ].filter((link) => link.href);
+  }
 }
 
 function createIdeaButton(label, id) {
@@ -72,6 +98,13 @@ function createLink(href, label) {
   link.setAttribute("href", href);
   link.setAttribute("label", label);
   return link;
+}
+
+function createLinkGroup(links) {
+  const group = document.createElement("div");
+  group.className = "seminar-link-list";
+  group.append(...links.map((link) => createLink(link.href, link.label)));
+  return group;
 }
 
 function createElement(tagName, textAttribute, text, attributes = {}) {

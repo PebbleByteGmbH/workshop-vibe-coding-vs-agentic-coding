@@ -48,11 +48,11 @@ Image: `assets/lukas-aichbauer.webp`
 
 _Agenda_
 
-- From chatbots to agents
-- Vibe Coding vs. Agentic Coding
-- Agent workflow and examples
-- Codex setup and building blocks
-- Security, permissions, and live demo
+- Welcome, introductions, and starter ideas
+- LLMs, chatbots, agents, and agentic coding
+- AI agent landscape and Codex setup
+- Choosing a good first use case
+- Exercises: inputs, steps, rules, task design, and error cases
 
 ## Slide 6: LLM / Chatbot / Agent
 
@@ -237,7 +237,28 @@ _Account usage_
 
 Image: `assets/codex-pictures/where-to-find-usage-2-en.png`
 
-## Slide 28: Which Use Cases Are Good Starting Points?
+## Slide 28: Quick Practice Run
+
+_Before we start with your own use cases_
+
+- Snake Clone
+  - Icon: code
+  - A small browser game with a board, controls, points, and restart.
+  - Good for practicing UI, game state, keyboard events, and simple rules.
+- Mini Todo List App
+  - Icon: clipboard-list
+  - A simple task list with add, complete, delete, and empty states.
+  - Good for making forms, lists, state, and small data models tangible.
+- Clone a Landing Page
+  - Icon: world
+  - Rebuild a landing page from a screenshot.
+  - Good for practicing layout, typography, colors, spacing, and responsive details.
+
+Button: Ideas
+
+Link: https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ
+
+## Slide 29: Which Use Cases Are Good Starting Points?
 
 _Start small, create real value_
 
@@ -249,7 +270,7 @@ _Start small, create real value_
 | low-risk | mistakes are easy to spot and correct |
 | context-rich | examples, files, and rules are available |
 
-## Slide 29: Use Case Board
+## Slide 30: Use Case Board
 
 _Excalidraw_
 
@@ -257,7 +278,7 @@ Button: Find your usecase
 
 Link: https://excalidraw.com/#room=3f7fb564ea3a699c6fd3,sDK2_w9L9RRcSUgP1PYFTA
 
-## Slide 30: Exercise 1: Define Input and Output
+## Slide 31: Exercise 1: Define Input and Output
 
 _Duration: 5 minutes_
 
@@ -277,7 +298,7 @@ Questions:
 
 Coffee shop landing page example: Input: campaign briefing, shop photos, menu CSV, and brand notes. Output: landing page outline, section copy, offer blocks, image suggestions, and CTA variants.
 
-## Slide 31: Exercise 2: Break Down the Process
+## Slide 32: Exercise 2: Break Down the Process
 
 _Duration: 5 minutes_
 
@@ -294,7 +315,7 @@ General process flow:
 
 Coffee shop landing page example: Read the campaign briefing, extract offer and tone, choose page sections, write section copy, insert menu and image placeholders, and export the HTML page.
 
-## Slide 32: Exercise 3: Collect Rules and Examples
+## Slide 33: Exercise 3: Collect Rules and Examples
 
 _Duration: 5 minutes_
 
@@ -318,64 +339,7 @@ General examples:
 
 Coffee shop landing page example: The headline mentions the seasonal drink, the CTA says "Reserve a table" or "Order ahead", opening hours are visible above the fold, no placeholder text remains, and the original briefing is not changed.
 
-## Slide 33: Exercise 4: Human or Agent?
-
-_Duration: 5 minutes_
-
-| Agent may | Human decides |
-| --- | --- |
-| analyze files and inputs | publish content |
-| create suggestions | make the final selection |
-| mark problems | delete files or data |
-| generate variants | approve budget or scope |
-| run tests and checks | share sensitive information |
-
-Coffee shop landing page example: The agent may analyze the briefing, draft hero copy, and flag missing photos. A human decides the final offer, approves the design, and publishes the page.
-
-Guiding question: What may happen automatically, and what needs approval?
-
-## Slide 34: Exercise 5: Write the First Codex Task
-
-_Duration: 10 minutes_
-
-Template:
-
-```text
-Build a local application that supports [goal].
-It uses [input] as input.
-The program should:
-- ...
-- ...
-- ...
-Follow these rules: [rules].
-The result should be [output].
-The task is done when [check criteria] are met.
-The program must not [boundaries].
-```
-
-Coffee shop landing page: Build a local app that turns a seasonal coffee campaign briefing into a responsive landing page preview with headline, offer, menu teaser, photos, opening hours, and CTA.
-
-## Slide 35: Exercise 6: The Error Case
-
-_Duration: 5 minutes_
-
-Goal: look beyond the ideal path.
-
-Define at least three general error states:
-
-- file is missing
-- format is wrong
-- input is empty
-- URL is not reachable
-- required columns are missing
-- result is ambiguous
-- multiple rules contradict each other
-
-Coffee shop landing page example: If the menu CSV is missing prices, the program should mark the affected drinks, keep generating the page, and show a warning in the report.
-
-Question: What should the program do in this case?
-
-## Slide 36: Summary: Basics
+## Slide 34: Summary: Basics
 
 _Important words and metaphors_
 
@@ -389,7 +353,7 @@ _Important words and metaphors_
 | Vibe Coding | Loosely describing software, trying it, and adjusting by feel. | 🍝 "Something pasta-ish" |
 | Agentic Coding | Giving goal, context, files, rules, and boundaries so an agent can implement. | 🍲 Chef in the kitchen |
 
-## Slide 37: Summary: Codex
+## Slide 35: Summary: Codex
 
 _Setup words and metaphors_
 
@@ -404,7 +368,7 @@ _Setup words and metaphors_
 | Automation | A repeatable agent task that can run on a configured trigger. | ⏲️ Kitchen timer |
 | Usage | The account area where you can see how much Codex has been used. | 💸 Salary for the cook |
 
-## Slide 38: Summary: Use Cases
+## Slide 36: Summary: Use Cases
 
 _Instructions and metaphors_
 

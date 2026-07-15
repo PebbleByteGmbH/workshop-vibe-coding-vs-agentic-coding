@@ -1,8 +1,10 @@
 const locale = window.HwI18n.getLocale();
 const copy = window.HwI18n.getCopy(locale);
+const slidesPage = document.querySelector("hw-workshop-slides-page");
+const pageName = slidesPage?.getAttribute("slide-set") === "day2" ? "slidesDay2" : "slides";
 
-window.HwI18n.applyDocument("slides", locale);
-applySlidesPageCopy(document.querySelector("hw-workshop-slides-page"), copy, locale);
+window.HwI18n.applyDocument(pageName, locale);
+applySlidesPageCopy(slidesPage, copy, locale);
 initializeThemeSwitch();
 initializeSlides();
 
@@ -33,16 +35,33 @@ function applySlidesPageCopy(element, pageCopy, currentLocale) {
 function initializeSlides() {
   if (!window.Reveal) return;
 
-  Reveal.initialize({
-    controls: true,
-    progress: true,
+  const isPrintPdf = isPrintPdfRequest();
+  document.documentElement.classList.toggle("hw-print-pdf", isPrintPdf);
+
+  const revealOptions = {
+    controls: !isPrintPdf,
+    progress: !isPrintPdf,
     hash: true,
     center: false,
-    width: "100%",
-    height: "100%",
+    width: isPrintPdf ? 1280 : "100%",
+    height: isPrintPdf ? 720 : "100%",
     margin: 0,
     minScale: 1,
     maxScale: 1,
-    transition: "slide"
-  });
+    pdfMaxPagesPerSlide: 1,
+    pdfSeparateFragments: false,
+    transition: isPrintPdf ? "none" : "slide"
+  };
+
+  if (isPrintPdf) {
+    revealOptions.view = "print";
+  }
+
+  Reveal.initialize(revealOptions);
+}
+
+function isPrintPdfRequest() {
+  const params = new URLSearchParams(window.location.search);
+
+  return params.has("print-pdf") || /[?&]print-pdf(?:[=&]|$)/.test(window.location.hash);
 }

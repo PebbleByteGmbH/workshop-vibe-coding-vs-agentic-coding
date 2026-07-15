@@ -8,7 +8,9 @@ class HwWorkshopSlidesPage extends HTMLElement {
       "locale",
       "locale-aria-label",
       "locale-en-label",
-      "locale-de-label"
+      "locale-de-label",
+      "slide-count",
+      "slide-set"
     ];
   }
 
@@ -30,7 +32,7 @@ class HwWorkshopSlidesPage extends HTMLElement {
     controls.className = "page-controls";
     copyAttributes(this, themeSwitch, ["dark-label", "light-label", "use-dark-label", "use-light-label"]);
     copyAttributes(this, localeSwitch, [["locale", "locale"], ["locale-aria-label", "aria-label"], ["locale-en-label", "en-label"], ["locale-de-label", "de-label"]]);
-    copyAttributes(this, deck, ["locale"]);
+    copyAttributes(this, deck, ["locale", "slide-count", "slide-set"]);
     controls.append(themeSwitch, localeSwitch);
 
     surface.append(

@@ -1,6 +1,6 @@
 class HwWorkshopSlidesDeck extends HTMLElement {
   static get observedAttributes() {
-    return ["locale"];
+    return ["locale", "slide-count", "slide-set"];
   }
 
   connectedCallback() {
@@ -15,7 +15,7 @@ class HwWorkshopSlidesDeck extends HTMLElement {
     const locale = this.getAttribute("locale") || window.HwI18n?.getLocale() || "en";
     const pageCopy = window.HwI18n?.getCopy(locale) || {};
     const slidesCopy = pageCopy.slidesPage || {};
-    const seminarSlides = pageCopy.slides || [];
+    const seminarSlides = getSlides(getSlideSet(pageCopy, this.getAttribute("slide-set")), this.getAttribute("slide-count"));
     const reveal = document.createElement("div");
     reveal.className = "reveal";
 
@@ -27,6 +27,24 @@ class HwWorkshopSlidesDeck extends HTMLElement {
     reveal.append(createSlideBrand(pageCopy.brand));
     this.replaceChildren(reveal);
   }
+}
+
+function getSlideSet(pageCopy, slideSet) {
+  if (slideSet === "day2") {
+    return pageCopy.slidesDay2 || [];
+  }
+
+  return pageCopy.slides || [];
+}
+
+function getSlides(slides, slideCount) {
+  const count = Number.parseInt(slideCount, 10);
+
+  if (!Number.isFinite(count) || count < 1) {
+    return slides;
+  }
+
+  return slides.slice(0, count);
 }
 
 function createSlideBrand(brandCopy = {}) {
@@ -144,6 +162,7 @@ function createBlock(block, labels) {
     prompt: createPrompt,
     screenshot: createScreenshot,
     security: createSecurityColumns,
+    skillAnatomy: createSkillAnatomy,
     table: createTable,
     text: createText
   };
@@ -294,6 +313,10 @@ function createAgentFlow(block, labels) {
     flowClasses.push("agent-flow-equal-columns");
   }
 
+  if (block.showArrows === false) {
+    flowClasses.push("agent-flow-no-arrows");
+  }
+
   flow.className = flowClasses.join(" ");
 
   const intro = document.createElement("p");
@@ -306,7 +329,7 @@ function createAgentFlow(block, labels) {
   block.columns.forEach((column, index) => {
     columns.append(createAgentFlowColumn(column));
 
-    if (index < block.columns.length - 1) {
+    if (block.showArrows !== false && index < block.columns.length - 1) {
       const arrow = document.createElement("div");
       arrow.className = "agent-flow-arrow fragment";
       arrow.setAttribute("aria-hidden", "true");
@@ -448,7 +471,7 @@ function createProfileContact(item) {
 
 function createLink(block) {
   const anchor = document.createElement("a");
-  anchor.className = "slide-link fragment";
+  anchor.className = block.size === "small" ? "slide-link slide-link-small fragment" : "slide-link fragment";
   anchor.href = block.href;
   anchor.textContent = block.text;
   anchor.target = "_blank";
@@ -521,6 +544,36 @@ function createCode(block) {
   code.textContent = block.text;
   pre.append(code);
   return pre;
+}
+
+function createSkillAnatomy(block) {
+  const anatomy = document.createElement("div");
+  anatomy.className = "skill-anatomy fragment";
+
+  const tree = document.createElement("div");
+  tree.className = "skill-anatomy-tree";
+
+  const treeLabel = document.createElement("strong");
+  treeLabel.textContent = block.treeLabel;
+
+  const pre = document.createElement("pre");
+  const code = document.createElement("code");
+  code.textContent = block.tree;
+  pre.append(code);
+  tree.append(treeLabel, pre);
+
+  const checklist = document.createElement("div");
+  checklist.className = "skill-anatomy-checklist";
+
+  const checklistLabel = document.createElement("strong");
+  checklistLabel.textContent = block.checklistLabel;
+
+  const list = document.createElement("ul");
+  list.append(...block.items.map((item) => createListItem(item)));
+  checklist.append(checklistLabel, list);
+
+  anatomy.append(tree, checklist);
+  return anatomy;
 }
 
 function createBullets(block) {

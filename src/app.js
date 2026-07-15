@@ -34,6 +34,15 @@ function applyWorkshopPageCopy(element, pageCopy, currentLocale) {
   element.setAttribute("idea", hero.idea);
   element.setAttribute("link-href", window.HwI18n.localizeHref(hero.linkHref, currentLocale));
   element.setAttribute("link-label", hero.linkLabel);
+
+  if (hero.secondaryLinkHref) {
+    element.setAttribute("secondary-link-href", window.HwI18n.localizeHref(hero.secondaryLinkHref, currentLocale));
+    element.setAttribute("secondary-link-label", hero.secondaryLinkLabel);
+  } else {
+    element.removeAttribute("secondary-link-href");
+    element.removeAttribute("secondary-link-label");
+  }
+
   element.setAttribute("dark-label", pageCopy.theme.darkLabel);
   element.setAttribute("light-label", pageCopy.theme.lightLabel);
   element.setAttribute("use-dark-label", pageCopy.theme.useDarkLabel);

@@ -1,6 +1,17 @@
 class HwWorkshopHero extends HTMLElement {
   static get observedAttributes() {
-    return ["eyebrow", "title", "title-level", "button-label", "button-id", "idea", "link-href", "link-label"];
+    return [
+      "eyebrow",
+      "title",
+      "title-level",
+      "button-label",
+      "button-id",
+      "idea",
+      "link-href",
+      "link-label",
+      "secondary-link-href",
+      "secondary-link-label"
+    ];
   }
 
   connectedCallback() {

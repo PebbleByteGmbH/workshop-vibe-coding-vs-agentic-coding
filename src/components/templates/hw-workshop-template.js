@@ -9,6 +9,8 @@ class HwWorkshopTemplate extends HTMLElement {
       "idea",
       "link-href",
       "link-label",
+      "secondary-link-href",
+      "secondary-link-label",
       "dark-label",
       "light-label",
       "use-dark-label",
@@ -41,7 +43,18 @@ class HwWorkshopTemplate extends HTMLElement {
 
     copyAttributes(this, themeSwitch, ["dark-label", "light-label", "use-dark-label", "use-light-label"]);
     copyAttributes(this, localeSwitch, [["locale", "locale"], ["locale-aria-label", "aria-label"], ["locale-en-label", "en-label"], ["locale-de-label", "de-label"]]);
-    copyAttributes(this, hero, ["eyebrow", "title", "title-level", "button-label", "button-id", "idea", "link-href", "link-label"]);
+    copyAttributes(this, hero, [
+      "eyebrow",
+      "title",
+      "title-level",
+      "button-label",
+      "button-id",
+      "idea",
+      "link-href",
+      "link-label",
+      "secondary-link-href",
+      "secondary-link-label"
+    ]);
     controls.append(themeSwitch, localeSwitch);
 
     surface.append(

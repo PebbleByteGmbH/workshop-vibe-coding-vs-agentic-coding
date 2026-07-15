@@ -154,10 +154,23 @@ hw-hello-card {
   gap: var(--space-22);
 }
 
+hw-hello-card .seminar-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-14);
+}
+
 hw-workshop-slides-deck {
   width: var(--size-full);
   height: var(--size-screen);
   display: block;
+}
+
+@media (max-width: 560px) {
+  hw-hello-card .seminar-link-list {
+    width: var(--size-full);
+    display: grid;
+  }
 }
 
 hw-workshop-slides-deck .reveal {
@@ -467,6 +480,17 @@ hw-workshop-slides-deck .slide-link {
   overflow-wrap: anywhere;
 }
 
+hw-workshop-slides-deck .slide-link-small {
+  width: auto;
+  max-width: min(var(--size-full), 360px);
+  padding: var(--space-10) var(--space-18);
+  font-size: 0.95rem;
+  line-height: 1.15;
+  box-shadow:
+    var(--space-2) var(--space-2) 0 var(--color-accent),
+    calc(-1 * var(--space-2)) calc(-1 * var(--space-2)) 0 var(--color-surface);
+}
+
 hw-workshop-slides-deck .slide-link::after {
   content: "";
   width: 42px;
@@ -477,6 +501,12 @@ hw-workshop-slides-deck .slide-link::after {
   clip-path: polygon(0 42%, 70% 42%, 70% 0, 100% 50%, 70% 100%, 70% 58%, 0 58%);
 }
 
+hw-workshop-slides-deck .slide-link-small::after {
+  width: 24px;
+  height: 10px;
+  margin-left: var(--space-10);
+}
+
 hw-workshop-slides-deck .slide-link:hover,
 hw-workshop-slides-deck .slide-link:focus-visible {
   outline: none;
@@ -484,6 +514,13 @@ hw-workshop-slides-deck .slide-link:focus-visible {
   box-shadow:
     var(--shadow-button-hover-x) var(--shadow-button-hover-y) 0 var(--color-accent),
     calc(-1 * var(--shadow-button-x)) calc(-1 * var(--shadow-button-y)) 0 var(--color-surface);
+}
+
+hw-workshop-slides-deck .slide-link-small:hover,
+hw-workshop-slides-deck .slide-link-small:focus-visible {
+  box-shadow:
+    var(--space-7) var(--space-7) 0 var(--color-accent),
+    calc(-1 * var(--space-2)) calc(-1 * var(--space-2)) 0 var(--color-surface);
 }
 
 hw-workshop-slides-deck .seminar-slide-codex-screenshot {
@@ -497,6 +534,40 @@ hw-workshop-slides-deck .seminar-slide-codex-screenshot h2 {
 hw-workshop-slides-deck .seminar-slide-codex-screenshot .slide-content {
   width: min(var(--size-full), 1380px);
   gap: var(--space-10);
+}
+
+hw-workshop-slides-deck .reveal .slides section.seminar-slide-codex-screenshot-full {
+  gap: var(--space-10);
+  padding: var(--space-42) var(--space-56) var(--space-32);
+}
+
+hw-workshop-slides-deck .seminar-slide-codex-screenshot-full h2 {
+  font-size: 2.6rem;
+}
+
+hw-workshop-slides-deck .seminar-slide-codex-screenshot-full .slide-content {
+  width: min(var(--size-full), 1380px);
+  gap: var(--space-10);
+}
+
+hw-workshop-slides-deck .seminar-slide-codex-screenshot-full .slide-screenshot {
+  width: min(var(--size-full), var(--size-slide-screenshot-full-width));
+  display: block;
+  border: var(--border-width) solid var(--color-text);
+  border-radius: var(--radius-button);
+  background: #ffffff;
+  box-shadow: var(--shadow-button-x) var(--shadow-button-y) 0 var(--color-accent);
+  overflow: hidden;
+}
+
+hw-workshop-slides-deck .seminar-slide-codex-screenshot-full .slide-screenshot img {
+  width: var(--size-full);
+  max-width: none;
+  height: auto;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 hw-workshop-slides-deck .slide-screenshot {
@@ -670,6 +741,38 @@ hw-workshop-slides-deck .slide-list-block-setup li::before {
   color: var(--color-text);
   font-size: 0.95rem;
   font-weight: var(--font-weight-button);
+}
+
+hw-workshop-slides-deck .seminar-slide-skill-setup {
+  gap: var(--space-14);
+}
+
+hw-workshop-slides-deck .seminar-slide-skill-setup h2,
+hw-workshop-slides-deck .seminar-slide-skill-anatomy h2 {
+  font-size: 3rem;
+}
+
+hw-workshop-slides-deck .seminar-slide-skill-setup .slide-content,
+hw-workshop-slides-deck .seminar-slide-skill-anatomy .slide-content {
+  gap: var(--space-14);
+}
+
+hw-workshop-slides-deck .seminar-slide-skill-setup .slide-list-block-setup {
+  padding: var(--space-18);
+}
+
+hw-workshop-slides-deck .seminar-slide-skill-setup .slide-list-block-setup ol {
+  gap: var(--space-7);
+  margin-top: var(--space-10);
+}
+
+hw-workshop-slides-deck .seminar-slide-skill-setup .slide-list-block-setup li {
+  min-height: 50px;
+  padding: var(--space-7) var(--space-10);
+}
+
+hw-workshop-slides-deck .seminar-slide-skill-setup .slide-callout {
+  padding: var(--space-14);
 }
 
 hw-workshop-slides-deck .slide-callout p {
@@ -867,6 +970,15 @@ hw-workshop-slides-deck .agent-flow-count-4 .agent-flow-columns {
 
 hw-workshop-slides-deck .agent-flow-count-3.agent-flow-equal-columns .agent-flow-columns {
   grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr) 40px minmax(0, 1fr);
+}
+
+hw-workshop-slides-deck .agent-flow-count-3.agent-flow-no-arrows .agent-flow-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-18);
+}
+
+hw-workshop-slides-deck .agent-flow-no-arrows .agent-flow-panel-mini {
+  align-self: stretch;
 }
 
 hw-workshop-slides-deck .agent-flow-equal .agent-flow-columns {
@@ -1170,6 +1282,51 @@ hw-workshop-slides-deck .slide-comparison {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+hw-workshop-slides-deck .skill-anatomy {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 2fr);
+  gap: var(--space-20);
+}
+
+hw-workshop-slides-deck .skill-anatomy-tree,
+hw-workshop-slides-deck .skill-anatomy-checklist {
+  min-width: 0;
+  border: var(--border-width) solid var(--color-text);
+  border-radius: var(--radius-button);
+  padding: var(--space-20);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-button-x) var(--shadow-button-y) 0 var(--color-accent);
+}
+
+hw-workshop-slides-deck .skill-anatomy-tree > strong,
+hw-workshop-slides-deck .skill-anatomy-checklist > strong {
+  display: block;
+  margin-bottom: var(--space-14);
+  color: var(--color-text);
+  font-size: 1.15rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+hw-workshop-slides-deck .skill-anatomy-tree pre {
+  min-height: 250px;
+  display: grid;
+  align-items: center;
+  font-size: 1.18rem;
+  line-height: 1.55;
+}
+
+hw-workshop-slides-deck .skill-anatomy-checklist ul {
+  display: grid;
+  gap: var(--space-14);
+  padding-left: var(--space-24);
+  font-size: 1.15rem;
+}
+
+hw-workshop-slides-deck .skill-anatomy-checklist li + li {
+  margin-top: var(--space-none);
+}
+
 hw-workshop-slides-deck .slide-security {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
@@ -1312,6 +1469,14 @@ hw-workshop-slides-deck .reveal .controls {
 }
 
 @media (max-width: 920px) {
+  hw-workshop-slides-deck .skill-anatomy {
+    grid-template-columns: 1fr;
+  }
+
+  hw-workshop-slides-deck .skill-anatomy-tree pre {
+    min-height: 0;
+  }
+
   hw-workshop-slides-deck .agent-logo-grid,
   hw-workshop-slides-deck .concept-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1372,6 +1537,10 @@ hw-workshop-slides-deck .reveal .controls {
   }
 
   hw-workshop-slides-deck .seminar-slide-codex-screenshot h2 {
+    font-size: 1.8rem;
+  }
+
+  hw-workshop-slides-deck .seminar-slide-codex-screenshot-full h2 {
     font-size: 1.8rem;
   }
 
@@ -1471,5 +1640,119 @@ hw-workshop-slides-deck .reveal .controls {
   hw-workshop-slides-deck .slide-brand img {
     width: 32px;
     height: 32px;
+  }
+}
+
+html.hw-print-pdf {
+  width: var(--size-full);
+  height: var(--size-full);
+  overflow: visible;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+html.hw-print-pdf body {
+  margin: var(--space-none) !important;
+  border: 0;
+  padding: var(--space-none);
+  background: var(--color-surface);
+  overflow: visible;
+}
+
+html.hw-print-pdf hw-surface {
+  min-height: 0;
+  display: block;
+  background: var(--color-surface);
+}
+
+html.hw-print-pdf .page-controls,
+html.hw-print-pdf hw-workshop-slides-deck .reveal .controls,
+html.hw-print-pdf hw-workshop-slides-deck .reveal .progress {
+  display: none !important;
+}
+
+html.hw-print-pdf hw-workshop-slides-deck,
+html.hw-print-pdf hw-workshop-slides-deck .reveal {
+  width: var(--slide-width, 1280px) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+html.hw-print-pdf hw-workshop-slides-deck .slides {
+  position: static !important;
+  inset: auto !important;
+  width: var(--slide-width, 1280px) !important;
+  height: auto !important;
+  margin: var(--space-none) !important;
+  padding: var(--space-none) !important;
+  display: block !important;
+  overflow: visible !important;
+  transform: none !important;
+}
+
+html.hw-print-pdf hw-workshop-slides-deck .reveal .slides .pdf-page {
+  position: relative !important;
+  width: var(--slide-width, 1280px) !important;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+}
+
+html.hw-print-pdf hw-workshop-slides-deck .reveal .slides .pdf-page:last-of-type {
+  page-break-after: avoid;
+  break-after: avoid-page;
+}
+
+html.hw-print-pdf hw-workshop-slides-deck .reveal .slides section {
+  position: absolute !important;
+  top: var(--space-none) !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: var(--space-none) !important;
+  width: var(--slide-width, 1280px) !important;
+  height: var(--slide-height, 720px) !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-18);
+  padding: var(--space-64) var(--space-64) var(--space-48);
+  overflow: hidden !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+  z-index: 1;
+}
+
+html.hw-print-pdf hw-workshop-slides-deck .reveal .slide-background {
+  z-index: 0 !important;
+}
+
+html.hw-print-pdf hw-workshop-slides-deck .fragment {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+html.hw-print-pdf hw-workshop-slides-deck *,
+html.hw-print-pdf hw-workshop-slides-deck *::before,
+html.hw-print-pdf hw-workshop-slides-deck *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+@media print {
+  html,
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page-controls,
+  hw-workshop-slides-deck .reveal .controls,
+  hw-workshop-slides-deck .reveal .progress {
+    display: none !important;
   }
 }

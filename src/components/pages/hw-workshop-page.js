@@ -9,6 +9,8 @@ class HwWorkshopPage extends HTMLElement {
       "idea",
       "link-href",
       "link-label",
+      "secondary-link-href",
+      "secondary-link-label",
       "dark-label",
       "light-label",
       "use-dark-label",

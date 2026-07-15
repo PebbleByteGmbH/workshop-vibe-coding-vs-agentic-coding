@@ -48,11 +48,11 @@ Bild: `assets/lukas-aichbauer.webp`
 
 _Agenda_
 
-- Von Chatbots zu Agenten
-- Vibe Coding vs. Agentic Coding
-- Agenten-Workflow und Beispiele
-- Codex-Setup und Bausteine
-- Sicherheit, Berechtigungen und Live-Demo
+- Ankommen, Vorstellung und Starter-Ideen
+- LLMs, Chatbots, Agenten und Agentic Coding
+- AI-Agenten-Landschaft und Codex-Setup
+- Einen guten ersten Use Case finden
+- Übungen: Input, Schritte, Regeln, Auftragsdesign und Fehlerfälle
 
 ## Folie 6: LLM / Chatbot / Agent
 
@@ -237,7 +237,28 @@ _Account Usage_
 
 Bild: `assets/codex-pictures/where-to-find-useage-2-de.png`
 
-## Folie 28: Welche Use Cases eignen sich für den Einstieg?
+## Folie 28: Kleiner Selbstversuch
+
+_Bevor wir mit eigenen Use Cases starten_
+
+- Snake Clone
+  - Icon: code
+  - Ein kleines Browser-Spiel mit Spielfeld, Steuerung, Punkten und Neustart.
+  - Gut, um UI, Spielzustand, Keyboard-Events und einfache Regeln zu üben.
+- Mini Todo List App
+  - Icon: clipboard-list
+  - Eine einfache Aufgabenliste mit Hinzufügen, Abhaken, Löschen und leerem Zustand.
+  - Gut, um Formulare, Listen, Zustände und kleine Datenmodelle greifbar zu machen.
+- Landing Page clonen
+  - Icon: world
+  - Eine Landing Page anhand eines Screenshots nachbauen.
+  - Gut, um Layout, Typografie, Farben, Abstände und responsive Details zu trainieren.
+
+Button: Ideen
+
+Link: https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ
+
+## Folie 29: Welche Use Cases eignen sich für den Einstieg?
 
 _Klein starten, echten Nutzen erzeugen_
 
@@ -249,7 +270,7 @@ _Klein starten, echten Nutzen erzeugen_
 | risikoarm | Fehler lassen sich leicht entdecken und korrigieren |
 | kontextreich | Beispiele, Dateien und Regeln sind vorhanden |
 
-## Folie 29: Use-Case-Board
+## Folie 30: Use-Case-Board
 
 _Excalidraw_
 
@@ -257,7 +278,7 @@ Button: Find your usecase
 
 Link: https://excalidraw.com/#room=3f7fb564ea3a699c6fd3,sDK2_w9L9RRcSUgP1PYFTA
 
-## Folie 30: Übung 1: Input und Output definieren
+## Folie 31: Übung 1: Input und Output definieren
 
 _Dauer: 5 Minuten_
 
@@ -277,7 +298,7 @@ Fragen:
 
 Beispiel Coffee-Shop-Landing-Page: Input: Kampagnen-Briefing, Shop-Fotos, Speisekarten-CSV und Brand-Notizen. Output: Landing-Page-Struktur, Sektionstexte, Angebotsblöcke, Bildvorschläge und CTA-Varianten.
 
-## Folie 31: Übung 2: Den Prozess zerlegen
+## Folie 32: Übung 2: Den Prozess zerlegen
 
 _Dauer: 5 Minuten_
 
@@ -294,7 +315,7 @@ Allgemeiner Prozessablauf:
 
 Beispiel Coffee-Shop-Landing-Page: Kampagnen-Briefing lesen, Angebot und Tonalität extrahieren, Seitensektionen auswählen, Texte pro Sektion schreiben, Speisekarte und Bildplatzhalter einsetzen und HTML-Seite exportieren.
 
-## Folie 32: Übung 3: Regeln und Beispiele sammeln
+## Folie 33: Übung 3: Regeln und Beispiele sammeln
 
 _Dauer: 5 Minuten_
 
@@ -318,64 +339,7 @@ Allgemeine Beispiele:
 
 Beispiel Coffee-Shop-Landing-Page: Die Headline nennt das saisonale Getränk, der CTA lautet "Tisch reservieren" oder "Vorbestellen", Öffnungszeiten sind above the fold sichtbar, kein Platzhaltertext bleibt stehen und das Original-Briefing wird nicht verändert.
 
-## Folie 33: Übung 4: Mensch oder Agent?
-
-_Dauer: 5 Minuten_
-
-| Agent darf | Mensch entscheidet |
-| --- | --- |
-| Dateien und Inputs analysieren | Inhalte veröffentlichen |
-| Vorschläge erstellen | finale Auswahl treffen |
-| Probleme markieren | Dateien oder Daten löschen |
-| Varianten erzeugen | Budget oder Scope freigeben |
-| Tests und Checks durchführen | sensible Informationen weitergeben |
-
-Beispiel Coffee-Shop-Landing-Page: Der Agent darf das Briefing analysieren, Hero-Texte entwerfen und fehlende Fotos markieren. Ein Mensch entscheidet das finale Angebot, gibt das Design frei und veröffentlicht die Seite.
-
-Leitfrage: Was darf automatisch passieren und was braucht eine Freigabe?
-
-## Folie 34: Übung 5: Den ersten Codex-Auftrag schreiben
-
-_Dauer: 10 Minuten_
-
-Vorlage:
-
-```text
-Baue eine lokale Anwendung, die [Ziel] unterstützt.
-Als Input verwendet sie [Input].
-Das Programm soll:
-- …
-- …
-- …
-Beachte folgende Regeln: [Regeln].
-Das Ergebnis soll [Output] sein.
-Die Aufgabe ist fertig, wenn [Prüfkriterien] erfüllt sind.
-Das Programm darf nicht [Grenzen].
-```
-
-Coffee-Shop-Landing-Page: Baue eine lokale App, die aus einem saisonalen Kaffee-Kampagnen-Briefing eine responsive Landing-Page-Vorschau mit Headline, Angebot, Menü-Teaser, Fotos, Öffnungszeiten und CTA erstellt.
-
-## Folie 35: Übung 6: Der Fehlerfall
-
-_Dauer: 5 Minuten_
-
-Ziel: Nicht nur den Idealzustand betrachten.
-
-Definiert mindestens drei allgemeine Fehlerzustände:
-
-- Datei fehlt
-- Format ist falsch
-- Eingabe ist leer
-- URL ist nicht erreichbar
-- Pflichtspalten fehlen
-- Ergebnis ist uneindeutig
-- mehrere Regeln widersprechen sich
-
-Beispiel Coffee-Shop-Landing-Page: Wenn in der Speisekarten-CSV Preise fehlen, soll das Programm die betroffenen Getränke markieren, die Seite weiter erzeugen und eine Warnung im Report anzeigen.
-
-Frage: Was soll das Programm in diesem Fall tun?
-
-## Folie 36: Zusammenfassung: Basics
+## Folie 34: Zusammenfassung: Basics
 
 _Wichtige Wörter und Metaphern_
 
@@ -389,7 +353,7 @@ _Wichtige Wörter und Metaphern_
 | Vibe Coding | Software grob beschreiben, ausprobieren und nach Gefühl anpassen. | 🍝 "Irgendwas mit Pasta" |
 | Agentic Coding | Ziel, Kontext, Dateien, Regeln und Grenzen geben, damit ein Agent umsetzt. | 🍲 Chef in der Küche |
 
-## Folie 37: Zusammenfassung: Codex
+## Folie 35: Zusammenfassung: Codex
 
 _Setup-Wörter und Metaphern_
 
@@ -404,7 +368,7 @@ _Setup-Wörter und Metaphern_
 | Automation | Eine wiederholbare Agenten-Aufgabe, die über einen Auslöser laufen kann. | ⏲️ Küchentimer |
 | Usage | Der Account-Bereich, in dem du siehst, wie viel Codex genutzt wurde. | 💸 Gehalt für den Koch |
 
-## Folie 38: Zusammenfassung: Use Cases
+## Folie 36: Zusammenfassung: Use Cases
 
 _Anweisungen und Metaphern_
 
