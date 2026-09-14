@@ -9,6 +9,7 @@ class HwWorkshopSlidesPage extends HTMLElement {
       "locale-aria-label",
       "locale-en-label",
       "locale-de-label",
+      "export-pdf-label",
       "slide-count",
       "slide-set"
     ];
@@ -27,13 +28,17 @@ class HwWorkshopSlidesPage extends HTMLElement {
     const controls = document.createElement("div");
     const themeSwitch = document.createElement("hw-theme-switch");
     const localeSwitch = document.createElement("hw-locale-switch");
+    const exportPdfButton = document.createElement("hw-button");
     const deck = document.createElement("hw-workshop-slides-deck");
 
     controls.className = "page-controls";
     copyAttributes(this, themeSwitch, ["dark-label", "light-label", "use-dark-label", "use-light-label"]);
     copyAttributes(this, localeSwitch, [["locale", "locale"], ["locale-aria-label", "aria-label"], ["locale-en-label", "en-label"], ["locale-de-label", "de-label"]]);
+    copyAttributes(this, exportPdfButton, [["export-pdf-label", "label"]]);
     copyAttributes(this, deck, ["locale", "slide-count", "slide-set"]);
-    controls.append(themeSwitch, localeSwitch);
+    exportPdfButton.setAttribute("variant", "compact");
+    exportPdfButton.setAttribute("data-action", "export-pdf");
+    controls.append(themeSwitch, localeSwitch, exportPdfButton);
 
     surface.append(
       controls,

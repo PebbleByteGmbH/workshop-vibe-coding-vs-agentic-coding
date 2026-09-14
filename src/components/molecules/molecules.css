@@ -1468,7 +1468,7 @@ hw-workshop-slides-deck .reveal .controls {
   z-index: var(--z-slide-control);
 }
 
-@media (max-width: 920px) {
+@media screen and (max-width: 920px) {
   hw-workshop-slides-deck .skill-anatomy {
     grid-template-columns: 1fr;
   }
@@ -1483,7 +1483,7 @@ hw-workshop-slides-deck .reveal .controls {
   }
 }
 
-@media (max-width: 560px) {
+@media screen and (max-width: 560px) {
   .page-controls {
     top: var(--space-14);
     right: var(--space-14);
@@ -1652,6 +1652,9 @@ html.hw-print-pdf {
 }
 
 html.hw-print-pdf body {
+  width: var(--size-pdf-page-width) !important;
+  height: auto !important;
+  min-height: 0 !important;
   margin: var(--space-none) !important;
   border: 0;
   padding: var(--space-none);
@@ -1673,7 +1676,7 @@ html.hw-print-pdf hw-workshop-slides-deck .reveal .progress {
 
 html.hw-print-pdf hw-workshop-slides-deck,
 html.hw-print-pdf hw-workshop-slides-deck .reveal {
-  width: var(--slide-width, 1280px) !important;
+  width: var(--size-pdf-page-width) !important;
   height: auto !important;
   min-height: 0 !important;
   overflow: visible !important;
@@ -1682,7 +1685,7 @@ html.hw-print-pdf hw-workshop-slides-deck .reveal {
 html.hw-print-pdf hw-workshop-slides-deck .slides {
   position: static !important;
   inset: auto !important;
-  width: var(--slide-width, 1280px) !important;
+  width: var(--size-pdf-page-width) !important;
   height: auto !important;
   margin: var(--space-none) !important;
   padding: var(--space-none) !important;
@@ -1693,37 +1696,78 @@ html.hw-print-pdf hw-workshop-slides-deck .slides {
 
 html.hw-print-pdf hw-workshop-slides-deck .reveal .slides .pdf-page {
   position: relative !important;
-  width: var(--slide-width, 1280px) !important;
+  inset: auto !important;
+  width: var(--size-pdf-page-width) !important;
+  height: var(--size-pdf-page-height) !important;
+  min-height: var(--size-pdf-page-height) !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  place-items: center !important;
+  margin: var(--space-none) !important;
+  border: 0 !important;
+  padding: var(--space-none) !important;
+  background: var(--color-surface);
   overflow: hidden;
+  page-break-inside: avoid;
+  break-inside: avoid-page;
   page-break-after: always;
   break-after: page;
 }
 
 html.hw-print-pdf hw-workshop-slides-deck .reveal .slides .pdf-page:last-of-type {
-  page-break-after: avoid;
-  break-after: avoid-page;
+  page-break-after: auto;
+  break-after: auto;
 }
 
 html.hw-print-pdf hw-workshop-slides-deck .reveal .slides section {
-  position: absolute !important;
-  top: var(--space-none) !important;
-  right: auto !important;
-  bottom: auto !important;
-  left: var(--space-none) !important;
-  width: var(--slide-width, 1280px) !important;
-  height: var(--slide-height, 720px) !important;
+  position: relative !important;
+  inset: auto !important;
+  grid-area: 1 / 1;
+  width: var(--size-pdf-slide-width) !important;
+  height: var(--size-pdf-slide-height) !important;
+  flex: 0 0 var(--size-pdf-slide-width);
   min-height: 0 !important;
+  margin: var(--space-none) !important;
   display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: var(--space-18);
   padding: var(--space-64) var(--space-64) var(--space-48);
-  overflow: hidden !important;
+  background: var(--color-surface);
+  overflow: visible !important;
+  page-break-before: auto !important;
+  page-break-after: auto !important;
+  page-break-inside: avoid !important;
+  break-before: auto !important;
+  break-after: auto !important;
+  break-inside: avoid-page !important;
   visibility: visible !important;
   opacity: 1 !important;
-  transform: none !important;
+  transform: scale(var(--scale-pdf-slide)) scale(var(--hw-pdf-fit-scale, 1)) !important;
+  transform-origin: center !important;
+  isolation: isolate;
   z-index: 1;
+}
+
+html.hw-print-pdf hw-workshop-slides-deck .hw-pdf-grid {
+  position: absolute !important;
+  inset: var(--space-none) !important;
+  width: var(--size-full) !important;
+  height: var(--size-full) !important;
+  display: block !important;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+html.hw-print-pdf hw-workshop-slides-deck .hw-pdf-grid-lines {
+  fill: none;
+  stroke: var(--color-grid-line);
+  stroke-width: var(--grid-line-size);
+  vector-effect: non-scaling-stroke;
+  shape-rendering: crispEdges;
 }
 
 html.hw-print-pdf hw-workshop-slides-deck .reveal .slide-background {

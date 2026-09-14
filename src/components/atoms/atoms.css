@@ -48,6 +48,19 @@ hw-button button {
   transition: transform var(--motion-fast), box-shadow var(--motion-fast), background var(--motion-fast), color var(--motion-fast);
 }
 
+hw-button[variant="compact"] button {
+  min-height: var(--size-button-sm);
+  padding: var(--space-none) var(--space-14);
+  font-size: 0.88rem;
+  line-height: 1;
+  box-shadow: var(--space-2) var(--space-2) var(--space-none) var(--color-accent);
+}
+
+hw-button[variant="compact"] button:hover,
+hw-button[variant="compact"] button:focus-visible {
+  box-shadow: var(--space-7) var(--space-7) var(--space-none) var(--color-accent);
+}
+
 hw-link {
   display: inline-block;
 }
@@ -116,5 +129,10 @@ hw-idea {
   hw-link,
   hw-link a {
     width: var(--size-full);
+  }
+
+  hw-button[variant="compact"],
+  hw-button[variant="compact"] button {
+    width: auto;
   }
 }

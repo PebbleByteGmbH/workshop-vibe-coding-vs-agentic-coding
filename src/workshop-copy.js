@@ -47,6 +47,7 @@
       },
       slidesPage: {
         bylineAriaLabel: "{byline} on LinkedIn",
+        exportPdfLabel: "Export PDF",
         fallbackLogoAlt: "{name} logo",
         keyIdeaLabel: "Key idea"
       },
@@ -1776,6 +1777,7 @@
       },
       slidesPage: {
         bylineAriaLabel: "{byline} auf LinkedIn",
+        exportPdfLabel: "PDF exportieren",
         fallbackLogoAlt: "{name}-Logo",
         keyIdeaLabel: "Kernidee"
       },

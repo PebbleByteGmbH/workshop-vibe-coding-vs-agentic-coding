@@ -62,8 +62,14 @@
   --size-slide-content-width: 1240px;
   --size-slide-copy-width: 760px;
   --size-slide-screenshot-full-width: 980px;
+  --size-pdf-page-width: 297mm;
+  --size-pdf-page-height: 210mm;
+  --size-pdf-slide-width: 1280px;
+  --size-pdf-slide-height: 720px;
   --size-full: 100%;
   --size-screen: 100vh;
+
+  --scale-pdf-slide: 0.8769685;
 
   --radius-button: 8px;
   --radius-pill: 999px;
@@ -78,6 +84,7 @@
   --pop-distance: -4px;
   --pop-scale: 1.02;
   --grid-size: var(--space-42);
+  --grid-size-pdf: var(--space-24);
   --grid-line-size: var(--space-1);
   --z-floating-control: 50;
   --z-slide-control: 40;
