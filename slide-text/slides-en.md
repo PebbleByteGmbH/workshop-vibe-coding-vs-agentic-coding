@@ -29,7 +29,30 @@ Image: `assets/lukas-aichbauer.webp`
   - Icon: question-mark
   - What do you expect from this workshop?
 
-## Slide 4: Three Starter Ideas
+## Slide 4: What do we use AI agents for?
+
+**Website development**
+
+We build and improve the DevOpsCycle website with AI agents.
+
+- [devopscycle.com](https://devopscycle.com)
+
+**Finding sales partners**
+
+We research agencies in Austria, Germany, and Switzerland that could sell RevWize through our partner model.
+
+- [revwize.com](https://revwize.com)
+- [Partner leads · Excel demo](../src/assets/showcases/revwize-partner-leads-demo.xlsx)
+
+**Creating marketing materials**
+
+We create cheat sheets, product information pages, and sales partner pitch decks from prompts.
+
+- [Docker cheat sheet · Image](../src/assets/showcases/ultimate-docker-cheat-sheet.webp)
+- [RevWize info pages · PDF](../src/assets/showcases/revwize-partner-info-de.pdf)
+- [Partner pitch · PDF](../src/assets/showcases/revwize-partner-pitch.pdf)
+
+## Slide 5: Three Starter Ideas
 
 - Marketing
   - Icon: search
@@ -44,7 +67,7 @@ Image: `assets/lukas-aichbauer.webp`
   - Requirements, user flows, and acceptance criteria often stay abstract and are interpreted differently by developers.
   - Prototype-as-acceptance app: turns a briefing into a working browser prototype with user flows, states, edge cases, and testable acceptance criteria as an executable reference for implementation.
 
-## Slide 5: What We'll Cover
+## Slide 6: What We'll Cover
 
 _Agenda_
 
@@ -54,7 +77,7 @@ _Agenda_
 - Choosing a good first use case
 - Exercises: inputs, steps, rules, task design, and error cases
 
-## Slide 6: LLM / Chatbot / Agent
+## Slide 7: LLM / Chatbot / Agent
 
 _From Brain to Action_
 
@@ -71,7 +94,7 @@ _From Brain to Action_
   - Uses tools and takes action
   - Metaphor: hands, arms, feet
 
-## Slide 7: LLM
+## Slide 8: LLM
 
 _Input -> LLM (Computer program) -> Output_
 
@@ -85,7 +108,7 @@ A simple way to think about what happens inside a Large Language Model.
 
 High level: It does not understand like a human. It uses patterns from many texts to predict likely next tokens. Tokens are small text pieces: word parts, whole words, or character strings.
 
-## Slide 8: Chatbot
+## Slide 9: Chatbot
 
 _Human -> Website -> Server with LLM -> Answer_
 
@@ -100,7 +123,7 @@ A chatbot is a website or app that sends your message to an LLM and shows the an
 
 High level: The chatbot is the interface and connection. The LLM usually runs on a server; your computer shows the conversation.
 
-## Slide 9: Agent
+## Slide 10: Agent
 
 _Goal -> Agent (LLM + programs) -> Result_
 
@@ -114,7 +137,7 @@ An agent gets a goal and can use tools to work through steps.
 
 High level: An agent does not stop at a text answer. It can plan, act, verify, and keep going until the task is done.
 
-## Slide 10: From Recipe to Chef
+## Slide 11: From Recipe to Chef
 
 _Prompting / Vibe Coding / Agentic Coding_
 
@@ -128,7 +151,7 @@ Same AI, different way of steering it: ask, improvise, or guide execution.
 
 Key idea: Prompting asks, Vibe Coding experiments, Agentic Coding delegates execution with context and review.
 
-## Slide 11: AI Agent Landscape
+## Slide 12: AI Agent Landscape
 
 _Six examples across different use cases and domains_
 
@@ -139,7 +162,7 @@ _Six examples across different use cases and domains_
 - Zapier Agents
 - OpenClaw
 
-## Slide 12: Install Codex
+## Slide 13: Install Codex
 
 _Setup_
 
@@ -147,104 +170,58 @@ Button: https://openai.com/codex/
 
 Link: https://openai.com/codex/
 
-## Slide 13: First Open Codex
+## Slide 14: First Open Codex
 
 _Launch_
 
 Image: `assets/codex-pictures/first-open-codex-en-de.png`
 
-## Slide 14: Click Sign In
+## Slide 15: Click Sign In
 
 _First opening_
 
 Image: `assets/codex-pictures/first-open-codex-click-signin-en-de.png`
 
-## Slide 15: Continue Sign-In
+## Slide 16: Continue Sign-In
 
 _First opening_
 
 Image: `assets/codex-pictures/first-open-codex-continue-sign-in-en-de.png`
 
-## Slide 16: Sign-In Successful
+## Slide 17: Sign-In Successful
 
 _First opening_
 
 Image: `assets/codex-pictures/first-open-codex-sign-in-successful-en-de.png`
 
-## Slide 17: Codex Home
+## Slide 18: Codex Home
 
 _After first login_
 
 Image: `assets/codex-pictures/how-codex-looks-first-login-en.png`
 
-## Slide 18: Create New Project
+## Slide 19: Create New Project
 
 _Project setup_
 
 Image: `assets/codex-pictures/create-new-project-en.png`
 
-## Slide 19: Name the Project
+## Slide 20: Name the Project
 
 _Project setup_
 
 Image: `assets/codex-pictures/create-project-name-en.png`
 
-## Slide 20: Select a Project
+## Slide 21: Select a Project
 
 _Where to choose the project_
 
 Image: `assets/codex-pictures/select-project-codex-en.png`
 
-## Slide 21: Select a Model
-
-_Where to choose the model_
-
-Image: `assets/codex-pictures/select-llm-model-en.png`
-
-## Slide 22: Select Workspace
-
-_Where the agent works_
-
-Image: `assets/codex-pictures/select-where-agent-works-en.png`
-
-## Slide 23: Include Plugins
-
-_Available tools_
-
-Image: `assets/codex-pictures/include-plugins-en.png`
-
-## Slide 24: Create Automations
-
-_Automation setup_
-
-Image: `assets/codex-pictures/create-automations-1-en.png`
-
-## Slide 25: Configure Automations
-
-_Automation setup_
-
-Image: `assets/codex-pictures/create-automations-2-en.png`
-
-## Slide 26: Find Usage
-
-_Account usage_
-
-Image: `assets/codex-pictures/where-to-find-usage-1-en.png`
-
-## Slide 27: Usage Details
-
-_Account usage_
-
-Image: `assets/codex-pictures/where-to-find-usage-2-en.png`
-
-## Slide 28: Quick Practice Run
+## Slide 22: Quick Practice Run
 
 _Before we start with your own use cases_
 
-- Snake Clone
-  - Icon: code
-  - A small browser game with a board, controls, points, and restart.
-  - Good for practicing UI, game state, keyboard events, and simple rules.
 - Mini Todo List App
   - Icon: clipboard-list
   - A simple task list with add, complete, delete, and empty states.
@@ -258,7 +235,112 @@ Button: Ideas
 
 Link: https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ
 
-## Slide 29: Which Use Cases Are Good Starting Points?
+## Slide 23: OpenAI Models at a Glance
+
+_GPT-6 & GPT-5.6 · Everyday work & creative tasks · Checked 16 Sep 2026_
+
+| Model | Focus / typical uses | Context (tokens) | Max output (tokens) | Reasoning effort | Input (USD / 1M) | Output (USD / 1M) | Knowledge cutoff |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| GPT-6 Astra | Most demanding work | 1.05M | 128,000 | low → max | $10.00 | $50.00 | 30 Apr 2026 |
+| GPT-5.6 Sol | Complex professional work | 1.05M | 128,000 | none → max | $4.00 | $20.00 | 16 Feb 2026 |
+| GPT-5.6 Terra | Balance quality and cost | 1.05M | 128,000 | none → max | $2.00 | $12.00 | 16 Feb 2026 |
+| GPT-5.6 Luna | Low cost at high volume | 1.05M | 128,000 | none → max | $0.20 | $1.20 | 16 Feb 2026 |
+
+Prices in USD per 1M tokens: standard API rates for short context and uncached input. Input = material sent; output = generated tokens. Long context costs more.
+
+Context = what fits on the model’s desk at once: conversation, briefing and documents. Tokens are small text pieces; M = million. Knowledge cutoff = the model’s built-in knowledge date; newer facts need current sources.
+
+Reasoning = how much effort the model puts into working through your task. A quick rewrite needs little; comparing options against several requirements may benefit from more. More effort can mean a longer wait. none = off; low → max = little to maximum.
+
+[Sources: OpenAI model catalog](https://developers.openai.com/api/docs/models)
+
+[OpenAI API pricing (USD / 1M tokens)](https://developers.openai.com/api/docs/pricing)
+
+## Slide 24: How Does Reasoning Work?
+
+_An internal working draft before the answer_
+
+The model generates internal reasoning tokens: intermediate steps that are normally hidden from you.
+
+**This lets it**
+
+- Break the task into smaller steps.
+- Compare approaches and check intermediate results.
+- Revise an approach and develop the answer.
+
+**Reasoning & agents**
+
+Reasoning is a model’s ability to work through a task. An agent uses a model and tools to act, check results and continue working.
+
+Example: reasoning helps weigh a campaign budget. An agent can also open the budget file and save the plan as a document.
+
+More reasoning = more computation for these steps. It can help with difficult tasks and take longer; correctness is not guaranteed.
+
+[Source: OpenAI — Reasoning](https://developers.openai.com/api/docs/guides/reasoning)
+
+## Slide 25: Select a Model
+
+_Where to choose the model_
+
+Image: `assets/codex-pictures/select-llm-model-en.png`
+
+## Slide 26: Select Workspace
+
+_Where the agent works_
+
+Image: `assets/codex-pictures/select-where-agent-works-en.png`
+
+## Slide 27: Include Plugins
+
+_Available tools_
+
+Image: `assets/codex-pictures/include-plugins-en.png`
+
+## Slide 28: What Is an Automation?
+
+_Tasks on a schedule_
+
+An automation starts a predefined task automatically when its trigger occurs.
+
+**Example: a weekly report**
+
+🕘 **Schedule**: 09:00, every Monday → ⚙️ **Task**: Summarize project updates → 📋 **Result**: Weekly report
+
+- The agent follows your instructions.
+- The result is ready for you to review.
+- ⟳ Repeat next Monday at 09:00.
+
+Set it up once. Run it at every scheduled time.
+
+Visual: Icons with connecting arrows and a return arrow to the next scheduled time. The gear and repeat symbol rotate once when the slide opens.
+
+Speaker notes: The time is an example, not an actual running automation. The return arrow means a new run at the next scheduled time, not a task that runs continuously. Other automations can start from an event instead of a schedule.
+
+## Slide 29: Create Automations
+
+_Automation setup_
+
+Image: `assets/codex-pictures/create-automations-1-en.png`
+
+## Slide 30: Configure Automations
+
+_Automation setup_
+
+Image: `assets/codex-pictures/create-automations-2-en.png`
+
+## Slide 31: Find Usage
+
+_Account usage_
+
+Image: `assets/codex-pictures/where-to-find-usage-1-en.png`
+
+## Slide 32: Usage Details
+
+_Account usage_
+
+Image: `assets/codex-pictures/where-to-find-usage-2-en.png`
+
+## Slide 33: Which Use Cases Are Good Starting Points?
 
 _Start small, create real value_
 
@@ -270,7 +352,7 @@ _Start small, create real value_
 | low-risk | mistakes are easy to spot and correct |
 | context-rich | examples, files, and rules are available |
 
-## Slide 30: Use Case Board
+## Slide 34: Use Case Board
 
 _Excalidraw_
 
@@ -278,7 +360,7 @@ Button: Find your usecase
 
 Link: https://excalidraw.com/#room=3f7fb564ea3a699c6fd3,sDK2_w9L9RRcSUgP1PYFTA
 
-## Slide 31: Exercise 1: Define Input and Output
+## Slide 35: Exercise 1: Define Input and Output
 
 _Duration: 5 minutes_
 
@@ -298,7 +380,7 @@ Questions:
 
 Coffee shop landing page example: Input: campaign briefing, shop photos, menu CSV, and brand notes. Output: landing page outline, section copy, offer blocks, image suggestions, and CTA variants.
 
-## Slide 32: Exercise 2: Break Down the Process
+## Slide 36: Exercise 2: Break Down the Process
 
 _Duration: 5 minutes_
 
@@ -315,7 +397,7 @@ General process flow:
 
 Coffee shop landing page example: Read the campaign briefing, extract offer and tone, choose page sections, write section copy, insert menu and image placeholders, and export the HTML page.
 
-## Slide 33: Exercise 3: Collect Rules and Examples
+## Slide 37: Exercise 3: Collect Rules and Examples
 
 _Duration: 5 minutes_
 
@@ -339,7 +421,7 @@ General examples:
 
 Coffee shop landing page example: The headline mentions the seasonal drink, the CTA says "Reserve a table" or "Order ahead", opening hours are visible above the fold, no placeholder text remains, and the original briefing is not changed.
 
-## Slide 34: Summary: Basics
+## Slide 38: Summary: Basics
 
 _Important words and metaphors_
 
@@ -353,7 +435,7 @@ _Important words and metaphors_
 | Vibe Coding | Loosely describing software, trying it, and adjusting by feel. | 🍝 "Something pasta-ish" |
 | Agentic Coding | Giving goal, context, files, rules, and boundaries so an agent can implement. | 🍲 Chef in the kitchen |
 
-## Slide 35: Summary: Codex
+## Slide 39: Summary: Codex
 
 _Setup words and metaphors_
 
@@ -368,7 +450,7 @@ _Setup words and metaphors_
 | Automation | A repeatable agent task that can run on a configured trigger. | ⏲️ Kitchen timer |
 | Usage | The account area where you can see how much Codex has been used. | 💸 Salary for the cook |
 
-## Slide 36: Summary: Use Cases
+## Slide 40: Summary: Use Cases
 
 _Instructions and metaphors_
 

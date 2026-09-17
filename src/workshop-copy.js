@@ -117,6 +117,46 @@
           ]
         },
         {
+          title: "What do we use AI agents for?",
+          blocks: [
+            {
+              type: "conceptCards",
+              items: [
+                {
+                  title: "Website development",
+                  icon: "world",
+                  accent: "#5b7cfa",
+                  description: "We build and improve the DevOpsCycle website with AI agents.",
+                  links: [
+                    { text: "devopscycle.com", href: "https://devopscycle.com" }
+                  ]
+                },
+                {
+                  title: "Finding sales partners",
+                  icon: "search",
+                  accent: "#16b85f",
+                  description: "We research agencies in Austria, Germany, and Switzerland that could sell RevWize through our partner model.",
+                  links: [
+                    { text: "revwize.com", href: "https://revwize.com" },
+                    { text: "Partner leads · Excel demo", href: "assets/showcases/revwize-partner-leads-demo.xlsx" }
+                  ]
+                },
+                {
+                  title: "Creating marketing materials",
+                  icon: "pencil",
+                  accent: "#f97316",
+                  description: "We create cheat sheets, product information pages, and sales partner pitch decks from prompts.",
+                  links: [
+                    { text: "Docker cheat sheet · Image", href: "assets/showcases/ultimate-docker-cheat-sheet.webp" },
+                    { text: "RevWize info pages · PDF", href: "assets/showcases/revwize-partner-info-de.pdf" },
+                    { text: "Partner pitch · PDF", href: "assets/showcases/revwize-partner-pitch.pdf" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           title: "Three Starter Ideas",
           blocks: [
             {
@@ -637,6 +677,165 @@
           ]
         },
         {
+          title: "Quick Practice Run",
+          subtitle: "Before we start with your own use cases",
+          blocks: [
+            {
+              type: "conceptCards",
+              items: [
+                {
+                  title: "Mini Todo List App",
+                  icon: "clipboard-list",
+                  accent: "#16b85f",
+                  description: "A simple task list with add, complete, delete, and empty states.",
+                  metaphor: "Good for making forms, lists, state, and small data models tangible."
+                },
+                {
+                  title: "Clone a Landing Page",
+                  icon: "world",
+                  accent: "#f97316",
+                  description: "Rebuild a landing page from a screenshot.",
+                  metaphor: "Good for practicing layout, typography, colors, spacing, and responsive details."
+                }
+              ]
+            },
+            {
+              type: "link",
+              size: "small",
+              href: "https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ",
+              text: "Ideas"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI Models at a Glance",
+          "subtitle": "GPT-6 & GPT-5.6 · Everyday work & creative tasks · Checked 16 Sep 2026",
+          "layout": "model-comparison",
+          "blocks": [
+            {
+              "type": "table",
+              "scrollLabel": "OpenAI models, token prices and knowledge cutoffs",
+              "headers": [
+                "Model",
+                "Focus / typical uses",
+                "Context (tokens)",
+                "Max output (tokens)",
+                "Reasoning effort",
+                "Input (USD / 1M)",
+                "Output (USD / 1M)",
+                "Knowledge cutoff"
+              ],
+              "rows": [
+                [
+                  "GPT-6 Astra",
+                  "Most demanding work",
+                  "1.05M",
+                  "128,000",
+                  "low → max",
+                  "$10.00",
+                  "$50.00",
+                  "30 Apr 2026"
+                ],
+                [
+                  "GPT-5.6 Sol",
+                  "Complex professional work",
+                  "1.05M",
+                  "128,000",
+                  "none → max",
+                  "$4.00",
+                  "$20.00",
+                  "16 Feb 2026"
+                ],
+                [
+                  "GPT-5.6 Terra",
+                  "Balance quality and cost",
+                  "1.05M",
+                  "128,000",
+                  "none → max",
+                  "$2.00",
+                  "$12.00",
+                  "16 Feb 2026"
+                ],
+                [
+                  "GPT-5.6 Luna",
+                  "Low cost at high volume",
+                  "1.05M",
+                  "128,000",
+                  "none → max",
+                  "$0.20",
+                  "$1.20",
+                  "16 Feb 2026"
+                ]
+              ]
+            },
+            {
+              "type": "text",
+              "text": "Prices in USD per 1M tokens: standard API rates for short context and uncached input. Input = material sent; output = generated tokens. Long context costs more."
+            },
+            {
+              "type": "text",
+              "text": "Context = what fits on the model’s desk at once: conversation, briefing and documents. Tokens are small text pieces; M = million. Knowledge cutoff = the model’s built-in knowledge date; newer facts need current sources."
+            },
+            {
+              "type": "text",
+              "text": "Reasoning = how much effort the model puts into working through your task. A quick rewrite needs little; comparing options against several requirements may benefit from more. More effort can mean a longer wait. none = off; low → max = little to maximum."
+            },
+            {
+              "type": "link",
+              "size": "small",
+              "href": "https://developers.openai.com/api/docs/models",
+              "text": "Sources: OpenAI model catalog"
+            },
+            {
+              "type": "link",
+              "size": "small",
+              "href": "https://developers.openai.com/api/docs/pricing",
+              "text": "OpenAI API pricing (USD / 1M tokens)"
+            }
+          ],
+          "notes": "Selected API models; availability in the Codex model picker may differ. Context figures are API limits. Arrows abbreviate supported effort levels. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. Source: https://developers.openai.com/api/docs/models\nTypical uses are illustrative applications of the official model positioning: Astra for the hardest end-to-end work, Sol for complex professional work, Terra for balancing intelligence and cost, and Luna for cost-sensitive high-volume workloads. They are not exclusive capabilities or benchmark-based task rankings."
+        },
+        {
+          "title": "How Does Reasoning Work?",
+          "subtitle": "An internal working draft before the answer",
+          "layout": "reasoning-info",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "The model generates internal reasoning tokens: intermediate steps that are normally hidden from you."
+            },
+            {
+              "type": "bullets",
+              "label": "This lets it",
+              "items": [
+                "Break the task into smaller steps.",
+                "Compare approaches and check intermediate results.",
+                "Revise an approach and develop the answer."
+              ]
+            },
+            {
+              "type": "callout",
+              "label": "Reasoning & agents",
+              "text": "Reasoning is a model’s ability to work through a task. An agent uses a model and tools to act, check results and continue working."
+            },
+            {
+              "type": "text",
+              "text": "Example: reasoning helps weigh a campaign budget. An agent can also open the budget file and save the plan as a document."
+            },
+            {
+              "type": "text",
+              "text": "More reasoning = more computation for these steps. It can help with difficult tasks and take longer; correctness is not guaranteed."
+            },
+            {
+              "type": "link",
+              "size": "small",
+              "href": "https://developers.openai.com/api/docs/guides/reasoning",
+              "text": "Source: OpenAI — Reasoning"
+            }
+          ],
+          "notes": "Simplified explanation of the documented mechanism. Internal reasoning tokens are not directly exposed; displayed summaries are not the complete internal process. Reasoning may also occur between tool calls. Source: https://developers.openai.com/api/docs/guides/reasoning"
+        },
+        {
           title: "Select a Model",
           subtitle: "Where to choose the model",
           layout: "codex-screenshot",
@@ -671,6 +870,26 @@
               alt: "Codex plugin selection"
             }
           ]
+        },
+        {
+          title: "What Is an Automation?",
+          subtitle: "Tasks on a schedule",
+          layout: "automation",
+          blocks: [
+            {
+              type: "automationFlow",
+              intro: "An automation starts a predefined task automatically when its trigger occurs.",
+              example: "Example: a weekly report",
+              steps: [
+                { icon: "🕘", label: "Schedule", value: "09:00", detail: "Every Monday", tone: "schedule" },
+                { icon: "⚙️", label: "Task", value: "Summarize project updates", detail: "The agent follows your instructions", tone: "task" },
+                { icon: "📋", label: "Result", value: "Weekly report", detail: "Ready for you to review", tone: "result" }
+              ],
+              repeat: "Repeat next Monday at 09:00",
+              takeaway: "Set it up once. Run it at every scheduled time."
+            }
+          ],
+          notes: "The time is an example, not an actual running automation. Explain the trigger, the saved instructions, and the result. The return arrow means a new run at the next scheduled time, not a task that runs continuously. Other automations can start from an event instead of a schedule."
         },
         {
           title: "Create Automations",
@@ -720,44 +939,7 @@
             }
           ]
         },
-        {
-          title: "Quick Practice Run",
-          subtitle: "Before we start with your own use cases",
-          blocks: [
-            {
-              type: "conceptCards",
-              items: [
-                {
-                  title: "Snake Clone",
-                  icon: "code",
-                  accent: "#5b7cfa",
-                  description: "A small browser game with a board, controls, points, and restart.",
-                  metaphor: "Good for practicing UI, game state, keyboard events, and simple rules."
-                },
-                {
-                  title: "Mini Todo List App",
-                  icon: "clipboard-list",
-                  accent: "#16b85f",
-                  description: "A simple task list with add, complete, delete, and empty states.",
-                  metaphor: "Good for making forms, lists, state, and small data models tangible."
-                },
-                {
-                  title: "Clone a Landing Page",
-                  icon: "world",
-                  accent: "#f97316",
-                  description: "Rebuild a landing page from a screenshot.",
-                  metaphor: "Good for practicing layout, typography, colors, spacing, and responsive details."
-                }
-              ]
-            },
-            {
-              type: "link",
-              size: "small",
-              href: "https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ",
-              text: "Ideas"
-            }
-          ]
-        },
+
         {
           title: "Which Use Cases Are Good Starting Points?",
           subtitle: "Start small, create real value",
@@ -1852,6 +2034,46 @@
           ]
         },
         {
+          title: "Wofür nutzen wir KI-Agenten?",
+          blocks: [
+            {
+              type: "conceptCards",
+              items: [
+                {
+                  title: "Websites entwickeln",
+                  icon: "world",
+                  accent: "#5b7cfa",
+                  description: "Wir entwickeln und verbessern die DevOpsCycle-Website mit KI-Agenten.",
+                  links: [
+                    { text: "devopscycle.com", href: "https://devopscycle.com" }
+                  ]
+                },
+                {
+                  title: "Vertriebspartner finden",
+                  icon: "search",
+                  accent: "#16b85f",
+                  description: "Wir recherchieren Agenturen in Österreich, Deutschland und der Schweiz, die RevWize über unser Partnermodell verkaufen könnten.",
+                  links: [
+                    { text: "revwize.com", href: "https://revwize.com" },
+                    { text: "Partner-Leads · Excel-Demo", href: "assets/showcases/revwize-partner-leads-demo.xlsx" }
+                  ]
+                },
+                {
+                  title: "Marketingmaterial erstellen",
+                  icon: "pencil",
+                  accent: "#f97316",
+                  description: "Wir erstellen Cheat Sheets, Produktinfoseiten und Präsentationen für den Vertriebspartner-Pitch per Prompt.",
+                  links: [
+                    { text: "Docker Cheat Sheet · Bild", href: "assets/showcases/ultimate-docker-cheat-sheet.webp" },
+                    { text: "RevWize-Infoseiten · PDF", href: "assets/showcases/revwize-partner-info-de.pdf" },
+                    { text: "Partner-Pitch · PDF", href: "assets/showcases/revwize-partner-pitch.pdf" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           title: "Drei Starter-Ideen",
           blocks: [
             {
@@ -2378,6 +2600,165 @@
           ]
         },
         {
+          title: "Kleiner Selbstversuch",
+          subtitle: "Bevor wir mit eigenen Use Cases starten",
+          blocks: [
+            {
+              type: "conceptCards",
+              items: [
+                {
+                  title: "Mini Todo List App",
+                  icon: "clipboard-list",
+                  accent: "#16b85f",
+                  description: "Eine einfache Aufgabenliste mit Hinzufügen, Abhaken, Löschen und leerem Zustand.",
+                  metaphor: "Gut, um Formulare, Listen, Zustände und kleine Datenmodelle greifbar zu machen."
+                },
+                {
+                  title: "Landing Page clonen",
+                  icon: "world",
+                  accent: "#f97316",
+                  description: "Eine Landing Page anhand eines Screenshots nachbauen.",
+                  metaphor: "Gut, um Layout, Typografie, Farben, Abstände und responsive Details zu trainieren."
+                }
+              ]
+            },
+            {
+              type: "link",
+              size: "small",
+              href: "https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ",
+              text: "Ideen"
+            }
+          ]
+        },
+        {
+          "title": "OpenAI-Modelle im Überblick",
+          "subtitle": "GPT-6 & GPT-5.6 · Berufsalltag & kreative Aufgaben · Stand: 16.09.2026",
+          "layout": "model-comparison",
+          "blocks": [
+            {
+              "type": "table",
+              "scrollLabel": "OpenAI-Modelle, Tokenpreise und Wissensstände",
+              "headers": [
+                "Modell",
+                "Fokus / typische Anwendungen",
+                "Kontext (Tokens)",
+                "Max. Output (Tokens)",
+                "Reasoning-Aufwand",
+                "Input (USD / Mio.)",
+                "Output (USD / Mio.)",
+                "Wissensstand"
+              ],
+              "rows": [
+                [
+                  "GPT-6 Astra",
+                  "Anspruchsvollste Aufgaben",
+                  "1,05 Mio.",
+                  "128.000",
+                  "low → max",
+                  "$10,00",
+                  "$50,00",
+                  "30.04.2026"
+                ],
+                [
+                  "GPT-5.6 Sol",
+                  "Komplexe professionelle Arbeit",
+                  "1,05 Mio.",
+                  "128.000",
+                  "none → max",
+                  "$4,00",
+                  "$20,00",
+                  "16.02.2026"
+                ],
+                [
+                  "GPT-5.6 Terra",
+                  "Balance aus Qualität und Kosten",
+                  "1,05 Mio.",
+                  "128.000",
+                  "none → max",
+                  "$2,00",
+                  "$12,00",
+                  "16.02.2026"
+                ],
+                [
+                  "GPT-5.6 Luna",
+                  "Günstig bei hohem Volumen",
+                  "1,05 Mio.",
+                  "128.000",
+                  "none → max",
+                  "$0,20",
+                  "$1,20",
+                  "16.02.2026"
+                ]
+              ]
+            },
+            {
+              "type": "text",
+              "text": "Preise in USD pro 1 Mio. Tokens: API-Standardtarif bei kurzem Kontext und ungecachtem Input. Input = gesendetes Material; Output = erzeugte Tokens. Langer Kontext kostet mehr."
+            },
+            {
+              "type": "text",
+              "text": "Kontext = was gleichzeitig auf den Schreibtisch des Modells passt: Gespräch, Briefing und Dokumente. Tokens sind kleine Textbausteine; Mio. = Millionen. Wissensstand = Stichtag des eingebauten Modellwissens; neuere Fakten brauchen aktuelle Quellen."
+            },
+            {
+              "type": "text",
+              "text": "Reasoning = wie viel Aufwand das Modell ins Durchdenken deiner Aufgabe steckt. Kurz umformulieren braucht wenig; Optionen anhand mehrerer Anforderungen abzuwägen kann von mehr profitieren. Mehr Aufwand kann länger dauern. none = aus; low → max = wenig bis maximal."
+            },
+            {
+              "type": "link",
+              "size": "small",
+              "href": "https://developers.openai.com/api/docs/models",
+              "text": "Quellen: OpenAI-Modellkatalog"
+            },
+            {
+              "type": "link",
+              "size": "small",
+              "href": "https://developers.openai.com/api/docs/pricing",
+              "text": "OpenAI-API-Preise (USD / 1 Mio. Tokens)"
+            }
+          ],
+          "notes": "Ausgewählte API-Modelle; die Verfügbarkeit in der Codex-Modellauswahl kann abweichen. Kontextangaben sind API-Limits. Die Pfeile kürzen die unterstützten Stufen ab. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. none = aus, low = gering, medium = mittel, high = hoch, xhigh = sehr hoch, max = maximal. Quelle: https://developers.openai.com/api/docs/models\nDie typischen Anwendungen sind Beispiele, abgeleitet aus der offiziellen Modellausrichtung: Astra für anspruchsvollste Aufgaben über viele Schritte, Sol für komplexe professionelle Arbeit, Terra für die Balance aus Leistungsfähigkeit und Kosten, Luna für kostensensitive Aufgaben mit hohem Volumen. Es sind keine exklusiven Fähigkeiten oder benchmarkbasierten Aufgaben-Ranglisten."
+        },
+        {
+          "title": "Wie funktioniert Reasoning?",
+          "subtitle": "Ein interner Arbeitsentwurf vor der Antwort",
+          "layout": "reasoning-info",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "Das Modell erzeugt interne Reasoning-Tokens: Zwischenschritte, die für dich normalerweise unsichtbar bleiben."
+            },
+            {
+              "type": "bullets",
+              "label": "Damit kann es",
+              "items": [
+                "Die Aufgabe in kleinere Schritte zerlegen.",
+                "Lösungswege vergleichen und Zwischenergebnisse prüfen.",
+                "Einen Ansatz überarbeiten und die Antwort entwickeln."
+              ]
+            },
+            {
+              "type": "callout",
+              "label": "Reasoning & Agenten",
+              "text": "Reasoning ist eine Fähigkeit des Modells, Aufgaben zu durchdenken. Ein Agent nutzt ein Modell und Werkzeuge, um zu handeln, Ergebnisse zu prüfen und weiterzuarbeiten."
+            },
+            {
+              "type": "text",
+              "text": "Beispiel: Reasoning hilft, ein Kampagnenbudget abzuwägen. Ein Agent kann zusätzlich die Budgetdatei öffnen und den Plan als Dokument speichern."
+            },
+            {
+              "type": "text",
+              "text": "Mehr Reasoning = mehr Rechenaufwand für diese Schritte. Das kann bei schwierigen Aufgaben helfen und länger dauern; richtige Antworten sind nicht garantiert."
+            },
+            {
+              "type": "link",
+              "size": "small",
+              "href": "https://developers.openai.com/api/docs/guides/reasoning",
+              "text": "Quelle: OpenAI – Reasoning"
+            }
+          ],
+          "notes": "Vereinfachte Erklärung des dokumentierten Ablaufs. Interne Reasoning-Tokens sind nicht direkt einsehbar; angezeigte Zusammenfassungen sind nicht der vollständige interne Prozess. Reasoning kann auch zwischen Tool-Aufrufen stattfinden. Quelle: https://developers.openai.com/api/docs/guides/reasoning"
+        },
+        {
           title: "Modell auswählen",
           subtitle: "Wo das Modell ausgewählt wird",
           layout: "codex-screenshot",
@@ -2412,6 +2793,26 @@
               alt: "Codex Plugin-Auswahl"
             }
           ]
+        },
+        {
+          title: "Was ist eine Automation?",
+          subtitle: "Aufgaben nach Zeitplan",
+          layout: "automation",
+          blocks: [
+            {
+              type: "automationFlow",
+              intro: "Eine Automation startet eine festgelegte Aufgabe automatisch, sobald ihr Auslöser eintritt.",
+              example: "Beispiel: ein Wochenbericht",
+              steps: [
+                { icon: "🕘", label: "Zeitplan", value: "09:00", detail: "Jeden Montag", tone: "schedule" },
+                { icon: "⚙️", label: "Aufgabe", value: "Projektstand zusammenfassen", detail: "Der Agent folgt deinen Anweisungen", tone: "task" },
+                { icon: "📋", label: "Ergebnis", value: "Wochenbericht", detail: "Bereit zum Prüfen", tone: "result" }
+              ],
+              repeat: "Nächsten Montag um 09:00 wiederholen",
+              takeaway: "Einmal einrichten. Bei jedem Termin automatisch ausführen."
+            }
+          ],
+          notes: "Die Uhrzeit ist ein Beispiel, keine tatsächlich laufende Automation. Auslöser, gespeicherte Anweisungen und Ergebnis erklären. Der Rückpfeil bedeutet einen neuen Durchlauf zum nächsten Termin, keine dauerhaft laufende Aufgabe. Andere Automationen können statt nach Zeitplan auch durch ein Ereignis starten."
         },
         {
           title: "Automations erstellen",
@@ -2461,44 +2862,7 @@
             }
           ]
         },
-        {
-          title: "Kleiner Selbstversuch",
-          subtitle: "Bevor wir mit eigenen Use Cases starten",
-          blocks: [
-            {
-              type: "conceptCards",
-              items: [
-                {
-                  title: "Snake Clone",
-                  icon: "code",
-                  accent: "#5b7cfa",
-                  description: "Ein kleines Browser-Spiel mit Spielfeld, Steuerung, Punkten und Neustart.",
-                  metaphor: "Gut, um UI, Spielzustand, Keyboard-Events und einfache Regeln zu üben."
-                },
-                {
-                  title: "Mini Todo List App",
-                  icon: "clipboard-list",
-                  accent: "#16b85f",
-                  description: "Eine einfache Aufgabenliste mit Hinzufügen, Abhaken, Löschen und leerem Zustand.",
-                  metaphor: "Gut, um Formulare, Listen, Zustände und kleine Datenmodelle greifbar zu machen."
-                },
-                {
-                  title: "Landing Page clonen",
-                  icon: "world",
-                  accent: "#f97316",
-                  description: "Eine Landing Page anhand eines Screenshots nachbauen.",
-                  metaphor: "Gut, um Layout, Typografie, Farben, Abstände und responsive Details zu trainieren."
-                }
-              ]
-            },
-            {
-              type: "link",
-              size: "small",
-              href: "https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ",
-              text: "Ideen"
-            }
-          ]
-        },
+
         {
           title: "Welche Use Cases eignen sich für den Einstieg?",
           subtitle: "Klein starten, echten Nutzen erzeugen",

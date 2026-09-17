@@ -149,6 +149,7 @@ function createBlock(block, labels) {
   const builders = {
     agentFlow: createAgentFlow,
     agentLogos: createAgentLogos,
+    automationFlow: createAutomationFlow,
     bullets: createBullets,
     callout: createCallout,
     code: createCode,
@@ -168,6 +169,87 @@ function createBlock(block, labels) {
   };
 
   return builders[block.type](block, labels);
+}
+
+function createAutomationFlow(block) {
+  const flow = document.createElement("figure");
+  flow.className = "hw-deck-automation";
+
+  const intro = document.createElement("figcaption");
+  intro.className = "hw-deck-automation-intro";
+  intro.textContent = block.intro;
+
+  const example = document.createElement("p");
+  example.className = "hw-deck-automation-example";
+  example.textContent = block.example;
+
+  const steps = document.createElement("ol");
+  steps.className = "hw-deck-automation-steps";
+
+  steps.append(...block.steps.map((item, index) => {
+    const step = document.createElement("li");
+    step.className = "hw-deck-automation-step";
+    step.dataset.tone = item.tone;
+
+    const symbol = document.createElement("span");
+    symbol.className = "hw-deck-automation-symbol";
+    symbol.setAttribute("aria-hidden", "true");
+
+    const icon = document.createElement("span");
+    icon.className = "hw-deck-automation-icon";
+    icon.textContent = item.icon;
+    symbol.append(icon);
+
+    const copy = document.createElement("div");
+    copy.className = "hw-deck-automation-copy";
+
+    const label = document.createElement("h3");
+    label.textContent = item.label;
+
+    const value = document.createElement("strong");
+    value.className = "hw-deck-automation-value";
+    value.textContent = item.value;
+
+    const detail = document.createElement("p");
+    detail.className = "hw-deck-automation-detail";
+    detail.textContent = item.detail;
+
+    copy.append(label, value, detail);
+    step.append(symbol, copy);
+
+    if (index < block.steps.length - 1) {
+      const arrow = document.createElement("span");
+      arrow.className = "hw-deck-automation-arrow";
+      arrow.setAttribute("aria-hidden", "true");
+      arrow.textContent = "→";
+      step.append(arrow);
+    }
+
+    return step;
+  }));
+
+  const loop = document.createElement("div");
+  loop.className = "hw-deck-automation-loop";
+
+  const repeat = document.createElement("p");
+  repeat.className = "hw-deck-automation-repeat";
+
+  const repeatIcon = document.createElement("span");
+  repeatIcon.className = "hw-deck-automation-repeat-icon";
+  repeatIcon.setAttribute("aria-hidden", "true");
+  repeatIcon.textContent = "⟳";
+
+  const repeatLabel = document.createElement("span");
+  repeatLabel.textContent = block.repeat;
+  repeat.append(repeatIcon, repeatLabel);
+  loop.append(repeat);
+
+  const takeaway = document.createElement("p");
+  takeaway.className = "hw-deck-automation-takeaway";
+  takeaway.textContent = block.takeaway;
+
+  flow.append(intro, example, steps, loop, takeaway);
+  return flow;
 }
 
 function createEmojiOnly(block) {
@@ -255,6 +337,24 @@ function createConceptCards(block) {
       metaphor.className = "concept-card-metaphor";
       metaphor.textContent = item.metaphor;
       children.push(metaphor);
+    }
+
+    if (item.links?.length) {
+      const links = document.createElement("ul");
+      links.className = "hw-deck-concept-links";
+
+      for (const itemLink of item.links) {
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = itemLink.href;
+        link.textContent = itemLink.text;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        listItem.append(link);
+        links.append(listItem);
+      }
+
+      children.push(links);
     }
 
     card.append(...children);
@@ -713,6 +813,17 @@ function createTable(block) {
   }));
 
   table.append(thead, tbody);
+
+  if (block.scrollLabel) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "hw-deck-table-scroll";
+    wrapper.tabIndex = 0;
+    wrapper.setAttribute("role", "region");
+    wrapper.setAttribute("aria-label", block.scrollLabel);
+    wrapper.append(table);
+    return wrapper;
+  }
+
   return table;
 }
 

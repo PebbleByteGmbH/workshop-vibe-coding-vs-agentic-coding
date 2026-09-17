@@ -29,7 +29,30 @@ Bild: `assets/lukas-aichbauer.webp`
   - Icon: question-mark
   - Was erwartet ihr von diesem Workshop?
 
-## Folie 4: Drei Starter-Ideen
+## Folie 4: Wofür nutzen wir KI-Agenten?
+
+**Websites entwickeln**
+
+Wir entwickeln und verbessern die DevOpsCycle-Website mit KI-Agenten.
+
+- [devopscycle.com](https://devopscycle.com)
+
+**Vertriebspartner finden**
+
+Wir recherchieren Agenturen in Österreich, Deutschland und der Schweiz, die RevWize über unser Partnermodell verkaufen könnten.
+
+- [revwize.com](https://revwize.com)
+- [Partner-Leads · Excel-Demo](../src/assets/showcases/revwize-partner-leads-demo.xlsx)
+
+**Marketingmaterial erstellen**
+
+Wir erstellen Cheat Sheets, Produktinfoseiten und Präsentationen für den Vertriebspartner-Pitch per Prompt.
+
+- [Docker Cheat Sheet · Bild](../src/assets/showcases/ultimate-docker-cheat-sheet.webp)
+- [RevWize-Infoseiten · PDF](../src/assets/showcases/revwize-partner-info-de.pdf)
+- [Partner-Pitch · PDF](../src/assets/showcases/revwize-partner-pitch.pdf)
+
+## Folie 5: Drei Starter-Ideen
 
 - Marketing
   - Icon: search
@@ -44,7 +67,7 @@ Bild: `assets/lukas-aichbauer.webp`
   - Anforderungen, User Flows und Akzeptanzkriterien bleiben oft unterschiedlich interpretierbar.
   - Prototype-as-Acceptance-App: macht aus einem Briefing einen Browser-Prototypen mit User Flows, Zuständen, Edge Cases und Akzeptanzkriterien als ausführbare Entwickler:innen-Referenz.
 
-## Folie 5: Was wir behandeln
+## Folie 6: Was wir behandeln
 
 _Agenda_
 
@@ -54,7 +77,7 @@ _Agenda_
 - Einen guten ersten Use Case finden
 - Übungen: Input, Schritte, Regeln, Auftragsdesign und Fehlerfälle
 
-## Folie 6: LLM / Chatbot / Agent
+## Folie 7: LLM / Chatbot / Agent
 
 _Vom Gehirn zur Handlung_
 
@@ -71,7 +94,7 @@ _Vom Gehirn zur Handlung_
   - Nutzt Tools und handelt
   - Metapher: Hände, Arme, Füße
 
-## Folie 7: LLM
+## Folie 8: LLM
 
 _Input -> LLM (Computerprogramm) -> Output_
 
@@ -85,7 +108,7 @@ So kann man sich grob vorstellen, was in einem Large Language Model passiert.
 
 Ganz grob: Es versteht nicht wie ein Mensch. Es nutzt Muster aus vielen Texten, um passende nächste Tokens vorherzusagen. Tokens sind kleine Textstücke: Wortteile, ganze Wörter oder Buchstabenketten.
 
-## Folie 8: Chatbot
+## Folie 9: Chatbot
 
 _Mensch -> Webseite -> Server mit LLM -> Antwort_
 
@@ -100,7 +123,7 @@ Ein Chatbot ist eine Webseite oder App, die deine Nachricht an ein LLM schickt u
 
 Ganz grob: Der Chatbot ist die Oberfläche und Verbindung. Das LLM läuft meistens auf einem Server; dein Computer zeigt das Gespräch.
 
-## Folie 9: Agent
+## Folie 10: Agent
 
 _Ziel -> Agent (LLM + Programme) -> Ergebnis_
 
@@ -114,7 +137,7 @@ Ein Agent bekommt ein Ziel und kann Tools benutzen, um Schritte auszuführen.
 
 Ganz grob: Ein Agent hört nicht bei einer Textantwort auf. Er kann planen, handeln, prüfen und weiterarbeiten, bis die Aufgabe erledigt ist.
 
-## Folie 10: Vom Rezept zum Chef
+## Folie 11: Vom Rezept zum Chef
 
 _Prompting / Vibe Coding / Agentic Coding_
 
@@ -128,7 +151,7 @@ Gleiche KI, aber anders gesteuert: fragen, improvisieren oder Umsetzung führen.
 
 Kernidee: Prompting fragt, Vibe Coding probiert, Agentic Coding lässt mit Kontext und Review ausführen.
 
-## Folie 11: AI-Agenten-Landschaft
+## Folie 12: AI-Agenten-Landschaft
 
 _Sechs Beispiele mit unterschiedlichen Anwendungsfällen und Gebieten_
 
@@ -139,7 +162,7 @@ _Sechs Beispiele mit unterschiedlichen Anwendungsfällen und Gebieten_
 - Zapier Agents
 - OpenClaw
 
-## Folie 12: Codex installieren
+## Folie 13: Codex installieren
 
 _Setup_
 
@@ -147,104 +170,58 @@ Button: https://openai.com/codex/
 
 Link: https://openai.com/codex/
 
-## Folie 13: Codex zuerst öffnen
+## Folie 14: Codex zuerst öffnen
 
 _Start_
 
 Bild: `assets/codex-pictures/first-open-codex-en-de.png`
 
-## Folie 14: Anmelden
+## Folie 15: Anmelden
 
 _Erstes Öffnen_
 
 Bild: `assets/codex-pictures/first-open-codex-click-signin-en-de.png`
 
-## Folie 15: Anmeldung fortsetzen
+## Folie 16: Anmeldung fortsetzen
 
 _Erstes Öffnen_
 
 Bild: `assets/codex-pictures/first-open-codex-continue-sign-in-en-de.png`
 
-## Folie 16: Anmeldung erfolgreich
+## Folie 17: Anmeldung erfolgreich
 
 _Erstes Öffnen_
 
 Bild: `assets/codex-pictures/first-open-codex-sign-in-successful-en-de.png`
 
-## Folie 17: Codex Startseite
+## Folie 18: Codex Startseite
 
 _Nach dem ersten Login_
 
 Bild: `assets/codex-pictures/how-codex-looks-first-login-de.png`
 
-## Folie 18: Neues Projekt erstellen
+## Folie 19: Neues Projekt erstellen
 
 _Projekt-Setup_
 
 Bild: `assets/codex-pictures/create-new-project-de.png`
 
-## Folie 19: Projekt benennen
+## Folie 20: Projekt benennen
 
 _Projekt-Setup_
 
 Bild: `assets/codex-pictures/create-project-name-de.png`
 
-## Folie 20: Projekt auswählen
+## Folie 21: Projekt auswählen
 
 _Wo das Projekt ausgewählt wird_
 
 Bild: `assets/codex-pictures/select-project-codex-de.png`
 
-## Folie 21: Modell auswählen
-
-_Wo das Modell ausgewählt wird_
-
-Bild: `assets/codex-pictures/select-llm-model-de.png`
-
-## Folie 22: Workspace auswählen
-
-_Wo der Agent arbeitet_
-
-Bild: `assets/codex-pictures/select-where-agent-works-de.png`
-
-## Folie 23: Plugins einbinden
-
-_Verfügbare Tools_
-
-Bild: `assets/codex-pictures/include-plugins-de.png`
-
-## Folie 24: Automations erstellen
-
-_Automation-Setup_
-
-Bild: `assets/codex-pictures/create-automations-1-de.png`
-
-## Folie 25: Automations konfigurieren
-
-_Automation-Setup_
-
-Bild: `assets/codex-pictures/create-automations-2-de.png`
-
-## Folie 26: Usage finden
-
-_Account Usage_
-
-Bild: `assets/codex-pictures/where-to-find-usage-1-de.png`
-
-## Folie 27: Usage Details
-
-_Account Usage_
-
-Bild: `assets/codex-pictures/where-to-find-useage-2-de.png`
-
-## Folie 28: Kleiner Selbstversuch
+## Folie 22: Kleiner Selbstversuch
 
 _Bevor wir mit eigenen Use Cases starten_
 
-- Snake Clone
-  - Icon: code
-  - Ein kleines Browser-Spiel mit Spielfeld, Steuerung, Punkten und Neustart.
-  - Gut, um UI, Spielzustand, Keyboard-Events und einfache Regeln zu üben.
 - Mini Todo List App
   - Icon: clipboard-list
   - Eine einfache Aufgabenliste mit Hinzufügen, Abhaken, Löschen und leerem Zustand.
@@ -258,7 +235,112 @@ Button: Ideen
 
 Link: https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ
 
-## Folie 29: Welche Use Cases eignen sich für den Einstieg?
+## Folie 23: OpenAI-Modelle im Überblick
+
+_GPT-6 & GPT-5.6 · Berufsalltag & kreative Aufgaben · Stand: 16.09.2026_
+
+| Modell | Fokus / typische Anwendungen | Kontext (Tokens) | Max. Output (Tokens) | Reasoning-Aufwand | Input (USD / Mio.) | Output (USD / Mio.) | Wissensstand |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| GPT-6 Astra | Anspruchsvollste Aufgaben | 1,05 Mio. | 128.000 | low → max | $10,00 | $50,00 | 30.04.2026 |
+| GPT-5.6 Sol | Komplexe professionelle Arbeit | 1,05 Mio. | 128.000 | none → max | $4,00 | $20,00 | 16.02.2026 |
+| GPT-5.6 Terra | Balance aus Qualität und Kosten | 1,05 Mio. | 128.000 | none → max | $2,00 | $12,00 | 16.02.2026 |
+| GPT-5.6 Luna | Günstig bei hohem Volumen | 1,05 Mio. | 128.000 | none → max | $0,20 | $1,20 | 16.02.2026 |
+
+Preise in USD pro 1 Mio. Tokens: API-Standardtarif bei kurzem Kontext und ungecachtem Input. Input = gesendetes Material; Output = erzeugte Tokens. Langer Kontext kostet mehr.
+
+Kontext = was gleichzeitig auf den Schreibtisch des Modells passt: Gespräch, Briefing und Dokumente. Tokens sind kleine Textbausteine; Mio. = Millionen. Wissensstand = Stichtag des eingebauten Modellwissens; neuere Fakten brauchen aktuelle Quellen.
+
+Reasoning = wie viel Aufwand das Modell ins Durchdenken deiner Aufgabe steckt. Kurz umformulieren braucht wenig; Optionen anhand mehrerer Anforderungen abzuwägen kann von mehr profitieren. Mehr Aufwand kann länger dauern. none = aus; low → max = wenig bis maximal.
+
+[Quellen: OpenAI-Modellkatalog](https://developers.openai.com/api/docs/models)
+
+[OpenAI-API-Preise (USD / 1 Mio. Tokens)](https://developers.openai.com/api/docs/pricing)
+
+## Folie 24: Wie funktioniert Reasoning?
+
+_Ein interner Arbeitsentwurf vor der Antwort_
+
+Das Modell erzeugt interne Reasoning-Tokens: Zwischenschritte, die für dich normalerweise unsichtbar bleiben.
+
+**Damit kann es**
+
+- Die Aufgabe in kleinere Schritte zerlegen.
+- Lösungswege vergleichen und Zwischenergebnisse prüfen.
+- Einen Ansatz überarbeiten und die Antwort entwickeln.
+
+**Reasoning & Agenten**
+
+Reasoning ist eine Fähigkeit des Modells, Aufgaben zu durchdenken. Ein Agent nutzt ein Modell und Werkzeuge, um zu handeln, Ergebnisse zu prüfen und weiterzuarbeiten.
+
+Beispiel: Reasoning hilft, ein Kampagnenbudget abzuwägen. Ein Agent kann zusätzlich die Budgetdatei öffnen und den Plan als Dokument speichern.
+
+Mehr Reasoning = mehr Rechenaufwand für diese Schritte. Das kann bei schwierigen Aufgaben helfen und länger dauern; richtige Antworten sind nicht garantiert.
+
+[Quelle: OpenAI – Reasoning](https://developers.openai.com/api/docs/guides/reasoning)
+
+## Folie 25: Modell auswählen
+
+_Wo das Modell ausgewählt wird_
+
+Bild: `assets/codex-pictures/select-llm-model-de.png`
+
+## Folie 26: Workspace auswählen
+
+_Wo der Agent arbeitet_
+
+Bild: `assets/codex-pictures/select-where-agent-works-de.png`
+
+## Folie 27: Plugins einbinden
+
+_Verfügbare Tools_
+
+Bild: `assets/codex-pictures/include-plugins-de.png`
+
+## Folie 28: Was ist eine Automation?
+
+_Aufgaben nach Zeitplan_
+
+Eine Automation startet eine festgelegte Aufgabe automatisch, sobald ihr Auslöser eintritt.
+
+**Beispiel: ein Wochenbericht**
+
+🕘 **Zeitplan**: 09:00, jeden Montag → ⚙️ **Aufgabe**: Projektstand zusammenfassen → 📋 **Ergebnis**: Wochenbericht
+
+- Der Agent folgt deinen Anweisungen.
+- Das Ergebnis ist bereit zum Prüfen.
+- ⟳ Nächsten Montag um 09:00 wiederholen.
+
+Einmal einrichten. Bei jedem Termin automatisch ausführen.
+
+Visuell: Icons mit Verbindungspfeilen und Rückpfeil zum nächsten Termin. Zahnrad und Wiederholungssymbol drehen sich beim Aufrufen der Folie einmal.
+
+Sprechernotizen: Die Uhrzeit ist ein Beispiel, keine tatsächlich laufende Automation. Der Rückpfeil bedeutet einen neuen Durchlauf zum nächsten Termin, keine dauerhaft laufende Aufgabe. Andere Automationen können statt nach Zeitplan auch durch ein Ereignis starten.
+
+## Folie 29: Automations erstellen
+
+_Automation-Setup_
+
+Bild: `assets/codex-pictures/create-automations-1-de.png`
+
+## Folie 30: Automations konfigurieren
+
+_Automation-Setup_
+
+Bild: `assets/codex-pictures/create-automations-2-de.png`
+
+## Folie 31: Usage finden
+
+_Account Usage_
+
+Bild: `assets/codex-pictures/where-to-find-usage-1-de.png`
+
+## Folie 32: Usage Details
+
+_Account Usage_
+
+Bild: `assets/codex-pictures/where-to-find-useage-2-de.png`
+
+## Folie 33: Welche Use Cases eignen sich für den Einstieg?
 
 _Klein starten, echten Nutzen erzeugen_
 
@@ -270,7 +352,7 @@ _Klein starten, echten Nutzen erzeugen_
 | risikoarm | Fehler lassen sich leicht entdecken und korrigieren |
 | kontextreich | Beispiele, Dateien und Regeln sind vorhanden |
 
-## Folie 30: Use-Case-Board
+## Folie 34: Use-Case-Board
 
 _Excalidraw_
 
@@ -278,7 +360,7 @@ Button: Find your usecase
 
 Link: https://excalidraw.com/#room=3f7fb564ea3a699c6fd3,sDK2_w9L9RRcSUgP1PYFTA
 
-## Folie 31: Übung 1: Input und Output definieren
+## Folie 35: Übung 1: Input und Output definieren
 
 _Dauer: 5 Minuten_
 
@@ -298,7 +380,7 @@ Fragen:
 
 Beispiel Coffee-Shop-Landing-Page: Input: Kampagnen-Briefing, Shop-Fotos, Speisekarten-CSV und Brand-Notizen. Output: Landing-Page-Struktur, Sektionstexte, Angebotsblöcke, Bildvorschläge und CTA-Varianten.
 
-## Folie 32: Übung 2: Den Prozess zerlegen
+## Folie 36: Übung 2: Den Prozess zerlegen
 
 _Dauer: 5 Minuten_
 
@@ -315,7 +397,7 @@ Allgemeiner Prozessablauf:
 
 Beispiel Coffee-Shop-Landing-Page: Kampagnen-Briefing lesen, Angebot und Tonalität extrahieren, Seitensektionen auswählen, Texte pro Sektion schreiben, Speisekarte und Bildplatzhalter einsetzen und HTML-Seite exportieren.
 
-## Folie 33: Übung 3: Regeln und Beispiele sammeln
+## Folie 37: Übung 3: Regeln und Beispiele sammeln
 
 _Dauer: 5 Minuten_
 
@@ -339,7 +421,7 @@ Allgemeine Beispiele:
 
 Beispiel Coffee-Shop-Landing-Page: Die Headline nennt das saisonale Getränk, der CTA lautet "Tisch reservieren" oder "Vorbestellen", Öffnungszeiten sind above the fold sichtbar, kein Platzhaltertext bleibt stehen und das Original-Briefing wird nicht verändert.
 
-## Folie 34: Zusammenfassung: Basics
+## Folie 38: Zusammenfassung: Basics
 
 _Wichtige Wörter und Metaphern_
 
@@ -353,7 +435,7 @@ _Wichtige Wörter und Metaphern_
 | Vibe Coding | Software grob beschreiben, ausprobieren und nach Gefühl anpassen. | 🍝 "Irgendwas mit Pasta" |
 | Agentic Coding | Ziel, Kontext, Dateien, Regeln und Grenzen geben, damit ein Agent umsetzt. | 🍲 Chef in der Küche |
 
-## Folie 35: Zusammenfassung: Codex
+## Folie 39: Zusammenfassung: Codex
 
 _Setup-Wörter und Metaphern_
 
@@ -368,7 +450,7 @@ _Setup-Wörter und Metaphern_
 | Automation | Eine wiederholbare Agenten-Aufgabe, die über einen Auslöser laufen kann. | ⏲️ Küchentimer |
 | Usage | Der Account-Bereich, in dem du siehst, wie viel Codex genutzt wurde. | 💸 Gehalt für den Koch |
 
-## Folie 36: Zusammenfassung: Use Cases
+## Folie 40: Zusammenfassung: Use Cases
 
 _Anweisungen und Metaphern_
 

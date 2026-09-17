@@ -899,8 +899,317 @@ hw-workshop-slides-deck .seminar-slide-live-demo .slide-content:empty {
   }
 }
 
+hw-workshop-slides-deck .hw-deck-automation {
+  --hw-automation-width: 1100px;
+  --hw-automation-gap: var(--space-42);
+  --hw-automation-symbol-size: var(--space-88);
+  --hw-automation-icon-size: var(--space-48);
+  --hw-automation-heading-size: 1.5rem;
+  --hw-automation-value-size: 1.35rem;
+  --hw-automation-detail-size: 1rem;
+  --hw-automation-intro-size: 1.25rem;
+  --hw-automation-leading: 1.3;
+  --hw-automation-motion-duration: 4s;
+  width: min(var(--size-full), var(--hw-automation-width));
+  display: grid;
+  gap: var(--space-18);
+  justify-self: center;
+  margin: var(--space-none);
+  text-align: center;
+}
+
+hw-workshop-slides-deck .hw-deck-automation-intro {
+  max-width: var(--size-slide-copy-width);
+  justify-self: center;
+  font-size: var(--hw-automation-intro-size);
+  line-height: var(--line-height-body);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-example {
+  max-width: none;
+  font-size: var(--hw-automation-detail-size);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--hw-automation-gap);
+  margin: var(--space-none);
+  padding: var(--space-none);
+  list-style: none;
+}
+
+hw-workshop-slides-deck .hw-deck-automation-step {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: var(--space-14);
+  margin: var(--space-none);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-symbol {
+  width: var(--hw-automation-symbol-size);
+  height: var(--hw-automation-symbol-size);
+  display: grid;
+  place-items: center;
+  border: var(--space-2) solid var(--color-text);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-step[data-tone="schedule"] .hw-deck-automation-symbol {
+  background: var(--color-brand-yellow);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-step[data-tone="task"] .hw-deck-automation-symbol {
+  background: var(--color-accent);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-icon {
+  display: block;
+  font-size: var(--hw-automation-icon-size);
+  line-height: 1;
+}
+
+hw-workshop-slides-deck .hw-deck-automation-copy {
+  display: grid;
+  gap: var(--space-7);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-copy h3 {
+  font-size: var(--hw-automation-heading-size);
+  line-height: var(--hw-automation-leading);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-value {
+  font-size: var(--hw-automation-value-size);
+  line-height: var(--hw-automation-leading);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-step[data-tone="schedule"] .hw-deck-automation-value {
+  font-variant-numeric: tabular-nums;
+}
+
+hw-workshop-slides-deck .hw-deck-automation-detail {
+  max-width: none;
+  font-size: var(--hw-automation-detail-size);
+  font-weight: 500;
+  line-height: var(--hw-automation-leading);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-arrow {
+  position: absolute;
+  top: calc(var(--hw-automation-symbol-size) / 2);
+  right: calc(var(--hw-automation-gap) / -2);
+  font-size: var(--hw-automation-icon-size);
+  line-height: 1;
+  transform: translate(50%, -50%);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-loop {
+  position: relative;
+  min-height: var(--space-32);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-inline: calc((100% - 2 * var(--hw-automation-gap)) / 6);
+  border: var(--space-2) solid var(--color-muted);
+  border-top: 0;
+  border-radius: 0 0 var(--radius-button) var(--radius-button);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-loop::before {
+  content: "↑";
+  position: absolute;
+  top: var(--space-none);
+  left: calc(-1 * var(--border-width));
+  color: var(--color-muted);
+  font-size: var(--hw-automation-heading-size);
+  line-height: 1;
+  transform: translate(-50%, -50%);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-repeat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+  padding-inline: var(--space-14);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--hw-automation-detail-size);
+  line-height: var(--hw-automation-leading);
+  transform: translateY(50%);
+}
+
+hw-workshop-slides-deck .hw-deck-automation-repeat-icon {
+  display: inline-block;
+  flex: 0 0 auto;
+  font-size: var(--space-32);
+  line-height: 1;
+}
+
+hw-workshop-slides-deck .hw-deck-automation-takeaway {
+  max-width: none;
+  margin-top: var(--space-20);
+  color: var(--color-text);
+  font-size: var(--hw-automation-intro-size);
+}
+
+/* One short rotation on entry keeps the diagram still while it is discussed. */
+hw-workshop-slides-deck .seminar-slide-automation.present .hw-deck-automation-step[data-tone="task"] .hw-deck-automation-icon,
+hw-workshop-slides-deck .seminar-slide-automation.present .hw-deck-automation-repeat-icon {
+  animation: hw-deck-automation-turn var(--hw-automation-motion-duration) ease-in-out;
+}
+
+@keyframes hw-deck-automation-turn {
+  from { transform: rotate(0turn); }
+  to { transform: rotate(1turn); }
+}
+
+@media screen and (max-width: 760px) {
+  hw-workshop-slides-deck .reveal .slides section.seminar-slide-automation.present {
+    justify-content: flex-start;
+  }
+
+  hw-workshop-slides-deck .hw-deck-automation {
+    --hw-automation-gap: var(--space-32);
+    --hw-automation-symbol-size: var(--space-64);
+    --hw-automation-icon-size: var(--space-36);
+    --hw-automation-heading-size: 1.2rem;
+    --hw-automation-value-size: 1.1rem;
+    --hw-automation-intro-size: 1rem;
+  }
+
+  hw-workshop-slides-deck .hw-deck-automation-steps {
+    grid-template-columns: 1fr;
+  }
+
+  hw-workshop-slides-deck .hw-deck-automation-step {
+    grid-template-columns: var(--hw-automation-symbol-size) minmax(0, 1fr);
+    align-items: center;
+    justify-items: start;
+    text-align: left;
+  }
+
+  hw-workshop-slides-deck .hw-deck-automation-arrow {
+    top: auto;
+    right: auto;
+    bottom: calc(var(--hw-automation-gap) / -2);
+    left: calc(var(--hw-automation-symbol-size) / 2);
+    transform: translate(-50%, 50%) rotate(90deg);
+  }
+
+  hw-workshop-slides-deck .hw-deck-automation-loop {
+    margin-inline: var(--space-none);
+    border: 0;
+  }
+
+  hw-workshop-slides-deck .hw-deck-automation-loop::before {
+    content: none;
+  }
+
+  hw-workshop-slides-deck .hw-deck-automation-repeat {
+    padding: var(--space-none);
+    transform: none;
+  }
+
+  hw-workshop-slides-deck .hw-deck-automation-takeaway {
+    margin-top: var(--space-none);
+  }
+}
+
+@media (prefers-reduced-motion: reduce), print {
+  hw-workshop-slides-deck .seminar-slide-automation.present .hw-deck-automation-step[data-tone="task"] .hw-deck-automation-icon,
+  hw-workshop-slides-deck .seminar-slide-automation.present .hw-deck-automation-repeat-icon {
+    animation: none;
+  }
+}
+
 hw-workshop-slides-deck .seminar-slide-agent-flow {
   gap: var(--space-14);
+}
+
+hw-workshop-slides-deck .seminar-slide-model-comparison {
+  --model-title-size: 2.8rem;
+  --model-copy-size: 1rem;
+  --model-copy-leading: 1.3;
+  --model-table-min-width: 62rem;
+  gap: var(--space-14);
+}
+
+hw-workshop-slides-deck .reveal .slides section.seminar-slide-model-comparison.present {
+  justify-content: flex-start;
+}
+
+hw-workshop-slides-deck .seminar-slide-model-comparison h2 {
+  font-size: var(--model-title-size);
+}
+
+hw-workshop-slides-deck .seminar-slide-model-comparison .slide-content {
+  gap: var(--space-14);
+  min-width: 0;
+}
+
+hw-workshop-slides-deck .hw-deck-table-scroll {
+  min-width: 0;
+  max-width: var(--size-full);
+  overflow-x: auto;
+  padding: var(--space-none) var(--space-7) var(--space-7) var(--space-none);
+}
+
+hw-workshop-slides-deck .hw-deck-table-scroll:focus-visible {
+  outline: var(--border-width) solid var(--color-text);
+  outline-offset: var(--space-2);
+}
+
+hw-workshop-slides-deck .seminar-slide-model-comparison .slide-table {
+  min-width: var(--model-table-min-width);
+}
+
+hw-workshop-slides-deck .seminar-slide-model-comparison .slide-table td:not(:nth-child(2)) {
+  white-space: nowrap;
+}
+
+hw-workshop-slides-deck .seminar-slide-model-comparison .slide-table tr > :nth-child(6),
+hw-workshop-slides-deck .seminar-slide-model-comparison .slide-table tr > :nth-child(7) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+hw-workshop-slides-deck .seminar-slide-model-comparison .slide-table th,
+hw-workshop-slides-deck .seminar-slide-model-comparison .slide-table td {
+  padding: var(--space-7) var(--space-10);
+}
+
+hw-workshop-slides-deck .seminar-slide-model-comparison .slide-text {
+  max-width: var(--size-full);
+  font-size: var(--model-copy-size);
+  line-height: var(--model-copy-leading);
+  text-align: left;
+}
+
+hw-workshop-slides-deck .seminar-slide-reasoning-info {
+  --reasoning-title-size: 2.8rem;
+  --reasoning-copy-size: 1.2rem;
+  --reasoning-leading: 1.35;
+  gap: var(--space-14);
+}
+
+hw-workshop-slides-deck .seminar-slide-reasoning-info h2 {
+  font-size: var(--reasoning-title-size);
+}
+
+hw-workshop-slides-deck .seminar-slide-reasoning-info .slide-content {
+  gap: var(--space-14);
+}
+
+hw-workshop-slides-deck .seminar-slide-reasoning-info .slide-text,
+hw-workshop-slides-deck .seminar-slide-reasoning-info .slide-list-block li,
+hw-workshop-slides-deck .seminar-slide-reasoning-info .slide-callout p {
+  font-size: var(--reasoning-copy-size);
+  line-height: var(--reasoning-leading);
 }
 
 hw-workshop-slides-deck .seminar-slide-summary {
@@ -1270,6 +1579,29 @@ hw-workshop-slides-deck .concept-card-metaphor {
   border-top: var(--border-width) solid var(--color-text);
   padding-top: var(--space-14);
   font-weight: var(--font-weight-button);
+}
+
+hw-workshop-slides-deck .hw-deck-concept-links {
+  display: grid;
+  gap: var(--space-10);
+  margin: var(--space-none);
+  padding: var(--space-none);
+  list-style: none;
+  font-size: var(--font-size-idea-min);
+  line-height: var(--line-height-body);
+}
+
+hw-workshop-slides-deck .hw-deck-concept-links a {
+  color: var(--color-text);
+  font-weight: var(--font-weight-label);
+  text-decoration: underline;
+  text-underline-offset: var(--space-2);
+  overflow-wrap: anywhere;
+}
+
+hw-workshop-slides-deck .hw-deck-concept-links a:focus-visible {
+  outline: var(--space-2) solid var(--color-text);
+  outline-offset: var(--space-2);
 }
 
 hw-workshop-slides-deck .slide-comparison,
