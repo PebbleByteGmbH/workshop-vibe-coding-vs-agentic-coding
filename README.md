@@ -74,3 +74,14 @@ Keep the workshop approachable: every file should be something a participant can
 Open `src/index.html` in a browser.
 
 That is the whole runtime contract. No install step, no terminal command, no Docker, no Node.js, no npm, no framework.
+
+## Slide design system
+
+Both workshop decks echo the index page with a subtle grid, bold Geist headings,
+smaller body copy, dark card outlines, light yellow icon headers, and consistent
+6px hard yellow shadows. Card headings belong in the body. Screenshots have white
+backings and rounded frames; footer numbers use muted, regular-weight text.
+PebbleByte yellow is the accent color. Day 1 has 51 slides and day 2 has 41 slides
+in both languages. Dense content is split at topic boundaries while preserving
+wording, links, images, notes, and table cells. See [the slide design guide](docs/slide-design.md)
+for typography roles, component variants, content editing and verification.

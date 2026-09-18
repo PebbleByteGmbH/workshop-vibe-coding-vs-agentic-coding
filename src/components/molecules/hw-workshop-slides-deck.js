@@ -7,8 +7,56 @@ class HwWorkshopSlidesDeck extends HTMLElement {
     this.render();
   }
 
+  disconnectedCallback() {
+    this.headerObserver?.disconnect();
+    cancelAnimationFrame(this.headerFrame);
+  }
+
   attributeChangedCallback() {
     this.render();
+  }
+
+  observeCardHeaders() {
+    this.headerObserver?.disconnect();
+    cancelAnimationFrame(this.headerFrame);
+    const pendingGroups = new Set();
+    this.headerObserver = new ResizeObserver((entries) => {
+      entries.forEach(({ target }) => {
+        const card = target.closest(".hw-deck-card");
+        pendingGroups.add(card ? card.parentElement : target);
+      });
+      cancelAnimationFrame(this.headerFrame);
+      // Apply sizes outside observer delivery to avoid resize-observer loops.
+      this.headerFrame = requestAnimationFrame(() => {
+        pendingGroups.forEach((group) => {
+          if (!group.isConnected) return;
+          const headers = [...group.querySelectorAll(":scope > .hw-deck-card > .hw-deck-card-visual")];
+          // Reset before measuring so fonts, wrapping, and viewport changes can
+          // shrink headers as well as grow them. Only align siblings in one row.
+          headers.forEach((header) => header.style.removeProperty("--hw-deck-card-header-height"));
+          const rows = new Map();
+          headers.forEach((header) => {
+            const top = header.parentElement.offsetTop;
+            if (!rows.has(top)) rows.set(top, []);
+            rows.get(top).push(header);
+          });
+          rows.forEach((row) => {
+            const height = Math.max(...row.map((header) => header.offsetHeight));
+            if (row.length > 1 && height > 0) {
+              row.forEach((header) => header.style.setProperty("--hw-deck-card-header-height", `${height}px`));
+            }
+          });
+        });
+        pendingGroups.clear();
+      });
+    });
+
+    this.querySelectorAll(".hw-deck-card-visual").forEach((header) => {
+      this.headerObserver.observe(header);
+      this.headerObserver.observe(header.parentElement.parentElement);
+      // Content changes (including loaded fonts) must also resize shorter headers.
+      [...header.children].forEach((child) => this.headerObserver.observe(child));
+    });
   }
 
   render() {
@@ -22,10 +70,10 @@ class HwWorkshopSlidesDeck extends HTMLElement {
     const slides = document.createElement("div");
     slides.className = "slides";
 
-    slides.append(...seminarSlides.map((slide) => createSlide(slide, slidesCopy)));
+    slides.append(...seminarSlides.map((slide, index) => createSlide(slide, slidesCopy, pageCopy.brand, index, seminarSlides.length)));
     reveal.append(slides);
-    reveal.append(createSlideBrand(pageCopy.brand));
     this.replaceChildren(reveal);
+    this.observeCardHeaders();
   }
 }
 
@@ -68,7 +116,7 @@ function createSlideBrand(brandCopy = {}) {
   return brand;
 }
 
-function createSlide(slide, labels) {
+function createSlide(slide, labels, brandCopy, index, total) {
   const section = document.createElement("section");
   const sectionClasses = ["seminar-slide"];
 
@@ -81,30 +129,71 @@ function createSlide(slide, labels) {
   }
 
   section.className = sectionClasses.join(" ");
+  section.dataset.composition = slide.composition || "standard";
+  section.dataset.palette = slide.palette || "white";
+  if (slide.density) section.dataset.density = slide.density;
 
-  const heading = document.createElement(slide.cover ? "h1" : "h2");
-  appendTextWithBreaks(heading, slide.title);
+  const isStatement = slide.cover || slide.layout === "live-demo";
+  if (slide.tone === "inverse") section.dataset.palette = "black";
+  if (slide.blocks.some((block) => block.type === "screenshot")) section.dataset.media = "true";
+  const header = document.createElement("header");
+  header.className = "hw-deck-header";
+  const heading = HwDeckUI.heading(slide.title, slide.cover ? 1 : 2, isStatement ? "display" : "slide");
 
   const content = document.createElement("div");
   content.className = "slide-content";
-  content.append(...slide.blocks.map((block) => createBlock(block, labels)));
+  content.append(...slide.blocks.map((block) => {
+    const element = createBlock(block, labels);
+    const exerciseList = slide.composition === "exercise-columns" && block.type === "bullets";
+    const exerciseSteps = slide.composition === "exercise-steps" && block.type === "ordered";
+    if (exerciseList || exerciseSteps) {
+      element.classList.add("hw-deck-card");
+      element.dataset.variant = "neutral";
+      return HwDeckUI.sectionCard(element, HwDeckUI.icon(block.icon || (exerciseSteps ? "clipboard-list" : "file")));
+    }
+    return element;
+  }));
+  if (slide.composition === "exercise-table") {
+    const examples = document.createElement("div");
+    examples.className = "hw-deck-input-examples";
+    const tableIndex = slide.blocks.findIndex((block) => block.type === "table");
+    const table = content.children[tableIndex];
+    const explanation = content.querySelector(":scope > .slide-text");
+    if (table) examples.append(table);
+    if (explanation) examples.append(explanation);
+    content.append(examples);
+  }
+  if (slide.composition === "models") {
+    // Keep the comparison together, with its three explanations below it.
+    const explanations = document.createElement("div");
+    explanations.className = "hw-deck-model-explanations";
+    const sources = document.createElement("div");
+    sources.className = "hw-deck-model-sources";
+    explanations.append(...content.querySelectorAll(":scope > .slide-text"));
+    sources.append(...content.querySelectorAll(":scope > .slide-link"));
+    content.append(explanations, sources);
+  }
 
   if (slide.subtitle) {
-    const eyebrow = document.createElement("p");
-    eyebrow.className = "slide-eyebrow";
-    eyebrow.textContent = slide.subtitle;
-    section.append(eyebrow);
+    header.append(HwDeckUI.label(slide.subtitle, "slide-eyebrow"));
   }
 
   if (slide.title) {
-    section.append(heading);
+    header.append(heading);
   }
+
+  section.append(header);
 
   if (slide.byline || slide.image) {
     section.append(createCoverMeta(slide, labels));
   }
 
   section.append(content);
+  const footer = document.createElement("footer");
+  footer.className = "hw-deck-footer";
+  const number = HwDeckUI.label(`${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`, "hw-deck-page-number");
+  footer.append(createSlideBrand(brandCopy), number);
+  section.append(footer);
 
   if (slide.notes) {
     const notes = document.createElement("aside");
@@ -137,8 +226,8 @@ function createCoverMeta(slide, labels) {
   }
 
   if (slide.byline) {
-    const byline = document.createElement("p");
-    byline.textContent = slide.byline;
+    const byline = HwDeckUI.paragraph(slide.byline);
+
     meta.append(byline);
   }
 
@@ -179,76 +268,68 @@ function createAutomationFlow(block) {
   intro.className = "hw-deck-automation-intro";
   intro.textContent = block.intro;
 
-  const example = document.createElement("p");
-  example.className = "hw-deck-automation-example";
-  example.textContent = block.example;
+  const example = HwDeckUI.paragraph(block.example);
+  example.className += " " + "hw-deck-automation-example";
+
 
   const steps = document.createElement("ol");
   steps.className = "hw-deck-automation-steps";
 
-  steps.append(...block.steps.map((item, index) => {
-    const step = document.createElement("li");
-    step.className = "hw-deck-automation-step";
+  steps.append(...block.steps.flatMap((item, index) => {
+    const step = HwDeckUI.card("hw-deck-automation-step fragment", "neutral", "li");
     step.dataset.tone = item.tone;
 
     const symbol = document.createElement("span");
     symbol.className = "hw-deck-automation-symbol";
     symbol.setAttribute("aria-hidden", "true");
 
-    const icon = document.createElement("span");
-    icon.className = "hw-deck-automation-icon";
-    icon.textContent = item.icon;
+    const icon = HwDeckUI.icon(item.icon, "hw-deck-automation-icon");
     symbol.append(icon);
 
     const copy = document.createElement("div");
     copy.className = "hw-deck-automation-copy";
 
-    const label = document.createElement("h3");
-    label.textContent = item.label;
+    const label = HwDeckUI.heading(item.label);
 
-    const value = document.createElement("strong");
-    value.className = "hw-deck-automation-value";
-    value.textContent = item.value;
+    const value = HwDeckUI.paragraph(item.value, "hw-deck-automation-value");
 
-    const detail = document.createElement("p");
-    detail.className = "hw-deck-automation-detail";
-    detail.textContent = item.detail;
+    const detail = HwDeckUI.paragraph(item.detail);
+    detail.className += " " + "hw-deck-automation-detail";
 
-    copy.append(label, value, detail);
-    step.append(symbol, copy);
+
+    copy.append(value, detail);
+    step.append(label, copy);
+    HwDeckUI.sectionCard(step, symbol);
 
     if (index < block.steps.length - 1) {
-      const arrow = document.createElement("span");
-      arrow.className = "hw-deck-automation-arrow";
+      const arrow = document.createElement("li");
+      arrow.className = "agent-flow-arrow hw-deck-automation-arrow fragment";
       arrow.setAttribute("aria-hidden", "true");
-      arrow.textContent = "→";
-      step.append(arrow);
+      return [step, arrow];
     }
 
-    return step;
+    return [step];
   }));
 
   const loop = document.createElement("div");
-  loop.className = "hw-deck-automation-loop";
+  loop.className = "hw-deck-automation-loop fragment";
 
-  const repeat = document.createElement("p");
-  repeat.className = "hw-deck-automation-repeat";
+  const repeat = HwDeckUI.paragraph("", "hw-deck-automation-repeat");
 
-  const repeatIcon = document.createElement("span");
-  repeatIcon.className = "hw-deck-automation-repeat-icon";
-  repeatIcon.setAttribute("aria-hidden", "true");
-  repeatIcon.textContent = "⟳";
+  const repeatIcon = HwDeckUI.icon("refresh", "hw-deck-automation-repeat-icon");
 
   const repeatLabel = document.createElement("span");
   repeatLabel.textContent = block.repeat;
   repeat.append(repeatIcon, repeatLabel);
-  loop.append(repeat);
+  loop.append(HwDeckUI.icon("arrow-up", "hw-deck-automation-return-arrow"), repeat);
 
-  const takeaway = document.createElement("p");
-  takeaway.className = "hw-deck-automation-takeaway";
-  takeaway.textContent = block.takeaway;
+  const takeaway = HwDeckUI.paragraph(block.takeaway);
+  takeaway.className += " " + "hw-deck-automation-takeaway fragment";
 
-  flow.append(intro, example, steps, loop, takeaway);
+
+  if (block.intro) flow.append(intro);
+  if (block.example) flow.append(example);
+  flow.append(steps, loop, takeaway);
   return flow;
 }
 
@@ -260,8 +341,7 @@ function createEmojiOnly(block) {
     const emoji = document.createElement("div");
     emoji.className = "slide-emoji-item fragment";
 
-    const symbols = document.createElement("span");
-    symbols.textContent = item;
+    const symbols = HwDeckUI.icon(item);
 
     emoji.append(symbols);
     return emoji;
@@ -273,11 +353,13 @@ function createEmojiOnly(block) {
 function createAgentLogos(block, labels) {
   const grid = document.createElement("div");
   grid.className = "agent-logo-grid";
+  grid.style.setProperty("--hw-deck-columns", Math.min(block.items.length, 3));
 
-  grid.append(...block.items.map((item) => {
-    const card = document.createElement(item.href ? "a" : "article");
-    card.className = "agent-logo-card fragment";
-    card.style.setProperty("--agent-logo-accent", item.accent);
+  grid.append(...block.items.map((item, index) => {
+    const card = HwDeckUI.card("agent-logo-card fragment", cardVisualVariant(item, index), item.href ? "a" : "article");
+    if (item.accent) {
+      card.style.setProperty("--agent-brand-color", item.accent);
+    }
     if (item.href) {
       card.href = item.href;
       card.target = "_blank";
@@ -301,11 +383,10 @@ function createAgentLogos(block, labels) {
       mark.textContent = item.mark;
     }
 
-    const name = document.createElement("strong");
-    name.textContent = item.name;
+    const name = HwDeckUI.heading(item.name);
 
-    card.append(mark, name);
-    return card;
+    card.append(name);
+    return HwDeckUI.sectionCard(card, mark);
   }));
 
   return grid;
@@ -314,28 +395,26 @@ function createAgentLogos(block, labels) {
 function createConceptCards(block) {
   const grid = document.createElement("div");
   grid.className = "concept-card-grid";
+  grid.style.setProperty("--hw-deck-columns", Math.min(block.items.length, 3));
 
-  grid.append(...block.items.map((item) => {
-    const card = document.createElement("article");
-    card.className = "concept-card fragment";
-    card.style.setProperty("--concept-card-accent", item.accent);
+  grid.append(...block.items.map((item, index) => {
+    const card = HwDeckUI.card("concept-card fragment", cardVisualVariant(item, index));
 
-    const title = document.createElement("strong");
-    title.textContent = item.title;
+    const title = HwDeckUI.heading(item.title);
 
-    const children = [createConceptCardIcons(item), title];
+    const children = [title];
 
     if (item.description) {
-      const description = document.createElement("p");
-      description.className = "concept-card-description";
-      description.textContent = item.description;
+      const description = HwDeckUI.paragraph(item.description);
+      description.className += " " + "concept-card-description";
+
       children.push(description);
     }
 
     if (item.metaphor) {
-      const metaphor = document.createElement("p");
-      metaphor.className = "concept-card-metaphor";
-      metaphor.textContent = item.metaphor;
+      const metaphor = HwDeckUI.paragraph(item.metaphor);
+      metaphor.className += " " + "concept-card-metaphor";
+
       children.push(metaphor);
     }
 
@@ -358,15 +437,20 @@ function createConceptCards(block) {
     }
 
     card.append(...children);
-    return card;
+    return HwDeckUI.sectionCard(card, createConceptCardIcons(item));
   }));
 
   return grid;
 }
 
+function cardVisualVariant(item, index) {
+  const variant = item.variant || ["neutral", "inverse", "accent"][index % 3];
+  return variant === "inverted" ? "inverse" : variant;
+}
+
 function createConceptCardIcons(item) {
-  if (!Array.isArray(item.icons)) {
-    return createConceptCardSvgIcon(item.icon);
+  if (!Array.isArray(item.icons) || !item.icons.length) {
+    return createConceptCardSvgIcon(item.icon || "apps");
   }
 
   const icons = document.createElement("div");
@@ -377,10 +461,6 @@ function createConceptCardIcons(item) {
 }
 
 function createConceptCardSymbol(symbol) {
-  if (typeof symbol === "string") {
-    return createConceptCardSvgIcon(symbol);
-  }
-
   if (symbol.emoji) {
     const emoji = document.createElement("span");
     emoji.className = "concept-card-emoji-icon";
@@ -389,16 +469,15 @@ function createConceptCardSymbol(symbol) {
     return emoji;
   }
 
+  if (typeof symbol === "string") {
+    return createConceptCardSvgIcon(symbol);
+  }
+
   return createConceptCardSvgIcon(symbol.icon);
 }
 
 function createConceptCardSvgIcon(name) {
-  const icon = document.createElement("img");
-  icon.className = "concept-card-icon";
-  icon.src = `vendor/tabler-icons/outline/${name}.svg`;
-  icon.alt = "";
-  icon.setAttribute("aria-hidden", "true");
-  return icon;
+  return HwDeckUI.icon(name, "concept-card-icon");
 }
 
 function createAgentFlow(block, labels) {
@@ -413,21 +492,25 @@ function createAgentFlow(block, labels) {
     flowClasses.push("agent-flow-equal-columns");
   }
 
+  if (block.emphasizeMiddle === true) {
+    flowClasses.push("agent-flow-focused");
+  }
+
   if (block.showArrows === false) {
     flowClasses.push("agent-flow-no-arrows");
   }
 
   flow.className = flowClasses.join(" ");
 
-  const intro = document.createElement("p");
-  intro.className = "agent-flow-intro";
-  intro.textContent = block.intro;
+  const intro = HwDeckUI.paragraph(block.intro);
+  intro.className += " " + "agent-flow-intro";
+
 
   const columns = document.createElement("div");
   columns.className = "agent-flow-columns";
 
   block.columns.forEach((column, index) => {
-    columns.append(createAgentFlowColumn(column));
+    columns.append(createAgentFlowColumn(column, block.showItemIcons !== false));
 
     if (block.showArrows !== false && index < block.columns.length - 1) {
       const arrow = document.createElement("div");
@@ -437,22 +520,23 @@ function createAgentFlow(block, labels) {
     }
   });
 
-  const keyIdea = document.createElement("div");
-  keyIdea.className = "slide-callout slide-callout-wide slide-callout-inverted agent-flow-key fragment";
+  const keyIdea = HwDeckUI.card("", "inverse");
+  keyIdea.className += " " + "slide-callout slide-callout-wide slide-callout-inverted agent-flow-key fragment";
 
-  const label = document.createElement("strong");
-  label.textContent = block.keyIdeaLabel || labels.keyIdeaLabel || "Key idea";
+  const label = HwDeckUI.heading(block.keyIdeaLabel || labels.keyIdeaLabel || "Key idea");
 
-  const text = document.createElement("p");
-  text.textContent = block.keyIdea;
+  const text = HwDeckUI.paragraph(block.keyIdea);
+
 
   keyIdea.append(label, text);
-  flow.append(intro, columns, keyIdea);
+  if (block.intro) flow.append(intro);
+  if (block.columns.length) flow.append(columns);
+  if (block.keyIdea) flow.append(keyIdea);
   return flow;
 }
 
-function createAgentFlowColumn(column) {
-  const panel = document.createElement("div");
+function createAgentFlowColumn(column, showItemIcons = true) {
+  const panel = HwDeckUI.card("", column.variant === "inverted" ? "inverse" : "neutral");
   const panelClasses = ["agent-flow-panel", `agent-flow-panel-${column.layout}`, "fragment"];
 
   if (column.size) {
@@ -463,42 +547,33 @@ function createAgentFlowColumn(column) {
     panelClasses.push("agent-flow-panel-inverted");
   }
 
-  panel.className = panelClasses.join(" ");
+  panel.className += " " + panelClasses.join(" ");
 
-  const title = document.createElement("h3");
-  title.textContent = column.title;
+  const title = HwDeckUI.heading(column.title);
 
   const items = document.createElement("div");
   items.className = "agent-flow-items";
-  items.append(...column.items.map((item) => createAgentFlowItem(item, column.layout)));
+  items.append(...column.items.map((item) => createAgentFlowItem(item, column.layout, showItemIcons)));
 
   panel.append(title, items);
-  return panel;
+  return HwDeckUI.sectionCard(panel, HwDeckUI.icon(column.icon || column.items[0]?.icon || "apps"));
 }
 
-function createAgentFlowItem(item, layout) {
+function createAgentFlowItem(item, layout, showIcon = true) {
   const row = document.createElement("div");
   row.className = `agent-flow-item agent-flow-item-${layout}`;
   row.style.setProperty("--agent-flow-icon-color", item.color);
 
-  const icon = createIcon(item.icon);
   const label = document.createElement("span");
-  appendTextWithBreaks(label, item.label);
+  appendTextWithBreaks(label, item.label.replace(/\n/g, " "));
 
-  row.append(icon, label);
+  if (showIcon) row.append(createIcon(item.icon));
+  row.append(label);
   return row;
 }
 
 function createIcon(name) {
-  const icon = document.createElement("img");
-  icon.className = "agent-flow-icon";
-  icon.src = `vendor/tabler-icons/outline/${name}.svg`;
-  icon.alt = "";
-  icon.loading = "eager";
-  icon.decoding = "async";
-  icon.draggable = false;
-
-  return icon;
+  return HwDeckUI.icon(name, "agent-flow-icon");
 }
 
 function appendTextWithBreaks(element, text) {
@@ -519,9 +594,9 @@ function formatLabel(template, values) {
 }
 
 function createText(block) {
-  const paragraph = document.createElement("p");
-  paragraph.className = "slide-text fragment";
-  paragraph.textContent = block.text;
+  const paragraph = HwDeckUI.paragraph(block.text);
+  paragraph.className += " " + "slide-text fragment";
+
   return paragraph;
 }
 
@@ -532,8 +607,8 @@ function createProfile(block) {
   const lines = document.createElement("div");
   lines.className = "slide-profile-lines";
   lines.append(...block.lines.map((line) => {
-    const item = document.createElement("p");
-    item.textContent = line;
+    const item = HwDeckUI.paragraph(line);
+
     return item;
   }));
 
@@ -556,10 +631,7 @@ function createProfileContact(item) {
   }
 
   if (item.type === "email" || item.type === "linkedin") {
-    const icon = document.createElement("span");
-    icon.className = "slide-profile-contact-icon";
-    icon.setAttribute("aria-hidden", "true");
-    icon.textContent = item.type === "email" ? "@" : "in";
+    const icon = HwDeckUI.icon(item.type === "email" ? "mail" : "brand-linkedin", "slide-profile-contact-icon");
     link.append(icon);
   }
 
@@ -586,10 +658,13 @@ function createScreenshot(block) {
   const image = document.createElement("img");
   image.src = block.src;
   image.alt = block.alt || "";
-  image.loading = "lazy";
+  image.loading = "eager";
   image.decoding = "async";
   image.draggable = false;
-  figure.append(image);
+  const panel = document.createElement("div");
+  panel.className = "hw-deck-image-panel";
+  panel.append(image);
+  figure.append(panel);
 
   if (block.caption) {
     const caption = document.createElement("figcaption");
@@ -601,7 +676,7 @@ function createScreenshot(block) {
 }
 
 function createCallout(block) {
-  const callout = document.createElement("div");
+  const callout = HwDeckUI.card("", block.variant === "inverted" ? "inverse" : (block.variant || "neutral"));
   const calloutClasses = ["slide-callout", "fragment"];
 
   if (block.wide) {
@@ -612,27 +687,23 @@ function createCallout(block) {
     calloutClasses.push("slide-callout-inverted");
   }
 
-  callout.className = calloutClasses.join(" ");
-  if (block.label === "Rule" || block.label === "Safety rule") {
-    callout.dataset.tone = "green";
-  }
+  callout.className += " " + calloutClasses.join(" ");
+  if (block.tone) callout.dataset.tone = block.tone;
 
-  const label = document.createElement("strong");
-  label.textContent = block.label;
+  const label = HwDeckUI.heading(block.label);
 
-  const text = document.createElement("p");
-  text.textContent = block.text;
+  const text = HwDeckUI.paragraph(block.text);
+
 
   callout.append(label, text);
-  return callout;
+  return HwDeckUI.sectionCard(callout, HwDeckUI.icon(block.icon || "message"));
 }
 
 function createPrompt(block) {
   const wrapper = document.createElement("div");
   wrapper.className = "slide-prompt fragment";
 
-  const label = document.createElement("strong");
-  label.textContent = block.label;
+  const label = HwDeckUI.heading(block.label);
 
   wrapper.append(label, createCode(block));
   return wrapper;
@@ -650,29 +721,28 @@ function createSkillAnatomy(block) {
   const anatomy = document.createElement("div");
   anatomy.className = "skill-anatomy fragment";
 
-  const tree = document.createElement("div");
-  tree.className = "skill-anatomy-tree";
+  const tree = HwDeckUI.card("skill-anatomy-tree");
 
-  const treeLabel = document.createElement("strong");
-  treeLabel.textContent = block.treeLabel;
+  const treeLabel = HwDeckUI.heading(block.treeLabel);
 
   const pre = document.createElement("pre");
   const code = document.createElement("code");
   code.textContent = block.tree;
   pre.append(code);
   tree.append(treeLabel, pre);
+  HwDeckUI.sectionCard(tree, HwDeckUI.icon("folder"));
 
-  const checklist = document.createElement("div");
-  checklist.className = "skill-anatomy-checklist";
+  const checklist = HwDeckUI.card("skill-anatomy-checklist");
 
-  const checklistLabel = document.createElement("strong");
-  checklistLabel.textContent = block.checklistLabel;
+  const checklistLabel = HwDeckUI.heading(block.checklistLabel);
 
   const list = document.createElement("ul");
-  list.append(...block.items.map((item) => createListItem(item)));
+  list.append(...block.items.map((item) => createListItem(item, block.revealItems === true)));
   checklist.append(checklistLabel, list);
+  HwDeckUI.sectionCard(checklist, HwDeckUI.icon("clipboard-list"));
 
-  anatomy.append(tree, checklist);
+  if (block.panel !== "checklist") anatomy.append(tree);
+  if (block.panel !== "tree") anatomy.append(checklist);
   return anatomy;
 }
 
@@ -681,13 +751,12 @@ function createBullets(block) {
   wrapper.className = block.reveal === false ? "slide-list-block" : "slide-list-block fragment";
 
   if (block.label) {
-    const label = document.createElement("strong");
-    label.textContent = block.label;
+    const label = HwDeckUI.heading(block.label);
     wrapper.append(label);
   }
 
   const list = document.createElement("ul");
-  list.append(...block.items.map((item) => createListItem(item)));
+  list.append(...block.items.map((item) => createListItem(item, block.revealItems === true)));
   wrapper.append(list);
   return wrapper;
 }
@@ -702,8 +771,7 @@ function createOrderedList(block) {
 
   wrapper.className = classes.join(" ");
 
-  const label = document.createElement("strong");
-  label.textContent = block.label;
+  const label = HwDeckUI.heading(block.label);
 
   const list = document.createElement("ol");
   list.append(...block.items.map((item) => createListItem(item, block.revealItems)));
@@ -715,16 +783,17 @@ function createOrderedList(block) {
 function createColumns(block) {
   const list = document.createElement("ul");
   list.className = "slide-chip-list fragment";
-  list.append(...block.items.map((item) => createListItem(item)));
+  list.append(...block.items.map((item) => createListItem(item, block.revealItems === true)));
   return list;
 }
 
 function createComparison(block) {
   const comparison = document.createElement("div");
   comparison.className = block.revealItems ? "slide-comparison" : "slide-comparison fragment";
+  comparison.style.setProperty("--hw-deck-columns", Math.min(block.items.length, 3));
 
   comparison.append(...block.items.map((item) => {
-    const card = document.createElement("div");
+    const card = HwDeckUI.card("", block.cardStyle === "inverted" ? "inverse" : "neutral");
     const cardClasses = ["slide-mini-card"];
 
     if (block.cardStyle === "inverted") {
@@ -735,16 +804,15 @@ function createComparison(block) {
       cardClasses.push("fragment");
     }
 
-    card.className = cardClasses.join(" ");
+    card.className += " " + cardClasses.join(" ");
     if (item.tone) {
       card.dataset.tone = item.tone;
     }
 
-    const label = document.createElement("strong");
-    label.textContent = item.label;
+    const label = HwDeckUI.heading(item.label);
 
     card.append(label, createCode(item));
-    return card;
+    return HwDeckUI.sectionCard(card, HwDeckUI.icon(item.icon || "code"));
   }));
 
   return comparison;
@@ -753,22 +821,21 @@ function createComparison(block) {
 function createSecurityColumns(block) {
   const wrapper = document.createElement("div");
   wrapper.className = block.revealItems ? "slide-security" : "slide-security fragment";
+  wrapper.style.setProperty("--hw-deck-columns", Math.min(block.columns.length, 3));
 
   wrapper.append(...block.columns.map((column) => {
-    const card = document.createElement("div");
-    card.className = block.revealItems ? "slide-mini-card fragment" : "slide-mini-card";
+    const card = HwDeckUI.card(block.revealItems ? "slide-mini-card fragment" : "slide-mini-card", column.variant || "neutral");
     if (column.tone) {
       card.dataset.tone = column.tone;
     }
 
-    const label = document.createElement("strong");
-    label.textContent = column.label;
+    const label = HwDeckUI.heading(column.label);
 
     const list = document.createElement("ul");
     list.append(...column.items.map((item) => createListItem(item)));
 
     card.append(label, list);
-    return card;
+    return HwDeckUI.sectionCard(card, HwDeckUI.icon(column.icon || "lock"));
   }));
 
   return wrapper;
@@ -776,20 +843,15 @@ function createSecurityColumns(block) {
 
 function createTable(block) {
   const table = document.createElement("table");
-  const revealCells = block.revealCells === true;
-  const tableClasses = ["slide-table"];
-
-  if (block.revealTable === true || (!block.revealRows && !revealCells)) {
-    tableClasses.push("fragment");
-  }
-
-  table.className = tableClasses.join(" ");
+  table.className = "slide-table";
 
   const thead = document.createElement("thead");
   const headRow = document.createElement("tr");
-  headRow.append(...block.headers.map((header) => {
+  headRow.append(...block.headers.map((header, index) => {
     const th = document.createElement("th");
     th.textContent = header;
+    th.scope = "col";
+    if (block.numericColumns?.includes(index)) th.className = "hw-deck-numeric";
     return th;
   }));
   thead.append(headRow);
@@ -797,15 +859,12 @@ function createTable(block) {
   const tbody = document.createElement("tbody");
   tbody.append(...block.rows.map((row) => {
     const tr = document.createElement("tr");
-    if (block.revealRows && !revealCells) {
-      tr.className = "fragment";
-    }
+    tr.className = "fragment";
 
-    tr.append(...row.map((cell) => {
-      const td = document.createElement("td");
-      if (revealCells) {
-        td.className = "fragment";
-      }
+    tr.append(...row.map((cell, index) => {
+      const td = document.createElement(index === 0 ? "th" : "td");
+      if (index === 0) td.scope = "row";
+      if (block.numericColumns?.includes(index)) td.classList.add("hw-deck-numeric");
       appendTableCellContent(td, cell);
       return td;
     }));
@@ -814,17 +873,22 @@ function createTable(block) {
 
   table.append(thead, tbody);
 
-  if (block.scrollLabel) {
+  {
     const wrapper = document.createElement("div");
-    wrapper.className = "hw-deck-table-scroll";
+    wrapper.className = "hw-deck-table-scroll fragment";
     wrapper.tabIndex = 0;
     wrapper.setAttribute("role", "region");
-    wrapper.setAttribute("aria-label", block.scrollLabel);
+    wrapper.setAttribute("aria-label", block.scrollLabel || block.headers.join(" · "));
     wrapper.append(table);
+    wrapper.addEventListener("keydown", (event) => {
+      if (["ArrowLeft", "ArrowRight"].includes(event.key) && wrapper.scrollWidth > wrapper.clientWidth) {
+        // Let the browser scroll the focused table instead of navigating Reveal.
+        event.stopPropagation();
+      }
+    });
     return wrapper;
   }
 
-  return table;
 }
 
 function appendTableCellContent(cellElement, cell) {
@@ -836,14 +900,15 @@ function appendTableCellContent(cellElement, cell) {
   const label = document.createElement("span");
   label.className = "slide-table-label";
 
-  if (cell.icon) {
-    const icon = document.createElement("img");
-    icon.className = "slide-table-icon";
-    icon.src = `vendor/tabler-icons/outline/${cell.icon}.svg`;
-    icon.alt = "";
-    icon.setAttribute("aria-hidden", "true");
-    icon.draggable = false;
-    label.append(icon);
+  if (cell.emojis?.length) {
+    const emojis = document.createElement("span");
+    emojis.textContent = cell.emojis.join("");
+    emojis.setAttribute("aria-hidden", "true");
+    label.append(emojis);
+  }
+
+  for (const name of cell.icons || (cell.icon ? [cell.icon] : [])) {
+    label.append(HwDeckUI.icon(name, "slide-table-icon"));
   }
 
   const text = document.createElement("span");

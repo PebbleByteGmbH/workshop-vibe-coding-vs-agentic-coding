@@ -1,32 +1,41 @@
 @font-face {
   font-family: "Saira";
   font-style: normal;
-  font-weight: 900;
+  font-weight: 100 900;
   font-display: swap;
-  src: url("assets/fonts/saira-latin.woff2") format("woff2");
+  src: url("assets/fonts/saira-variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Geist Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("assets/fonts/geist-variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("assets/fonts/geist-mono-variable.ttf") format("truetype");
 }
 
 :root {
   --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-brand: "Saira", ui-sans-serif, system-ui, sans-serif;
+  /* pebblebyte.com: 56px logo beside 30px brand text. */
+  --size-brand-logo: 1.866667em;
   --font-size-root: 16px;
   --font-size-label: 0.82rem;
   --font-size-idea-min: 1.05rem;
   --font-size-idea-fluid: 2vw;
   --font-size-idea-max: 1.25rem;
-  --font-size-slide-copy-min: 1.35rem;
-  --font-size-slide-copy-fluid: 2.6vw;
-  --font-size-slide-copy-max: 2rem;
   --font-size-title-min: 4.4rem;
   --font-size-title-fluid: 15vw;
   --font-size-title-max: 10rem;
   --font-size-title-mobile: 4.2rem;
-  --font-size-slide-cover-min: 3.8rem;
-  --font-size-slide-cover-fluid: 9vw;
-  --font-size-slide-cover-max: 7.5rem;
-  --font-size-slide-title-min: 3rem;
-  --font-size-slide-title-fluid: 8vw;
-  --font-size-slide-title-max: 6.6rem;
   --line-height-body: 1.5;
   --line-height-title: 0.9;
   --letter-spacing-flat: 0;
@@ -59,9 +68,6 @@
   --size-idea-width: 520px;
   --size-title-width: 760px;
   --size-card-width: 860px;
-  --size-slide-content-width: 1240px;
-  --size-slide-copy-width: 760px;
-  --size-slide-screenshot-full-width: 980px;
   --size-pdf-page-width: 297mm;
   --size-pdf-page-height: 210mm;
   --size-pdf-slide-width: 1280px;
@@ -74,17 +80,18 @@
   --radius-button: 8px;
   --radius-pill: 999px;
   --border-width: 1px;
-  --shadow-button-x: var(--space-7);
-  --shadow-button-y: var(--space-7);
-  --shadow-button-hover-x: var(--space-10);
-  --shadow-button-hover-y: var(--space-10);
+  --shadow-offset: 6px;
+  --shadow-button-x: var(--shadow-offset);
+  --shadow-button-y: var(--shadow-offset);
+  --button-hover-offset: calc(var(--shadow-offset) / 2);
+  --shadow-button-hover-x: calc(var(--shadow-button-x) - var(--button-hover-offset));
+  --shadow-button-hover-y: calc(var(--shadow-button-y) - var(--button-hover-offset));
   --motion-fast: 160ms ease;
   --motion-pop: 220ms ease;
   --lift-distance: -2px;
   --pop-distance: -4px;
   --pop-scale: 1.02;
   --grid-size: var(--space-42);
-  --grid-size-pdf: var(--space-24);
   --grid-line-size: var(--space-1);
   --z-floating-control: 50;
   --z-slide-control: 40;
@@ -132,4 +139,150 @@ body {
 
 button {
   font: inherit;
+}
+
+/* Landing-page shapes and typography with the slide deck's brand palette. */
+.hw-slides,
+.hw-index {
+  --font-body: "Geist Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Geist Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-code: "Geist Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --deck-display: 104px;
+  --deck-heading: 56px;
+  --deck-subheading: 30px;
+  --deck-body: 20px;
+  --deck-detail: 20px;
+  --deck-meta: 16px;
+  --deck-heading-leading: 1.04;
+  --deck-body-leading: 1.45;
+  --deck-heading-weight: var(--font-weight-button);
+  --deck-body-weight: 400;
+  --deck-label-weight: var(--font-weight-label);
+  --deck-meta-weight: var(--font-weight-label);
+  --deck-page-number-weight: 400;
+  --deck-page-number-size: calc(var(--deck-meta) * 0.875);
+  --deck-page-number-color: color-mix(in srgb, var(--deck-text) 38%, var(--deck-bg));
+  --deck-component-leading: 1.15;
+  --deck-component-tracking: var(--letter-spacing-flat);
+  --deck-tracking: -0.025em;
+  --deck-space-xs: 8px;
+  --deck-space-sm: 12px;
+  --deck-space-md: 20px;
+  --deck-space-lg: 28px;
+  --deck-space-xl: 40px;
+  --deck-gutter: 48px;
+  --deck-top: 70px;
+  --deck-bottom: 64px;
+  --deck-radius: 4px;
+  --deck-image-radius: 12px;
+  --deck-card-padding: 20px;
+  --deck-card-rule: 2px;
+  --deck-card-shadow-offset: var(--shadow-offset);
+  --deck-shadow-color: color-mix(in srgb, var(--deck-yellow) 40%, var(--deck-white));
+  --deck-card-shadow-color: var(--deck-shadow-color);
+  --deck-card-shadow: var(--deck-card-shadow-offset) var(--deck-card-shadow-offset) var(--space-none) var(--deck-card-shadow-color);
+  --deck-card-shadow-hover: var(--deck-card-shadow);
+  --deck-control-shadow: var(--deck-card-shadow-offset) var(--deck-card-shadow-offset) var(--space-none) var(--deck-shadow-color);
+  --deck-control-hover-offset: calc(var(--deck-card-shadow-offset) / 2);
+  --deck-control-hover-shadow: var(--deck-control-hover-offset) var(--deck-control-hover-offset) var(--space-none) var(--deck-shadow-color);
+  --deck-card-gap: 16px;
+  --deck-repeat-text-offset: 0.08em;
+  --deck-flow-small-grow: 0.4;
+  --deck-card-visual-height: 104px;
+  --deck-card-visual-icon: 64px;
+  --deck-card-logo-height: 120px;
+  --deck-card-logo-width: 80%;
+  --deck-agenda-number-width: 64px;
+  --deck-agenda-row-height: 56px;
+  --deck-card-border: var(--deck-ink);
+  --deck-card-surface: var(--deck-white);
+  --deck-card-header-bg: var(--deck-yellow);
+  --deck-callout-bg: color-mix(in srgb, var(--deck-yellow) 22%, var(--deck-white));
+  --deck-card-muted: #585858;
+  --deck-card-inverse-icon-filter: invert(1);
+  --deck-rule: 1px;
+  --deck-accent-rule: 3px;
+  --deck-icon: 40px;
+  --deck-logo: 48px;
+  --deck-portrait: 300px;
+  --deck-mark: 72px;
+  --deck-emoji: 144px;
+  --deck-focus: 3px;
+  --deck-code-leading: 1.3;
+  --deck-yellow: #f7b74f;
+  --deck-ink: #080808;
+  --deck-white: #ffffff;
+  --deck-light: var(--deck-white);
+  --deck-text: var(--deck-ink);
+  --deck-bg: var(--deck-white);
+  --deck-muted: var(--deck-ink);
+  --deck-border: var(--deck-ink);
+  --deck-panel: var(--deck-white);
+  --deck-link: var(--deck-ink);
+  --deck-accent: var(--deck-yellow);
+  --deck-icon-filter: none;
+  --deck-grid-line: color-mix(in srgb, var(--deck-text) 4%, transparent);
+  --deck-canvas:
+    linear-gradient(90deg, var(--deck-grid-line) var(--grid-line-size), transparent var(--grid-line-size)),
+    linear-gradient(var(--deck-grid-line) var(--grid-line-size), transparent var(--grid-line-size));
+  --color-text: var(--deck-text);
+  --color-surface: var(--deck-bg);
+  --color-muted: var(--deck-muted);
+  --color-accent: var(--deck-yellow);
+  --color-brand-yellow: var(--deck-yellow);
+  --color-button-text: var(--deck-white);
+  font-family: var(--font-body);
+}
+
+.hw-slides.theme-dark,
+.hw-index.theme-dark {
+  --deck-card-surface: #151515;
+  --deck-card-muted: #c3c3c3;
+  --deck-card-border: var(--deck-white);
+  --deck-grid-line: color-mix(in srgb, var(--deck-white) 8%, transparent);
+  --deck-panel: var(--deck-ink);
+  --deck-text: var(--deck-white);
+  --deck-bg: var(--deck-ink);
+  --deck-muted: var(--deck-white);
+  --deck-border: var(--deck-white);
+  --deck-link: var(--deck-yellow);
+  --deck-accent: var(--deck-yellow);
+  --deck-icon-filter: invert(1);
+}
+
+.hw-index {
+  --color-grid-line: var(--deck-grid-line);
+  --color-accent: var(--deck-shadow-color);
+  --color-button-text: var(--deck-bg);
+  --border-width: var(--deck-card-rule);
+  --radius-button: var(--deck-radius);
+  --font-size-title-max: 104px;
+  --font-size-title-fluid: 10vw;
+  --font-size-title-min: 54px;
+  --font-size-title-mobile: 54px;
+  --font-size-label: 16px;
+  --line-height-body: var(--deck-body-leading);
+  --size-card-width: 1100px;
+  --size-title-width: 900px;
+}
+
+@media screen and (max-width: 1000px) {
+  .hw-slides {
+    --deck-display: 80px;
+    --deck-heading: 44px;
+    --deck-gutter: 32px;
+    --deck-top: 88px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hw-slides {
+    --deck-display: 54px;
+    --deck-heading: 36px;
+    --deck-subheading: 28px;
+    --deck-body: 20px;
+    --deck-detail: 18px;
+    --deck-gutter: 24px;
+    --deck-space-xl: 28px;
+    --deck-portrait: 220px;
+  }
 }

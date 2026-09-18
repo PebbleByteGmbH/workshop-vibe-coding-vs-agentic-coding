@@ -12,6 +12,7 @@ class HwThemeSwitch extends HTMLElement {
   }
 
   render() {
+    const restoreFocus = this.contains(document.activeElement);
     this.replaceChildren();
 
     const button = document.createElement("button");
@@ -35,6 +36,7 @@ class HwThemeSwitch extends HTMLElement {
     track.append(thumb);
     button.append(track, label);
     this.append(button);
+    if (restoreFocus) button.focus({ preventScroll: true });
   }
 
   setChecked(checked) {

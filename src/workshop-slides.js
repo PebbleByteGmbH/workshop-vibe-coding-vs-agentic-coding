@@ -73,24 +73,55 @@ function initializeSlides(printPdf) {
     progress: !printPdf,
     hash: true,
     center: false,
-    width: printPdf ? 1280 : "100%",
-    height: printPdf ? 720 : "100%",
+    // Keep one scrollable slide at a time on phones, using our responsive layout.
+    scrollActivationWidth: null,
+    width: printPdf || !useResponsiveSlides() ? 1280 : "100%",
+    height: printPdf || !useResponsiveSlides() ? 720 : "100%",
     margin: 0,
-    minScale: 1,
-    maxScale: 1,
+    minScale: printPdf || useResponsiveSlides() ? 1 : 0.2,
+    maxScale: printPdf || useResponsiveSlides() ? 1 : 3,
     pdfMaxPagesPerSlide: 1,
     pdfSeparateFragments: false,
-    transition: printPdf ? "none" : "slide"
+    transition: printPdf || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "none" : "slide"
   };
 
   if (printPdf) {
     revealOptions.view = "print";
   }
 
+  Reveal.on("slidechanged", updateLocaleLinks);
+  Reveal.on("fragmentshown", updateLocaleLinks);
+  Reveal.on("fragmenthidden", updateLocaleLinks);
+  if (printPdf) {
+    // Print pages are created asynchronously after Reveal initializes.
+    // Wait for them before adding the grid and opening the print dialog.
+    Reveal.on("pdf-ready", preparePdfExport);
+  }
   Reveal.initialize(revealOptions).then(() => {
-    if (printPdf) {
-      preparePdfExport();
-    }
+    updateLocaleLinks();
+  });
+  if (!printPdf) {
+    window.matchMedia("(max-width: 1000px)").addEventListener("change", () => {
+      const responsive = useResponsiveSlides();
+      Reveal.configure({ width: responsive ? "100%" : 1280, height: responsive ? "100%" : 720,
+        minScale: responsive ? 1 : 0.2, maxScale: responsive ? 1 : 3 });
+      Reveal.layout();
+    });
+  }
+}
+
+function useResponsiveSlides() {
+  return window.matchMedia("(max-width: 1000px)").matches;
+}
+
+function updateLocaleLinks() {
+  // Reveal updates the URL after its slide event. Use its current indices so a
+  // language switch cannot pick up the previous slide's hash.
+  const { h = 0, v = 0, f } = window.Reveal?.getIndices() || {};
+  document.querySelectorAll("hw-locale-switch a[hreflang]").forEach((link) => {
+    const url = new URL(window.HwI18n.localeUrl(link.hreflang), window.location.href);
+    url.hash = Number.isFinite(f) && f >= 0 ? `/${h}/${v}/${f}` : `/${h}`;
+    link.href = url.href;
   });
 }
 
@@ -99,18 +130,48 @@ async function preparePdfExport() {
   await waitForFonts();
   await waitForImages();
   await waitForAnimationFrames(2);
-  preparePrintLayout();
+  installA4PageStyle();
+  installPdfGrids();
   await waitForAnimationFrames(2);
 
-  window.addEventListener("beforeprint", preparePrintLayout, { once: true });
+  window.addEventListener("beforeprint", installA4PageStyle, { once: true });
   window.addEventListener("afterprint", finishPdfExport, { once: true });
   window.print();
 }
 
-function preparePrintLayout() {
-  installA4PageStyle();
-  installPrintGrid();
-  fitPrintSlides();
+function installPdfGrids() {
+  const svgNamespace = "http://www.w3.org/2000/svg";
+  const createSvgElement = (name, attributes) => {
+    const element = document.createElementNS(svgNamespace, name);
+    for (const [key, value] of Object.entries(attributes)) {
+      element.setAttribute(key, value);
+    }
+    return element;
+  };
+
+  document.querySelectorAll(".pdf-page").forEach((page, index) => {
+    page.querySelectorAll(":scope > .hw-deck-pdf-grid").forEach((grid) => grid.remove());
+    const style = getComputedStyle(page);
+    const spacing = style.getPropertyValue("--grid-size").trim();
+    const lineWidth = style.getPropertyValue("--grid-line-size").trim();
+    const patternId = `hw-deck-pdf-grid-pattern-${index}`;
+    const grid = createSvgElement("svg", {
+      class: "hw-deck-pdf-grid", "aria-hidden": "true", focusable: "false"
+    });
+    const definitions = createSvgElement("defs", {});
+    const pattern = createSvgElement("pattern", {
+      id: patternId, patternUnits: "userSpaceOnUse", width: spacing, height: spacing
+    });
+    pattern.append(
+      createSvgElement("rect", { width: lineWidth, height: spacing }),
+      createSvgElement("rect", { width: spacing, height: lineWidth })
+    );
+    definitions.append(pattern);
+    grid.append(definitions, createSvgElement("rect", {
+      width: "100%", height: "100%", fill: `url(#${patternId})`
+    }));
+    page.prepend(grid);
+  });
 }
 
 function installA4PageStyle() {
@@ -127,47 +188,6 @@ function installA4PageStyle() {
   }
 
   document.head.append(pageStyle);
-}
-
-function installPrintGrid() {
-  const rootStyles = window.getComputedStyle(document.documentElement);
-  const slideWidth = Number.parseFloat(rootStyles.getPropertyValue("--size-pdf-slide-width")) || 1280;
-  const slideHeight = Number.parseFloat(rootStyles.getPropertyValue("--size-pdf-slide-height")) || 720;
-  const gridSize = Number.parseFloat(rootStyles.getPropertyValue("--grid-size-pdf")) || 24;
-  const pathData = createPrintGridPath(slideWidth, slideHeight, gridSize);
-
-  document.querySelectorAll(".pdf-page section").forEach((section) => {
-    if (section.querySelector(":scope > .hw-pdf-grid")) return;
-
-    const grid = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    grid.classList.add("hw-pdf-grid");
-    grid.setAttribute("viewBox", `0 0 ${slideWidth} ${slideHeight}`);
-    grid.setAttribute("preserveAspectRatio", "none");
-    grid.setAttribute("aria-hidden", "true");
-    grid.setAttribute("focusable", "false");
-
-    const lines = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    lines.classList.add("hw-pdf-grid-lines");
-    lines.setAttribute("d", pathData);
-    lines.setAttribute("vector-effect", "non-scaling-stroke");
-
-    grid.append(lines);
-    section.prepend(grid);
-  });
-}
-
-function createPrintGridPath(width, height, spacing) {
-  const commands = [];
-
-  for (let x = 0; x <= width; x += spacing) {
-    commands.push(`M ${x} 0 V ${height}`);
-  }
-
-  for (let y = 0; y <= height; y += spacing) {
-    commands.push(`M 0 ${y} H ${width}`);
-  }
-
-  return commands.join(" ");
 }
 
 function waitForFonts() {
@@ -206,67 +226,6 @@ function waitForAnimationFrames(count) {
 
     nextFrame(count);
   });
-}
-
-function fitPrintSlides() {
-  const sections = document.querySelectorAll(".pdf-page section");
-
-  sections.forEach((section) => {
-    section.style.setProperty("--hw-pdf-fit-scale", "1");
-
-    const slideBounds = section.getBoundingClientRect();
-    const contentBounds = getVisibleContentBounds(section);
-
-    if (!contentBounds) return;
-
-    const contentWidth = Math.max(slideBounds.right, contentBounds.right)
-      - Math.min(slideBounds.left, contentBounds.left);
-    const contentHeight = Math.max(slideBounds.bottom, contentBounds.bottom)
-      - Math.min(slideBounds.top, contentBounds.top);
-    let fitScale = Math.min(
-      1,
-      slideBounds.width / contentWidth,
-      slideBounds.height / contentHeight
-    );
-
-    if (fitScale < 1) {
-      fitScale *= 0.98;
-      section.style.setProperty("--hw-pdf-fit-scale", fitScale.toFixed(6));
-    }
-  });
-}
-
-function getVisibleContentBounds(section) {
-  const elements = Array.from(section.querySelectorAll("*"));
-  let bounds = null;
-
-  elements.forEach((element) => {
-    if (element.closest("aside.notes, .hw-pdf-grid")) return;
-
-    const styles = window.getComputedStyle(element);
-    const rect = element.getBoundingClientRect();
-
-    if (styles.display === "none" || styles.visibility === "hidden" || rect.width === 0 || rect.height === 0) {
-      return;
-    }
-
-    const scaleX = element.offsetWidth > 0 ? rect.width / element.offsetWidth : 1;
-    const scaleY = element.offsetHeight > 0 ? rect.height / element.offsetHeight : 1;
-    const right = rect.left + Math.max(rect.width, element.scrollWidth * scaleX);
-    const bottom = rect.top + Math.max(rect.height, element.scrollHeight * scaleY);
-
-    if (!bounds) {
-      bounds = { left: rect.left, top: rect.top, right, bottom };
-      return;
-    }
-
-    bounds.left = Math.min(bounds.left, rect.left);
-    bounds.top = Math.min(bounds.top, rect.top);
-    bounds.right = Math.max(bounds.right, right);
-    bounds.bottom = Math.max(bounds.bottom, bottom);
-  });
-
-  return bounds;
 }
 
 function finishPdfExport() {

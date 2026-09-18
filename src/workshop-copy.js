@@ -1,38 +1,38 @@
 (function () {
   window.HwWorkshopCopy = {
-    en: {
-      meta: {
-        htmlLang: "en",
-        appTitle: "Hello Workshop",
-        slidesTitle: "Agentic Coding for Creative Teams",
-        slidesDay2Title: "Agentic Coding for Creative Teams - Day 2"
+    "en": {
+      "meta": {
+        "htmlLang": "en",
+        "appTitle": "Hello Workshop",
+        "slidesTitle": "Agentic Coding for Creative Teams",
+        "slidesDay2Title": "Agentic Coding for Creative Teams - Day 2"
       },
-      brand: {
-        ariaLabel: "PebbleByte website"
+      "brand": {
+        "ariaLabel": "PebbleByte website"
       },
-      theme: {
-        darkLabel: "Dark",
-        lightLabel: "Light",
-        useDarkLabel: "Use dark theme",
-        useLightLabel: "Use light theme"
+      "theme": {
+        "darkLabel": "Dark",
+        "lightLabel": "Light",
+        "useDarkLabel": "Use dark theme",
+        "useLightLabel": "Use light theme"
       },
-      localeSwitch: {
-        ariaLabel: "Change language",
-        enLabel: "EN",
-        deLabel: "DE"
+      "localeSwitch": {
+        "ariaLabel": "Change language",
+        "enLabel": "EN",
+        "deLabel": "DE"
       },
-      app: {
-        page: {
-          eyebrow: "Agentic Coding",
-          title: "Hello Workshop",
-          buttonLabel: "Tap for a tiny idea",
-          idea: "Pick one real workflow annoyance and turn it into a small local app.",
-          linkHref: "workshop-slides.html",
-          linkLabel: "Seminar slides day 1",
-          secondaryLinkHref: "workshop-slides-day-2.html",
-          secondaryLinkLabel: "Seminar slides day 2"
+      "app": {
+        "page": {
+          "eyebrow": "Agentic Coding",
+          "title": "Hello Workshop",
+          "buttonLabel": "Tap for a tiny idea",
+          "idea": "Pick one real workflow annoyance and turn it into a small local app.",
+          "linkHref": "workshop-slides.html",
+          "linkLabel": "Seminar slides day 1",
+          "secondaryLinkHref": "workshop-slides-day-2.html",
+          "secondaryLinkLabel": "Seminar slides day 2"
         },
-        ideas: [
+        "ideas": [
           "Build a local campaign tracker: tasks, channels, owners, deadlines, and notes in IndexedDB.",
           "Make an Excel cleanup helper: paste messy rows, tag issues, and save cleanup rules locally.",
           "Create a design feedback board: store screens, comments, status, and decisions offline.",
@@ -45,667 +45,861 @@
           "Build a handoff checklist: store recurring project steps and mark what is done."
         ]
       },
-      slidesPage: {
-        bylineAriaLabel: "{byline} on LinkedIn",
-        exportPdfLabel: "Export PDF",
-        fallbackLogoAlt: "{name} logo",
-        keyIdeaLabel: "Key idea"
+      "slidesPage": {
+        "bylineAriaLabel": "{byline} on LinkedIn",
+        "exportPdfLabel": "Export PDF",
+        "fallbackLogoAlt": "{name} logo",
+        "keyIdeaLabel": "Key idea"
       },
-      slides: [
+      "slides": [
         {
-          title: "Agentic Coding\nfor Creative Teams",
-          subtitle: "From chatbots to agents in creative workflows",
-          cover: true,
-          blocks: [],
-          notes: "Keep this simple. The goal is to reduce fear and curiosity gap."
+          "title": "Agentic Coding\nfor Creative Teams",
+          "subtitle": "From chatbots to agents in creative workflows",
+          "cover": true,
+          "blocks": [],
+          "notes": "Keep this simple. The goal is to reduce fear and curiosity gap.",
+          "composition": "cover",
+          "palette": "yellow"
         },
         {
-          title: "Lukas Aichbauer",
-          subtitle: "About me",
-          image: {
-            src: "assets/lukas-aichbauer.webp",
-            alt: "Lukas Aichbauer"
+          "title": "Lukas Aichbauer",
+          "subtitle": "About me",
+          "image": {
+            "src": "assets/lukas-aichbauer.webp",
+            "alt": "Lukas Aichbauer"
           },
-          blocks: [
+          "blocks": [
             {
-              type: "profile",
-              lines: [
+              "type": "profile",
+              "lines": [
                 "Co-Founder @ PebbleByte GmbH",
                 "Lecturer @ Technikum Wien"
               ],
-              contacts: [
+              "contacts": [
                 {
-                  type: "email",
-                  label: "lukas@pebblebyte.com",
-                  href: "mailto:lukas@pebblebyte.com"
+                  "type": "email",
+                  "label": "lukas@pebblebyte.com",
+                  "href": "mailto:lukas@pebblebyte.com"
                 },
                 {
-                  type: "linkedin",
-                  label: "/in/aichbauer",
-                  href: "https://www.linkedin.com/in/aichbauer"
+                  "type": "linkedin",
+                  "label": "/in/aichbauer",
+                  "href": "https://www.linkedin.com/in/aichbauer"
                 }
               ]
             }
-          ]
+          ],
+          "composition": "profile",
+          "palette": "yellow"
         },
         {
-          title: "Who Are You?",
-          blocks: [
+          "title": "Who Are You?",
+          "blocks": [
             {
-              type: "conceptCards",
-              items: [
+              "type": "conceptCards",
+              "items": [
                 {
-                  title: "Work Field",
-                  icon: "briefcase",
-                  accent: "#5b7cfa",
-                  description: "What field do you work in?"
+                  "title": "Work Field",
+                  "icon": "briefcase",
+                  "accent": "#5b7cfa",
+                  "description": "What field do you work in?"
                 },
                 {
-                  title: "AI Experience",
-                  icon: "brain",
-                  accent: "#16b85f",
-                  description: "What experience do you have with AI?"
+                  "title": "AI Experience",
+                  "icon": "robot",
+                  "accent": "#16b85f",
+                  "description": "What experience do you have with AI?"
                 },
                 {
-                  title: "Expectations",
-                  icon: "question-mark",
-                  accent: "#f97316",
-                  description: "What do you expect from this workshop?"
+                  "title": "Expectations",
+                  "icon": "question-mark",
+                  "accent": "#f97316",
+                  "description": "What do you expect from this workshop?"
                 }
               ]
+            },
+            {
+              "type": "link",
+              "href": "https://excalidraw.com/#room=b865e3e0b6ae59e06db4,t2my8u5vBfupgW9RRFdYWw",
+              "text": "Open the introduction board"
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
-          title: "What do we use AI agents for?",
-          blocks: [
+          "title": "What do we use AI agents for?",
+          "blocks": [
             {
-              type: "conceptCards",
-              items: [
+              "type": "conceptCards",
+              "items": [
                 {
-                  title: "Website development",
-                  icon: "world",
-                  accent: "#5b7cfa",
-                  description: "We build and improve the DevOpsCycle website with AI agents.",
-                  links: [
-                    { text: "devopscycle.com", href: "https://devopscycle.com" }
+                  "title": "Website development",
+                  "icon": "world",
+                  "accent": "#5b7cfa",
+                  "description": "We build and improve the DevOpsCycle website with AI agents.",
+                  "links": [
+                    {
+                      "text": "devopscycle.com",
+                      "href": "https://devopscycle.com"
+                    }
                   ]
                 },
                 {
-                  title: "Finding sales partners",
-                  icon: "search",
-                  accent: "#16b85f",
-                  description: "We research agencies in Austria, Germany, and Switzerland that could sell RevWize through our partner model.",
-                  links: [
-                    { text: "revwize.com", href: "https://revwize.com" },
-                    { text: "Partner leads · Excel demo", href: "assets/showcases/revwize-partner-leads-demo.xlsx" }
+                  "title": "Finding sales partners",
+                  "icon": "search",
+                  "accent": "#16b85f",
+                  "description": "We research agencies in Austria, Germany, and Switzerland that could sell RevWize through our partner model.",
+                  "links": [
+                    {
+                      "text": "revwize.com",
+                      "href": "https://revwize.com"
+                    },
+                    {
+                      "text": "Partner leads · Excel demo",
+                      "href": "assets/showcases/revwize-partner-leads-demo.xlsx"
+                    }
                   ]
                 },
                 {
-                  title: "Creating marketing materials",
-                  icon: "pencil",
-                  accent: "#f97316",
-                  description: "We create cheat sheets, product information pages, and sales partner pitch decks from prompts.",
-                  links: [
-                    { text: "Docker cheat sheet · Image", href: "assets/showcases/ultimate-docker-cheat-sheet.webp" },
-                    { text: "RevWize info pages · PDF", href: "assets/showcases/revwize-partner-info-de.pdf" },
-                    { text: "Partner pitch · PDF", href: "assets/showcases/revwize-partner-pitch.pdf" }
+                  "title": "Creating marketing materials",
+                  "icon": "pencil",
+                  "accent": "#f97316",
+                  "description": "We create cheat sheets, product information pages, and sales partner pitch decks from prompts.",
+                  "links": [
+                    {
+                      "text": "Docker cheat sheet · Image",
+                      "href": "assets/showcases/ultimate-docker-cheat-sheet.webp"
+                    },
+                    {
+                      "text": "RevWize info pages · PDF",
+                      "href": "assets/showcases/revwize-partner-info-de.pdf"
+                    },
+                    {
+                      "text": "Partner pitch · PDF",
+                      "href": "assets/showcases/revwize-partner-pitch.pdf"
+                    }
                   ]
                 }
               ]
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
-          title: "Three Starter Ideas",
-          blocks: [
+          "title": "Three Starter Ideas",
+          "blocks": [
             {
-              type: "conceptCards",
-              items: [
+              "type": "conceptCards",
+              "items": [
                 {
-                  title: "Marketing",
-                  icon: "search",
-                  accent: "#5b7cfa",
-                  description: "Customer reviews contain strong marketing language, but are rarely analyzed systematically.",
-                  metaphor: "Review mining app: collects reviews from G2, Trustpilot, App Store, Amazon, or support tickets and extracts pain points, value propositions, objections, and reusable copy."
+                  "title": "Marketing",
+                  "icon": "search",
+                  "accent": "#5b7cfa",
+                  "description": "Customer reviews contain strong marketing language, but are rarely analyzed systematically.",
+                  "metaphor": "Review mining app: collects reviews from G2, Trustpilot, App Store, Amazon, or support tickets and extracts pain points, value propositions, objections, and reusable copy."
                 },
                 {
-                  title: "Designers",
-                  icon: "pencil",
-                  accent: "#16b85f",
-                  description: "Checking desktop, tablet, and mobile layouts takes time.",
-                  metaphor: "Responsive screenshot reviewer: enter a URL, generate breakpoint screenshots, and flag overflow, broken layouts, tiny text, or clipped buttons."
-                },
-                {
-                  title: "Project Management",
-                  icon: "clipboard-list",
-                  accent: "#f97316",
-                  description: "Requirements, user flows, and acceptance criteria often stay abstract and are interpreted differently by developers.",
-                  metaphor: "Prototype-as-acceptance app: turns a briefing into a working browser prototype with user flows, states, edge cases, and testable acceptance criteria as an executable reference for implementation."
+                  "title": "Designers",
+                  "icon": "pencil",
+                  "accent": "#16b85f",
+                  "description": "Checking desktop, tablet, and mobile layouts takes time.",
+                  "metaphor": "Responsive screenshot reviewer: enter a URL, generate breakpoint screenshots, and flag overflow, broken layouts, tiny text, or clipped buttons."
                 }
               ]
             }
-          ]
+          ],
+          "composition": "concepts-dense",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "What We'll Cover",
-          subtitle: "Agenda",
-          blocks: [
+          "title": "Starter Idea: Project Management",
+          "blocks": [
             {
-              type: "bullets",
-              reveal: false,
-              items: [
-                "Welcome, introductions, and starter ideas",
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "Project Management",
+                  "icon": "clipboard-list",
+                  "accent": "#f97316",
+                  "description": "Requirements, user flows, and acceptance criteria often stay abstract and are interpreted differently by developers.",
+                  "metaphor": "Prototype-as-acceptance app: turns a briefing into a working browser prototype with user flows, states, edge cases, and testable acceptance criteria as an executable reference for implementation."
+                }
+              ]
+            },
+            {
+              "type": "link",
+              "size": "small",
+              "href": "https://excalidraw.com/#room=ea1db8fc739eedf79aa2,UVhiaqFZYp8kMExx7z64zA",
+              "text": "Small example"
+            }
+          ],
+          "composition": "concepts-dense",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "What We'll Cover",
+          "subtitle": "Agenda",
+          "blocks": [
+            {
+              "type": "bullets",
+              "reveal": false,
+              "revealItems": true,
+              "items": [
                 "LLMs, chatbots, agents, and agentic coding",
                 "AI agent landscape and Codex setup",
                 "Choosing a good first use case",
                 "Exercises: inputs, steps, rules, task design, and error cases"
               ]
             }
-          ]
+          ],
+          "composition": "agenda",
+          "palette": "yellow"
         },
         {
-          title: "LLM / Chatbot / Agent",
-          subtitle: "From Brain to Action",
-          blocks: [
+          "title": "LLM / Chatbot / Agent",
+          "subtitle": "From Brain to Action",
+          "blocks": [
             {
-              type: "conceptCards",
-              items: [
+              "type": "conceptCards",
+              "items": [
                 {
-                  title: "Large Language Model (LLM)",
-                  icons: [
-                    { emoji: "🧠" }
+                  "title": "Large Language Model (LLM)",
+                  "icons": [
+                    {
+                      "emoji": "🧠"
+                    }
                   ],
-                  accent: "#5b7cfa",
-                  description: "Computer program",
-                  metaphor: "Metaphor: Brain"
+                  "accent": "#5b7cfa",
+                  "description": "Computer program",
+                  "metaphor": "Metaphor: Brain"
                 },
                 {
-                  title: "Chatbot",
-                  icons: [
-                    { emoji: "👀" },
-                    { emoji: "👂" },
-                    { emoji: "👄" }
+                  "title": "Chatbot",
+                  "icons": [
+                    {
+                      "emoji": "👀"
+                    },
+                    {
+                      "emoji": "👂"
+                    },
+                    {
+                      "emoji": "👄"
+                    }
                   ],
-                  accent: "#16b85f",
-                  description: "Conversation interface",
-                  metaphor: "Metaphor: eyes, ears, mouth"
+                  "accent": "#16b85f",
+                  "description": "Conversation interface",
+                  "metaphor": "Metaphor: eyes, ears, mouth"
                 },
                 {
-                  title: "Agent",
-                  icons: [
-                    { emoji: "🤲" },
-                    { emoji: "💪" },
-                    { emoji: "🦵" }
+                  "title": "Agent",
+                  "icons": [
+                    {
+                      "emoji": "🤲"
+                    },
+                    {
+                      "emoji": "💪"
+                    },
+                    {
+                      "emoji": "🦵"
+                    }
                   ],
-                  accent: "#f97316",
-                  description: "Uses tools and takes action",
-                  metaphor: "Metaphor: hands, arms, feet"
+                  "accent": "#f97316",
+                  "description": "Uses tools and takes action",
+                  "metaphor": "Metaphor: hands, arms, feet"
                 }
               ]
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
-          title: "LLM",
-          subtitle: "Input -> LLM (Computer program) -> Output",
-          layout: "agent-flow",
-          blocks: [
+          "title": "LLM",
+          "subtitle": "Input -> LLM (Computer program) -> Output",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              intro: "A simple way to think about what happens inside a Large Language Model.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": false,
+              "emphasizeMiddle": true,
+              "intro": "A simple way to think about what happens inside a Large Language Model.",
+              "columns": [
                 {
-                  title: "Input",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Input",
+                  "icon": "keyboard",
+                  "layout": "list",
+                  "size": "small",
+                  "items": [
                     {
-                      icon: "message",
-                      color: "#5b7cfa",
-                      label: "Sentence start:\n\"The sky is ...\""
+                      "icon": "message",
+                      "color": "#5b7cfa",
+                      "label": "Sentence start:\n\"The sky is ...\""
                     }
                   ]
                 },
                 {
-                  title: "LLM",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "LLM",
+                  "icon": "brain",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "dots",
-                      color: "#16b85f",
-                      label: "\"blue\" -> 0.87"
+                      "icon": "dots",
+                      "color": "#16b85f",
+                      "label": "\"blue\" -> 0.87"
                     },
                     {
-                      icon: "dots",
-                      color: "#16b85f",
-                      label: "\"cloudy\" -> 0.09"
+                      "icon": "dots",
+                      "color": "#16b85f",
+                      "label": "\"cloudy\" -> 0.09"
                     },
                     {
-                      icon: "dots",
-                      color: "#16b85f",
-                      label: "\"green\" -> 0.04"
+                      "icon": "dots",
+                      "color": "#16b85f",
+                      "label": "\"green\" -> 0.04"
                     }
                   ]
                 },
                 {
-                  title: "Output",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Output",
+                  "icon": "text-output",
+                  "layout": "list",
+                  "size": "small",
+                  "items": [
                     {
-                      icon: "file",
-                      color: "#f97316",
-                      label: "\"The sky is blue.\""
+                      "icon": "file",
+                      "color": "#f97316",
+                      "label": "\"The sky is blue.\""
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "High level",
-              keyIdea: "It does not understand like a human. It uses patterns from many texts to predict likely next tokens. Tokens are small text pieces: word parts, whole words, or character strings."
+              "keyIdeaLabel": null,
+              "keyIdea": null
             }
-          ]
+          ],
+          "composition": "flow",
+          "palette": "yellow"
         },
         {
-          title: "Chatbot",
-          subtitle: "Human -> Website -> Server with LLM -> Answer",
-          layout: "agent-flow",
-          blocks: [
+          "title": "LLM: The Key Idea",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              intro: "A chatbot is a website or app that sends your message to an LLM and shows the answer.",
-              columns: [
+              "type": "agentFlow",
+              "columns": [],
+              "keyIdeaLabel": "High level",
+              "keyIdea": "It does not understand like a human. It uses patterns from many texts to predict likely next tokens. Tokens are small text pieces: word parts, whole words, or character strings."
+            }
+          ],
+          "composition": "flow",
+          "palette": "yellow"
+        },
+        {
+          "title": "Chatbot",
+          "subtitle": "Human -> Website -> Server with LLM -> Answer",
+          "layout": "agent-flow",
+          "blocks": [
+            {
+              "type": "agentFlow",
+              "equalHeight": true,
+              "showItemIcons": false,
+              "intro": "A chatbot is a website or app that sends your message to an LLM and shows the answer.",
+              "columns": [
                 {
-                  title: "Human",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Human",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "user",
-                      color: "#5b7cfa",
-                      label: "Types a question\nor task"
+                      "icon": "user",
+                      "color": "#5b7cfa",
+                      "label": "Types a question\nor task"
                     }
                   ]
                 },
                 {
-                  title: "Website",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Website",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "world",
-                      color: "#16b85f",
-                      label: "Chatbot page\nor app"
+                      "icon": "world",
+                      "color": "#16b85f",
+                      "label": "Chatbot page\nor app"
                     }
                   ]
                 },
                 {
-                  title: "Server + LLM",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Server + LLM",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "brain",
-                      color: "#16b85f",
-                      label: "Predicts tokens\nand builds text"
+                      "icon": "brain",
+                      "color": "#16b85f",
+                      "label": "Predicts tokens\nand builds text"
                     }
                   ]
                 },
                 {
-                  title: "Answer",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Answer",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "file",
-                      color: "#f97316",
-                      label: "Computer shows\nthe answer"
+                      "icon": "file",
+                      "color": "#f97316",
+                      "label": "Computer shows\nthe answer"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "High level",
-              keyIdea: "The chatbot is the interface and connection. The LLM usually runs on a server; your computer shows the conversation."
+              "keyIdeaLabel": "High level",
+              "keyIdea": "The chatbot is the interface and connection. The LLM usually runs on a server; your computer shows the conversation."
             }
-          ]
+          ],
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Agent",
-          subtitle: "Goal -> Agent (LLM + programs) -> Result",
-          layout: "agent-flow",
-          blocks: [
+          "title": "Agent",
+          "subtitle": "Goal -> Agent (LLM + programs) -> Result",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              intro: "An agent gets a goal and can use tools to work through steps.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": false,
+              "intro": "An agent gets a goal and can use tools to work through steps.",
+              "columns": [
                 {
-                  title: "Goal",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Goal",
+                  "icon": "target",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "message",
-                      color: "#5b7cfa",
-                      label: "Task:\n\"Add two slides and check the deck.\""
+                      "icon": "message",
+                      "color": "#5b7cfa",
+                      "label": "Task:\n\"Add two slides and check the deck.\""
                     }
                   ]
                 },
                 {
-                  title: "Agent",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Agent",
+                  "icon": "robot",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "brain",
-                      color: "#16b85f",
-                      label: "Talks to the LLM"
+                      "icon": "brain",
+                      "color": "#16b85f",
+                      "label": "Talks to the LLM"
                     },
                     {
-                      icon: "tool",
-                      color: "#16b85f",
-                      label: "Uses programs:\nPowerPoint, Google Slides, browser"
+                      "icon": "tool",
+                      "color": "#16b85f",
+                      "label": "Uses programs:\nPowerPoint, Google Slides, browser"
                     },
                     {
-                      icon: "file",
-                      color: "#16b85f",
-                      label: "Reads and edits files"
+                      "icon": "file",
+                      "color": "#16b85f",
+                      "label": "Reads and edits files"
                     },
                     {
-                      icon: "check",
-                      color: "#16b85f",
-                      label: "Checks the result"
+                      "icon": "check",
+                      "color": "#16b85f",
+                      "label": "Checks the result"
                     }
                   ]
                 },
                 {
-                  title: "Result",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Result",
+                  "icon": "circle-check",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "file",
-                      color: "#f97316",
-                      label: "Changed deck\nplus short summary"
+                      "icon": "file",
+                      "color": "#f97316",
+                      "label": "Changed deck\nplus short summary"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "High level",
-              keyIdea: "An agent does not stop at a text answer. It can plan, act, verify, and keep going until the task is done."
+              "keyIdeaLabel": null,
+              "keyIdea": null,
+              "showArrows": true,
+              "emphasizeMiddle": true
             }
-          ]
+          ],
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "From Recipe to Chef",
-          subtitle: "Prompting / Vibe Coding / Agentic Coding",
-          layout: "agent-flow",
-          blocks: [
+          "title": "Agent: The Key Idea",
+          "subtitle": "Goal -> Agent (LLM + programs) -> Result",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              equalColumns: true,
-              intro: "Same AI, different way of steering it: ask, improvise, or guide execution.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "intro": null,
+              "columns": [],
+              "keyIdeaLabel": "High level",
+              "keyIdea": "An agent does not stop at a text answer. It can plan steps, use tools, read and edit files, check results, and keep working until the task is done.",
+              "showArrows": false
+            }
+          ],
+          "composition": "flow",
+          "palette": "white"
+        },
+        {
+          "title": "From Recipe to Chef",
+          "subtitle": "Prompting / Vibe Coding / Agentic Coding",
+          "layout": "agent-flow",
+          "blocks": [
+            {
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "intro": "Same AI, different way of steering it: ask, improvise, or guide execution.",
+              "columns": [
                 {
-                  title: "Prompting",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Prompting",
+                  "icon": "book",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "message",
-                      color: "#5b7cfa",
-                      label: "Ask in chat\nand get an answer"
+                      "icon": "message",
+                      "color": "#5b7cfa",
+                      "label": "Ask in chat\nand get an answer"
                     },
                     {
-                      icon: "user",
-                      color: "#5b7cfa",
-                      label: "You decide what to do\nwith the response"
+                      "icon": "user",
+                      "color": "#5b7cfa",
+                      "label": "You decide what to do\nwith the response"
                     },
                     {
-                      icon: "book",
-                      color: "#5b7cfa",
-                      label: "Metaphor:\nrecipe request"
+                      "icon": "book",
+                      "color": "#5b7cfa",
+                      "label": "Metaphor:\nrecipe request"
                     }
                   ]
                 },
                 {
-                  title: "Vibe Coding",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Vibe Coding",
+                  "icon": "cooking-pot",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "code",
-                      color: "#16b85f",
-                      label: "Describe the app loosely\nand paste code back and forth"
+                      "icon": "code",
+                      "color": "#16b85f",
+                      "label": "Describe the app loosely\nand paste code back and forth"
                     },
                     {
-                      icon: "player-play",
-                      color: "#16b85f",
-                      label: "Run it, see what happens,\ntweak by feel"
+                      "icon": "player-play",
+                      "color": "#16b85f",
+                      "label": "Run it, see what happens,\ntweak by feel"
                     },
                     {
-                      icon: "tool",
-                      color: "#16b85f",
-                      label: "Metaphor:\n\"Something pasta-ish\""
+                      "icon": "tool",
+                      "color": "#16b85f",
+                      "label": "Metaphor:\n\"Something pasta-ish\""
                     }
                   ]
                 },
                 {
-                  title: "Agentic Coding",
-                  layout: "list",
-                  size: "mini",
-                  variant: "inverted",
-                  items: [
+                  "title": "Agentic Coding",
+                  "icon": "chef-hat",
+                  "layout": "list",
+                  "size": "mini",
+                  "variant": "inverted",
+                  "items": [
                     {
-                      icon: "tool",
-                      color: "#f97316",
-                      label: "Give a goal, context,\nfiles, and constraints"
+                      "icon": "tool",
+                      "color": "#f97316",
+                      "label": "Give a goal, context,\nfiles, and constraints"
                     },
                     {
-                      icon: "clipboard-list",
-                      color: "#f97316",
-                      label: "Agent plans, edits,\ntests, and improves"
+                      "icon": "clipboard-list",
+                      "color": "#f97316",
+                      "label": "Agent plans, edits,\ntests, and improves"
                     },
                     {
-                      icon: "check",
-                      color: "#f97316",
-                      label: "Metaphor:\nchef in the kitchen"
+                      "icon": "check",
+                      "color": "#f97316",
+                      "label": "Metaphor:\nchef in the kitchen"
                     }
                   ]
                 }
               ],
-              keyIdea: "Prompting asks, Vibe Coding experiments, Agentic Coding delegates execution with context and review."
+              "keyIdea": null,
+              "keyIdeaLabel": null,
+              "showArrows": true
             }
-          ]
+          ],
+          "composition": "flow",
+          "palette": "yellow"
         },
         {
-          title: "AI Agent Landscape",
-          subtitle: "Six examples across different use cases and domains",
-          blocks: [
+          "title": "From Recipe to Chef: Key Idea",
+          "subtitle": "Prompting / Vibe Coding / Agentic Coding",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentLogos",
-              items: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "intro": null,
+              "columns": [],
+              "keyIdea": "Prompting asks, Vibe Coding experiments. With Agentic Coding, you set the goal and context – the agent plans, implements, and checks; you give feedback and make the decisions.",
+              "keyIdeaLabel": "Key idea",
+              "showArrows": false
+            }
+          ],
+          "composition": "flow",
+          "palette": "yellow"
+        },
+        {
+          "title": "AI Agent Landscape",
+          "subtitle": "Six examples across different use cases and domains",
+          "blocks": [
+            {
+              "type": "agentLogos",
+              "items": [
                 {
-                  name: "Codex",
-                  logo: "assets/agent-logos/codex.svg",
-                  alt: "Codex logo",
-                  accent: "#7cf4c4"
+                  "name": "Codex",
+                  "logo": "assets/agent-logos/codex.svg",
+                  "alt": "Codex logo",
+                  "accent": "#000000"
                 },
                 {
-                  name: "Claude Code",
-                  logo: "assets/agent-logos/claude-code.svg",
-                  alt: "Claude Code logo",
-                  accent: "#d97757"
+                  "name": "Claude Code",
+                  "logo": "assets/agent-logos/claude-code.svg",
+                  "alt": "Claude Code logo",
+                  "accent": "#d97757"
                 },
                 {
-                  name: "Qwen Code",
-                  logo: "assets/agent-logos/qwen-code.svg",
-                  alt: "Qwen Code logo",
-                  accent: "#615ced"
+                  "name": "Qwen Code",
+                  "logo": "assets/agent-logos/qwen-code.svg",
+                  "alt": "Qwen Code logo",
+                  "accent": "#615ced"
                 },
                 {
-                  name: "Mistral Vibe Code",
-                  logo: "assets/agent-logos/mistral-vibe-code.svg",
-                  alt: "Mistral Vibe Code logo",
-                  accent: "#ff8205"
+                  "name": "Mistral Vibe Code",
+                  "logo": "assets/agent-logos/mistral-vibe-code.svg",
+                  "alt": "Mistral Vibe Code logo",
+                  "accent": "#ff8205"
                 },
                 {
-                  name: "Zapier Agents",
-                  logo: "assets/agent-logos/zapier-agents.svg",
-                  alt: "Zapier Agents logo",
-                  accent: "#ff4a00"
+                  "name": "Zapier Agents",
+                  "logo": "assets/agent-logos/zapier-agents.svg",
+                  "alt": "Zapier Agents logo",
+                  "accent": "#ff4a00"
                 },
                 {
-                  name: "OpenClaw",
-                  logo: "assets/agent-logos/openclaw.svg",
-                  alt: "OpenClaw logo",
-                  accent: "#16b85f"
+                  "name": "OpenClaw",
+                  "logo": "assets/agent-logos/openclaw.svg",
+                  "alt": "OpenClaw logo",
+                  "accent": "#e81b25"
                 }
               ]
             }
-          ]
+          ],
+          "composition": "logos",
+          "palette": "white"
         },
         {
-          title: "Install Codex",
-          subtitle: "Setup",
-          blocks: [
+          "title": "Install Codex",
+          "subtitle": "Setup",
+          "blocks": [
             {
-              type: "link",
-              href: "https://openai.com/codex/",
-              text: "https://openai.com/codex/"
+              "type": "link",
+              "href": "https://openai.com/codex/",
+              "text": "https://openai.com/codex/"
             }
-          ]
+          ],
+          "composition": "statement",
+          "palette": "yellow"
         },
         {
-          title: "First Open Codex",
-          subtitle: "Launch",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "First Open Codex",
+          "subtitle": "Launch",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/first-open-codex-en-de.png",
-              alt: "Codex first open screen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/first-open-codex-en-de.png",
+              "alt": "Codex first open screen"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Click Sign In",
-          subtitle: "First opening",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Click Sign In",
+          "subtitle": "First opening",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/first-open-codex-click-signin-en-de.png",
-              alt: "Codex sign-in button"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/first-open-codex-click-signin-en-de.png",
+              "alt": "Codex sign-in button"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Continue Sign-In",
-          subtitle: "First opening",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Continue Sign-In",
+          "subtitle": "First opening",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/first-open-codex-continue-sign-in-en-de.png",
-              alt: "Codex continue sign-in screen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/first-open-codex-continue-sign-in-en-de.png",
+              "alt": "Codex continue sign-in screen"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Sign-In Successful",
-          subtitle: "First opening",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Sign-In Successful",
+          "subtitle": "First opening",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/first-open-codex-sign-in-successful-en-de.png",
-              alt: "Codex successful sign-in screen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/first-open-codex-sign-in-successful-en-de.png",
+              "alt": "Codex successful sign-in screen"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Codex Home",
-          subtitle: "After first login",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Codex Home",
+          "subtitle": "After first login",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/how-codex-looks-first-login-en.png",
-              alt: "Codex home screen after first login"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/how-codex-looks-first-login-en.png",
+              "alt": "Codex home screen after first login"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Create New Project",
-          subtitle: "Project setup",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Create New Project",
+          "subtitle": "Project setup",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-new-project-en.png",
-              alt: "Codex create new project screen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-new-project-en.png",
+              "alt": "Codex create new project screen"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Name the Project",
-          subtitle: "Project setup",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Name the Project",
+          "subtitle": "Project setup",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-project-name-en.png",
-              alt: "Codex project name screen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-project-name-en.png",
+              "alt": "Codex project name screen"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Select a Project",
-          subtitle: "Where to choose the project",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Select a Project",
+          "subtitle": "Where to choose the project",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/select-project-codex-en.png",
-              alt: "Codex project selector"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/select-project-codex-en.png",
+              "alt": "Codex project selector"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Quick Practice Run",
-          subtitle: "Before we start with your own use cases",
-          blocks: [
+          "title": "Quick Practice Run – Coding",
+          "subtitle": "Before we start with your own use cases",
+          "blocks": [
             {
-              type: "conceptCards",
-              items: [
+              "type": "conceptCards",
+              "items": [
                 {
-                  title: "Mini Todo List App",
-                  icon: "clipboard-list",
-                  accent: "#16b85f",
-                  description: "A simple task list with add, complete, delete, and empty states.",
-                  metaphor: "Good for making forms, lists, state, and small data models tangible."
+                  "title": "Mini Todo List App",
+                  "icon": "clipboard-list",
+                  "accent": "#16b85f",
+                  "description": "A simple task list with add, complete, delete, and empty states.",
+                  "metaphor": "Good for making forms, lists, state, and small data models tangible."
                 },
                 {
-                  title: "Clone a Landing Page",
-                  icon: "world",
-                  accent: "#f97316",
-                  description: "Rebuild a landing page from a screenshot.",
-                  metaphor: "Good for practicing layout, typography, colors, spacing, and responsive details."
+                  "title": "Clone a Landing Page",
+                  "icon": "world",
+                  "accent": "#f97316",
+                  "description": "Rebuild a landing page from a screenshot.",
+                  "metaphor": "Good for practicing layout, typography, colors, spacing, and responsive details."
                 }
               ]
             },
             {
-              type: "link",
-              size: "small",
-              href: "https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ",
-              text: "Ideas"
+              "type": "link",
+              "size": "small",
+              "href": "https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ",
+              "text": "Ideas"
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
+        },
+        {
+          "title": "Quick Practice Run – Everyday Tasks",
+          "subtitle": "Before we start with your own use cases",
+          "blocks": [
+            {
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "Research in the Browser",
+                  "icon": "world",
+                  "accent": "#5b7cfa",
+                  "description": "Visit three event venues in the browser and compare capacity, location, and contact details.",
+                  "metaphor": "Practice navigating websites and collecting results with source links."
+                },
+                {
+                  "title": "Send an Email",
+                  "icon": "mail",
+                  "accent": "#f97316",
+                  "description": "Turn three bullet points into an email, enter your own address, check the draft, and send it.",
+                  "metaphor": "Practice using a mail app and checking the recipient, subject, and message."
+                }
+              ]
+            }
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
           "title": "OpenAI Models at a Glance",
@@ -718,67 +912,137 @@
               "headers": [
                 "Model",
                 "Focus / typical uses",
-                "Context (tokens)",
-                "Max output (tokens)",
-                "Reasoning effort",
-                "Input (USD / 1M)",
-                "Output (USD / 1M)",
-                "Knowledge cutoff"
+                "Reasoning effort"
               ],
               "rows": [
                 [
                   "GPT-6 Astra",
                   "Most demanding work",
-                  "1.05M",
-                  "128,000",
-                  "low → max",
-                  "$10.00",
-                  "$50.00",
-                  "30 Apr 2026"
+                  "low → max"
                 ],
                 [
                   "GPT-5.6 Sol",
                   "Complex professional work",
-                  "1.05M",
-                  "128,000",
-                  "none → max",
-                  "$4.00",
-                  "$20.00",
-                  "16 Feb 2026"
+                  "none → max"
                 ],
                 [
                   "GPT-5.6 Terra",
                   "Balance quality and cost",
-                  "1.05M",
-                  "128,000",
-                  "none → max",
-                  "$2.00",
-                  "$12.00",
-                  "16 Feb 2026"
+                  "none → max"
                 ],
                 [
                   "GPT-5.6 Luna",
                   "Low cost at high volume",
+                  "none → max"
+                ]
+              ],
+              "numericColumns": []
+            },
+            {
+              "type": "text",
+              "text": "Reasoning = how much effort the model puts into working through your task. A quick rewrite needs little; comparing options against several requirements may benefit from more. More effort can mean a longer wait. none = off; low → max = little to maximum."
+            }
+          ],
+          "notes": "Selected API models; availability in the Codex model picker may differ. Context figures are API limits. Arrows abbreviate supported effort levels. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. Source: https://developers.openai.com/api/docs/models\nTypical uses are illustrative applications of the official model positioning: Astra for the hardest end-to-end work, Sol for complex professional work, Terra for balancing intelligence and cost, and Luna for cost-sensitive high-volume workloads. They are not exclusive capabilities or benchmark-based task rankings.",
+          "composition": "model-details",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "OpenAI Models: Context and Knowledge",
+          "subtitle": "GPT-6 & GPT-5.6 · Everyday work & creative tasks · Checked 16 Sep 2026",
+          "layout": "model-comparison",
+          "blocks": [
+            {
+              "type": "table",
+              "scrollLabel": "OpenAI models, token prices and knowledge cutoffs",
+              "headers": [
+                "Model",
+                "Context (tokens)",
+                "Max output (tokens)",
+                "Knowledge cutoff"
+              ],
+              "rows": [
+                [
+                  "GPT-6 Astra",
                   "1.05M",
                   "128,000",
-                  "none → max",
-                  "$0.20",
-                  "$1.20",
+                  "30 Apr 2026"
+                ],
+                [
+                  "GPT-5.6 Sol",
+                  "1.05M",
+                  "128,000",
+                  "16 Feb 2026"
+                ],
+                [
+                  "GPT-5.6 Terra",
+                  "1.05M",
+                  "128,000",
+                  "16 Feb 2026"
+                ],
+                [
+                  "GPT-5.6 Luna",
+                  "1.05M",
+                  "128,000",
                   "16 Feb 2026"
                 ]
+              ],
+              "numericColumns": []
+            },
+            {
+              "type": "text",
+              "text": "Context = what fits on the model’s desk at once: conversation, briefing and documents. Tokens are small text pieces; M = million. Knowledge cutoff = the model’s built-in knowledge date; newer facts need current sources."
+            }
+          ],
+          "notes": "Selected API models; availability in the Codex model picker may differ. Context figures are API limits. Arrows abbreviate supported effort levels. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. Source: https://developers.openai.com/api/docs/models\nTypical uses are illustrative applications of the official model positioning: Astra for the hardest end-to-end work, Sol for complex professional work, Terra for balancing intelligence and cost, and Luna for cost-sensitive high-volume workloads. They are not exclusive capabilities or benchmark-based task rankings.",
+          "composition": "model-details",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "OpenAI Models: API Pricing",
+          "subtitle": "GPT-6 & GPT-5.6 · Everyday work & creative tasks · Checked 16 Sep 2026",
+          "layout": "model-comparison",
+          "blocks": [
+            {
+              "type": "table",
+              "scrollLabel": "OpenAI models, token prices and knowledge cutoffs",
+              "headers": [
+                "Model",
+                "Input (USD / 1M)",
+                "Output (USD / 1M)"
+              ],
+              "rows": [
+                [
+                  "GPT-6 Astra",
+                  "$10.00",
+                  "$50.00"
+                ],
+                [
+                  "GPT-5.6 Sol",
+                  "$4.00",
+                  "$20.00"
+                ],
+                [
+                  "GPT-5.6 Terra",
+                  "$2.00",
+                  "$12.00"
+                ],
+                [
+                  "GPT-5.6 Luna",
+                  "$0.20",
+                  "$1.20"
+                ]
+              ],
+              "numericColumns": [
+                1,
+                2
               ]
             },
             {
               "type": "text",
               "text": "Prices in USD per 1M tokens: standard API rates for short context and uncached input. Input = material sent; output = generated tokens. Long context costs more."
-            },
-            {
-              "type": "text",
-              "text": "Context = what fits on the model’s desk at once: conversation, briefing and documents. Tokens are small text pieces; M = million. Knowledge cutoff = the model’s built-in knowledge date; newer facts need current sources."
-            },
-            {
-              "type": "text",
-              "text": "Reasoning = how much effort the model puts into working through your task. A quick rewrite needs little; comparing options against several requirements may benefit from more. More effort can mean a longer wait. none = off; low → max = little to maximum."
             },
             {
               "type": "link",
@@ -793,7 +1057,10 @@
               "text": "OpenAI API pricing (USD / 1M tokens)"
             }
           ],
-          "notes": "Selected API models; availability in the Codex model picker may differ. Context figures are API limits. Arrows abbreviate supported effort levels. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. Source: https://developers.openai.com/api/docs/models\nTypical uses are illustrative applications of the official model positioning: Astra for the hardest end-to-end work, Sol for complex professional work, Terra for balancing intelligence and cost, and Luna for cost-sensitive high-volume workloads. They are not exclusive capabilities or benchmark-based task rankings."
+          "notes": "Selected API models; availability in the Codex model picker may differ. Context figures are API limits. Arrows abbreviate supported effort levels. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. Source: https://developers.openai.com/api/docs/models\nTypical uses are illustrative applications of the official model positioning: Astra for the hardest end-to-end work, Sol for complex professional work, Terra for balancing intelligence and cost, and Luna for cost-sensitive high-volume workloads. They are not exclusive capabilities or benchmark-based task rankings.",
+          "composition": "model-details",
+          "palette": "white",
+          "density": "compact"
         },
         {
           "title": "How Does Reasoning Work?",
@@ -814,15 +1081,6 @@
               ]
             },
             {
-              "type": "callout",
-              "label": "Reasoning & agents",
-              "text": "Reasoning is a model’s ability to work through a task. An agent uses a model and tools to act, check results and continue working."
-            },
-            {
-              "type": "text",
-              "text": "Example: reasoning helps weigh a campaign budget. An agent can also open the budget file and save the plan as a document."
-            },
-            {
               "type": "text",
               "text": "More reasoning = more computation for these steps. It can help with difficult tasks and take longer; correctness is not guaranteed."
             },
@@ -833,151 +1091,267 @@
               "text": "Source: OpenAI — Reasoning"
             }
           ],
-          "notes": "Simplified explanation of the documented mechanism. Internal reasoning tokens are not directly exposed; displayed summaries are not the complete internal process. Reasoning may also occur between tool calls. Source: https://developers.openai.com/api/docs/guides/reasoning"
+          "notes": "Simplified explanation of the documented mechanism. Internal reasoning tokens are not directly exposed; displayed summaries are not the complete internal process. Reasoning may also occur between tool calls. Source: https://developers.openai.com/api/docs/guides/reasoning",
+          "composition": "standard",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Select a Model",
-          subtitle: "Where to choose the model",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Reasoning and Agents",
+          "subtitle": "An internal working draft before the answer",
+          "layout": "reasoning-info",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/select-llm-model-en.png",
-              alt: "Codex model selector"
-            }
-          ]
-        },
-        {
-          title: "Select Workspace",
-          subtitle: "Where the agent works",
-          layout: "codex-screenshot",
-          blocks: [
+              "type": "callout",
+              "label": "Reasoning & agents",
+              "tone": "plain",
+              "text": "Reasoning is a model’s ability to work through a task. An agent uses a model and tools to act, check results and continue working."
+            },
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/select-where-agent-works-en.png",
-              alt: "Codex workspace selector"
-            }
-          ]
-        },
-        {
-          title: "Include Plugins",
-          subtitle: "Available tools",
-          layout: "codex-screenshot",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/include-plugins-en.png",
-              alt: "Codex plugin selection"
-            }
-          ]
-        },
-        {
-          title: "What Is an Automation?",
-          subtitle: "Tasks on a schedule",
-          layout: "automation",
-          blocks: [
-            {
-              type: "automationFlow",
-              intro: "An automation starts a predefined task automatically when its trigger occurs.",
-              example: "Example: a weekly report",
-              steps: [
-                { icon: "🕘", label: "Schedule", value: "09:00", detail: "Every Monday", tone: "schedule" },
-                { icon: "⚙️", label: "Task", value: "Summarize project updates", detail: "The agent follows your instructions", tone: "task" },
-                { icon: "📋", label: "Result", value: "Weekly report", detail: "Ready for you to review", tone: "result" }
-              ],
-              repeat: "Repeat next Monday at 09:00",
-              takeaway: "Set it up once. Run it at every scheduled time."
+              "type": "text",
+              "text": "Example: reasoning helps weigh a campaign budget. An agent can also open the budget file and save the plan as a document."
             }
           ],
-          notes: "The time is an example, not an actual running automation. Explain the trigger, the saved instructions, and the result. The return arrow means a new run at the next scheduled time, not a task that runs continuously. Other automations can start from an event instead of a schedule."
+          "notes": "Simplified explanation of the documented mechanism. Internal reasoning tokens are not directly exposed; displayed summaries are not the complete internal process. Reasoning may also occur between tool calls. Source: https://developers.openai.com/api/docs/guides/reasoning",
+          "composition": "standard",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Create Automations",
-          subtitle: "Automation setup",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Select a Model",
+          "subtitle": "Where to choose the model",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-automations-1-en.png",
-              alt: "Codex create automations screen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/select-llm-model-en.png",
+              "alt": "Codex model selector"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Configure Automations",
-          subtitle: "Automation setup",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Select Workspace",
+          "subtitle": "Where the agent works",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-automations-2-en.png",
-              alt: "Codex automation configuration screen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/select-where-agent-works-en.png",
+              "alt": "Codex workspace selector"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Find Usage",
-          subtitle: "Account usage",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Include Plugins",
+          "subtitle": "Available tools",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/where-to-find-usage-1-en.png",
-              alt: "Codex usage navigation"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/include-plugins-en.png",
+              "alt": "Codex plugin selection"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Usage Details",
-          subtitle: "Account usage",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "What Is an Automation?",
+          "subtitle": "Tasks on a schedule",
+          "layout": "automation",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/where-to-find-usage-2-en.png",
-              alt: "Codex usage details"
+              "type": "text",
+              "text": "An automation starts a predefined task automatically when its trigger occurs."
+            },
+            {
+              "type": "text",
+              "text": "Example: a weekly report"
+            },
+            {
+              "type": "automationFlow",
+              "intro": null,
+              "example": null,
+              "steps": [
+                {
+                  "icon": "clock",
+                  "label": "Schedule",
+                  "value": "09:00",
+                  "detail": "Every Monday",
+                  "tone": "schedule"
+                },
+                {
+                  "icon": "settings",
+                  "label": "Task",
+                  "value": "Summarize project updates",
+                  "detail": "The agent follows your instructions",
+                  "tone": "task"
+                },
+                {
+                  "icon": "clipboard-list",
+                  "label": "Result",
+                  "value": "Weekly report",
+                  "detail": "Ready for you to review",
+                  "tone": "result"
+                }
+              ],
+              "repeat": "Repeat next Monday at 09:00",
+              "takeaway": "Set it up once. Run it at every scheduled time."
             }
-          ]
+          ],
+          "notes": "The time is an example, not an actual running automation. Explain the trigger, the saved instructions, and the result. The return arrow means a new run at the next scheduled time, not a task that runs continuously. Other automations can start from an event instead of a schedule.",
+          "composition": "automation",
+          "palette": "white",
+          "density": "compact"
         },
-
         {
-          title: "Which Use Cases Are Good Starting Points?",
-          subtitle: "Start small, create real value",
-          blocks: [
+          "title": "Create Automations",
+          "subtitle": "Automation setup",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "table",
-              revealTable: true,
-              revealRows: true,
-              headers: ["A good first use case is", "How to recognize it"],
-              rows: [
-                ["frequent", "the task comes up regularly"],
-                ["time-consuming", "it noticeably absorbs attention"],
-                ["easy to check", "a good result is recognizable"],
-                ["low-risk", "mistakes are easy to spot and correct"],
-                ["context-rich", "examples, files, and rules are available"]
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-automations-1-en.png",
+              "alt": "Codex create automations screen"
+            }
+          ],
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Configure Automations",
+          "subtitle": "Automation setup",
+          "layout": "codex-screenshot",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-automations-2-en.png",
+              "alt": "Codex automation configuration screen"
+            }
+          ],
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Daily Research",
+          "subtitle": "Automated every day at 09:00 AM",
+          "blocks": [
+            {
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "Competitor Research",
+                  "icon": "briefcase",
+                  "accent": "#5b7cfa",
+                  "description": "Check selected competitors’ websites for new products, pricing changes, and campaigns.",
+                  "metaphor": "Result: a brief summary of changes since the last run, with source links."
+                },
+                {
+                  "title": "Customer Research",
+                  "icon": "user",
+                  "accent": "#16b85f",
+                  "description": "Check selected customers’ websites and public news for announcements, projects, and changes in their business.",
+                  "metaphor": "Result: a brief summary per customer, with source links and possible topics for your next conversation."
+                }
               ]
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
-          title: "Use Case Board",
-          subtitle: "Excalidraw",
-          blocks: [
+          "title": "Find Usage",
+          "subtitle": "Account usage",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "link",
-              href: "https://excalidraw.com/#room=3f7fb564ea3a699c6fd3,sDK2_w9L9RRcSUgP1PYFTA",
-              text: "Find your usecase"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/where-to-find-usage-1-en.png",
+              "alt": "Codex usage navigation"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Exercise 1: Define Input and Output",
-          subtitle: "Duration: 5 minutes",
-          blocks: [
+          "title": "Usage Details",
+          "subtitle": "Account usage",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "bullets",
-              label: "Questions",
-              items: [
+              "type": "screenshot",
+              "src": "assets/codex-pictures/where-to-find-usage-2-en.png",
+              "alt": "Codex usage details"
+            }
+          ],
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Which Use Cases Are Good Starting Points?",
+          "subtitle": "Start small, create real value",
+          "blocks": [
+            {
+              "type": "table",
+              "revealTable": true,
+              "revealRows": true,
+              "headers": [
+                "A good first use case is",
+                "How to recognize it"
+              ],
+              "rows": [
+                [
+                  "frequent",
+                  "the task comes up regularly"
+                ],
+                [
+                  "time-consuming",
+                  "it noticeably absorbs attention"
+                ],
+                [
+                  "easy to check",
+                  "a good result is recognizable"
+                ],
+                [
+                  "low-risk",
+                  "mistakes are easy to spot and correct"
+                ],
+                [
+                  "context-rich",
+                  "examples, files, and rules are available"
+                ]
+              ]
+            }
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "Use Case Board",
+          "subtitle": "Excalidraw",
+          "blocks": [
+            {
+              "type": "link",
+              "href": "https://excalidraw.com/#room=3f7fb564ea3a699c6fd3,sDK2_w9L9RRcSUgP1PYFTA",
+              "text": "Find your usecase"
+            }
+          ],
+          "composition": "statement",
+          "palette": "black"
+        },
+        {
+          "title": "Exercise 1: Define Input and Output",
+          "subtitle": "Duration: 5 minutes",
+          "blocks": [
+            {
+              "type": "bullets",
+              "label": "Questions",
+              "items": [
                 "What does the program receive?",
                 "In which format?",
                 "What should it create?",
@@ -985,182 +1359,339 @@
               ]
             },
             {
-              type: "table",
-              revealTable: true,
-              revealRows: true,
-              headers: ["Input", "Output"],
-              rows: [
-                ["file", "summary or report"],
-                ["notes", "task list"],
-                ["URL", "screenshots and issues"],
-                ["CSV table", "themes and examples"]
-              ]
+              "type": "text",
+              "text": "Examples: Input can be a file, a note, a URL, a CSV file, or other material."
             },
             {
-              type: "callout",
-              label: "Coffee shop landing page example",
-              text: "Input: campaign briefing, shop photos, menu CSV, and brand notes. Output: landing page outline, section copy, offer blocks, image suggestions, and CTA variants."
+              "type": "table",
+              "revealTable": true,
+              "revealRows": true,
+              "headers": [
+                "Input",
+                "Output"
+              ],
+              "rows": [
+                [
+                  "file",
+                  "summary or report"
+                ],
+                [
+                  "notes",
+                  "task list"
+                ],
+                [
+                  "URL",
+                  "screenshots and issues"
+                ],
+                [
+                  "CSV table",
+                  "themes and examples"
+                ]
+              ]
             }
-          ]
+          ],
+          "composition": "exercise-table",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Exercise 2: Break Down the Process",
-          subtitle: "Duration: 5 minutes",
-          blocks: [
+          "title": "Exercise 2: Break Down the Process",
+          "subtitle": "Duration: 5 minutes",
+          "blocks": [
             {
-              type: "text",
-              text: "Goal: split the task into small programmable steps."
+              "type": "text",
+              "text": "Goal: describe the task in small, clear steps that an agent can follow."
             },
             {
-              type: "ordered",
-              label: "General process flow",
-              revealItems: true,
-              items: [
-                "select the input",
-                "open or read the input",
-                "extract the relevant information",
-                "apply the rules",
-                "collect problems or results",
-                "create the output"
+              "type": "ordered",
+              "label": "General Example",
+              "revealItems": true,
+              "items": [
+                "Choose input: which file, note, or website should be processed?",
+                "Open input: load the file or visit the website and read its content.",
+                "Collect information: find the details that matter for the task.",
+                "Apply rules: check, sort, or edit the information according to your instructions.",
+                "Gather results: put the findings together and flag missing or unclear information.",
+                "Create output: produce a list, CSV file, Excel spreadsheet, or PowerPoint presentation, send the result by email, or turn it into a website."
               ]
-            },
-            {
-              type: "callout",
-              label: "Coffee shop landing page example",
-              text: "Read the campaign briefing, extract offer and tone, choose page sections, write section copy, insert menu and image placeholders, and export the HTML page."
             }
-          ]
+          ],
+          "composition": "exercise-steps",
+          "palette": "yellow"
         },
         {
-          title: "Exercise 3: Collect Rules and Examples",
-          subtitle: "Duration: 5 minutes",
-          blocks: [
+          "title": "Exercise 3: Collect Rules and Examples",
+          "subtitle": "Duration: 5 minutes",
+          "blocks": [
             {
-              type: "text",
-              text: "Goal: make implicit knowledge visible."
+              "type": "text",
+              "text": "Write 3–5 specific rules: what must the result contain, what should it look like, and what must not happen?"
             },
             {
-              type: "bullets",
-              label: "Collect",
-              items: [
-                "fixed rules",
-                "good examples",
-                "bad examples",
-                "exceptions",
-                "typical mistakes"
+              "type": "bullets",
+              "label": "Which rules do you need?",
+              "items": [
+                "Content: which details must be included?",
+                "Format: list, table, or prose? How long?",
+                "Language: which tone and terminology?",
+                "Missing information: ask, flag, or skip?",
+                "Check: what does a good and a bad result look like?"
               ]
             },
             {
-              type: "bullets",
-              label: "General examples",
-              items: [
-                "required fields must be present",
-                "forbidden words or placeholders must not appear",
-                "output format must follow a known example",
-                "exceptions must be listed explicitly",
-                "common mistakes should be easy to detect"
+              "type": "bullets",
+              "label": "General Rules",
+              "items": [
+                "Include all required details. Do not invent information.",
+                "Follow the agreed format, order, and maximum length.",
+                "Write clearly and use the agreed language and tone.",
+                "Flag missing or unclear information and ask questions when needed.",
+                "Check the result for completeness, contradictions, and remaining placeholders."
               ]
-            },
-            {
-              type: "callout",
-              label: "Coffee shop landing page example",
-              text: "The headline mentions the seasonal drink, the CTA says \"Reserve a table\" or \"Order ahead\", opening hours are visible above the fold, no placeholder text remains, and the original briefing is not changed."
             }
-          ]
+          ],
+          "composition": "exercise-columns",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Summary: Basics",
-          subtitle: "Important words and metaphors",
-          layout: "summary",
-          blocks: [
+          "title": "Summary: Basics",
+          "subtitle": "Important words and metaphors",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Word", "Meaning", "Metaphor"],
-              rows: [
-                ["LLM", "A language model that predicts likely next text pieces from input.", "🧠 Brain"],
-                ["Token", "A small text piece: a word part, word, or character string.", "🧩 Text building block"],
-                ["Chatbot", "An interface that sends messages to an LLM and shows answers.", "👀👂👄 Eyes, ears, mouth"],
-                ["Agent", "An LLM-based system that can use tools, act, check, and continue.", "🤲💪🦵 Hands, arms, feet"],
-                ["Prompting", "Asking in chat and deciding yourself what to do with the answer.", "📖 Ask for a recipe"],
-                ["Vibe Coding", "Loosely describing software, trying it, and adjusting by feel.", "🍝 \"Something pasta-ish\""],
-                ["Agentic Coding", "Giving goal, context, files, rules, and boundaries so an agent can implement.", "🍲 Chef in the kitchen"]
+              "type": "table",
+              "headers": [
+                "Word",
+                "Meaning",
+                "Metaphor"
+              ],
+              "rows": [
+                [
+                  "LLM",
+                  "A language model that predicts likely next text pieces from input.",
+                  {"emojis": ["🧠"], "text": "Brain"}
+                ],
+                [
+                  "Token",
+                  "A small text piece: a word part, word, or character string.",
+                  {"emojis": ["🧩"], "text": "Text building block"}
+                ],
+                [
+                  "Chatbot",
+                  "An interface that sends messages to an LLM and shows answers.",
+                  {"emojis": ["👀👂👄"], "text": "Eyes, ears, mouth"}
+                ],
+                [
+                  "Agent",
+                  "An LLM-based system that can use tools, act, check, and continue.",
+                  {"emojis": ["🤲💪🦵"], "text": "Hands, arms, feet"}
+                ],
+                [
+                  "Prompting",
+                  "Asking in chat and deciding yourself what to do with the answer.",
+                  {"emojis": ["📖"], "text": "Ask for a recipe"}
+                ],
+                [
+                  "Vibe Coding",
+                  "Loosely describing software, trying it, and adjusting by feel.",
+                  {"emojis": ["🍝"], "text": "\"Something pasta-ish\""}
+                ],
+                [
+                  "Agentic Coding",
+                  "Giving goal, context, files, rules, and boundaries so an agent can implement.",
+                  {"emojis": ["🍲"], "text": "Chef in the kitchen"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Summary: Codex",
-          subtitle: "Setup words and metaphors",
-          layout: "summary",
-          blocks: [
+          "title": "Summary: Codex",
+          "subtitle": "Setup words and metaphors",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Word", "Meaning", "Metaphor"],
-              rows: [
-                ["Codex", "An agentic coding environment that can work with your project files.", "🧑‍🍳 Chef cook"],
-                ["Project", "The place where your work is organized inside Codex.", "🏪 Restaurant"],
-                ["Model", "The selected AI brain Codex uses for the task.", "🎓 Chef's brain"],
-                ["Workspace", "The project folder where the agent is allowed to read and change files.", "🍳 Kitchen"],
-                ["Tool", "Programs and apps the agent can use.", "🛠️ Kitchen tools"],
-                ["Plugin", "A special program made for Codex.", "🧰 Special kitchen tool"],
-                ["Automation", "A repeatable agent task that can run on a configured trigger.", "⏲️ Kitchen timer"],
-                ["Usage", "The account area where you can see how much Codex has been used.", "💸 Salary for the cook"]
+              "type": "table",
+              "headers": [
+                "Word",
+                "Meaning",
+                "Metaphor"
+              ],
+              "rows": [
+                [
+                  "Codex",
+                  "An agentic coding environment that can work with your project files.",
+                  {"emojis": ["🧑‍🍳"], "text": "Chef cook"}
+                ],
+                [
+                  "Project",
+                  "The place where your work is organized inside Codex.",
+                  {"emojis": ["🏪"], "text": "Restaurant"}
+                ],
+                [
+                  "Model",
+                  "The selected AI brain Codex uses for the task.",
+                  {"emojis": ["🧠"], "text": "Chef's brain"}
+                ],
+                [
+                  "Workspace",
+                  "The project folder where the agent is allowed to read and change files.",
+                  {"emojis": ["🍳"], "text": "Kitchen"}
+                ],
+                [
+                  "Tool",
+                  "Programs and apps the agent can use.",
+                  {"emojis": ["🛠️"], "text": "Kitchen tools"}
+                ],
+                [
+                  "Plugin",
+                  "A special program made for Codex.",
+                  {"emojis": ["🧰"], "text": "Special kitchen tool"}
+                ],
+                [
+                  "Automation",
+                  "A repeatable agent task that can run on a configured trigger.",
+                  "⏲️ Kitchen timer"
+                ],
+                [
+                  "Usage",
+                  "The account area where you can see how much Codex has been used.",
+                  {"emojis": ["💸"], "text": "Salary for the cook"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Summary: Use Cases",
-          subtitle: "Instructions and metaphors",
-          layout: "summary",
-          blocks: [
+          "title": "Summary: Use Cases",
+          "subtitle": "Instructions and metaphors",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Word", "Meaning", "Metaphor"],
-              rows: [
-                ["Use Case", "A concrete task where AI can create value in a workflow.", "📋 Dish on the menu"],
-                ["Input", "The material the program receives: file, notes, URL, or table.", "🥕 Ingredients"],
-                ["Output", "The result the program should create: report, list, screenshots, or app.", "🍽️ Finished dish"],
-                ["Rule", "A fixed condition the result must follow.", "📏 Cooking rule"],
-                ["Check Criteria", "How you know the task is done well enough.", "👅 Taste test"],
-                ["Error Case", "A situation where the input or result is missing, wrong, or unclear.", "❓ Missing ingredient"],
-                ["Human Approval", "A decision that stays with a person, such as publishing or deleting data.", "✅ Chef signs off"]
-              ]
-            },
-            {
-              type: "table",
-              headers: ["Good use case is", "How to recognize it", "Metaphor"],
-              rows: [
-                ["Frequent", "The task comes up regularly.", "🔁 Regular order"],
-                ["Time-consuming", "It noticeably absorbs attention.", "⏳ Long prep time"],
-                ["Easy to check", "A good result is recognizable.", "🔍 Quality check"],
-                ["Low-risk", "Mistakes are easy to spot and correct.", "🛟 Safety net"],
-                ["Context-rich", "Examples, files, and rules are available.", "🗂️ Recipe archive"]
+              "type": "table",
+              "headers": [
+                "Word",
+                "Meaning",
+                "Metaphor"
+              ],
+              "rows": [
+                [
+                  "Use Case",
+                  "A concrete task where AI can create value in a workflow.",
+                  {"emojis": ["📋"], "text": "Dish on the menu"}
+                ],
+                [
+                  "Input",
+                  "The material the program receives: file, notes, URL, or table.",
+                  {"emojis": ["🥕"], "text": "Ingredients"}
+                ],
+                [
+                  "Output",
+                  "The result the program should create: report, list, screenshots, or app.",
+                  {"emojis": ["🍽️"], "text": "Finished dish"}
+                ],
+                [
+                  "Rule",
+                  "A fixed condition the result must follow.",
+                  {"emojis": ["📏"], "text": "Cooking rule"}
+                ],
+                [
+                  "Check Criteria",
+                  "How you know the task is done well enough.",
+                  {"emojis": ["👅"], "text": "Taste test"}
+                ],
+                [
+                  "Error Case",
+                  "A situation where the input or result is missing, wrong, or unclear.",
+                  {"emojis": ["❓"], "text": "Missing ingredient"}
+                ],
+                [
+                  "Human Approval",
+                  "A decision that stays with a person, such as publishing or deleting data.",
+                  {"emojis": ["✅"], "text": "Chef signs off"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "Summary: Choosing a Good Use Case",
+          "subtitle": "Instructions and metaphors",
+          "layout": "summary",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Good use case is",
+                "How to recognize it",
+                "Metaphor"
+              ],
+              "rows": [
+                [
+                  "Frequent",
+                  "The task comes up regularly.",
+                  {"emojis": ["🔁"], "text": "Regular order"}
+                ],
+                [
+                  "Time-consuming",
+                  "It noticeably absorbs attention.",
+                  "⏳ Long prep time"
+                ],
+                [
+                  "Easy to check",
+                  "A good result is recognizable.",
+                  {"emojis": ["🔍"], "text": "Quality check"}
+                ],
+                [
+                  "Low-risk",
+                  "Mistakes are easy to spot and correct.",
+                  {"emojis": ["🛟"], "text": "Safety net"}
+                ],
+                [
+                  "Context-rich",
+                  "Examples, files, and rules are available.",
+                  {"emojis": ["🗂️"], "text": "Recipe archive"}
+                ]
+              ]
+            }
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         }
       ],
-      slidesDay2: [
+      "slidesDay2": [
         {
-          title: "Agentic Coding\nDay 2",
-          subtitle: "Projects, skills, tools, and safe boundaries",
-          cover: true,
-          blocks: [],
-          notes: "Connect yesterday's agent basics to today's practical Codex building blocks."
+          "title": "Agentic Coding\nDay 2",
+          "subtitle": "Projects, skills, tools, and safe boundaries",
+          "cover": true,
+          "blocks": [],
+          "notes": "Connect yesterday's agent basics to today's practical Codex building blocks.",
+          "composition": "cover",
+          "palette": "yellow"
         },
         {
-          title: "Exercise 4: The Error Case",
-          subtitle: "Duration: 5 minutes",
-          blocks: [
+          "title": "Exercise 4: The Error Case",
+          "subtitle": "Duration: 5 minutes",
+          "blocks": [
             {
-              type: "text",
-              text: "Goal: look beyond the ideal path."
+              "type": "text",
+              "text": "Goal: look beyond the ideal path."
             },
             {
-              type: "bullets",
-              label: "Define at least three general error states",
-              items: [
+              "type": "bullets",
+              "label": "Define at least three general error states",
+              "items": [
                 "file is missing",
                 "format is wrong",
                 "input is empty",
@@ -1169,634 +1700,770 @@
                 "result is ambiguous",
                 "multiple rules contradict each other"
               ]
-            },
-            {
-              type: "callout",
-              label: "Coffee shop landing page example",
-              text: "If the menu CSV is missing prices, the program should mark the affected drinks, keep generating the page, and show a warning in the report."
-            },
-            {
-              type: "callout",
-              label: "Question",
-              text: "What should the program do in this case?"
             }
-          ]
+          ],
+          "composition": "exercise-columns",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Exercise 5: Write the First LLM Prompt",
-          subtitle: "Duration: 10 minutes",
-          blocks: [
+          "title": "Exercise 5: Write the First LLM Prompt",
+          "subtitle": "Duration: 10 minutes",
+          "blocks": [
             {
-              type: "prompt",
-              label: "Template",
-              text: "Build a local application that supports [goal].\nIt uses [input] as input.\nThe program should:\n- ...\n- ...\n- ...\nFollow these rules: [rules].\nThe result should be [output].\nThe task is done when [check criteria] are met.\nThe program must not [boundaries]."
-            },
-            {
-              type: "callout",
-              label: "Coffee shop landing page",
-              text: "Build a local app that turns a seasonal coffee campaign briefing into a responsive landing page preview with headline, offer, menu teaser, photos, opening hours, and CTA."
+              "type": "prompt",
+              "label": "Template",
+              "text": "Build a local application that supports [goal].\nIt uses [input] as input.\nThe program should:\n- ...\n- ...\n- ...\nFollow these rules: [rules].\nThe result should be [output].\nThe task is done when [check criteria] are met.\nThe program must not [boundaries]."
             }
-          ]
+          ],
+          "composition": "prompt",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Project / Skill / Tool",
-          subtitle: "From workspace to action",
-          blocks: [
+          "title": "Project / Skill / Tool",
+          "subtitle": "From workspace to action",
+          "blocks": [
             {
-              type: "conceptCards",
-              items: [
+              "type": "conceptCards",
+              "items": [
                 {
-                  title: "Project",
-                  icons: [
-                    { emoji: "🏪" }
+                  "title": "Project",
+                  "icons": [
+                    {
+                      "icon": "building-store"
+                    }
                   ],
-                  accent: "#5b7cfa",
-                  description: "Workspace with context",
-                  metaphor: "Metaphor: restaurant"
+                  "accent": "#5b7cfa",
+                  "description": "Workspace with context",
+                  "metaphor": "Metaphor: restaurant"
                 },
                 {
-                  title: "Skill",
-                  icons: [
-                    { emoji: "📘" }
+                  "title": "Skill",
+                  "icons": [
+                    {
+                      "icon": "book"
+                    }
                   ],
-                  accent: "#16b85f",
-                  description: "Reusable instruction",
-                  metaphor: "Metaphor: recipe card"
+                  "accent": "#16b85f",
+                  "description": "Reusable instruction",
+                  "metaphor": "Metaphor: recipe card"
                 },
                 {
-                  title: "Tool",
-                  icons: [
-                    { emoji: "🛠️" }
+                  "title": "Tool",
+                  "icons": [
+                    {
+                      "icon": "tool"
+                    }
                   ],
-                  accent: "#f97316",
-                  description: "Can execute an action",
-                  metaphor: "Metaphor: kitchen tool"
+                  "accent": "#f97316",
+                  "description": "Can execute an action",
+                  "metaphor": "Metaphor: kitchen tool"
                 }
               ]
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
-          title: "Project",
-          subtitle: "What it is · Why it helps · How to use it",
-          layout: "agent-flow",
-          blocks: [
+          "title": "Project",
+          "subtitle": "What it is · Why it helps · How to use it",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              equalColumns: true,
-              showArrows: false,
-              intro: "A project is a dedicated workspace that brings together the files, context, and rules for one area of work.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": "A project is a dedicated workspace that brings together the files, context, and rules for one area of work.",
+              "columns": [
                 {
-                  title: "What is it?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "What is it?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "folder",
-                      color: "#5b7cfa",
-                      label: "Files, context,\nand project rules"
+                      "icon": "folder",
+                      "color": "#5b7cfa",
+                      "label": "Files, context,\nand project rules"
                     }
                   ]
                 },
                 {
-                  title: "Why use it?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Why use it?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "message",
-                      color: "#16b85f",
-                      label: "Keeps the agent\non the right task"
+                      "icon": "message",
+                      "color": "#16b85f",
+                      "label": "Keeps the agent\non the right task"
                     },
                     {
-                      icon: "lock",
-                      color: "#16b85f",
-                      label: "Separates projects\nand sensitive data"
-                    }
-                  ]
-                },
-                {
-                  title: "How do I use it?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
-                    {
-                      icon: "check",
-                      color: "#f97316",
-                      label: "Select the right\nproject first"
-                    },
-                    {
-                      icon: "file",
-                      color: "#f97316",
-                      label: "Add only what\nthe task needs"
+                      "icon": "lock",
+                      "color": "#16b85f",
+                      "label": "Separates projects\nand sensitive data"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Security",
-              keyIdea: "Keep secrets, client data, production files, and private notes outside the project unless the task genuinely needs them."
-            }
-          ]
-        },
-        {
-          title: "Create a new project",
-          subtitle: "Step 1 of 3 — Start a dedicated workspace",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-new-project-en.png",
-              alt: "Create a new project in Codex"
-            }
-          ]
-        },
-        {
-          title: "Give the project a clear name",
-          subtitle: "Step 2 of 3 — Make the context recognizable",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-project-name-en.png",
-              alt: "Name a new project in Codex"
-            }
-          ]
-        },
-        {
-          title: "Select the project for the task",
-          subtitle: "Step 3 of 3 — Work in the right context",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/select-project-codex-en.png",
-              alt: "Select a project in Codex"
-            }
-          ]
-        },
-        {
-          title: "Give the agent only the access it needs",
-          subtitle: "Start with the safest approval mode for the project",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/project-and-agent-security-1-en.png",
-              alt: "Codex approval menu with Ask for approval, Approve for me, and Full access options"
+              "keyIdeaLabel": null,
+              "keyIdea": null
             }
           ],
-          notes: "Choose the narrowest approval mode that still lets the agent complete the task. Prefer Ask for approval when external files or internet access are sensitive. Use Full access only when it is truly necessary and the workspace is safe."
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Plan Mode",
-          subtitle: "Understand first · Plan second · Implement after",
-          layout: "agent-flow",
-          blocks: [
+          "title": "Project: Usage and Safety",
+          "subtitle": "What it is · Why it helps · How to use it",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              equalColumns: true,
-              showArrows: false,
-              intro: "Plan Mode lets Codex gather context, ask clarifying questions, and build a stronger plan before implementation.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": null,
+              "columns": [
                 {
-                  title: "Understand",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "How do I use it?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "search",
-                      color: "#5b7cfa",
-                      label: "Gathers relevant\ncontext"
+                      "icon": "check",
+                      "color": "#f97316",
+                      "label": "Select the right\nproject first"
                     },
                     {
-                      icon: "question-mark",
-                      color: "#5b7cfa",
-                      label: "Asks clarifying\nquestions"
-                    }
-                  ]
-                },
-                {
-                  title: "Plan",
-                  layout: "list",
-                  size: "mini",
-                  items: [
-                    {
-                      icon: "clipboard-list",
-                      color: "#16b85f",
-                      label: "Proposes clear\nimplementation steps"
-                    },
-                    {
-                      icon: "check",
-                      color: "#16b85f",
-                      label: "Makes assumptions\nvisible"
-                    }
-                  ]
-                },
-                {
-                  title: "Use it for",
-                  layout: "list",
-                  size: "mini",
-                  items: [
-                    {
-                      icon: "stack-2",
-                      color: "#f97316",
-                      label: "Complex or\nmulti-step tasks"
-                    },
-                    {
-                      icon: "message",
-                      color: "#f97316",
-                      label: "Ambiguous\nrequirements"
+                      "icon": "file",
+                      "color": "#f97316",
+                      "label": "Add only what\nthe task needs"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Key idea",
-              keyIdea: "Agree on the route before Codex changes files."
+              "keyIdeaLabel": "Security",
+              "keyIdea": "Keep secrets, client data, production files, and private notes outside the project unless the task genuinely needs them."
             }
           ],
-          notes: "The Codex manual recommends Plan Mode for complex, ambiguous, or hard-to-describe tasks. It lets Codex gather context, ask clarifying questions, and prepare a stronger plan before implementation."
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Turn Plan Mode on",
-          subtitle: "Step 1 of 3 — Open + and choose Plan mode",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Create a new project",
+          "subtitle": "Step 1 of 3 — Start a dedicated workspace",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/planmode-en-1.png",
-              alt: "Plan mode highlighted in the Codex add menu"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-new-project-en.png",
+              "alt": "Create a new project in Codex"
             }
           ],
-          notes: "Open the add menu and choose Plan mode before sending a complex prompt. In supported Codex surfaces, /plan or Shift+Tab can also toggle Plan Mode."
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Add files and folders",
-          subtitle: "Step 1 of 3 — Open + and choose Files and folders",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Give the project a clear name",
+          "subtitle": "Step 2 of 3 — Make the context recognizable",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/add-documents-and-folders-en-1.png",
-              alt: "Files and folders highlighted in the Codex add menu"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-project-name-en.png",
+              "alt": "Name a new project in Codex"
             }
           ],
-          notes: "Add only the files or folders Codex needs for the task. Avoid sharing an entire drive or unrelated client material."
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Choose the relevant material",
-          subtitle: "Step 2 of 3 — Select a file or folder",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Select the project for the task",
+          "subtitle": "Step 3 of 3 — Work in the right context",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/add-documents-and-folders-2-en-de.png",
-              alt: "System file picker opened from Codex"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/select-project-codex-en.png",
+              "alt": "Select a project in Codex"
             }
           ],
-          notes: "Select the smallest useful scope. A focused brief or project folder gives Codex better context and reduces accidental data exposure."
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Check the attachment before sending",
-          subtitle: "Step 3 of 3 — Confirm the right context is attached",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Give the agent only the access it needs",
+          "subtitle": "Start with the safest approval mode for the project",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/add-documents-and-folders-3-en.png",
-              alt: "A PDF attached to a Codex prompt"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/project-and-agent-security-1-en.png",
+              "alt": "Codex approval menu with Ask for approval, Approve for me, and Full access options"
             }
           ],
-          notes: "Review the attachment chips before starting the task. Remove anything that is unrelated, sensitive, or no longer needed."
+          "notes": "Choose the narrowest approval mode that still lets the agent complete the task. Prefer Ask for approval when external files or internet access are sensitive. Use Full access only when it is truly necessary and the workspace is safe.",
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Answer clarifying questions",
-          subtitle: "Step 2 of 3 — Resolve important decisions before implementation",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Plan Mode",
+          "subtitle": "Understand first · Plan second · Implement after",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/planmode-clarifiying-en-2.png",
-              alt: "Codex asks a multiple-choice clarifying question in Plan Mode"
-            }
-          ],
-          notes: "Plan Mode can pause to ask targeted questions when an important requirement is unclear. Choose an option or give your own answer so Codex can build the plan around the right assumptions."
-        },
-        {
-          title: "Implement the plan",
-          subtitle: "Step 3 of 3 — Review the plan and confirm implementation",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/planmode-implement-1-en.png",
-              alt: "Codex asks for confirmation to implement the completed plan"
-            }
-          ],
-          notes: "Review the plan summary, scope, and assumptions before continuing. Choose Yes, implement this plan only when the proposed approach matches the task."
-        },
-        {
-          title: "Skill",
-          subtitle: "What it is · Why it helps · How to use it",
-          layout: "agent-flow",
-          blocks: [
-            {
-              type: "agentFlow",
-              equalHeight: true,
-              equalColumns: true,
-              showArrows: false,
-              intro: "A skill is a reusable playbook that teaches Codex how to perform one specific type of task.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": "Plan Mode lets Codex gather context, ask clarifying questions, and build a stronger plan before implementation.",
+              "columns": [
                 {
-                  title: "What is it?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Understand",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "book",
-                      color: "#5b7cfa",
-                      label: "Instructions,\nreferences, and checks"
+                      "icon": "search",
+                      "color": "#5b7cfa",
+                      "label": "Gathers relevant\ncontext"
+                    },
+                    {
+                      "icon": "question-mark",
+                      "color": "#5b7cfa",
+                      "label": "Asks clarifying\nquestions"
                     }
                   ]
                 },
                 {
-                  title: "Why use it?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Plan",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "trending-up",
-                      color: "#16b85f",
-                      label: "More consistent\nresults"
+                      "icon": "clipboard-list",
+                      "color": "#16b85f",
+                      "label": "Proposes clear\nimplementation steps"
                     },
                     {
-                      icon: "message",
-                      color: "#16b85f",
-                      label: "Less repeated\nprompting"
+                      "icon": "check",
+                      "color": "#16b85f",
+                      "label": "Makes assumptions\nvisible"
                     }
                   ]
                 },
                 {
-                  title: "How do I use it?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Use it for",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "clipboard-list",
-                      color: "#f97316",
-                      label: "Use it for a\nrepeatable task"
+                      "icon": "stack-2",
+                      "color": "#f97316",
+                      "label": "Complex or\nmulti-step tasks"
                     },
                     {
-                      icon: "check",
-                      color: "#f97316",
-                      label: "Mention $skill-name\nor let Codex match it"
+                      "icon": "message",
+                      "color": "#f97316",
+                      "label": "Ambiguous\nrequirements"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Security",
-              keyIdea: "Read a skill before trusting it. Prefer focused skills from trusted sources and check what tools, files, or external services they expect to use."
-            }
-          ]
-        },
-        {
-          title: "Create a skill with Skill Creator",
-          subtitle: "Select the skill and describe the task",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-skill-en.png",
-              alt: "Select Skill Creator in Codex by entering $skill in the prompt field"
+              "keyIdeaLabel": "Key idea",
+              "keyIdea": "Agree on the route before Codex changes files."
             }
           ],
-          notes: "Enter $skill, select Skill Creator, and describe one focused task, its trigger, and the expected result. Review and test the generated skill before using it."
+          "notes": "The Codex manual recommends Plan Mode for complex, ambiguous, or hard-to-describe tasks. It lets Codex gather context, ask clarifying questions, and prepare a stronger plan before implementation.",
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Describe what the skill should do",
-          subtitle: "Name the skill, define its trigger, and set clear constraints",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Turn Plan Mode on",
+          "subtitle": "Step 1 of 3 — Open + and choose Plan mode",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-skill-2-en.png",
-              alt: "Example prompt for creating a local Frontend Developer skill with Skill Creator"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/planmode-en-1.png",
+              "alt": "Plan mode highlighted in the Codex add menu"
             }
           ],
-          notes: "A useful request names the skill, explains when it should activate, and states the standards or constraints it must follow."
+          "notes": "Open the add menu and choose Plan mode before sending a complex prompt. In supported Codex surfaces, /plan or Shift+Tab can also toggle Plan Mode.",
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Open the generated skill",
-          subtitle: "Skill Creator creates and validates the local files",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Add files and folders",
+          "subtitle": "Step 1 of 3 — Open + and choose Files and folders",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-skill-3-en.png",
-              alt: "Validated local skill result in Codex with the generated SKILL.md highlighted"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/add-documents-and-folders-en-1.png",
+              "alt": "Files and folders highlighted in the Codex add menu"
             }
           ],
-          notes: "After creation, check that Codex reports the skill as valid and open the generated files for review."
+          "notes": "Add only the files or folders Codex needs for the task. Avoid sharing an entire drive or unrelated client material.",
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Check the skill metadata",
-          subtitle: "openai.yaml defines how the skill appears and starts",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Choose the relevant material",
+          "subtitle": "Step 2 of 3 — Select a file or folder",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-skill-4-en.png",
-              alt: "Generated agents/openai.yaml with the skill display name, description, and default prompt"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/add-documents-and-folders-2-en-de.png",
+              "alt": "System file picker opened from Codex"
             }
           ],
-          notes: "Review the display name, short description, and default prompt in agents/openai.yaml. They should make the skill easy to recognize and use."
+          "notes": "Select the smallest useful scope. A focused brief or project folder gives Codex better context and reduces accidental data exposure.",
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Review the skill instructions",
-          subtitle: "SKILL.md defines the trigger, workflow, and constraints",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Check the attachment before sending",
+          "subtitle": "Step 3 of 3 — Confirm the right context is attached",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-skill-5-en.png",
-              alt: "Generated SKILL.md with its trigger description, required stack, and workflow"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/add-documents-and-folders-3-en.png",
+              "alt": "A PDF attached to a Codex prompt"
             }
           ],
-          notes: "Read the complete SKILL.md before using the skill. Check that the trigger is precise and that the instructions are ordered, focused, and testable."
+          "notes": "Review the attachment chips before starting the task. Remove anything that is unrelated, sensitive, or no longer needed.",
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "A good skill is focused and testable",
-          subtitle: "Local required core, optional support",
-          layout: "skill-anatomy",
-          blocks: [
+          "title": "Answer clarifying questions",
+          "subtitle": "Step 2 of 3 — Resolve important decisions before implementation",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "skillAnatomy",
-              treeLabel: "Folder structure",
-              tree: "my-skill/\n├── SKILL.md                 required\n├── agents/\n│   └── openai.yaml          required for local skills\n├── references/\n│   └── some.md              optional deep context\n└── scripts/                 optional deterministic helpers",
-              checklistLabel: "Quality check",
-              items: [
+              "type": "screenshot",
+              "src": "assets/codex-pictures/planmode-clarifiying-en-2.png",
+              "alt": "Codex asks a multiple-choice clarifying question in Plan Mode"
+            }
+          ],
+          "notes": "Plan Mode can pause to ask targeted questions when an important requirement is unclear. Choose an option or give your own answer so Codex can build the plan around the right assumptions.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Implement the plan",
+          "subtitle": "Step 3 of 3 — Review the plan and confirm implementation",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/planmode-implement-1-en.png",
+              "alt": "Codex asks for confirmation to implement the completed plan"
+            }
+          ],
+          "notes": "Review the plan summary, scope, and assumptions before continuing. Choose Yes, implement this plan only when the proposed approach matches the task.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Skill",
+          "subtitle": "What it is · Why it helps · How to use it",
+          "layout": "agent-flow",
+          "blocks": [
+            {
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": "A skill is a reusable playbook that teaches Codex how to perform one specific type of task.",
+              "columns": [
+                {
+                  "title": "What is it?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
+                    {
+                      "icon": "book",
+                      "color": "#5b7cfa",
+                      "label": "Instructions,\nreferences, and checks"
+                    }
+                  ]
+                },
+                {
+                  "title": "Why use it?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
+                    {
+                      "icon": "trending-up",
+                      "color": "#16b85f",
+                      "label": "More consistent\nresults"
+                    },
+                    {
+                      "icon": "message",
+                      "color": "#16b85f",
+                      "label": "Less repeated\nprompting"
+                    }
+                  ]
+                }
+              ],
+              "keyIdeaLabel": null,
+              "keyIdea": null
+            }
+          ],
+          "composition": "flow",
+          "palette": "white"
+        },
+        {
+          "title": "Skill: Usage and Safety",
+          "subtitle": "What it is · Why it helps · How to use it",
+          "layout": "agent-flow",
+          "blocks": [
+            {
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": null,
+              "columns": [
+                {
+                  "title": "How do I use it?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
+                    {
+                      "icon": "clipboard-list",
+                      "color": "#f97316",
+                      "label": "Use it for a\nrepeatable task"
+                    },
+                    {
+                      "icon": "check",
+                      "color": "#f97316",
+                      "label": "Mention $skill-name\nor let Codex match it"
+                    }
+                  ]
+                }
+              ],
+              "keyIdeaLabel": "Security",
+              "keyIdea": "Read a skill before trusting it. Prefer focused skills from trusted sources and check what tools, files, or external services they expect to use."
+            }
+          ],
+          "composition": "flow",
+          "palette": "white"
+        },
+        {
+          "title": "Create a skill with Skill Creator",
+          "subtitle": "Select the skill and describe the task",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-skill-en.png",
+              "alt": "Select Skill Creator in Codex by entering $skill in the prompt field"
+            }
+          ],
+          "notes": "Enter $skill, select Skill Creator, and describe one focused task, its trigger, and the expected result. Review and test the generated skill before using it.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Describe what the skill should do",
+          "subtitle": "Name the skill, define its trigger, and set clear constraints",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-skill-2-en.png",
+              "alt": "Example prompt for creating a local Frontend Developer skill with Skill Creator"
+            }
+          ],
+          "notes": "A useful request names the skill, explains when it should activate, and states the standards or constraints it must follow.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Open the generated skill",
+          "subtitle": "Skill Creator creates and validates the local files",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-skill-3-en.png",
+              "alt": "Validated local skill result in Codex with the generated SKILL.md highlighted"
+            }
+          ],
+          "notes": "After creation, check that Codex reports the skill as valid and open the generated files for review.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Check the skill metadata",
+          "subtitle": "openai.yaml defines how the skill appears and starts",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-skill-4-en.png",
+              "alt": "Generated agents/openai.yaml with the skill display name, description, and default prompt"
+            }
+          ],
+          "notes": "Review the display name, short description, and default prompt in agents/openai.yaml. They should make the skill easy to recognize and use.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Review the skill instructions",
+          "subtitle": "SKILL.md defines the trigger, workflow, and constraints",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-skill-5-en.png",
+              "alt": "Generated SKILL.md with its trigger description, required stack, and workflow"
+            }
+          ],
+          "notes": "Read the complete SKILL.md before using the skill. Check that the trigger is precise and that the instructions are ordered, focused, and testable.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "A good skill is focused and testable",
+          "subtitle": "Local required core, optional support",
+          "layout": "skill-anatomy",
+          "blocks": [
+            {
+              "type": "skillAnatomy",
+              "treeLabel": "Folder structure",
+              "tree": "my-skill/\n├── SKILL.md                 required\n├── agents/\n│   └── openai.yaml          required for local skills\n├── references/\n│   └── some.md              optional deep context\n└── scripts/                 optional deterministic helpers",
+              "checklistLabel": "Quality check",
+              "items": [
                 "One clearly scoped job",
                 "Precise trigger description",
                 "Explicit inputs and outputs",
                 "Imperative, ordered steps",
                 "Examples and checks only where useful"
-              ]
-            },
-            {
-              type: "callout",
-              label: "Rule",
-              text: "Local standard: Always include SKILL.md and agents/openai.yaml. Add references and scripts only when the workflow needs them."
+              ],
+              "panel": "tree"
             }
           ],
-          notes: "For local workshop skills, agents/openai.yaml is required alongside SKILL.md. In the general Codex skill format, this metadata file is optional. Keep references separate so Codex can use progressive disclosure."
+          "notes": "For local workshop skills, agents/openai.yaml is required alongside SKILL.md. In the general Codex skill format, this metadata file is optional. Keep references separate so Codex can use progressive disclosure.",
+          "composition": "anatomy",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Tool",
-          subtitle: "What it is · Why it helps · How to use it",
-          layout: "agent-flow",
-          blocks: [
+          "title": "Skill: Quality Check",
+          "subtitle": "Local required core, optional support",
+          "layout": "skill-anatomy",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              equalColumns: true,
-              showArrows: false,
-              intro: "A tool is a program or interface Codex can use to retrieve information or perform a task.",
-              columns: [
+              "type": "skillAnatomy",
+              "treeLabel": "Folder structure",
+              "tree": "my-skill/\n├── SKILL.md                 required\n├── agents/\n│   └── openai.yaml          required for local skills\n├── references/\n│   └── some.md              optional deep context\n└── scripts/                 optional deterministic helpers",
+              "checklistLabel": "Quality check",
+              "items": [
+                "One clearly scoped job",
+                "Precise trigger description",
+                "Explicit inputs and outputs",
+                "Imperative, ordered steps",
+                "Examples and checks only where useful"
+              ],
+              "panel": "checklist"
+            },
+            {
+              "type": "callout",
+              "label": "Rule",
+              "text": "Local standard: Always include SKILL.md and agents/openai.yaml. Add references and scripts only when the workflow needs them."
+            }
+          ],
+          "notes": "For local workshop skills, agents/openai.yaml is required alongside SKILL.md. In the general Codex skill format, this metadata file is optional. Keep references separate so Codex can use progressive disclosure.",
+          "composition": "anatomy",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "Tool",
+          "subtitle": "What it is · Why it helps · How to use it",
+          "layout": "agent-flow",
+          "blocks": [
+            {
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": "A tool is a program or interface Codex can use to retrieve information or perform a task.",
+              "columns": [
                 {
-                  title: "What is it?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "What is it?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "tool",
-                      color: "#5b7cfa",
-                      label: "Programs: browser,\nterminal, Excel"
+                      "icon": "tool",
+                      "color": "#5b7cfa",
+                      "label": "Programs: browser,\nterminal, Excel"
                     },
                     {
-                      icon: "world",
-                      color: "#5b7cfa",
-                      label: "Services: GitHub,\nGoogle Drive, Slack"
+                      "icon": "world",
+                      "color": "#5b7cfa",
+                      "label": "Services: GitHub,\nGoogle Drive, Slack"
                     }
                   ]
                 },
                 {
-                  title: "Why use it?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Why use it?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "search",
-                      color: "#16b85f",
-                      label: "Find, read, and\ncheck information"
+                      "icon": "search",
+                      "color": "#16b85f",
+                      "label": "Find, read, and\ncheck information"
                     },
                     {
-                      icon: "code",
-                      color: "#16b85f",
-                      label: "Complete tasks inside\nother programs"
-                    }
-                  ]
-                },
-                {
-                  title: "How do I use it?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
-                    {
-                      icon: "tool",
-                      color: "#f97316",
-                      label: "Choose the tool that\nmatches the task"
-                    },
-                    {
-                      icon: "check",
-                      color: "#f97316",
-                      label: "Check access and\nreview the result"
+                      "icon": "code",
+                      "color": "#16b85f",
+                      "label": "Complete tasks inside\nother programs"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Security",
-              keyIdea: "Tools make risk real. Review anything that deletes, publishes, sends messages, installs software, calls external services, or shares data."
-            }
-          ]
-        },
-        {
-          title: "Install a plugin",
-          subtitle: "Open Plugins -> Review access -> Install",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/include-plugins-en.png",
-              alt: "Full Codex plugin directory showing the Plugins navigation item, available plugins, an Install button, and a data-access warning"
+              "keyIdeaLabel": null,
+              "keyIdea": null
             }
           ],
-          notes: "Plugins are installable bundles. Review requested access before installation. In the CLI, run /plugins, install from a configured marketplace, and start a new session."
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Open the plugin details before installing",
-          subtitle: "Choose the plugin you want to review",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Tool: Usage and Safety",
+          "subtitle": "What it is · Why it helps · How to use it",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/check-plugin-access-skills-1-en.png",
-              alt: "Google Calendar highlighted in the Codex plugin directory before installation"
-            }
-          ],
-          notes: "Do not install from the directory view alone. Open the plugin detail page so you can inspect what the bundle contains and what it can access."
-        },
-        {
-          title: "Check what the plugin includes",
-          subtitle: "Review every app and skill in the bundle",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/check-plugin-access-skills-2-en.png",
-              alt: "Google Calendar plugin detail page with its included app and five skills highlighted"
-            }
-          ],
-          notes: "A plugin can bundle apps and skills. Review each included capability rather than judging the plugin only by its name or summary."
-        },
-        {
-          title: "Inspect the app's actions",
-          subtitle: "Pay special attention to write and delete actions",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/check-plugin-access-skills-3-en.png",
-              alt: "Google Calendar app action list showing create, delete, respond, and update event actions"
-            }
-          ],
-          notes: "Check which actions only read information and which can create, update, delete, or send data. Grant access only when those actions are necessary for your task."
-        },
-        {
-          title: "Read the included skill before use",
-          subtitle: "Check its workflow, boundaries, and expected output",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/check-plugin-access-skills-4-en.png",
-              alt: "Google Calendar skill details showing its overview, preferred deliverables, and workflow"
-            }
-          ],
-          notes: "Read the skill instructions before trusting them. Check that the workflow is relevant, the boundaries are safe, and the expected outputs match your task."
-        },
-        {
-          title: "Skill or plugin? Choose by the need",
-          subtitle: "Process = Skill · Connected tool or information = Plugin",
-          blocks: [
-            {
-              type: "security",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": null,
+              "columns": [
                 {
-                  label: "Skill",
-                  tone: "orange",
-                  items: [
+                  "title": "How do I use it?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
+                    {
+                      "icon": "tool",
+                      "color": "#f97316",
+                      "label": "Choose the tool that\nmatches the task"
+                    },
+                    {
+                      "icon": "check",
+                      "color": "#f97316",
+                      "label": "Check access and\nreview the result"
+                    }
+                  ]
+                }
+              ],
+              "keyIdeaLabel": "Security",
+              "keyIdea": "Tools make risk real. Review anything that deletes, publishes, sends messages, installs software, calls external services, or shares data."
+            }
+          ],
+          "composition": "flow",
+          "palette": "white"
+        },
+        {
+          "title": "Install a plugin",
+          "subtitle": "Open Plugins -> Review access -> Install",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/include-plugins-en.png",
+              "alt": "Full Codex plugin directory showing the Plugins navigation item, available plugins, an Install button, and a data-access warning"
+            }
+          ],
+          "notes": "Plugins are installable bundles. Review requested access before installation. In the CLI, run /plugins, install from a configured marketplace, and start a new session.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Open the plugin details before installing",
+          "subtitle": "Choose the plugin you want to review",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/check-plugin-access-skills-1-en.png",
+              "alt": "Google Calendar highlighted in the Codex plugin directory before installation"
+            }
+          ],
+          "notes": "Do not install from the directory view alone. Open the plugin detail page so you can inspect what the bundle contains and what it can access.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Check what the plugin includes",
+          "subtitle": "Review every app and skill in the bundle",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/check-plugin-access-skills-2-en.png",
+              "alt": "Google Calendar plugin detail page with its included app and five skills highlighted"
+            }
+          ],
+          "notes": "A plugin can bundle apps and skills. Review each included capability rather than judging the plugin only by its name or summary.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Inspect the app's actions",
+          "subtitle": "Pay special attention to write and delete actions",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/check-plugin-access-skills-3-en.png",
+              "alt": "Google Calendar app action list showing create, delete, respond, and update event actions"
+            }
+          ],
+          "notes": "Check which actions only read information and which can create, update, delete, or send data. Grant access only when those actions are necessary for your task.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Read the included skill before use",
+          "subtitle": "Check its workflow, boundaries, and expected output",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/check-plugin-access-skills-4-en.png",
+              "alt": "Google Calendar skill details showing its overview, preferred deliverables, and workflow"
+            }
+          ],
+          "notes": "Read the skill instructions before trusting them. Check that the workflow is relevant, the boundaries are safe, and the expected outputs match your task.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Skill or plugin? Choose by the need",
+          "subtitle": "Process = Skill · Connected tool or information = Plugin",
+          "blocks": [
+            {
+              "type": "security",
+              "columns": [
+                {
+                  "label": "Skill",
+                  "tone": "orange",
+                  "items": [
                     "Teaches Codex your repeatable process",
                     "Use for consistent rules, order, tone, or format",
                     "Start with $ and select the skill",
@@ -1804,9 +2471,9 @@
                   ]
                 },
                 {
-                  label: "Plugin",
-                  tone: "green",
-                  items: [
+                  "label": "Plugin",
+                  "tone": "green",
+                  "items": [
                     "Connects Codex to other tools and information",
                     "Use for Google Drive, email, or another service",
                     "Open Plugins, review access, and install",
@@ -1814,31 +2481,65 @@
                   ]
                 }
               ]
-            },
-            {
-              type: "callout",
-              label: "Use both",
-              text: "Combine a skill and a plugin when your process needs information from a connected tool."
             }
           ],
-          notes: "Source: OpenAI Academy — Plugins and skills, https://openai.com/academy/codex-plugins-and-skills/. OpenAI Academy's rule of thumb: use a plugin for information from another tool, a skill for your process, and both when the process uses connected information."
+          "notes": "Source: OpenAI Academy — Plugins and skills, https://openai.com/academy/codex-plugins-and-skills/. OpenAI Academy's rule of thumb: use a plugin for information from another tool, a skill for your process, and both when the process uses connected information.",
+          "composition": "security",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Top 10 AI Safety Tips",
-          subtitle: "Simple rules for everyday work",
-          blocks: [
+          "title": "Combining a Skill and a Plugin",
+          "subtitle": "Process = Skill · Connected tool or information = Plugin",
+          "blocks": [
             {
-              type: "security",
-              columns: [
+              "type": "callout",
+              "label": "Use both",
+              "text": "Combine a skill and a plugin when your process needs information from a connected tool."
+            }
+          ],
+          "notes": "Source: OpenAI Academy — Plugins and skills, https://openai.com/academy/codex-plugins-and-skills/. OpenAI Academy's rule of thumb: use a plugin for information from another tool, a skill for your process, and both when the process uses connected information.",
+          "composition": "standard",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "Top 10 AI Safety Tips",
+          "subtitle": "Simple rules for everyday work",
+          "blocks": [
+            {
+              "type": "security",
+              "columns": [
                 {
-                  label: "10 simple rules",
-                  tone: "red",
-                  items: [
+                  "label": "10 simple rules · 1–5",
+                  "tone": "red",
+                  "items": [
                     "1. Use approved material — use your company's images instead of copying from Google",
                     "2. Share as little as possible — remove customer names, addresses, and private notes",
                     "3. Keep passwords private — never paste passwords or access codes into an AI chat",
                     "4. Open only what is needed — share one campaign folder, not the whole drive",
-                    "5. Check connected apps — know what an AI tool can read, change, or send",
+                    "5. Check connected apps — know what an AI tool can read, change, or send"
+                  ]
+                }
+              ]
+            }
+          ],
+          "notes": "These rules are for everyday marketing work. The main idea: share less, check access, keep final decisions with a person, review AI results, and stop when something looks wrong.",
+          "composition": "safety",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "AI Safety Tips: Check and Act",
+          "subtitle": "Simple rules for everyday work",
+          "blocks": [
+            {
+              "type": "security",
+              "columns": [
+                {
+                  "label": "10 simple rules · 6–10",
+                  "tone": "red",
+                  "items": [
                     "6. Let a person make final decisions — check before sending, publishing, deleting, or spending money",
                     "7. Do not trust every instruction — a file or website may try to trick the AI into sharing information",
                     "8. Check the result — verify names, facts, prices, dates, links, sources, and brand tone",
@@ -1849,102 +2550,206 @@
               ]
             }
           ],
-          notes: "These rules are for everyday marketing work. The main idea: share less, check access, keep final decisions with a person, review AI results, and stop when something looks wrong."
+          "notes": "These rules are for everyday marketing work. The main idea: share less, check access, keep final decisions with a person, review AI results, and stop when something looks wrong.",
+          "composition": "safety",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Summary: Projects & Plan Mode",
-          subtitle: "Workspace and planning words",
-          layout: "summary",
-          blocks: [
+          "title": "Summary: Projects & Plan Mode",
+          "subtitle": "Workspace and planning words",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Word", "Meaning", "Metaphor"],
-              rows: [
-                ["Project", "A dedicated workspace with the files, context, and rules for one area of work.", "🏪 Restaurant"],
-                ["Access mode", "Controls what the agent may do and when it must ask for approval.", "🔑 Kitchen key"],
-                ["Files and folders", "The focused task material shared with Codex as context.", "🧺 Ingredient basket"],
-                ["Plan Mode", "Lets Codex gather context, ask questions, and propose a plan before implementation.", "📝 Preparation plan"],
-                ["Clarifying question", "Resolves an important missing decision before work starts.", "🙋 Chef asks the guest"],
-                ["Implement plan", "Starts the work after the proposed approach has been reviewed.", "▶️ Start cooking"]
+              "type": "table",
+              "headers": [
+                "Word",
+                "Meaning",
+                "Metaphor"
+              ],
+              "rows": [
+                [
+                  "Project",
+                  "A dedicated workspace with the files, context, and rules for one area of work.",
+                  {"emojis": ["🏪"], "text": "Restaurant"}
+                ],
+                [
+                  "Access mode",
+                  "Controls what the agent may do and when it must ask for approval.",
+                  {"emojis": ["🔑"], "text": "Kitchen key"}
+                ],
+                [
+                  "Files and folders",
+                  "The focused task material shared with Codex as context.",
+                  {"emojis": ["🧺"], "text": "Ingredient basket"}
+                ],
+                [
+                  "Plan Mode",
+                  "Lets Codex gather context, ask questions, and propose a plan before implementation.",
+                  {"emojis": ["📝"], "text": "Preparation plan"}
+                ],
+                [
+                  "Clarifying question",
+                  "Resolves an important missing decision before work starts.",
+                  {"emojis": ["🙋"], "text": "Chef asks the guest"}
+                ],
+                [
+                  "Implement plan",
+                  "Starts the work after the proposed approach has been reviewed.",
+                  {"emojis": ["▶️"], "text": "Start cooking"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Summary: Skills & Tools",
-          subtitle: "Reusable processes and capabilities",
-          layout: "summary",
-          blocks: [
+          "title": "Summary: Skills & Tools",
+          "subtitle": "Reusable processes and capabilities",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Word", "Meaning", "Metaphor"],
-              rows: [
-                ["Skill", "A reusable playbook that teaches Codex how to perform a focused task.", "📘 Recipe card"],
-                ["SKILL.md", "The main file containing the skill's trigger, workflow, and constraints.", "📖 Recipe"],
-                ["openai.yaml", "Metadata that controls how a local skill appears and starts.", "🏷️ Recipe label"],
-                ["Tool", "A program or interface Codex can use to retrieve information or take action.", "🛠️ Kitchen tool"],
-                ["Plugin", "An installable bundle that can provide apps, skills, and connected capabilities.", "🧰 Toolbox"],
-                ["App action", "A connected operation that can read, create, update, delete, or send data.", "🔌 Connected appliance"],
-                ["Skill + plugin", "A repeatable process that uses information or actions from another tool.", "📘 Recipe + pantry"]
+              "type": "table",
+              "headers": [
+                "Word",
+                "Meaning",
+                "Metaphor"
+              ],
+              "rows": [
+                [
+                  "Skill",
+                  "A reusable playbook that teaches Codex how to perform a focused task.",
+                  {"emojis": ["📘"], "text": "Recipe card"}
+                ],
+                [
+                  "SKILL.md",
+                  "The main file containing the skill's trigger, workflow, and constraints.",
+                  {"emojis": ["📖"], "text": "Recipe"}
+                ],
+                [
+                  "openai.yaml",
+                  "Metadata that controls how a local skill appears and starts.",
+                  {"emojis": ["🏷️"], "text": "Recipe label"}
+                ],
+                [
+                  "Tool",
+                  "A program or interface Codex can use to retrieve information or take action.",
+                  {"emojis": ["🛠️"], "text": "Kitchen tool"}
+                ],
+                [
+                  "Plugin",
+                  "An installable bundle that can provide apps, skills, and connected capabilities.",
+                  {"emojis": ["🧰"], "text": "Toolbox"}
+                ],
+                [
+                  "App action",
+                  "A connected operation that can read, create, update, delete, or send data.",
+                  {"emojis": ["🔌"], "text": "Connected appliance"}
+                ],
+                [
+                  "Skill + plugin",
+                  "A repeatable process that uses information or actions from another tool.",
+                  {"emojis": ["📘"], "text": "Recipe + pantry"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Summary: Safe Work",
-          subtitle: "Everyday safety rules and metaphors",
-          layout: "summary",
-          blocks: [
+          "title": "Summary: Safe Work",
+          "subtitle": "Everyday safety rules and metaphors",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Rule", "What it means", "Metaphor"],
-              rows: [
-                ["Use least access", "Choose the narrowest access that still allows the task.", "🔑 One kitchen key"],
-                ["Share minimum context", "Add only the files and folders the task genuinely needs.", "🥕 Ingredients for one dish"],
-                ["Use trusted sources", "Review skills, plugins, instructions, and requested access before use.", "✅ Approved supplier"],
-                ["Keep human approval", "A person decides before sending, publishing, deleting, or spending money.", "🧑‍🍳 Head chef signs off"],
-                ["Verify the result", "Check facts, names, prices, dates, links, sources, and brand tone.", "👅 Taste test"],
-                ["Test on a copy", "Preview changes and keep a backup before touching the original.", "🍽️ Practice plate + spare"],
-                ["Stop and report", "Disconnect the tool and tell the responsible person when something looks wrong.", "🛑 Emergency stop"]
+              "type": "table",
+              "headers": [
+                "Rule",
+                "What it means",
+                "Metaphor"
+              ],
+              "rows": [
+                [
+                  "Use least access",
+                  "Choose the narrowest access that still allows the task.",
+                  {"emojis": ["🔑"], "text": "One kitchen key"}
+                ],
+                [
+                  "Share minimum context",
+                  "Add only the files and folders the task genuinely needs.",
+                  {"emojis": ["🥕"], "text": "Ingredients for one dish"}
+                ],
+                [
+                  "Use trusted sources",
+                  "Review skills, plugins, instructions, and requested access before use.",
+                  {"emojis": ["✅"], "text": "Approved supplier"}
+                ],
+                [
+                  "Keep human approval",
+                  "A person decides before sending, publishing, deleting, or spending money.",
+                  {"emojis": ["🧑‍🍳"], "text": "Head chef signs off"}
+                ],
+                [
+                  "Verify the result",
+                  "Check facts, names, prices, dates, links, sources, and brand tone.",
+                  {"emojis": ["👅"], "text": "Taste test"}
+                ],
+                [
+                  "Test on a copy",
+                  "Preview changes and keep a backup before touching the original.",
+                  {"emojis": ["🍽️"], "text": "Practice plate + spare"}
+                ],
+                [
+                  "Stop and report",
+                  "Disconnect the tool and tell the responsible person when something looks wrong.",
+                  {"emojis": ["🛑"], "text": "Emergency stop"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         }
       ]
     },
-    de: {
-      meta: {
-        htmlLang: "de",
-        appTitle: "Hallo Workshop",
-        slidesTitle: "Agentic Coding für kreative Teams",
-        slidesDay2Title: "Agentic Coding für kreative Teams - Tag 2"
+    "de": {
+      "meta": {
+        "htmlLang": "de",
+        "appTitle": "Hallo Workshop",
+        "slidesTitle": "Agentic Coding für kreative Teams",
+        "slidesDay2Title": "Agentic Coding für kreative Teams - Tag 2"
       },
-      brand: {
-        ariaLabel: "PebbleByte Website"
+      "brand": {
+        "ariaLabel": "PebbleByte Website"
       },
-      theme: {
-        darkLabel: "Dunkel",
-        lightLabel: "Hell",
-        useDarkLabel: "Dunkles Design verwenden",
-        useLightLabel: "Helles Design verwenden"
+      "theme": {
+        "darkLabel": "Dunkel",
+        "lightLabel": "Hell",
+        "useDarkLabel": "Dunkles Design verwenden",
+        "useLightLabel": "Helles Design verwenden"
       },
-      localeSwitch: {
-        ariaLabel: "Sprache wechseln",
-        enLabel: "EN",
-        deLabel: "DE"
+      "localeSwitch": {
+        "ariaLabel": "Sprache wechseln",
+        "enLabel": "EN",
+        "deLabel": "DE"
       },
-      app: {
-        page: {
-          eyebrow: "Agentic Coding",
-          title: "Hallo Workshop",
-          buttonLabel: "Tippe für eine kleine Idee",
-          idea: "Nimm ein echtes Workflow-Ärgernis und mach daraus eine kleine lokale App.",
-          linkHref: "workshop-slides.html",
-          linkLabel: "Seminar-Folien Tag 1",
-          secondaryLinkHref: "workshop-slides-day-2.html",
-          secondaryLinkLabel: "Seminar-Folien Tag 2"
+      "app": {
+        "page": {
+          "eyebrow": "Agentic Coding",
+          "title": "Hallo Workshop",
+          "buttonLabel": "Tippe für eine kleine Idee",
+          "idea": "Nimm ein echtes Workflow-Ärgernis und mach daraus eine kleine lokale App.",
+          "linkHref": "workshop-slides.html",
+          "linkLabel": "Seminar-Folien Tag 1",
+          "secondaryLinkHref": "workshop-slides-day-2.html",
+          "secondaryLinkLabel": "Seminar-Folien Tag 2"
         },
-        ideas: [
+        "ideas": [
           "Baue einen lokalen Kampagnen-Tracker: Aufgaben, Kanäle, Verantwortliche, Deadlines und Notizen in IndexedDB.",
           "Mach einen Excel-Aufräumhelfer: füge chaotische Zeilen ein, markiere Probleme und speichere Regeln lokal.",
           "Erstelle ein Design-Feedback-Board: speichere Screens, Kommentare, Status und Entscheidungen offline.",
@@ -1957,678 +2762,861 @@
           "Baue eine Handoff-Checkliste: speichere wiederkehrende Projektschritte und hake Erledigtes ab."
         ]
       },
-      slidesPage: {
-        bylineAriaLabel: "{byline} auf LinkedIn",
-        exportPdfLabel: "PDF exportieren",
-        fallbackLogoAlt: "{name}-Logo",
-        keyIdeaLabel: "Kernidee"
+      "slidesPage": {
+        "bylineAriaLabel": "{byline} auf LinkedIn",
+        "exportPdfLabel": "PDF exportieren",
+        "fallbackLogoAlt": "{name}-Logo",
+        "keyIdeaLabel": "Kernidee"
       },
-      slides: [
+      "slides": [
         {
-          title: "Agentic Coding\nfür kreative Teams",
-          subtitle: "Von Chatbots zu Agenten im kreativen Arbeitsalltag",
-          cover: true,
-          blocks: [],
-          notes: "Halte es einfach. Ziel ist, Angst abzubauen und die Neugierlücke zu schließen."
+          "title": "Agentic Coding\nfür kreative Teams",
+          "subtitle": "Von Chatbots zu Agenten im kreativen Arbeitsalltag",
+          "cover": true,
+          "blocks": [],
+          "notes": "Halte es einfach. Ziel ist, Angst abzubauen und die Neugierlücke zu schließen.",
+          "composition": "cover",
+          "palette": "yellow"
         },
         {
-          title: "Lukas Aichbauer",
-          subtitle: "Über mich",
-          image: {
-            src: "assets/lukas-aichbauer.webp",
-            alt: "Lukas Aichbauer"
+          "title": "Lukas Aichbauer",
+          "subtitle": "Über mich",
+          "image": {
+            "src": "assets/lukas-aichbauer.webp",
+            "alt": "Lukas Aichbauer"
           },
-          blocks: [
+          "blocks": [
             {
-              type: "profile",
-              lines: [
+              "type": "profile",
+              "lines": [
                 "Co-Founder @ PebbleByte GmbH",
                 "Lecturer @ Technikum Wien"
               ],
-              contacts: [
+              "contacts": [
                 {
-                  type: "email",
-                  label: "lukas@pebblebyte.com",
-                  href: "mailto:lukas@pebblebyte.com"
+                  "type": "email",
+                  "label": "lukas@pebblebyte.com",
+                  "href": "mailto:lukas@pebblebyte.com"
                 },
                 {
-                  type: "linkedin",
-                  label: "/in/aichbauer",
-                  href: "https://www.linkedin.com/in/aichbauer"
+                  "type": "linkedin",
+                  "label": "/in/aichbauer",
+                  "href": "https://www.linkedin.com/in/aichbauer"
                 }
               ]
             }
-          ]
+          ],
+          "composition": "profile",
+          "palette": "yellow"
         },
         {
-          title: "Wer seid Ihr?",
-          blocks: [
+          "title": "Wer seid Ihr?",
+          "blocks": [
             {
-              type: "conceptCards",
-              items: [
+              "type": "conceptCards",
+              "items": [
                 {
-                  title: "Arbeitsbereich",
-                  icon: "briefcase",
-                  accent: "#5b7cfa",
-                  description: "In welchem Bereich arbeitet ihr?"
+                  "title": "Arbeitsbereich",
+                  "icon": "briefcase",
+                  "accent": "#5b7cfa",
+                  "description": "In welchem Bereich arbeitet ihr?"
                 },
                 {
-                  title: "AI-Erfahrung",
-                  icon: "brain",
-                  accent: "#16b85f",
-                  description: "Welche Erfahrung habt ihr mit AI?"
+                  "title": "AI-Erfahrung",
+                  "icon": "robot",
+                  "accent": "#16b85f",
+                  "description": "Welche Erfahrung habt ihr mit AI?"
                 },
                 {
-                  title: "Erwartungen",
-                  icon: "question-mark",
-                  accent: "#f97316",
-                  description: "Was erwartet ihr von diesem Workshop?"
-                }
-              ]
-            },
-            {
-              type: "link",
-              href: "https://excalidraw.com/#room=b865e3e0b6ae59e06db4,t2my8u5vBfupgW9RRFdYWw",
-              text: "Zum Vorstellungsboard"
-            }
-          ]
-        },
-        {
-          title: "Wofür nutzen wir KI-Agenten?",
-          blocks: [
-            {
-              type: "conceptCards",
-              items: [
-                {
-                  title: "Websites entwickeln",
-                  icon: "world",
-                  accent: "#5b7cfa",
-                  description: "Wir entwickeln und verbessern die DevOpsCycle-Website mit KI-Agenten.",
-                  links: [
-                    { text: "devopscycle.com", href: "https://devopscycle.com" }
-                  ]
-                },
-                {
-                  title: "Vertriebspartner finden",
-                  icon: "search",
-                  accent: "#16b85f",
-                  description: "Wir recherchieren Agenturen in Österreich, Deutschland und der Schweiz, die RevWize über unser Partnermodell verkaufen könnten.",
-                  links: [
-                    { text: "revwize.com", href: "https://revwize.com" },
-                    { text: "Partner-Leads · Excel-Demo", href: "assets/showcases/revwize-partner-leads-demo.xlsx" }
-                  ]
-                },
-                {
-                  title: "Marketingmaterial erstellen",
-                  icon: "pencil",
-                  accent: "#f97316",
-                  description: "Wir erstellen Cheat Sheets, Produktinfoseiten und Präsentationen für den Vertriebspartner-Pitch per Prompt.",
-                  links: [
-                    { text: "Docker Cheat Sheet · Bild", href: "assets/showcases/ultimate-docker-cheat-sheet.webp" },
-                    { text: "RevWize-Infoseiten · PDF", href: "assets/showcases/revwize-partner-info-de.pdf" },
-                    { text: "Partner-Pitch · PDF", href: "assets/showcases/revwize-partner-pitch.pdf" }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          title: "Drei Starter-Ideen",
-          blocks: [
-            {
-              type: "conceptCards",
-              items: [
-                {
-                  title: "Marketing",
-                  icon: "search",
-                  accent: "#5b7cfa",
-                  description: "Kundenbewertungen enthalten starke Marketing-Sprache, werden aber selten systematisch analysiert.",
-                  metaphor: "Review-Mining-App: sammelt Reviews aus G2, Trustpilot, App Store, Amazon oder Support-Tickets und extrahiert Pain Points, Nutzenversprechen, Einwände und wiederverwendbare Formulierungen."
-                },
-                {
-                  title: "Designer:innen",
-                  icon: "pencil",
-                  accent: "#16b85f",
-                  description: "Desktop-, Tablet- und Mobile-Layouts zu prüfen kostet regelmäßig Zeit und viel manuelle Aufmerksamkeit.",
-                  metaphor: "Responsive-Screenshot-Reviewer: URL eingeben, Breakpoint-Screenshots erzeugen und Overflow, kaputte Layouts, winzige Schrift oder abgeschnittene Buttons markieren."
-                },
-                {
-                  title: "Projektmanagement",
-                  icon: "clipboard-list",
-                  accent: "#f97316",
-                  description: "Anforderungen, User Flows und Akzeptanzkriterien bleiben oft unterschiedlich interpretierbar.",
-                  metaphor: "Prototype-as-Acceptance-App: macht aus einem Briefing einen Browser-Prototypen mit User Flows, Zuständen, Edge Cases und Akzeptanzkriterien als ausführbare Entwickler:innen-Referenz."
+                  "title": "Erwartungen",
+                  "icon": "question-mark",
+                  "accent": "#f97316",
+                  "description": "Was erwartet ihr von diesem Workshop?"
                 }
               ]
             },
             {
-              type: "link",
-              size: "small",
-              href: "https://excalidraw.com/#room=ea1db8fc739eedf79aa2,UVhiaqFZYp8kMExx7z64zA",
-              text: "Small example"
+              "type": "link",
+              "href": "https://excalidraw.com/#room=b865e3e0b6ae59e06db4,t2my8u5vBfupgW9RRFdYWw",
+              "text": "Zum Vorstellungsboard"
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
-          title: "Was wir behandeln",
-          subtitle: "Agenda",
-          blocks: [
+          "title": "Wofür nutzen wir KI-Agenten?",
+          "blocks": [
             {
-              type: "bullets",
-              reveal: false,
-              items: [
-                "Ankommen, Vorstellung und Starter-Ideen",
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "Websites entwickeln",
+                  "icon": "world",
+                  "accent": "#5b7cfa",
+                  "description": "Wir entwickeln und verbessern die DevOpsCycle-Website mit KI-Agenten.",
+                  "links": [
+                    {
+                      "text": "devopscycle.com",
+                      "href": "https://devopscycle.com"
+                    }
+                  ]
+                },
+                {
+                  "title": "Vertriebspartner finden",
+                  "icon": "search",
+                  "accent": "#16b85f",
+                  "description": "Wir recherchieren Agenturen in Österreich, Deutschland und der Schweiz, die RevWize über unser Partnermodell verkaufen könnten.",
+                  "links": [
+                    {
+                      "text": "revwize.com",
+                      "href": "https://revwize.com"
+                    },
+                    {
+                      "text": "Partner-Leads · Excel-Demo",
+                      "href": "assets/showcases/revwize-partner-leads-demo.xlsx"
+                    }
+                  ]
+                },
+                {
+                  "title": "Marketingmaterial erstellen",
+                  "icon": "pencil",
+                  "accent": "#f97316",
+                  "description": "Wir erstellen Cheat Sheets, Produktinfoseiten und Präsentationen für den Vertriebspartner-Pitch per Prompt.",
+                  "links": [
+                    {
+                      "text": "Docker Cheat Sheet · Bild",
+                      "href": "assets/showcases/ultimate-docker-cheat-sheet.webp"
+                    },
+                    {
+                      "text": "RevWize-Infoseiten · PDF",
+                      "href": "assets/showcases/revwize-partner-info-de.pdf"
+                    },
+                    {
+                      "text": "Partner-Pitch · PDF",
+                      "href": "assets/showcases/revwize-partner-pitch.pdf"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
+        },
+        {
+          "title": "Drei Starter-Ideen",
+          "blocks": [
+            {
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "Marketing",
+                  "icon": "search",
+                  "accent": "#5b7cfa",
+                  "description": "Kundenbewertungen enthalten starke Marketing-Sprache, werden aber selten systematisch analysiert.",
+                  "metaphor": "Review-Mining-App: sammelt Reviews aus G2, Trustpilot, App Store, Amazon oder Support-Tickets und extrahiert Pain Points, Nutzenversprechen, Einwände und wiederverwendbare Formulierungen."
+                },
+                {
+                  "title": "Designer:innen",
+                  "icon": "pencil",
+                  "accent": "#16b85f",
+                  "description": "Desktop-, Tablet- und Mobile-Layouts zu prüfen kostet regelmäßig Zeit und viel manuelle Aufmerksamkeit.",
+                  "metaphor": "Responsive-Screenshot-Reviewer: URL eingeben, Breakpoint-Screenshots erzeugen und Overflow, kaputte Layouts, winzige Schrift oder abgeschnittene Buttons markieren."
+                }
+              ]
+            }
+          ],
+          "composition": "concepts-dense",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "Starter-Idee: Projektmanagement",
+          "blocks": [
+            {
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "Projektmanagement",
+                  "icon": "clipboard-list",
+                  "accent": "#f97316",
+                  "description": "Anforderungen, User Flows und Akzeptanzkriterien bleiben oft unterschiedlich interpretierbar.",
+                  "metaphor": "Prototype-as-Acceptance-App: macht aus einem Briefing einen Browser-Prototypen mit User Flows, Zuständen, Edge Cases und Akzeptanzkriterien als ausführbare Entwickler:innen-Referenz."
+                }
+              ]
+            },
+            {
+              "type": "link",
+              "size": "small",
+              "href": "https://excalidraw.com/#room=ea1db8fc739eedf79aa2,UVhiaqFZYp8kMExx7z64zA",
+              "text": "Small example"
+            }
+          ],
+          "composition": "concepts-dense",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "Was wir behandeln",
+          "subtitle": "Agenda",
+          "blocks": [
+            {
+              "type": "bullets",
+              "reveal": false,
+              "revealItems": true,
+              "items": [
                 "LLMs, Chatbots, Agenten und Agentic Coding",
                 "AI-Agenten-Landschaft und Codex-Setup",
                 "Einen guten ersten Use Case finden",
                 "Übungen: Input, Schritte, Regeln, Auftragsdesign und Fehlerfälle"
               ]
             }
-          ]
+          ],
+          "composition": "agenda",
+          "palette": "yellow"
         },
         {
-          title: "LLM / Chatbot / Agent",
-          subtitle: "Vom Gehirn zur Handlung",
-          blocks: [
+          "title": "LLM / Chatbot / Agent",
+          "subtitle": "Vom Gehirn zur Handlung",
+          "blocks": [
             {
-              type: "conceptCards",
-              items: [
+              "type": "conceptCards",
+              "items": [
                 {
-                  title: "Large Language Model (LLM)",
-                  icons: [
-                    { emoji: "🧠" }
+                  "title": "Large Language Model (LLM)",
+                  "icons": [
+                    {
+                      "emoji": "🧠"
+                    }
                   ],
-                  accent: "#5b7cfa",
-                  description: "Computerprogramm",
-                  metaphor: "Metapher: Gehirn"
+                  "accent": "#5b7cfa",
+                  "description": "Computerprogramm",
+                  "metaphor": "Metapher: Gehirn"
                 },
                 {
-                  title: "Chatbot",
-                  icons: [
-                    { emoji: "👀" },
-                    { emoji: "👂" },
-                    { emoji: "👄" }
+                  "title": "Chatbot",
+                  "icons": [
+                    {
+                      "emoji": "👀"
+                    },
+                    {
+                      "emoji": "👂"
+                    },
+                    {
+                      "emoji": "👄"
+                    }
                   ],
-                  accent: "#16b85f",
-                  description: "Gesprächsoberfläche",
-                  metaphor: "Metapher: Augen, Ohren, Mund"
+                  "accent": "#16b85f",
+                  "description": "Gesprächsoberfläche",
+                  "metaphor": "Metapher: Augen, Ohren, Mund"
                 },
                 {
-                  title: "Agent",
-                  icons: [
-                    { emoji: "🤲" },
-                    { emoji: "💪" },
-                    { emoji: "🦵" }
+                  "title": "Agent",
+                  "icons": [
+                    {
+                      "emoji": "🤲"
+                    },
+                    {
+                      "emoji": "💪"
+                    },
+                    {
+                      "emoji": "🦵"
+                    }
                   ],
-                  accent: "#f97316",
-                  description: "Nutzt Tools und handelt",
-                  metaphor: "Metapher: Hände, Arme, Füße"
+                  "accent": "#f97316",
+                  "description": "Nutzt Tools und handelt",
+                  "metaphor": "Metapher: Hände, Arme, Füße"
                 }
               ]
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
-          title: "LLM",
-          subtitle: "Input -> LLM (Computerprogramm) -> Output",
-          layout: "agent-flow",
-          blocks: [
+          "title": "LLM",
+          "subtitle": "Input -> LLM (Computerprogramm) -> Output",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              intro: "So kann man sich grob vorstellen, was in einem Large Language Model passiert.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": false,
+              "emphasizeMiddle": true,
+              "intro": "So kann man sich grob vorstellen, was in einem Large Language Model passiert.",
+              "columns": [
                 {
-                  title: "Input",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Input",
+                  "icon": "keyboard",
+                  "layout": "list",
+                  "size": "small",
+                  "items": [
                     {
-                      icon: "message",
-                      color: "#5b7cfa",
-                      label: "Satzanfang:\n\"Der Himmel ist ...\""
+                      "icon": "message",
+                      "color": "#5b7cfa",
+                      "label": "Satzanfang:\n\"Der Himmel ist ...\""
                     }
                   ]
                 },
                 {
-                  title: "LLM",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "LLM",
+                  "icon": "brain",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "dots",
-                      color: "#16b85f",
-                      label: "\"blau\" -> 0,87"
+                      "icon": "dots",
+                      "color": "#16b85f",
+                      "label": "\"blau\" -> 0,87"
                     },
                     {
-                      icon: "dots",
-                      color: "#16b85f",
-                      label: "\"bewölkt\" -> 0,09"
+                      "icon": "dots",
+                      "color": "#16b85f",
+                      "label": "\"bewölkt\" -> 0,09"
                     },
                     {
-                      icon: "dots",
-                      color: "#16b85f",
-                      label: "\"grün\" -> 0,04"
+                      "icon": "dots",
+                      "color": "#16b85f",
+                      "label": "\"grün\" -> 0,04"
                     }
                   ]
                 },
                 {
-                  title: "Output",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Output",
+                  "icon": "text-output",
+                  "layout": "list",
+                  "size": "small",
+                  "items": [
                     {
-                      icon: "file",
-                      color: "#f97316",
-                      label: "\"Der Himmel ist blau.\""
+                      "icon": "file",
+                      "color": "#f97316",
+                      "label": "\"Der Himmel ist blau.\""
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Ganz grob",
-              keyIdea: "Es versteht nicht wie ein Mensch. Es nutzt Muster aus vielen Texten, um passende nächste Tokens vorherzusagen. Tokens sind kleine Textstücke: Wortteile, ganze Wörter oder Buchstabenketten."
+              "keyIdeaLabel": null,
+              "keyIdea": null
             }
-          ]
+          ],
+          "composition": "flow",
+          "palette": "yellow"
         },
         {
-          title: "Chatbot",
-          subtitle: "Mensch -> Webseite -> Server mit LLM -> Antwort",
-          layout: "agent-flow",
-          blocks: [
+          "title": "LLM: Die Kernidee",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              intro: "Ein Chatbot ist eine Webseite oder App, die deine Nachricht an ein LLM schickt und die Antwort anzeigt.",
-              columns: [
+              "type": "agentFlow",
+              "columns": [],
+              "keyIdeaLabel": "Ganz grob",
+              "keyIdea": "Es versteht nicht wie ein Mensch. Es nutzt Muster aus vielen Texten, um passende nächste Tokens vorherzusagen. Tokens sind kleine Textstücke: Wortteile, ganze Wörter oder Buchstabenketten."
+            }
+          ],
+          "composition": "flow",
+          "palette": "yellow"
+        },
+        {
+          "title": "Chatbot",
+          "subtitle": "Mensch -> Webseite -> Server mit LLM -> Antwort",
+          "layout": "agent-flow",
+          "blocks": [
+            {
+              "type": "agentFlow",
+              "equalHeight": true,
+              "showItemIcons": false,
+              "intro": "Ein Chatbot ist eine Webseite oder App, die deine Nachricht an ein LLM schickt und die Antwort anzeigt.",
+              "columns": [
                 {
-                  title: "Mensch",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Mensch",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "user",
-                      color: "#5b7cfa",
-                      label: "Tippt eine Frage\noder Aufgabe"
+                      "icon": "user",
+                      "color": "#5b7cfa",
+                      "label": "Tippt eine Frage\noder Aufgabe"
                     }
                   ]
                 },
                 {
-                  title: "Webseite",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Webseite",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "world",
-                      color: "#16b85f",
-                      label: "Chatbot-Seite\noder App"
+                      "icon": "world",
+                      "color": "#16b85f",
+                      "label": "Chatbot-Seite\noder App"
                     }
                   ]
                 },
                 {
-                  title: "Server + LLM",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Server + LLM",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "brain",
-                      color: "#16b85f",
-                      label: "Sagt Tokens voraus\nund baut Text"
+                      "icon": "brain",
+                      "color": "#16b85f",
+                      "label": "Sagt Tokens voraus\nund baut Text"
                     }
                   ]
                 },
                 {
-                  title: "Antwort",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Antwort",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "file",
-                      color: "#f97316",
-                      label: "Computer zeigt\ndie Antwort"
+                      "icon": "file",
+                      "color": "#f97316",
+                      "label": "Computer zeigt\ndie Antwort"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Ganz grob",
-              keyIdea: "Der Chatbot ist die Oberfläche und Verbindung. Das LLM läuft meistens auf einem Server; dein Computer zeigt das Gespräch."
+              "keyIdeaLabel": "Ganz grob",
+              "keyIdea": "Der Chatbot ist die Oberfläche und Verbindung. Das LLM läuft meistens auf einem Server; dein Computer zeigt das Gespräch."
             }
-          ]
+          ],
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Agent",
-          subtitle: "Ziel -> Agent (LLM + Programme) -> Ergebnis",
-          layout: "agent-flow",
-          blocks: [
+          "title": "Agent",
+          "subtitle": "Ziel -> Agent (LLM + Programme) -> Ergebnis",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              intro: "Ein Agent bekommt ein Ziel und kann Tools benutzen, um Schritte auszuführen.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": false,
+              "intro": "Ein Agent bekommt ein Ziel und kann Tools benutzen, um Schritte auszuführen.",
+              "columns": [
                 {
-                  title: "Ziel",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Ziel",
+                  "icon": "target",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "message",
-                      color: "#5b7cfa",
-                      label: "Aufgabe:\n\"Füge zwei Folien hinzu und prüfe das Deck.\""
+                      "icon": "message",
+                      "color": "#5b7cfa",
+                      "label": "Aufgabe:\n\"Füge zwei Folien hinzu und prüfe das Deck.\""
                     }
                   ]
                 },
                 {
-                  title: "Agent",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Agent",
+                  "icon": "robot",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "brain",
-                      color: "#16b85f",
-                      label: "Spricht mit LLM"
+                      "icon": "brain",
+                      "color": "#16b85f",
+                      "label": "Spricht mit LLM"
                     },
                     {
-                      icon: "tool",
-                      color: "#16b85f",
-                      label: "Nutzt Programme:\nPowerPoint, Google Slides, Browser"
+                      "icon": "tool",
+                      "color": "#16b85f",
+                      "label": "Nutzt Programme:\nPowerPoint, Google Slides, Browser"
                     },
                     {
-                      icon: "file",
-                      color: "#16b85f",
-                      label: "Liest und ändert Dateien"
+                      "icon": "file",
+                      "color": "#16b85f",
+                      "label": "Liest und ändert Dateien"
                     },
                     {
-                      icon: "check",
-                      color: "#16b85f",
-                      label: "Prüft das Ergebnis"
+                      "icon": "check",
+                      "color": "#16b85f",
+                      "label": "Prüft das Ergebnis"
                     }
                   ]
                 },
                 {
-                  title: "Ergebnis",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Ergebnis",
+                  "icon": "circle-check",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "file",
-                      color: "#f97316",
-                      label: "Geändertes Deck\nplus kurze Zusammenfassung"
+                      "icon": "file",
+                      "color": "#f97316",
+                      "label": "Geändertes Deck\nplus kurze Zusammenfassung"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Ganz grob",
-              keyIdea: "Ein Agent hört nicht bei einer Textantwort auf. Er kann planen, handeln, prüfen und weiterarbeiten, bis die Aufgabe erledigt ist."
+              "keyIdeaLabel": null,
+              "keyIdea": null,
+              "showArrows": true,
+              "emphasizeMiddle": true
             }
-          ]
+          ],
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Vom Rezept zum Chef",
-          subtitle: "Prompting / Vibe Coding / Agentic Coding",
-          layout: "agent-flow",
-          blocks: [
+          "title": "Agent: Die Kernidee",
+          "subtitle": "Ziel -> Agent (LLM + Programme) -> Ergebnis",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              equalColumns: true,
-              intro: "Gleiche KI, aber anders gesteuert: fragen, improvisieren oder Umsetzung führen.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "intro": null,
+              "columns": [],
+              "keyIdeaLabel": "Ganz grob",
+              "keyIdea": "Ein Agent hört nicht bei einer Textantwort auf. Er kann Schritte planen, Tools verwenden, Dateien lesen und bearbeiten, Ergebnisse prüfen und weiterarbeiten, bis die Aufgabe erledigt ist.",
+              "showArrows": false
+            }
+          ],
+          "composition": "flow",
+          "palette": "white"
+        },
+        {
+          "title": "Vom Rezept zum Chef",
+          "subtitle": "Prompting / Vibe Coding / Agentic Coding",
+          "layout": "agent-flow",
+          "blocks": [
+            {
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "intro": "Gleiche KI, aber anders gesteuert: fragen, improvisieren oder Umsetzung führen.",
+              "columns": [
                 {
-                  title: "Prompting",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Prompting",
+                  "icon": "book",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "message",
-                      color: "#5b7cfa",
-                      label: "Du fragst im Chat\nund bekommst eine Antwort"
+                      "icon": "message",
+                      "color": "#5b7cfa",
+                      "label": "Du fragst im Chat\nund bekommst eine Antwort"
                     },
                     {
-                      icon: "user",
-                      color: "#5b7cfa",
-                      label: "Du entscheidest selbst,\nwas du damit machst"
+                      "icon": "user",
+                      "color": "#5b7cfa",
+                      "label": "Du entscheidest selbst,\nwas du damit machst"
                     },
                     {
-                      icon: "book",
-                      color: "#5b7cfa",
-                      label: "Metapher:\nRezept anfragen"
+                      "icon": "book",
+                      "color": "#5b7cfa",
+                      "label": "Metapher:\nRezept anfragen"
                     }
                   ]
                 },
                 {
-                  title: "Vibe Coding",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Vibe Coding",
+                  "icon": "cooking-pot",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "code",
-                      color: "#16b85f",
-                      label: "Du beschreibst die App grob\nund kopierst Code hin und her"
+                      "icon": "code",
+                      "color": "#16b85f",
+                      "label": "Du beschreibst die App grob\nund kopierst Code hin und her"
                     },
                     {
-                      icon: "player-play",
-                      color: "#16b85f",
-                      label: "Starten, anschauen,\nnach Gefühl anpassen"
+                      "icon": "player-play",
+                      "color": "#16b85f",
+                      "label": "Starten, anschauen,\nnach Gefühl anpassen"
                     },
                     {
-                      icon: "tool",
-                      color: "#16b85f",
-                      label: "Metapher:\n\"Irgendwas mit Pasta\""
+                      "icon": "tool",
+                      "color": "#16b85f",
+                      "label": "Metapher:\n\"Irgendwas mit Pasta\""
                     }
                   ]
                 },
                 {
-                  title: "Agentic Coding",
-                  layout: "list",
-                  size: "mini",
-                  variant: "inverted",
-                  items: [
+                  "title": "Agentic Coding",
+                  "icon": "chef-hat",
+                  "layout": "list",
+                  "size": "mini",
+                  "variant": "inverted",
+                  "items": [
                     {
-                      icon: "tool",
-                      color: "#f97316",
-                      label: "Du gibst Ziel, Kontext,\nDateien und Grenzen"
+                      "icon": "tool",
+                      "color": "#f97316",
+                      "label": "Du gibst Ziel, Kontext,\nDateien und Grenzen"
                     },
                     {
-                      icon: "clipboard-list",
-                      color: "#f97316",
-                      label: "Agent plant, ändert,\ntestet und verbessert"
+                      "icon": "clipboard-list",
+                      "color": "#f97316",
+                      "label": "Agent plant, ändert,\ntestet und verbessert"
                     },
                     {
-                      icon: "check",
-                      color: "#f97316",
-                      label: "Metapher:\nChef in der Küche"
+                      "icon": "check",
+                      "color": "#f97316",
+                      "label": "Metapher:\nChef in der Küche"
                     }
                   ]
                 }
               ],
-              keyIdea: "Prompting fragt, Vibe Coding probiert, Agentic Coding lässt mit Kontext und Review ausführen."
+              "keyIdea": null,
+              "keyIdeaLabel": null,
+              "showArrows": true
             }
-          ]
+          ],
+          "composition": "flow",
+          "palette": "yellow"
         },
         {
-          title: "AI-Agenten-Landschaft",
-          subtitle: "Sechs Beispiele mit unterschiedlichen Anwendungsfällen und Gebieten",
-          blocks: [
+          "title": "Vom Rezept zum Chef: Kernidee",
+          "subtitle": "Prompting / Vibe Coding / Agentic Coding",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentLogos",
-              items: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "intro": null,
+              "columns": [],
+              "keyIdea": "Prompting fragt, Vibe Coding probiert. Beim Agentic Coding gibst du Ziel und Kontext vor – der Agent plant, setzt um und prüft, du gibst Feedback und entscheidest.",
+              "keyIdeaLabel": "Kernidee",
+              "showArrows": false
+            }
+          ],
+          "composition": "flow",
+          "palette": "yellow"
+        },
+        {
+          "title": "AI-Agenten-Landschaft",
+          "subtitle": "Sechs Beispiele mit unterschiedlichen Anwendungsfällen und Gebieten",
+          "blocks": [
+            {
+              "type": "agentLogos",
+              "items": [
                 {
-                  name: "Codex",
-                  logo: "assets/agent-logos/codex.svg",
-                  alt: "Codex-Logo",
-                  accent: "#7cf4c4"
+                  "name": "Codex",
+                  "logo": "assets/agent-logos/codex.svg",
+                  "alt": "Codex-Logo",
+                  "accent": "#000000"
                 },
                 {
-                  name: "Claude Code",
-                  logo: "assets/agent-logos/claude-code.svg",
-                  alt: "Claude-Code-Logo",
-                  accent: "#d97757"
+                  "name": "Claude Code",
+                  "logo": "assets/agent-logos/claude-code.svg",
+                  "alt": "Claude-Code-Logo",
+                  "accent": "#d97757"
                 },
                 {
-                  name: "Qwen Code",
-                  logo: "assets/agent-logos/qwen-code.svg",
-                  alt: "Qwen-Code-Logo",
-                  accent: "#615ced"
+                  "name": "Qwen Code",
+                  "logo": "assets/agent-logos/qwen-code.svg",
+                  "alt": "Qwen-Code-Logo",
+                  "accent": "#615ced"
                 },
                 {
-                  name: "Mistral Vibe Code",
-                  logo: "assets/agent-logos/mistral-vibe-code.svg",
-                  alt: "Mistral-Vibe-Code-Logo",
-                  accent: "#ff8205"
+                  "name": "Mistral Vibe Code",
+                  "logo": "assets/agent-logos/mistral-vibe-code.svg",
+                  "alt": "Mistral-Vibe-Code-Logo",
+                  "accent": "#ff8205"
                 },
                 {
-                  name: "Zapier Agents",
-                  logo: "assets/agent-logos/zapier-agents.svg",
-                  alt: "Zapier-Agents-Logo",
-                  accent: "#ff4a00"
+                  "name": "Zapier Agents",
+                  "logo": "assets/agent-logos/zapier-agents.svg",
+                  "alt": "Zapier-Agents-Logo",
+                  "accent": "#ff4a00"
                 },
                 {
-                  name: "OpenClaw",
-                  logo: "assets/agent-logos/openclaw.svg",
-                  alt: "OpenClaw-Logo",
-                  accent: "#16b85f"
+                  "name": "OpenClaw",
+                  "logo": "assets/agent-logos/openclaw.svg",
+                  "alt": "OpenClaw-Logo",
+                  "accent": "#e81b25"
                 }
               ]
             }
-          ]
+          ],
+          "composition": "logos",
+          "palette": "white"
         },
         {
-          title: "Codex installieren",
-          subtitle: "Setup",
-          blocks: [
+          "title": "Codex installieren",
+          "subtitle": "Setup",
+          "blocks": [
             {
-              type: "link",
-              href: "https://openai.com/codex/",
-              text: "https://openai.com/codex/"
+              "type": "link",
+              "href": "https://openai.com/codex/",
+              "text": "https://openai.com/codex/"
             }
-          ]
+          ],
+          "composition": "statement",
+          "palette": "yellow"
         },
         {
-          title: "Codex zuerst öffnen",
-          subtitle: "Start",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Codex zuerst öffnen",
+          "subtitle": "Start",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/first-open-codex-en-de.png",
-              alt: "Codex Startbildschirm beim ersten Öffnen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/first-open-codex-en-de.png",
+              "alt": "Codex Startbildschirm beim ersten Öffnen"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Anmelden",
-          subtitle: "Erstes Öffnen",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Anmelden",
+          "subtitle": "Erstes Öffnen",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/first-open-codex-click-signin-en-de.png",
-              alt: "Codex Anmeldebutton"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/first-open-codex-click-signin-en-de.png",
+              "alt": "Codex Anmeldebutton"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Anmeldung fortsetzen",
-          subtitle: "Erstes Öffnen",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Anmeldung fortsetzen",
+          "subtitle": "Erstes Öffnen",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/first-open-codex-continue-sign-in-en-de.png",
-              alt: "Codex Anmeldung fortsetzen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/first-open-codex-continue-sign-in-en-de.png",
+              "alt": "Codex Anmeldung fortsetzen"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Anmeldung erfolgreich",
-          subtitle: "Erstes Öffnen",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Anmeldung erfolgreich",
+          "subtitle": "Erstes Öffnen",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/first-open-codex-sign-in-successful-en-de.png",
-              alt: "Codex erfolgreiche Anmeldung"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/first-open-codex-sign-in-successful-en-de.png",
+              "alt": "Codex erfolgreiche Anmeldung"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Codex Startseite",
-          subtitle: "Nach dem ersten Login",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Codex Startseite",
+          "subtitle": "Nach dem ersten Login",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/how-codex-looks-first-login-de.png",
-              alt: "Codex Startseite nach dem ersten Login"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/how-codex-looks-first-login-de.png",
+              "alt": "Codex Startseite nach dem ersten Login"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Neues Projekt erstellen",
-          subtitle: "Projekt-Setup",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Neues Projekt erstellen",
+          "subtitle": "Projekt-Setup",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-new-project-de.png",
-              alt: "Codex neues Projekt erstellen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-new-project-de.png",
+              "alt": "Codex neues Projekt erstellen"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Projekt benennen",
-          subtitle: "Projekt-Setup",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Projekt benennen",
+          "subtitle": "Projekt-Setup",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-project-name-de.png",
-              alt: "Codex Projekt benennen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-project-name-de.png",
+              "alt": "Codex Projekt benennen"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Projekt auswählen",
-          subtitle: "Wo das Projekt ausgewählt wird",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Projekt auswählen",
+          "subtitle": "Wo das Projekt ausgewählt wird",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/select-project-codex-de.png",
-              alt: "Codex Projektauswahl"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/select-project-codex-de.png",
+              "alt": "Codex Projektauswahl"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Kleiner Selbstversuch",
-          subtitle: "Bevor wir mit eigenen Use Cases starten",
-          blocks: [
+          "title": "Kleiner Selbstversuch – Coding",
+          "subtitle": "Bevor wir mit eigenen Use Cases starten",
+          "blocks": [
             {
-              type: "conceptCards",
-              items: [
+              "type": "conceptCards",
+              "items": [
                 {
-                  title: "Mini Todo List App",
-                  icon: "clipboard-list",
-                  accent: "#16b85f",
-                  description: "Eine einfache Aufgabenliste mit Hinzufügen, Abhaken, Löschen und leerem Zustand.",
-                  metaphor: "Gut, um Formulare, Listen, Zustände und kleine Datenmodelle greifbar zu machen."
+                  "title": "Mini Todo List App",
+                  "icon": "clipboard-list",
+                  "accent": "#16b85f",
+                  "description": "Eine einfache Aufgabenliste mit Hinzufügen, Abhaken, Löschen und leerem Zustand.",
+                  "metaphor": "Gut, um Formulare, Listen, Zustände und kleine Datenmodelle greifbar zu machen."
                 },
                 {
-                  title: "Landing Page clonen",
-                  icon: "world",
-                  accent: "#f97316",
-                  description: "Eine Landing Page anhand eines Screenshots nachbauen.",
-                  metaphor: "Gut, um Layout, Typografie, Farben, Abstände und responsive Details zu trainieren."
+                  "title": "Landing Page clonen",
+                  "icon": "world",
+                  "accent": "#f97316",
+                  "description": "Eine Landing Page anhand eines Screenshots nachbauen.",
+                  "metaphor": "Gut, um Layout, Typografie, Farben, Abstände und responsive Details zu trainieren."
                 }
               ]
             },
             {
-              type: "link",
-              size: "small",
-              href: "https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ",
-              text: "Ideen"
+              "type": "link",
+              "size": "small",
+              "href": "https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ",
+              "text": "Ideen"
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
+        },
+        {
+          "title": "Kleiner Selbstversuch – Alltagsoperationen",
+          "subtitle": "Bevor wir mit eigenen Use Cases starten",
+          "blocks": [
+            {
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "Im Browser recherchieren",
+                  "icon": "world",
+                  "accent": "#5b7cfa",
+                  "description": "Besuche drei Eventlocations im Browser und vergleiche Kapazität, Lage und Kontaktdaten.",
+                  "metaphor": "Übe das Navigieren auf Websites und das Sammeln von Ergebnissen mit Quellenlinks."
+                },
+                {
+                  "title": "Eine E-Mail senden",
+                  "icon": "mail",
+                  "accent": "#f97316",
+                  "description": "Formuliere aus drei Stichpunkten eine E-Mail, trage deine eigene Adresse ein, prüfe den Entwurf und sende ihn ab.",
+                  "metaphor": "Übe das Bedienen einer Mail-App und das Prüfen von Empfänger, Betreff und Nachricht."
+                }
+              ]
+            }
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
           "title": "OpenAI-Modelle im Überblick",
@@ -2641,67 +3629,137 @@
               "headers": [
                 "Modell",
                 "Fokus / typische Anwendungen",
-                "Kontext (Tokens)",
-                "Max. Output (Tokens)",
-                "Reasoning-Aufwand",
-                "Input (USD / Mio.)",
-                "Output (USD / Mio.)",
-                "Wissensstand"
+                "Reasoning-Aufwand"
               ],
               "rows": [
                 [
                   "GPT-6 Astra",
                   "Anspruchsvollste Aufgaben",
-                  "1,05 Mio.",
-                  "128.000",
-                  "low → max",
-                  "$10,00",
-                  "$50,00",
-                  "30.04.2026"
+                  "low → max"
                 ],
                 [
                   "GPT-5.6 Sol",
                   "Komplexe professionelle Arbeit",
-                  "1,05 Mio.",
-                  "128.000",
-                  "none → max",
-                  "$4,00",
-                  "$20,00",
-                  "16.02.2026"
+                  "none → max"
                 ],
                 [
                   "GPT-5.6 Terra",
                   "Balance aus Qualität und Kosten",
-                  "1,05 Mio.",
-                  "128.000",
-                  "none → max",
-                  "$2,00",
-                  "$12,00",
-                  "16.02.2026"
+                  "none → max"
                 ],
                 [
                   "GPT-5.6 Luna",
                   "Günstig bei hohem Volumen",
+                  "none → max"
+                ]
+              ],
+              "numericColumns": []
+            },
+            {
+              "type": "text",
+              "text": "Reasoning = wie viel Aufwand das Modell ins Durchdenken deiner Aufgabe steckt. Kurz umformulieren braucht wenig; Optionen anhand mehrerer Anforderungen abzuwägen kann von mehr profitieren. Mehr Aufwand kann länger dauern. none = aus; low → max = wenig bis maximal."
+            }
+          ],
+          "notes": "Ausgewählte API-Modelle; die Verfügbarkeit in der Codex-Modellauswahl kann abweichen. Kontextangaben sind API-Limits. Die Pfeile kürzen die unterstützten Stufen ab. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. none = aus, low = gering, medium = mittel, high = hoch, xhigh = sehr hoch, max = maximal. Quelle: https://developers.openai.com/api/docs/models\nDie typischen Anwendungen sind Beispiele, abgeleitet aus der offiziellen Modellausrichtung: Astra für anspruchsvollste Aufgaben über viele Schritte, Sol für komplexe professionelle Arbeit, Terra für die Balance aus Leistungsfähigkeit und Kosten, Luna für kostensensitive Aufgaben mit hohem Volumen. Es sind keine exklusiven Fähigkeiten oder benchmarkbasierten Aufgaben-Ranglisten.",
+          "composition": "model-details",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "OpenAI-Modelle: Kontext und Wissen",
+          "subtitle": "GPT-6 & GPT-5.6 · Berufsalltag & kreative Aufgaben · Stand: 16.09.2026",
+          "layout": "model-comparison",
+          "blocks": [
+            {
+              "type": "table",
+              "scrollLabel": "OpenAI-Modelle, Tokenpreise und Wissensstände",
+              "headers": [
+                "Modell",
+                "Kontext (Tokens)",
+                "Max. Output (Tokens)",
+                "Wissensstand"
+              ],
+              "rows": [
+                [
+                  "GPT-6 Astra",
                   "1,05 Mio.",
                   "128.000",
-                  "none → max",
-                  "$0,20",
-                  "$1,20",
+                  "30.04.2026"
+                ],
+                [
+                  "GPT-5.6 Sol",
+                  "1,05 Mio.",
+                  "128.000",
+                  "16.02.2026"
+                ],
+                [
+                  "GPT-5.6 Terra",
+                  "1,05 Mio.",
+                  "128.000",
+                  "16.02.2026"
+                ],
+                [
+                  "GPT-5.6 Luna",
+                  "1,05 Mio.",
+                  "128.000",
                   "16.02.2026"
                 ]
+              ],
+              "numericColumns": []
+            },
+            {
+              "type": "text",
+              "text": "Kontext = was gleichzeitig auf den Schreibtisch des Modells passt: Gespräch, Briefing und Dokumente. Tokens sind kleine Textbausteine; Mio. = Millionen. Wissensstand = Stichtag des eingebauten Modellwissens; neuere Fakten brauchen aktuelle Quellen."
+            }
+          ],
+          "notes": "Ausgewählte API-Modelle; die Verfügbarkeit in der Codex-Modellauswahl kann abweichen. Kontextangaben sind API-Limits. Die Pfeile kürzen die unterstützten Stufen ab. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. none = aus, low = gering, medium = mittel, high = hoch, xhigh = sehr hoch, max = maximal. Quelle: https://developers.openai.com/api/docs/models\nDie typischen Anwendungen sind Beispiele, abgeleitet aus der offiziellen Modellausrichtung: Astra für anspruchsvollste Aufgaben über viele Schritte, Sol für komplexe professionelle Arbeit, Terra für die Balance aus Leistungsfähigkeit und Kosten, Luna für kostensensitive Aufgaben mit hohem Volumen. Es sind keine exklusiven Fähigkeiten oder benchmarkbasierten Aufgaben-Ranglisten.",
+          "composition": "model-details",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "OpenAI-Modelle: API-Preise",
+          "subtitle": "GPT-6 & GPT-5.6 · Berufsalltag & kreative Aufgaben · Stand: 16.09.2026",
+          "layout": "model-comparison",
+          "blocks": [
+            {
+              "type": "table",
+              "scrollLabel": "OpenAI-Modelle, Tokenpreise und Wissensstände",
+              "headers": [
+                "Modell",
+                "Input (USD / Mio.)",
+                "Output (USD / Mio.)"
+              ],
+              "rows": [
+                [
+                  "GPT-6 Astra",
+                  "$10,00",
+                  "$50,00"
+                ],
+                [
+                  "GPT-5.6 Sol",
+                  "$4,00",
+                  "$20,00"
+                ],
+                [
+                  "GPT-5.6 Terra",
+                  "$2,00",
+                  "$12,00"
+                ],
+                [
+                  "GPT-5.6 Luna",
+                  "$0,20",
+                  "$1,20"
+                ]
+              ],
+              "numericColumns": [
+                1,
+                2
               ]
             },
             {
               "type": "text",
               "text": "Preise in USD pro 1 Mio. Tokens: API-Standardtarif bei kurzem Kontext und ungecachtem Input. Input = gesendetes Material; Output = erzeugte Tokens. Langer Kontext kostet mehr."
-            },
-            {
-              "type": "text",
-              "text": "Kontext = was gleichzeitig auf den Schreibtisch des Modells passt: Gespräch, Briefing und Dokumente. Tokens sind kleine Textbausteine; Mio. = Millionen. Wissensstand = Stichtag des eingebauten Modellwissens; neuere Fakten brauchen aktuelle Quellen."
-            },
-            {
-              "type": "text",
-              "text": "Reasoning = wie viel Aufwand das Modell ins Durchdenken deiner Aufgabe steckt. Kurz umformulieren braucht wenig; Optionen anhand mehrerer Anforderungen abzuwägen kann von mehr profitieren. Mehr Aufwand kann länger dauern. none = aus; low → max = wenig bis maximal."
             },
             {
               "type": "link",
@@ -2716,7 +3774,10 @@
               "text": "OpenAI-API-Preise (USD / 1 Mio. Tokens)"
             }
           ],
-          "notes": "Ausgewählte API-Modelle; die Verfügbarkeit in der Codex-Modellauswahl kann abweichen. Kontextangaben sind API-Limits. Die Pfeile kürzen die unterstützten Stufen ab. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. none = aus, low = gering, medium = mittel, high = hoch, xhigh = sehr hoch, max = maximal. Quelle: https://developers.openai.com/api/docs/models\nDie typischen Anwendungen sind Beispiele, abgeleitet aus der offiziellen Modellausrichtung: Astra für anspruchsvollste Aufgaben über viele Schritte, Sol für komplexe professionelle Arbeit, Terra für die Balance aus Leistungsfähigkeit und Kosten, Luna für kostensensitive Aufgaben mit hohem Volumen. Es sind keine exklusiven Fähigkeiten oder benchmarkbasierten Aufgaben-Ranglisten."
+          "notes": "Ausgewählte API-Modelle; die Verfügbarkeit in der Codex-Modellauswahl kann abweichen. Kontextangaben sind API-Limits. Die Pfeile kürzen die unterstützten Stufen ab. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. none = aus, low = gering, medium = mittel, high = hoch, xhigh = sehr hoch, max = maximal. Quelle: https://developers.openai.com/api/docs/models\nDie typischen Anwendungen sind Beispiele, abgeleitet aus der offiziellen Modellausrichtung: Astra für anspruchsvollste Aufgaben über viele Schritte, Sol für komplexe professionelle Arbeit, Terra für die Balance aus Leistungsfähigkeit und Kosten, Luna für kostensensitive Aufgaben mit hohem Volumen. Es sind keine exklusiven Fähigkeiten oder benchmarkbasierten Aufgaben-Ranglisten.",
+          "composition": "model-details",
+          "palette": "white",
+          "density": "compact"
         },
         {
           "title": "Wie funktioniert Reasoning?",
@@ -2737,15 +3798,6 @@
               ]
             },
             {
-              "type": "callout",
-              "label": "Reasoning & Agenten",
-              "text": "Reasoning ist eine Fähigkeit des Modells, Aufgaben zu durchdenken. Ein Agent nutzt ein Modell und Werkzeuge, um zu handeln, Ergebnisse zu prüfen und weiterzuarbeiten."
-            },
-            {
-              "type": "text",
-              "text": "Beispiel: Reasoning hilft, ein Kampagnenbudget abzuwägen. Ein Agent kann zusätzlich die Budgetdatei öffnen und den Plan als Dokument speichern."
-            },
-            {
               "type": "text",
               "text": "Mehr Reasoning = mehr Rechenaufwand für diese Schritte. Das kann bei schwierigen Aufgaben helfen und länger dauern; richtige Antworten sind nicht garantiert."
             },
@@ -2756,151 +3808,267 @@
               "text": "Quelle: OpenAI – Reasoning"
             }
           ],
-          "notes": "Vereinfachte Erklärung des dokumentierten Ablaufs. Interne Reasoning-Tokens sind nicht direkt einsehbar; angezeigte Zusammenfassungen sind nicht der vollständige interne Prozess. Reasoning kann auch zwischen Tool-Aufrufen stattfinden. Quelle: https://developers.openai.com/api/docs/guides/reasoning"
+          "notes": "Vereinfachte Erklärung des dokumentierten Ablaufs. Interne Reasoning-Tokens sind nicht direkt einsehbar; angezeigte Zusammenfassungen sind nicht der vollständige interne Prozess. Reasoning kann auch zwischen Tool-Aufrufen stattfinden. Quelle: https://developers.openai.com/api/docs/guides/reasoning",
+          "composition": "standard",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Modell auswählen",
-          subtitle: "Wo das Modell ausgewählt wird",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Reasoning und Agenten",
+          "subtitle": "Ein interner Arbeitsentwurf vor der Antwort",
+          "layout": "reasoning-info",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/select-llm-model-de.png",
-              alt: "Codex Modellauswahl"
-            }
-          ]
-        },
-        {
-          title: "Workspace auswählen",
-          subtitle: "Wo der Agent arbeitet",
-          layout: "codex-screenshot",
-          blocks: [
+              "type": "callout",
+              "label": "Reasoning & Agenten",
+              "tone": "plain",
+              "text": "Reasoning ist eine Fähigkeit des Modells, Aufgaben zu durchdenken. Ein Agent nutzt ein Modell und Werkzeuge, um zu handeln, Ergebnisse zu prüfen und weiterzuarbeiten."
+            },
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/select-where-agent-works-de.png",
-              alt: "Codex Workspace-Auswahl"
-            }
-          ]
-        },
-        {
-          title: "Plugins einbinden",
-          subtitle: "Verfügbare Tools",
-          layout: "codex-screenshot",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/include-plugins-de.png",
-              alt: "Codex Plugin-Auswahl"
-            }
-          ]
-        },
-        {
-          title: "Was ist eine Automation?",
-          subtitle: "Aufgaben nach Zeitplan",
-          layout: "automation",
-          blocks: [
-            {
-              type: "automationFlow",
-              intro: "Eine Automation startet eine festgelegte Aufgabe automatisch, sobald ihr Auslöser eintritt.",
-              example: "Beispiel: ein Wochenbericht",
-              steps: [
-                { icon: "🕘", label: "Zeitplan", value: "09:00", detail: "Jeden Montag", tone: "schedule" },
-                { icon: "⚙️", label: "Aufgabe", value: "Projektstand zusammenfassen", detail: "Der Agent folgt deinen Anweisungen", tone: "task" },
-                { icon: "📋", label: "Ergebnis", value: "Wochenbericht", detail: "Bereit zum Prüfen", tone: "result" }
-              ],
-              repeat: "Nächsten Montag um 09:00 wiederholen",
-              takeaway: "Einmal einrichten. Bei jedem Termin automatisch ausführen."
+              "type": "text",
+              "text": "Beispiel: Reasoning hilft, ein Kampagnenbudget abzuwägen. Ein Agent kann zusätzlich die Budgetdatei öffnen und den Plan als Dokument speichern."
             }
           ],
-          notes: "Die Uhrzeit ist ein Beispiel, keine tatsächlich laufende Automation. Auslöser, gespeicherte Anweisungen und Ergebnis erklären. Der Rückpfeil bedeutet einen neuen Durchlauf zum nächsten Termin, keine dauerhaft laufende Aufgabe. Andere Automationen können statt nach Zeitplan auch durch ein Ereignis starten."
+          "notes": "Vereinfachte Erklärung des dokumentierten Ablaufs. Interne Reasoning-Tokens sind nicht direkt einsehbar; angezeigte Zusammenfassungen sind nicht der vollständige interne Prozess. Reasoning kann auch zwischen Tool-Aufrufen stattfinden. Quelle: https://developers.openai.com/api/docs/guides/reasoning",
+          "composition": "standard",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Automations erstellen",
-          subtitle: "Automation-Setup",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Modell auswählen",
+          "subtitle": "Wo das Modell ausgewählt wird",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-automations-1-de.png",
-              alt: "Codex Automations erstellen"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/select-llm-model-de.png",
+              "alt": "Codex Modellauswahl"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Automations konfigurieren",
-          subtitle: "Automation-Setup",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Workspace auswählen",
+          "subtitle": "Wo der Agent arbeitet",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-automations-2-de.png",
-              alt: "Codex Automations konfigurieren"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/select-where-agent-works-de.png",
+              "alt": "Codex Workspace-Auswahl"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Usage finden",
-          subtitle: "Account Usage",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Plugins einbinden",
+          "subtitle": "Verfügbare Tools",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/where-to-find-usage-1-de.png",
-              alt: "Codex Usage Navigation"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/include-plugins-de.png",
+              "alt": "Codex Plugin-Auswahl"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Usage Details",
-          subtitle: "Account Usage",
-          layout: "codex-screenshot",
-          blocks: [
+          "title": "Was ist eine Automation?",
+          "subtitle": "Aufgaben nach Zeitplan",
+          "layout": "automation",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/where-to-find-useage-2-de.png",
-              alt: "Codex Usage Details"
+              "type": "text",
+              "text": "Eine Automation startet eine festgelegte Aufgabe automatisch, sobald ihr Auslöser eintritt."
+            },
+            {
+              "type": "text",
+              "text": "Beispiel: ein Wochenbericht"
+            },
+            {
+              "type": "automationFlow",
+              "intro": null,
+              "example": null,
+              "steps": [
+                {
+                  "icon": "clock",
+                  "label": "Zeitplan",
+                  "value": "09:00",
+                  "detail": "Jeden Montag",
+                  "tone": "schedule"
+                },
+                {
+                  "icon": "settings",
+                  "label": "Aufgabe",
+                  "value": "Projektstand zusammenfassen",
+                  "detail": "Der Agent folgt deinen Anweisungen",
+                  "tone": "task"
+                },
+                {
+                  "icon": "clipboard-list",
+                  "label": "Ergebnis",
+                  "value": "Wochenbericht",
+                  "detail": "Bereit zum Prüfen",
+                  "tone": "result"
+                }
+              ],
+              "repeat": "Nächsten Montag um 09:00 wiederholen",
+              "takeaway": "Einmal einrichten. Bei jedem Termin automatisch ausführen."
             }
-          ]
+          ],
+          "notes": "Die Uhrzeit ist ein Beispiel, keine tatsächlich laufende Automation. Auslöser, gespeicherte Anweisungen und Ergebnis erklären. Der Rückpfeil bedeutet einen neuen Durchlauf zum nächsten Termin, keine dauerhaft laufende Aufgabe. Andere Automationen können statt nach Zeitplan auch durch ein Ereignis starten.",
+          "composition": "automation",
+          "palette": "white",
+          "density": "compact"
         },
-
         {
-          title: "Welche Use Cases eignen sich für den Einstieg?",
-          subtitle: "Klein starten, echten Nutzen erzeugen",
-          blocks: [
+          "title": "Automations erstellen",
+          "subtitle": "Automation-Setup",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "table",
-              revealTable: true,
-              revealRows: true,
-              headers: ["Ein guter erster Use Case ist", "Woran man es erkennt"],
-              rows: [
-                ["häufig", "die Aufgabe kommt regelmäßig vor"],
-                ["zeitaufwendig", "sie bindet spürbar Aufmerksamkeit"],
-                ["klar prüfbar", "ein gutes Ergebnis ist erkennbar"],
-                ["risikoarm", "Fehler lassen sich leicht entdecken und korrigieren"],
-                ["kontextreich", "Beispiele, Dateien und Regeln sind vorhanden"]
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-automations-1-de.png",
+              "alt": "Codex Automations erstellen"
+            }
+          ],
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Automations konfigurieren",
+          "subtitle": "Automation-Setup",
+          "layout": "codex-screenshot",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-automations-2-de.png",
+              "alt": "Codex Automations konfigurieren"
+            }
+          ],
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Tägliche Recherche",
+          "subtitle": "Automatisch jeden Tag um 09:00 Uhr",
+          "blocks": [
+            {
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "Wettbewerbsrecherche",
+                  "icon": "briefcase",
+                  "accent": "#5b7cfa",
+                  "description": "Prüfe die Websites ausgewählter Wettbewerber auf neue Produkte, Preisänderungen und Kampagnen.",
+                  "metaphor": "Ergebnis: ein kurzer Überblick über Änderungen seit dem letzten Durchlauf, mit Quellenlinks."
+                },
+                {
+                  "title": "Kundenrecherche",
+                  "icon": "user",
+                  "accent": "#16b85f",
+                  "description": "Prüfe die Websites ausgewählter Kunden und öffentliche Nachrichten auf Ankündigungen, Projekte und Veränderungen im Unternehmen.",
+                  "metaphor": "Ergebnis: ein kurzer Überblick pro Kunde, mit Quellenlinks und möglichen Themen für das nächste Gespräch."
+                }
               ]
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
-          title: "Use-Case-Board",
-          subtitle: "Excalidraw",
-          blocks: [
+          "title": "Usage finden",
+          "subtitle": "Account Usage",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "link",
-              href: "https://excalidraw.com/#room=3f7fb564ea3a699c6fd3,sDK2_w9L9RRcSUgP1PYFTA",
-              text: "Find your usecase"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/where-to-find-usage-1-de.png",
+              "alt": "Codex Usage Navigation"
             }
-          ]
+          ],
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Übung 1: Input und Output definieren",
-          subtitle: "Dauer: 5 Minuten",
-          blocks: [
+          "title": "Usage Details",
+          "subtitle": "Account Usage",
+          "layout": "codex-screenshot",
+          "blocks": [
             {
-              type: "bullets",
-              label: "Fragen",
-              items: [
+              "type": "screenshot",
+              "src": "assets/codex-pictures/where-to-find-useage-2-de.png",
+              "alt": "Codex Usage Details"
+            }
+          ],
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Welche Use Cases eignen sich für den Einstieg?",
+          "subtitle": "Klein starten, echten Nutzen erzeugen",
+          "blocks": [
+            {
+              "type": "table",
+              "revealTable": true,
+              "revealRows": true,
+              "headers": [
+                "Ein guter erster Use Case ist",
+                "Woran man es erkennt"
+              ],
+              "rows": [
+                [
+                  "häufig",
+                  "die Aufgabe kommt regelmäßig vor"
+                ],
+                [
+                  "zeitaufwendig",
+                  "sie bindet spürbar Aufmerksamkeit"
+                ],
+                [
+                  "klar prüfbar",
+                  "ein gutes Ergebnis ist erkennbar"
+                ],
+                [
+                  "risikoarm",
+                  "Fehler lassen sich leicht entdecken und korrigieren"
+                ],
+                [
+                  "kontextreich",
+                  "Beispiele, Dateien und Regeln sind vorhanden"
+                ]
+              ]
+            }
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "Use-Case-Board",
+          "subtitle": "Excalidraw",
+          "blocks": [
+            {
+              "type": "link",
+              "href": "https://excalidraw.com/#room=3f7fb564ea3a699c6fd3,sDK2_w9L9RRcSUgP1PYFTA",
+              "text": "Find your usecase"
+            }
+          ],
+          "composition": "statement",
+          "palette": "black"
+        },
+        {
+          "title": "Übung 1: Input und Output definieren",
+          "subtitle": "Dauer: 5 Minuten",
+          "blocks": [
+            {
+              "type": "bullets",
+              "label": "Fragen",
+              "items": [
                 "Was bekommt das Programm?",
                 "In welchem Format?",
                 "Was soll es erzeugen?",
@@ -2908,182 +4076,339 @@
               ]
             },
             {
-              type: "table",
-              revealTable: true,
-              revealRows: true,
-              headers: ["Input", "Output"],
-              rows: [
-                ["Datei", "Zusammenfassung oder Report"],
-                ["Notizen", "Aufgabenliste"],
-                ["URL", "Screenshots und Fehler"],
-                ["CSV-Tabelle", "Themen und Beispiele"]
-              ]
+              "type": "text",
+              "text": "Beispiele: Input kann eine Datei, eine Notiz, eine URL, eine CSV-Datei oder anderes Material sein."
             },
             {
-              type: "callout",
-              label: "Beispiel Coffee-Shop-Landing-Page",
-              text: "Input: Kampagnen-Briefing, Shop-Fotos, Speisekarten-CSV und Brand-Notizen. Output: Landing-Page-Struktur, Sektionstexte, Angebotsblöcke, Bildvorschläge und CTA-Varianten."
+              "type": "table",
+              "revealTable": true,
+              "revealRows": true,
+              "headers": [
+                "Input",
+                "Output"
+              ],
+              "rows": [
+                [
+                  "Datei",
+                  "Zusammenfassung oder Report"
+                ],
+                [
+                  "Notizen",
+                  "Aufgabenliste"
+                ],
+                [
+                  "URL",
+                  "Screenshots und Fehler"
+                ],
+                [
+                  "CSV-Tabelle",
+                  "Themen und Beispiele"
+                ]
+              ]
             }
-          ]
+          ],
+          "composition": "exercise-table",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Übung 2: Den Prozess zerlegen",
-          subtitle: "Dauer: 5 Minuten",
-          blocks: [
+          "title": "Übung 2: Den Prozess zerlegen",
+          "subtitle": "Dauer: 5 Minuten",
+          "blocks": [
             {
-              type: "text",
-              text: "Ziel: Die Aufgabe in kleine, programmierbare Schritte aufteilen."
+              "type": "text",
+              "text": "Ziel: Die Aufgabe in kleine, klare Schritte aufteilen, denen ein Agent folgen kann."
             },
             {
-              type: "ordered",
-              label: "Allgemeiner Prozessablauf",
-              revealItems: true,
-              items: [
-                "Input auswählen",
-                "Input öffnen oder lesen",
-                "relevante Informationen extrahieren",
-                "Regeln anwenden",
-                "Probleme oder Ergebnisse sammeln",
-                "Output erstellen"
+              "type": "ordered",
+              "label": "Allgemeines Beispiel",
+              "revealItems": true,
+              "items": [
+                "Input auswählen: Welche Datei, Notiz oder Website soll bearbeitet werden?",
+                "Input öffnen: Die Datei laden oder die Website aufrufen und den Inhalt lesen.",
+                "Informationen sammeln: Die Angaben heraussuchen, die für die Aufgabe wichtig sind.",
+                "Regeln anwenden: Die Angaben nach deinen Vorgaben prüfen, sortieren oder bearbeiten.",
+                "Ergebnisse sammeln: Die Resultate zusammenstellen und fehlende oder unklare Angaben markieren.",
+                "Output erstellen: Das Ergebnis als Liste, CSV-Datei, Excel-Tabelle oder PowerPoint-Präsentation ausgeben, per E-Mail senden oder als Website aufbereiten."
               ]
-            },
-            {
-              type: "callout",
-              label: "Beispiel Coffee-Shop-Landing-Page",
-              text: "Kampagnen-Briefing lesen, Angebot und Tonalität extrahieren, Seitensektionen auswählen, Texte pro Sektion schreiben, Speisekarte und Bildplatzhalter einsetzen und HTML-Seite exportieren."
             }
-          ]
+          ],
+          "composition": "exercise-steps",
+          "palette": "yellow"
         },
         {
-          title: "Übung 3: Regeln und Beispiele sammeln",
-          subtitle: "Dauer: 5 Minuten",
-          blocks: [
+          "title": "Übung 3: Regeln und Beispiele sammeln",
+          "subtitle": "Dauer: 5 Minuten",
+          "blocks": [
             {
-              type: "text",
-              text: "Ziel: Implizites Wissen sichtbar machen."
+              "type": "text",
+              "text": "Schreibt 3–5 konkrete Regeln auf: Was muss das Ergebnis enthalten, wie soll es aussehen und was darf nicht passieren?"
             },
             {
-              type: "bullets",
-              label: "Sammelt",
-              items: [
-                "feste Regeln",
-                "gute Beispiele",
-                "schlechte Beispiele",
-                "Ausnahmen",
-                "typische Fehler"
+              "type": "bullets",
+              "label": "Welche Regeln braucht ihr?",
+              "items": [
+                "Inhalt: Welche Angaben müssen enthalten sein?",
+                "Format: Liste, Tabelle oder Fließtext? Wie lang?",
+                "Sprache: Welcher Ton, welche Begriffe?",
+                "Fehlende Angaben: Nachfragen, markieren oder überspringen?",
+                "Prüfung: Wie sieht ein gutes und ein schlechtes Ergebnis aus?"
               ]
             },
             {
-              type: "bullets",
-              label: "Allgemeine Beispiele",
-              items: [
-                "Pflichtfelder müssen vorhanden sein",
-                "verbotene Wörter oder Platzhalter dürfen nicht vorkommen",
-                "das Ausgabeformat folgt einem bekannten Beispiel",
-                "Ausnahmen werden explizit aufgelistet",
-                "typische Fehler sollen leicht erkennbar sein"
+              "type": "bullets",
+              "label": "Allgemeine Regeln",
+              "items": [
+                "Übernimm alle geforderten Angaben. Erfinde keine Informationen.",
+                "Halte das vereinbarte Format, die Reihenfolge und die maximale Länge ein.",
+                "Schreibe verständlich und verwende die vereinbarte Sprache und Ansprache.",
+                "Markiere fehlende oder unklare Angaben und frage bei Bedarf nach.",
+                "Prüfe das Ergebnis auf Vollständigkeit, Widersprüche und übrig gebliebene Platzhalter."
               ]
-            },
-            {
-              type: "callout",
-              label: "Beispiel Coffee-Shop-Landing-Page",
-              text: "Die Headline nennt das saisonale Getränk, der CTA lautet \"Tisch reservieren\" oder \"Vorbestellen\", Öffnungszeiten sind above the fold sichtbar, kein Platzhaltertext bleibt stehen und das Original-Briefing wird nicht verändert."
             }
-          ]
+          ],
+          "composition": "exercise-columns",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Zusammenfassung: Basics",
-          subtitle: "Wichtige Wörter und Metaphern",
-          layout: "summary",
-          blocks: [
+          "title": "Zusammenfassung: Basics",
+          "subtitle": "Wichtige Wörter und Metaphern",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Wort", "Bedeutung", "Metapher"],
-              rows: [
-                ["LLM", "Ein Sprachmodell, das aus Input passende nächste Textstücke vorhersagt.", "🧠 Gehirn"],
-                ["Token", "Ein kleines Textstück: Wortteil, ganzes Wort oder Zeichenkette.", "🧩 Text-Baustein"],
-                ["Chatbot", "Eine Oberfläche, die Nachrichten an ein LLM schickt und Antworten zeigt.", "👀👂👄 Augen, Ohren, Mund"],
-                ["Agent", "Ein LLM-basiertes System, das Tools nutzen, handeln, prüfen und weitermachen kann.", "🤲💪🦵 Hände, Arme, Füße"],
-                ["Prompting", "Im Chat fragen und selbst entscheiden, was man mit der Antwort macht.", "📖 Rezept anfragen"],
-                ["Vibe Coding", "Software grob beschreiben, ausprobieren und nach Gefühl anpassen.", "🍝 \"Irgendwas mit Pasta\""],
-                ["Agentic Coding", "Ziel, Kontext, Dateien, Regeln und Grenzen geben, damit ein Agent umsetzt.", "🍲 Chef in der Küche"]
+              "type": "table",
+              "headers": [
+                "Wort",
+                "Bedeutung",
+                "Metapher"
+              ],
+              "rows": [
+                [
+                  "LLM",
+                  "Ein Sprachmodell, das aus Input passende nächste Textstücke vorhersagt.",
+                  {"emojis": ["🧠"], "text": "Gehirn"}
+                ],
+                [
+                  "Token",
+                  "Ein kleines Textstück: Wortteil, ganzes Wort oder Zeichenkette.",
+                  {"emojis": ["🧩"], "text": "Text-Baustein"}
+                ],
+                [
+                  "Chatbot",
+                  "Eine Oberfläche, die Nachrichten an ein LLM schickt und Antworten zeigt.",
+                  {"emojis": ["👀👂👄"], "text": "Augen, Ohren, Mund"}
+                ],
+                [
+                  "Agent",
+                  "Ein LLM-basiertes System, das Tools nutzen, handeln, prüfen und weitermachen kann.",
+                  {"emojis": ["🤲💪🦵"], "text": "Hände, Arme, Füße"}
+                ],
+                [
+                  "Prompting",
+                  "Im Chat fragen und selbst entscheiden, was man mit der Antwort macht.",
+                  {"emojis": ["📖"], "text": "Rezept anfragen"}
+                ],
+                [
+                  "Vibe Coding",
+                  "Software grob beschreiben, ausprobieren und nach Gefühl anpassen.",
+                  {"emojis": ["🍝"], "text": "\"Irgendwas mit Pasta\""}
+                ],
+                [
+                  "Agentic Coding",
+                  "Ziel, Kontext, Dateien, Regeln und Grenzen geben, damit ein Agent umsetzt.",
+                  {"emojis": ["🍲"], "text": "Chef in der Küche"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Zusammenfassung: Codex",
-          subtitle: "Setup-Wörter und Metaphern",
-          layout: "summary",
-          blocks: [
+          "title": "Zusammenfassung: Codex",
+          "subtitle": "Setup-Wörter und Metaphern",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Wort", "Bedeutung", "Metapher"],
-              rows: [
-                ["Codex", "Eine Agentic-Coding-Umgebung, die mit deinen Projektdateien arbeiten kann.", "🧑‍🍳 Chefkoch"],
-                ["Projekt", "Der Ort, an dem deine Arbeit in Codex organisiert ist.", "🏪 Restaurant"],
-                ["Modell", "Das ausgewählte AI-Gehirn, das Codex für die Aufgabe nutzt.", "🎓 Gehirn des Chefs"],
-                ["Workspace", "Der Projektordner, in dem der Agent Dateien lesen und ändern darf.", "🍳 Küche"],
-                ["Tool", "Programme und Apps, die der Agent nutzen kann.", "🛠️ Küchenwerkzeuge"],
-                ["Plugin", "Ein spezielles Programm, das für Codex gemacht ist.", "🧰 Spezielles Küchenwerkzeug"],
-                ["Automation", "Eine wiederholbare Agenten-Aufgabe, die über einen Auslöser laufen kann.", "⏲️ Küchentimer"],
-                ["Usage", "Der Account-Bereich, in dem du siehst, wie viel Codex genutzt wurde.", "💸 Gehalt für den Koch"]
+              "type": "table",
+              "headers": [
+                "Wort",
+                "Bedeutung",
+                "Metapher"
+              ],
+              "rows": [
+                [
+                  "Codex",
+                  "Eine Agentic-Coding-Umgebung, die mit deinen Projektdateien arbeiten kann.",
+                  {"emojis": ["🧑‍🍳"], "text": "Chefkoch"}
+                ],
+                [
+                  "Projekt",
+                  "Der Ort, an dem deine Arbeit in Codex organisiert ist.",
+                  {"emojis": ["🏪"], "text": "Restaurant"}
+                ],
+                [
+                  "Modell",
+                  "Das ausgewählte AI-Gehirn, das Codex für die Aufgabe nutzt.",
+                  {"emojis": ["🧠"], "text": "Gehirn des Chefs"}
+                ],
+                [
+                  "Workspace",
+                  "Der Projektordner, in dem der Agent Dateien lesen und ändern darf.",
+                  {"emojis": ["🍳"], "text": "Küche"}
+                ],
+                [
+                  "Tool",
+                  "Programme und Apps, die der Agent nutzen kann.",
+                  {"emojis": ["🛠️"], "text": "Küchenwerkzeuge"}
+                ],
+                [
+                  "Plugin",
+                  "Ein spezielles Programm, das für Codex gemacht ist.",
+                  {"emojis": ["🧰"], "text": "Spezielles Küchenwerkzeug"}
+                ],
+                [
+                  "Automation",
+                  "Eine wiederholbare Agenten-Aufgabe, die über einen Auslöser laufen kann.",
+                  "⏲️ Küchentimer"
+                ],
+                [
+                  "Usage",
+                  "Der Account-Bereich, in dem du siehst, wie viel Codex genutzt wurde.",
+                  {"emojis": ["💸"], "text": "Gehalt für den Koch"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Zusammenfassung: Use Cases",
-          subtitle: "Anweisungen und Metaphern",
-          layout: "summary",
-          blocks: [
+          "title": "Zusammenfassung: Use Cases",
+          "subtitle": "Anweisungen und Metaphern",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Wort", "Bedeutung", "Metapher"],
-              rows: [
-                ["Use Case", "Eine konkrete Aufgabe, bei der AI im Workflow Nutzen erzeugt.", "📋 Gericht auf der Karte"],
-                ["Input", "Das Material, das das Programm bekommt: Datei, Notizen, URL oder Tabelle.", "🥕 Zutaten"],
-                ["Output", "Das Ergebnis, das das Programm erzeugen soll: Report, Liste, Screenshots oder App.", "🍽️ Fertiges Gericht"],
-                ["Regel", "Eine feste Bedingung, die das Ergebnis erfüllen muss.", "📏 Kochregel"],
-                ["Prüfkriterien", "Woran man erkennt, dass die Aufgabe gut genug erledigt ist.", "👅 Geschmackstest"],
-                ["Fehlerfall", "Eine Situation, in der Input oder Ergebnis fehlt, falsch oder unklar ist.", "❓ Fehlende Zutat"],
-                ["Freigabe durch Menschen", "Eine Entscheidung, die bei Menschen bleibt, z. B. veröffentlichen oder Daten löschen.", "✅ Chef:in gibt frei"]
-              ]
-            },
-            {
-              type: "table",
-              headers: ["Guter Use Case ist", "Woran man es erkennt", "Metapher"],
-              rows: [
-                ["häufig", "die Aufgabe kommt regelmäßig vor", "🔁 Regelmäßige Bestellung"],
-                ["zeitaufwendig", "sie bindet spürbar Aufmerksamkeit", "⏳ Lange Vorbereitung"],
-                ["klar prüfbar", "ein gutes Ergebnis ist erkennbar", "🔍 Qualitätscheck"],
-                ["risikoarm", "Fehler lassen sich leicht entdecken und korrigieren", "🛟 Sicherheitsnetz"],
-                ["kontextreich", "Beispiele, Dateien und Regeln sind vorhanden", "🗂️ Rezeptarchiv"]
+              "type": "table",
+              "headers": [
+                "Wort",
+                "Bedeutung",
+                "Metapher"
+              ],
+              "rows": [
+                [
+                  "Use Case",
+                  "Eine konkrete Aufgabe, bei der AI im Workflow Nutzen erzeugt.",
+                  {"emojis": ["📋"], "text": "Gericht auf der Karte"}
+                ],
+                [
+                  "Input",
+                  "Das Material, das das Programm bekommt: Datei, Notizen, URL oder Tabelle.",
+                  {"emojis": ["🥕"], "text": "Zutaten"}
+                ],
+                [
+                  "Output",
+                  "Das Ergebnis, das das Programm erzeugen soll: Report, Liste, Screenshots oder App.",
+                  {"emojis": ["🍽️"], "text": "Fertiges Gericht"}
+                ],
+                [
+                  "Regel",
+                  "Eine feste Bedingung, die das Ergebnis erfüllen muss.",
+                  {"emojis": ["📏"], "text": "Kochregel"}
+                ],
+                [
+                  "Prüfkriterien",
+                  "Woran man erkennt, dass die Aufgabe gut genug erledigt ist.",
+                  {"emojis": ["👅"], "text": "Geschmackstest"}
+                ],
+                [
+                  "Fehlerfall",
+                  "Eine Situation, in der Input oder Ergebnis fehlt, falsch oder unklar ist.",
+                  {"emojis": ["❓"], "text": "Fehlende Zutat"}
+                ],
+                [
+                  "Freigabe durch Menschen",
+                  "Eine Entscheidung, die bei Menschen bleibt, z. B. veröffentlichen oder Daten löschen.",
+                  {"emojis": ["✅"], "text": "Chef:in gibt frei"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "Zusammenfassung: Gute Use Cases wählen",
+          "subtitle": "Anweisungen und Metaphern",
+          "layout": "summary",
+          "blocks": [
+            {
+              "type": "table",
+              "headers": [
+                "Guter Use Case ist",
+                "Woran man es erkennt",
+                "Metapher"
+              ],
+              "rows": [
+                [
+                  "häufig",
+                  "die Aufgabe kommt regelmäßig vor",
+                  {"emojis": ["🔁"], "text": "Regelmäßige Bestellung"}
+                ],
+                [
+                  "zeitaufwendig",
+                  "sie bindet spürbar Aufmerksamkeit",
+                  "⏳ Lange Vorbereitung"
+                ],
+                [
+                  "klar prüfbar",
+                  "ein gutes Ergebnis ist erkennbar",
+                  {"emojis": ["🔍"], "text": "Qualitätscheck"}
+                ],
+                [
+                  "risikoarm",
+                  "Fehler lassen sich leicht entdecken und korrigieren",
+                  {"emojis": ["🛟"], "text": "Sicherheitsnetz"}
+                ],
+                [
+                  "kontextreich",
+                  "Beispiele, Dateien und Regeln sind vorhanden",
+                  {"emojis": ["🗂️"], "text": "Rezeptarchiv"}
+                ]
+              ]
+            }
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         }
       ],
-      slidesDay2: [
+      "slidesDay2": [
         {
-          title: "Agentic Coding\nTag 2",
-          subtitle: "Projekte, Skills, Tools und sichere Grenzen",
-          cover: true,
-          blocks: [],
-          notes: "Verbinde die Agenten-Grundlagen von gestern mit den praktischen Codex-Bausteinen von heute."
+          "title": "Agentic Coding\nTag 2",
+          "subtitle": "Projekte, Skills, Tools und sichere Grenzen",
+          "cover": true,
+          "blocks": [],
+          "notes": "Verbinde die Agenten-Grundlagen von gestern mit den praktischen Codex-Bausteinen von heute.",
+          "composition": "cover",
+          "palette": "yellow"
         },
         {
-          title: "Übung 4: Der Fehlerfall",
-          subtitle: "Dauer: 5 Minuten",
-          blocks: [
+          "title": "Übung 4: Der Fehlerfall",
+          "subtitle": "Dauer: 5 Minuten",
+          "blocks": [
             {
-              type: "text",
-              text: "Ziel: Nicht nur den Idealzustand betrachten."
+              "type": "text",
+              "text": "Ziel: Nicht nur den Idealzustand betrachten."
             },
             {
-              type: "bullets",
-              label: "Definiert mindestens drei allgemeine Fehlerzustände",
-              items: [
+              "type": "bullets",
+              "label": "Definiert mindestens drei allgemeine Fehlerzustände",
+              "items": [
                 "Datei fehlt",
                 "Format ist falsch",
                 "Eingabe ist leer",
@@ -3092,634 +4417,770 @@
                 "Ergebnis ist uneindeutig",
                 "mehrere Regeln widersprechen sich"
               ]
-            },
-            {
-              type: "callout",
-              label: "Beispiel Coffee-Shop-Landing-Page",
-              text: "Wenn in der Speisekarten-CSV Preise fehlen, soll das Programm die betroffenen Getränke markieren, die Seite weiter erzeugen und eine Warnung im Report anzeigen."
-            },
-            {
-              type: "callout",
-              label: "Frage",
-              text: "Was soll das Programm in diesem Fall tun?"
             }
-          ]
+          ],
+          "composition": "exercise-columns",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Übung 5: Den ersten LLM-Prompt schreiben",
-          subtitle: "Dauer: 10 Minuten",
-          blocks: [
+          "title": "Übung 5: Den ersten LLM-Prompt schreiben",
+          "subtitle": "Dauer: 10 Minuten",
+          "blocks": [
             {
-              type: "prompt",
-              label: "Vorlage",
-              text: "Baue eine lokale Anwendung, die [Ziel] unterstützt.\nAls Input verwendet sie [Input].\nDas Programm soll:\n- …\n- …\n- …\nBeachte folgende Regeln: [Regeln].\nDas Ergebnis soll [Output] sein.\nDie Aufgabe ist fertig, wenn [Prüfkriterien] erfüllt sind.\nDas Programm darf nicht [Grenzen]."
-            },
-            {
-              type: "callout",
-              label: "Coffee-Shop-Landing-Page",
-              text: "Baue eine lokale App, die aus einem saisonalen Kaffee-Kampagnen-Briefing eine responsive Landing-Page-Vorschau mit Headline, Angebot, Menü-Teaser, Fotos, Öffnungszeiten und CTA erstellt."
+              "type": "prompt",
+              "label": "Vorlage",
+              "text": "Baue eine lokale Anwendung, die [Ziel] unterstützt.\nAls Input verwendet sie [Input].\nDas Programm soll:\n- …\n- …\n- …\nBeachte folgende Regeln: [Regeln].\nDas Ergebnis soll [Output] sein.\nDie Aufgabe ist fertig, wenn [Prüfkriterien] erfüllt sind.\nDas Programm darf nicht [Grenzen]."
             }
-          ]
+          ],
+          "composition": "prompt",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Projekt / Skill / Tool",
-          subtitle: "Vom Arbeitsraum zur Handlung",
-          blocks: [
+          "title": "Projekt / Skill / Tool",
+          "subtitle": "Vom Arbeitsraum zur Handlung",
+          "blocks": [
             {
-              type: "conceptCards",
-              items: [
+              "type": "conceptCards",
+              "items": [
                 {
-                  title: "Projekt",
-                  icons: [
-                    { emoji: "🏪" }
+                  "title": "Projekt",
+                  "icons": [
+                    {
+                      "icon": "building-store"
+                    }
                   ],
-                  accent: "#5b7cfa",
-                  description: "Arbeitsraum mit Kontext",
-                  metaphor: "Metapher: Restaurant"
+                  "accent": "#5b7cfa",
+                  "description": "Arbeitsraum mit Kontext",
+                  "metaphor": "Metapher: Restaurant"
                 },
                 {
-                  title: "Skill",
-                  icons: [
-                    { emoji: "📘" }
+                  "title": "Skill",
+                  "icons": [
+                    {
+                      "icon": "book"
+                    }
                   ],
-                  accent: "#16b85f",
-                  description: "Wiederverwendbare Anleitung",
-                  metaphor: "Metapher: Rezeptkarte"
+                  "accent": "#16b85f",
+                  "description": "Wiederverwendbare Anleitung",
+                  "metaphor": "Metapher: Rezeptkarte"
                 },
                 {
-                  title: "Tool",
-                  icons: [
-                    { emoji: "🛠️" }
+                  "title": "Tool",
+                  "icons": [
+                    {
+                      "icon": "tool"
+                    }
                   ],
-                  accent: "#f97316",
-                  description: "Kann etwas ausführen",
-                  metaphor: "Metapher: Küchenwerkzeug"
+                  "accent": "#f97316",
+                  "description": "Kann etwas ausführen",
+                  "metaphor": "Metapher: Küchenwerkzeug"
                 }
               ]
             }
-          ]
+          ],
+          "composition": "concepts",
+          "palette": "yellow"
         },
         {
-          title: "Projekt",
-          subtitle: "Was es ist · Warum es hilft · Wie du es nutzt",
-          layout: "agent-flow",
-          blocks: [
+          "title": "Projekt",
+          "subtitle": "Was es ist · Warum es hilft · Wie du es nutzt",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              equalColumns: true,
-              showArrows: false,
-              intro: "Ein Projekt ist ein eigener Arbeitsbereich, der Dateien, Kontext und Regeln für ein Vorhaben zusammenführt.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": "Ein Projekt ist ein eigener Arbeitsbereich, der Dateien, Kontext und Regeln für ein Vorhaben zusammenführt.",
+              "columns": [
                 {
-                  title: "Was ist es?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Was ist es?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "folder",
-                      color: "#5b7cfa",
-                      label: "Dateien, Kontext\nund Projektregeln"
+                      "icon": "folder",
+                      "color": "#5b7cfa",
+                      "label": "Dateien, Kontext\nund Projektregeln"
                     }
                   ]
                 },
                 {
-                  title: "Warum nutzen?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Warum nutzen?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "message",
-                      color: "#16b85f",
-                      label: "Hält den Agenten\nbei der richtigen Aufgabe"
+                      "icon": "message",
+                      "color": "#16b85f",
+                      "label": "Hält den Agenten\nbei der richtigen Aufgabe"
                     },
                     {
-                      icon: "lock",
-                      color: "#16b85f",
-                      label: "Trennt Projekte\nund sensible Daten"
-                    }
-                  ]
-                },
-                {
-                  title: "Wie nutzen?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
-                    {
-                      icon: "check",
-                      color: "#f97316",
-                      label: "Zuerst das passende\nProjekt auswählen"
-                    },
-                    {
-                      icon: "file",
-                      color: "#f97316",
-                      label: "Nur hinzufügen, was\ndie Aufgabe braucht"
+                      "icon": "lock",
+                      "color": "#16b85f",
+                      "label": "Trennt Projekte\nund sensible Daten"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Sicherheit",
-              keyIdea: "Halte Secrets, Kundendaten, Produktionsdateien und private Notizen außerhalb des Projekts, außer die Aufgabe braucht sie wirklich."
-            }
-          ]
-        },
-        {
-          title: "Neues Projekt erstellen",
-          subtitle: "Schritt 1 von 3 — Einen eigenen Workspace starten",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-new-project-de.png",
-              alt: "Ein neues Projekt in Codex erstellen"
-            }
-          ]
-        },
-        {
-          title: "Projekt eindeutig benennen",
-          subtitle: "Schritt 2 von 3 — Den Kontext erkennbar machen",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-project-name-de.png",
-              alt: "Ein neues Projekt in Codex benennen"
-            }
-          ]
-        },
-        {
-          title: "Projekt für die Aufgabe auswählen",
-          subtitle: "Schritt 3 von 3 — Im richtigen Kontext arbeiten",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/select-project-codex-de.png",
-              alt: "Ein Projekt in Codex auswählen"
-            }
-          ]
-        },
-        {
-          title: "Gib dem Agenten nur den nötigen Zugriff",
-          subtitle: "Starte mit dem sichersten Freigabemodus für das Projekt",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/project-and-agent-security-1-de.png",
-              alt: "Codex-Freigabemenü mit Genehmigung anfordern, Für mich genehmigen und Vollzugriff"
+              "keyIdeaLabel": null,
+              "keyIdea": null
             }
           ],
-          notes: "Wähle den engsten Freigabemodus, mit dem der Agent die Aufgabe noch erledigen kann. Nutze Genehmigung anfordern, wenn externe Dateien oder Internetzugriff sensibel sind. Vollzugriff nur verwenden, wenn er wirklich nötig und der Workspace sicher ist."
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Planmodus",
-          subtitle: "Erst verstehen · dann planen · danach umsetzen",
-          layout: "agent-flow",
-          blocks: [
+          "title": "Projekt: Nutzung und Sicherheit",
+          "subtitle": "Was es ist · Warum es hilft · Wie du es nutzt",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              equalColumns: true,
-              showArrows: false,
-              intro: "Im Planmodus sammelt Codex Kontext, stellt Rückfragen und erstellt vor der Umsetzung einen besseren Plan.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": null,
+              "columns": [
                 {
-                  title: "Verstehen",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Wie nutzen?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "search",
-                      color: "#5b7cfa",
-                      label: "Sammelt relevanten\nKontext"
+                      "icon": "check",
+                      "color": "#f97316",
+                      "label": "Zuerst das passende\nProjekt auswählen"
                     },
                     {
-                      icon: "question-mark",
-                      color: "#5b7cfa",
-                      label: "Stellt klärende\nRückfragen"
-                    }
-                  ]
-                },
-                {
-                  title: "Planen",
-                  layout: "list",
-                  size: "mini",
-                  items: [
-                    {
-                      icon: "clipboard-list",
-                      color: "#16b85f",
-                      label: "Schlägt klare\nUmsetzungsschritte vor"
-                    },
-                    {
-                      icon: "check",
-                      color: "#16b85f",
-                      label: "Macht Annahmen\nsichtbar"
-                    }
-                  ]
-                },
-                {
-                  title: "Nutzen bei",
-                  layout: "list",
-                  size: "mini",
-                  items: [
-                    {
-                      icon: "stack-2",
-                      color: "#f97316",
-                      label: "Komplexen oder\nmehrstufigen Aufgaben"
-                    },
-                    {
-                      icon: "message",
-                      color: "#f97316",
-                      label: "Unklaren\nAnforderungen"
+                      "icon": "file",
+                      "color": "#f97316",
+                      "label": "Nur hinzufügen, was\ndie Aufgabe braucht"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Kernidee",
-              keyIdea: "Einigt euch auf den Weg, bevor Codex Dateien verändert."
+              "keyIdeaLabel": "Sicherheit",
+              "keyIdea": "Halte Secrets, Kundendaten, Produktionsdateien und private Notizen außerhalb des Projekts, außer die Aufgabe braucht sie wirklich."
             }
           ],
-          notes: "Das Codex-Handbuch empfiehlt den Planmodus für komplexe, unklare oder schwer zu beschreibende Aufgaben. Codex sammelt Kontext, stellt Rückfragen und bereitet vor der Umsetzung einen besseren Plan vor."
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Planmodus einschalten",
-          subtitle: "Schritt 1 von 3 — + öffnen und Planmodus wählen",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Neues Projekt erstellen",
+          "subtitle": "Schritt 1 von 3 — Einen eigenen Workspace starten",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/planmode-de-1.png",
-              alt: "Planmodus ist im Hinzufügen-Menü von Codex hervorgehoben"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-new-project-de.png",
+              "alt": "Ein neues Projekt in Codex erstellen"
             }
           ],
-          notes: "Öffne das Hinzufügen-Menü und wähle Planmodus, bevor du einen komplexen Prompt abschickst. In unterstützten Codex-Oberflächen lässt sich der Planmodus auch mit /plan oder Umschalt+Tab ein- und ausschalten."
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Dateien und Ordner hinzufügen",
-          subtitle: "Schritt 1 von 3 — + öffnen und Dateien und Ordner wählen",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Projekt eindeutig benennen",
+          "subtitle": "Schritt 2 von 3 — Den Kontext erkennbar machen",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/add-documents-and-folders-de-1.png",
-              alt: "Dateien und Ordner ist im Hinzufügen-Menü von Codex hervorgehoben"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-project-name-de.png",
+              "alt": "Ein neues Projekt in Codex benennen"
             }
           ],
-          notes: "Füge nur die Dateien oder Ordner hinzu, die Codex für die Aufgabe braucht. Teile nicht den gesamten Drive oder unbeteiligtes Kundenmaterial."
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Relevantes Material auswählen",
-          subtitle: "Schritt 2 von 3 — Datei oder Ordner auswählen",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Projekt für die Aufgabe auswählen",
+          "subtitle": "Schritt 3 von 3 — Im richtigen Kontext arbeiten",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/add-documents-and-folders-2-en-de.png",
-              alt: "System-Dateiauswahl, die aus Codex geöffnet wurde"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/select-project-codex-de.png",
+              "alt": "Ein Projekt in Codex auswählen"
             }
           ],
-          notes: "Wähle den kleinsten sinnvollen Umfang. Ein fokussiertes Briefing oder ein Projektordner gibt Codex besseren Kontext und reduziert versehentlich geteilte Daten."
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Anhang vor dem Senden prüfen",
-          subtitle: "Schritt 3 von 3 — Den richtigen Kontext bestätigen",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Gib dem Agenten nur den nötigen Zugriff",
+          "subtitle": "Starte mit dem sichersten Freigabemodus für das Projekt",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/add-documents-and-folders-3-de.png",
-              alt: "Eine PDF-Datei ist an einen Codex-Prompt angehängt"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/project-and-agent-security-1-de.png",
+              "alt": "Codex-Freigabemenü mit Genehmigung anfordern, Für mich genehmigen und Vollzugriff"
             }
           ],
-          notes: "Prüfe die Anhänge, bevor du die Aufgabe startest. Entferne alles, was nicht dazugehört, sensibel ist oder nicht mehr gebraucht wird."
+          "notes": "Wähle den engsten Freigabemodus, mit dem der Agent die Aufgabe noch erledigen kann. Nutze Genehmigung anfordern, wenn externe Dateien oder Internetzugriff sensibel sind. Vollzugriff nur verwenden, wenn er wirklich nötig und der Workspace sicher ist.",
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Klärende Rückfragen beantworten",
-          subtitle: "Schritt 2 von 3 — Wichtige Entscheidungen vor der Umsetzung klären",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Planmodus",
+          "subtitle": "Erst verstehen · dann planen · danach umsetzen",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/planmode-clarifiying-de-2.png",
-              alt: "Codex stellt im Planmodus eine klärende Multiple-Choice-Frage"
-            }
-          ],
-          notes: "Der Planmodus kann gezielte Rückfragen stellen, wenn eine wichtige Anforderung unklar ist. Wähle eine Option oder gib eine eigene Antwort, damit Codex den Plan auf den richtigen Annahmen aufbaut."
-        },
-        {
-          title: "Plan umsetzen",
-          subtitle: "Schritt 3 von 3 — Plan prüfen und Umsetzung bestätigen",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/planmode-implement-1-de.png",
-              alt: "Codex bittet um Bestätigung, den fertigen Plan zu implementieren"
-            }
-          ],
-          notes: "Prüfe Zusammenfassung, Umfang und Annahmen des Plans, bevor du fortfährst. Wähle Ja, diesen Plan implementieren nur, wenn der vorgeschlagene Weg zur Aufgabe passt."
-        },
-        {
-          title: "Skill",
-          subtitle: "Was es ist · Warum es hilft · Wie du es nutzt",
-          layout: "agent-flow",
-          blocks: [
-            {
-              type: "agentFlow",
-              equalHeight: true,
-              equalColumns: true,
-              showArrows: false,
-              intro: "Ein Skill ist eine wiederverwendbare Arbeitsanleitung, die Codex eine bestimmte Art von Aufgabe beibringt.",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": "Im Planmodus sammelt Codex Kontext, stellt Rückfragen und erstellt vor der Umsetzung einen besseren Plan.",
+              "columns": [
                 {
-                  title: "Was ist es?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Verstehen",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "book",
-                      color: "#5b7cfa",
-                      label: "Anweisungen,\nReferenzen und Checks"
+                      "icon": "search",
+                      "color": "#5b7cfa",
+                      "label": "Sammelt relevanten\nKontext"
+                    },
+                    {
+                      "icon": "question-mark",
+                      "color": "#5b7cfa",
+                      "label": "Stellt klärende\nRückfragen"
                     }
                   ]
                 },
                 {
-                  title: "Warum nutzen?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Planen",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "trending-up",
-                      color: "#16b85f",
-                      label: "Konsistentere\nErgebnisse"
+                      "icon": "clipboard-list",
+                      "color": "#16b85f",
+                      "label": "Schlägt klare\nUmsetzungsschritte vor"
                     },
                     {
-                      icon: "message",
-                      color: "#16b85f",
-                      label: "Weniger wiederholte\nPrompts"
+                      "icon": "check",
+                      "color": "#16b85f",
+                      "label": "Macht Annahmen\nsichtbar"
                     }
                   ]
                 },
                 {
-                  title: "Wie nutzen?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Nutzen bei",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "clipboard-list",
-                      color: "#f97316",
-                      label: "Für wiederkehrende\nAufgaben einsetzen"
+                      "icon": "stack-2",
+                      "color": "#f97316",
+                      "label": "Komplexen oder\nmehrstufigen Aufgaben"
                     },
                     {
-                      icon: "check",
-                      color: "#f97316",
-                      label: "$skill-name nennen\noder Codex wählen lassen"
+                      "icon": "message",
+                      "color": "#f97316",
+                      "label": "Unklaren\nAnforderungen"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Sicherheit",
-              keyIdea: "Lies einen Skill, bevor du ihm vertraust. Nutze fokussierte Skills aus vertrauenswürdigen Quellen und prüfe, welche Tools, Dateien oder externen Dienste sie erwarten."
-            }
-          ]
-        },
-        {
-          title: "Skill mit Skill Creator erstellen",
-          subtitle: "Skill auswählen und Aufgabe beschreiben",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-skill-de.png",
-              alt: "Skill Creator in Codex auswählen, indem $skill in das Prompt-Feld eingegeben wird"
+              "keyIdeaLabel": "Kernidee",
+              "keyIdea": "Einigt euch auf den Weg, bevor Codex Dateien verändert."
             }
           ],
-          notes: "Gib $skill ein, wähle Skill Creator und beschreibe eine fokussierte Aufgabe, ihren Trigger und das erwartete Ergebnis. Prüfe und teste den erzeugten Skill vor der Nutzung."
+          "notes": "Das Codex-Handbuch empfiehlt den Planmodus für komplexe, unklare oder schwer zu beschreibende Aufgaben. Codex sammelt Kontext, stellt Rückfragen und bereitet vor der Umsetzung einen besseren Plan vor.",
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Beschreibe, was der Skill tun soll",
-          subtitle: "Name, Trigger und klare Grenzen festlegen",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Planmodus einschalten",
+          "subtitle": "Schritt 1 von 3 — + öffnen und Planmodus wählen",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-skill-2-de.png",
-              alt: "Beispiel-Prompt zum Erstellen eines lokalen Frontend-Entwickler-Skills mit Skill Creator"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/planmode-de-1.png",
+              "alt": "Planmodus ist im Hinzufügen-Menü von Codex hervorgehoben"
             }
           ],
-          notes: "Ein guter Auftrag nennt den Skill, erklärt, wann er aktiv werden soll, und beschreibt die Standards oder Grenzen, die er einhalten muss."
+          "notes": "Öffne das Hinzufügen-Menü und wähle Planmodus, bevor du einen komplexen Prompt abschickst. In unterstützten Codex-Oberflächen lässt sich der Planmodus auch mit /plan oder Umschalt+Tab ein- und ausschalten.",
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Öffne den erstellten Skill",
-          subtitle: "Skill Creator erstellt und validiert die lokalen Dateien",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Dateien und Ordner hinzufügen",
+          "subtitle": "Schritt 1 von 3 — + öffnen und Dateien und Ordner wählen",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-skill-3-de.png",
-              alt: "Validiertes Ergebnis eines lokalen Skills in Codex mit hervorgehobener SKILL.md"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/add-documents-and-folders-de-1.png",
+              "alt": "Dateien und Ordner ist im Hinzufügen-Menü von Codex hervorgehoben"
             }
           ],
-          notes: "Prüfe nach der Erstellung, ob Codex den Skill als gültig meldet, und öffne anschließend die erzeugten Dateien."
+          "notes": "Füge nur die Dateien oder Ordner hinzu, die Codex für die Aufgabe braucht. Teile nicht den gesamten Drive oder unbeteiligtes Kundenmaterial.",
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Prüfe die Skill-Metadaten",
-          subtitle: "openai.yaml steuert Darstellung und Start des Skills",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Relevantes Material auswählen",
+          "subtitle": "Schritt 2 von 3 — Datei oder Ordner auswählen",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-skill-4-de.png",
-              alt: "Erzeugte agents/openai.yaml mit Anzeigename, Kurzbeschreibung und Standard-Prompt"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/add-documents-and-folders-2-en-de.png",
+              "alt": "System-Dateiauswahl, die aus Codex geöffnet wurde"
             }
           ],
-          notes: "Prüfe Anzeigename, Kurzbeschreibung und Standard-Prompt in agents/openai.yaml. Der Skill soll leicht erkennbar und nutzbar sein."
+          "notes": "Wähle den kleinsten sinnvollen Umfang. Ein fokussiertes Briefing oder ein Projektordner gibt Codex besseren Kontext und reduziert versehentlich geteilte Daten.",
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Prüfe die Skill-Anweisungen",
-          subtitle: "SKILL.md definiert Trigger, Workflow und Grenzen",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Anhang vor dem Senden prüfen",
+          "subtitle": "Schritt 3 von 3 — Den richtigen Kontext bestätigen",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/create-skill-5-de.png",
-              alt: "Erzeugte SKILL.md mit Trigger-Beschreibung, Vorgaben und Workflow"
+              "type": "screenshot",
+              "src": "assets/codex-pictures/add-documents-and-folders-3-de.png",
+              "alt": "Eine PDF-Datei ist an einen Codex-Prompt angehängt"
             }
           ],
-          notes: "Lies die vollständige SKILL.md vor der Nutzung. Prüfe, ob der Trigger präzise und die Anweisungen geordnet, fokussiert und testbar sind."
+          "notes": "Prüfe die Anhänge, bevor du die Aufgabe startest. Entferne alles, was nicht dazugehört, sensibel ist oder nicht mehr gebraucht wird.",
+          "composition": "media",
+          "palette": "yellow"
         },
         {
-          title: "Ein guter Skill ist fokussiert und testbar",
-          subtitle: "Lokaler Pflichtkern, optionale Unterstützung",
-          layout: "skill-anatomy",
-          blocks: [
+          "title": "Klärende Rückfragen beantworten",
+          "subtitle": "Schritt 2 von 3 — Wichtige Entscheidungen vor der Umsetzung klären",
+          "layout": "codex-screenshot-full",
+          "blocks": [
             {
-              type: "skillAnatomy",
-              treeLabel: "Ordnerstruktur",
-              tree: "my-skill/\n├── SKILL.md                 Pflicht\n├── agents/\n│   └── openai.yaml          Pflicht für lokale Skills\n├── references/\n│   └── some.md              optional: Detailkontext\n└── scripts/                 optional: deterministische Helfer",
-              checklistLabel: "Qualitätscheck",
-              items: [
+              "type": "screenshot",
+              "src": "assets/codex-pictures/planmode-clarifiying-de-2.png",
+              "alt": "Codex stellt im Planmodus eine klärende Multiple-Choice-Frage"
+            }
+          ],
+          "notes": "Der Planmodus kann gezielte Rückfragen stellen, wenn eine wichtige Anforderung unklar ist. Wähle eine Option oder gib eine eigene Antwort, damit Codex den Plan auf den richtigen Annahmen aufbaut.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Plan umsetzen",
+          "subtitle": "Schritt 3 von 3 — Plan prüfen und Umsetzung bestätigen",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/planmode-implement-1-de.png",
+              "alt": "Codex bittet um Bestätigung, den fertigen Plan zu implementieren"
+            }
+          ],
+          "notes": "Prüfe Zusammenfassung, Umfang und Annahmen des Plans, bevor du fortfährst. Wähle Ja, diesen Plan implementieren nur, wenn der vorgeschlagene Weg zur Aufgabe passt.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Skill",
+          "subtitle": "Was es ist · Warum es hilft · Wie du es nutzt",
+          "layout": "agent-flow",
+          "blocks": [
+            {
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": "Ein Skill ist eine wiederverwendbare Arbeitsanleitung, die Codex eine bestimmte Art von Aufgabe beibringt.",
+              "columns": [
+                {
+                  "title": "Was ist es?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
+                    {
+                      "icon": "book",
+                      "color": "#5b7cfa",
+                      "label": "Anweisungen,\nReferenzen und Checks"
+                    }
+                  ]
+                },
+                {
+                  "title": "Warum nutzen?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
+                    {
+                      "icon": "trending-up",
+                      "color": "#16b85f",
+                      "label": "Konsistentere\nErgebnisse"
+                    },
+                    {
+                      "icon": "message",
+                      "color": "#16b85f",
+                      "label": "Weniger wiederholte\nPrompts"
+                    }
+                  ]
+                }
+              ],
+              "keyIdeaLabel": null,
+              "keyIdea": null
+            }
+          ],
+          "composition": "flow",
+          "palette": "white"
+        },
+        {
+          "title": "Skill: Nutzung und Sicherheit",
+          "subtitle": "Was es ist · Warum es hilft · Wie du es nutzt",
+          "layout": "agent-flow",
+          "blocks": [
+            {
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": null,
+              "columns": [
+                {
+                  "title": "Wie nutzen?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
+                    {
+                      "icon": "clipboard-list",
+                      "color": "#f97316",
+                      "label": "Für wiederkehrende\nAufgaben einsetzen"
+                    },
+                    {
+                      "icon": "check",
+                      "color": "#f97316",
+                      "label": "$skill-name nennen\noder Codex wählen lassen"
+                    }
+                  ]
+                }
+              ],
+              "keyIdeaLabel": "Sicherheit",
+              "keyIdea": "Lies einen Skill, bevor du ihm vertraust. Nutze fokussierte Skills aus vertrauenswürdigen Quellen und prüfe, welche Tools, Dateien oder externen Dienste sie erwarten."
+            }
+          ],
+          "composition": "flow",
+          "palette": "white"
+        },
+        {
+          "title": "Skill mit Skill Creator erstellen",
+          "subtitle": "Skill auswählen und Aufgabe beschreiben",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-skill-de.png",
+              "alt": "Skill Creator in Codex auswählen, indem $skill in das Prompt-Feld eingegeben wird"
+            }
+          ],
+          "notes": "Gib $skill ein, wähle Skill Creator und beschreibe eine fokussierte Aufgabe, ihren Trigger und das erwartete Ergebnis. Prüfe und teste den erzeugten Skill vor der Nutzung.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Beschreibe, was der Skill tun soll",
+          "subtitle": "Name, Trigger und klare Grenzen festlegen",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-skill-2-de.png",
+              "alt": "Beispiel-Prompt zum Erstellen eines lokalen Frontend-Entwickler-Skills mit Skill Creator"
+            }
+          ],
+          "notes": "Ein guter Auftrag nennt den Skill, erklärt, wann er aktiv werden soll, und beschreibt die Standards oder Grenzen, die er einhalten muss.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Öffne den erstellten Skill",
+          "subtitle": "Skill Creator erstellt und validiert die lokalen Dateien",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-skill-3-de.png",
+              "alt": "Validiertes Ergebnis eines lokalen Skills in Codex mit hervorgehobener SKILL.md"
+            }
+          ],
+          "notes": "Prüfe nach der Erstellung, ob Codex den Skill als gültig meldet, und öffne anschließend die erzeugten Dateien.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Prüfe die Skill-Metadaten",
+          "subtitle": "openai.yaml steuert Darstellung und Start des Skills",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-skill-4-de.png",
+              "alt": "Erzeugte agents/openai.yaml mit Anzeigename, Kurzbeschreibung und Standard-Prompt"
+            }
+          ],
+          "notes": "Prüfe Anzeigename, Kurzbeschreibung und Standard-Prompt in agents/openai.yaml. Der Skill soll leicht erkennbar und nutzbar sein.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Prüfe die Skill-Anweisungen",
+          "subtitle": "SKILL.md definiert Trigger, Workflow und Grenzen",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/create-skill-5-de.png",
+              "alt": "Erzeugte SKILL.md mit Trigger-Beschreibung, Vorgaben und Workflow"
+            }
+          ],
+          "notes": "Lies die vollständige SKILL.md vor der Nutzung. Prüfe, ob der Trigger präzise und die Anweisungen geordnet, fokussiert und testbar sind.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Ein guter Skill ist fokussiert und testbar",
+          "subtitle": "Lokaler Pflichtkern, optionale Unterstützung",
+          "layout": "skill-anatomy",
+          "blocks": [
+            {
+              "type": "skillAnatomy",
+              "treeLabel": "Ordnerstruktur",
+              "tree": "my-skill/\n├── SKILL.md                 Pflicht\n├── agents/\n│   └── openai.yaml          Pflicht für lokale Skills\n├── references/\n│   └── some.md              optional: Detailkontext\n└── scripts/                 optional: deterministische Helfer",
+              "checklistLabel": "Qualitätscheck",
+              "items": [
                 "Eine klar abgegrenzte Aufgabe",
                 "Präzise Trigger-Beschreibung",
                 "Explizite Ein- und Ausgaben",
                 "Imperative, geordnete Schritte",
                 "Beispiele und Checks nur, wenn nützlich"
-              ]
-            },
-            {
-              type: "callout",
-              label: "Regel",
-              text: "Lokaler Standard: SKILL.md und agents/openai.yaml gehören immer dazu. Referenzen und Skripte ergänzt du nur, wenn der Workflow sie braucht."
+              ],
+              "panel": "tree"
             }
           ],
-          notes: "Für lokale Workshop-Skills ist agents/openai.yaml neben SKILL.md verpflichtend. Im allgemeinen Codex-Skill-Format ist diese Metadatendatei optional. Separate Referenzen unterstützen Progressive Disclosure."
+          "notes": "Für lokale Workshop-Skills ist agents/openai.yaml neben SKILL.md verpflichtend. Im allgemeinen Codex-Skill-Format ist diese Metadatendatei optional. Separate Referenzen unterstützen Progressive Disclosure.",
+          "composition": "anatomy",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Tool",
-          subtitle: "Was es ist · Warum es hilft · Wie du es nutzt",
-          layout: "agent-flow",
-          blocks: [
+          "title": "Skill: Qualitätscheck",
+          "subtitle": "Lokaler Pflichtkern, optionale Unterstützung",
+          "layout": "skill-anatomy",
+          "blocks": [
             {
-              type: "agentFlow",
-              equalHeight: true,
-              equalColumns: true,
-              showArrows: false,
-              intro: "Ein Tool ist ein Programm oder eine Schnittstelle, die Codex nutzen kann, um Informationen abzurufen oder eine Aufgabe auszuführen.",
-              columns: [
+              "type": "skillAnatomy",
+              "treeLabel": "Ordnerstruktur",
+              "tree": "my-skill/\n├── SKILL.md                 Pflicht\n├── agents/\n│   └── openai.yaml          Pflicht für lokale Skills\n├── references/\n│   └── some.md              optional: Detailkontext\n└── scripts/                 optional: deterministische Helfer",
+              "checklistLabel": "Qualitätscheck",
+              "items": [
+                "Eine klar abgegrenzte Aufgabe",
+                "Präzise Trigger-Beschreibung",
+                "Explizite Ein- und Ausgaben",
+                "Imperative, geordnete Schritte",
+                "Beispiele und Checks nur, wenn nützlich"
+              ],
+              "panel": "checklist"
+            },
+            {
+              "type": "callout",
+              "label": "Regel",
+              "text": "Lokaler Standard: SKILL.md und agents/openai.yaml gehören immer dazu. Referenzen und Skripte ergänzt du nur, wenn der Workflow sie braucht."
+            }
+          ],
+          "notes": "Für lokale Workshop-Skills ist agents/openai.yaml neben SKILL.md verpflichtend. Im allgemeinen Codex-Skill-Format ist diese Metadatendatei optional. Separate Referenzen unterstützen Progressive Disclosure.",
+          "composition": "anatomy",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "Tool",
+          "subtitle": "Was es ist · Warum es hilft · Wie du es nutzt",
+          "layout": "agent-flow",
+          "blocks": [
+            {
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": "Ein Tool ist ein Programm oder eine Schnittstelle, die Codex nutzen kann, um Informationen abzurufen oder eine Aufgabe auszuführen.",
+              "columns": [
                 {
-                  title: "Was ist es?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Was ist es?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "tool",
-                      color: "#5b7cfa",
-                      label: "Programme: Browser,\nTerminal, Excel"
+                      "icon": "tool",
+                      "color": "#5b7cfa",
+                      "label": "Programme: Browser,\nTerminal, Excel"
                     },
                     {
-                      icon: "world",
-                      color: "#5b7cfa",
-                      label: "Dienste: GitHub,\nGoogle Drive, Slack"
+                      "icon": "world",
+                      "color": "#5b7cfa",
+                      "label": "Dienste: GitHub,\nGoogle Drive, Slack"
                     }
                   ]
                 },
                 {
-                  title: "Warum nutzen?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
+                  "title": "Warum nutzen?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
                     {
-                      icon: "search",
-                      color: "#16b85f",
-                      label: "Informationen suchen,\nlesen und prüfen"
+                      "icon": "search",
+                      "color": "#16b85f",
+                      "label": "Informationen suchen,\nlesen und prüfen"
                     },
                     {
-                      icon: "code",
-                      color: "#16b85f",
-                      label: "Aufgaben direkt in\nanderen Programmen erledigen"
-                    }
-                  ]
-                },
-                {
-                  title: "Wie nutzen?",
-                  layout: "list",
-                  size: "mini",
-                  items: [
-                    {
-                      icon: "tool",
-                      color: "#f97316",
-                      label: "Passendes Tool für\ndie Aufgabe auswählen"
-                    },
-                    {
-                      icon: "check",
-                      color: "#f97316",
-                      label: "Zugriff prüfen und\nErgebnis kontrollieren"
+                      "icon": "code",
+                      "color": "#16b85f",
+                      "label": "Aufgaben direkt in\nanderen Programmen erledigen"
                     }
                   ]
                 }
               ],
-              keyIdeaLabel: "Sicherheit",
-              keyIdea: "Tools machen Risiko real. Prüfe alles, was löscht, veröffentlicht, Nachrichten sendet, Software installiert, externe Dienste nutzt oder Daten teilt."
-            }
-          ]
-        },
-        {
-          title: "Plugin installieren",
-          subtitle: "Plugins öffnen -> Zugriffe prüfen -> Installieren",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/include-plugins-de.png",
-              alt: "Vollständiges Codex Plugin-Verzeichnis mit Plugin-Navigation, verfügbaren Plugins, Installieren-Schaltfläche und Datenzugriffshinweis"
+              "keyIdeaLabel": null,
+              "keyIdea": null
             }
           ],
-          notes: "Plugins sind installierbare Pakete. Prüfe die angeforderten Zugriffe vor der Installation. In der CLI: /plugins ausführen, aus einem konfigurierten Marketplace installieren und eine neue Session starten."
+          "composition": "flow",
+          "palette": "white"
         },
         {
-          title: "Öffne vor der Installation die Plugin-Details",
-          subtitle: "Wähle das Plugin aus, das du prüfen möchtest",
-          layout: "codex-screenshot-full",
-          blocks: [
+          "title": "Tool: Nutzung und Sicherheit",
+          "subtitle": "Was es ist · Warum es hilft · Wie du es nutzt",
+          "layout": "agent-flow",
+          "blocks": [
             {
-              type: "screenshot",
-              src: "assets/codex-pictures/check-plugin-access-skills-1-de.png",
-              alt: "Google Calendar ist vor der Installation im Codex Plugin-Verzeichnis hervorgehoben"
-            }
-          ],
-          notes: "Installiere nicht allein aus der Verzeichnisansicht. Öffne die Plugin-Details, damit du den Inhalt des Pakets und seine Zugriffe prüfen kannst."
-        },
-        {
-          title: "Prüfe den Inhalt des Plugins",
-          subtitle: "Kontrolliere jede enthaltene App und jeden Skill",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/check-plugin-access-skills-2-de.png",
-              alt: "Google-Calendar-Plugin mit hervorgehobener App und fünf enthaltenen Skills"
-            }
-          ],
-          notes: "Ein Plugin kann Apps und Skills bündeln. Prüfe jede enthaltene Fähigkeit und verlasse dich nicht nur auf den Namen oder die Kurzbeschreibung des Plugins."
-        },
-        {
-          title: "Prüfe die Aktionen der App",
-          subtitle: "Achte besonders auf Schreib- und Löschaktionen",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/check-plugin-access-skills-3-de.png",
-              alt: "Aktionsliste der Google-Calendar-App mit Erstellen, Löschen, Antworten und Aktualisieren von Terminen"
-            }
-          ],
-          notes: "Prüfe, welche Aktionen nur Informationen lesen und welche Daten erstellen, ändern, löschen oder senden können. Erlaube nur Zugriffe, die deine Aufgabe wirklich benötigt."
-        },
-        {
-          title: "Lies den enthaltenen Skill vor der Nutzung",
-          subtitle: "Prüfe Workflow, Grenzen und erwartetes Ergebnis",
-          layout: "codex-screenshot-full",
-          blocks: [
-            {
-              type: "screenshot",
-              src: "assets/codex-pictures/check-plugin-access-skills-4-de.png",
-              alt: "Details des Google-Calendar-Skills mit Übersicht, bevorzugten Ergebnissen und Workflow"
-            }
-          ],
-          notes: "Lies die Skill-Anweisungen, bevor du ihnen vertraust. Prüfe, ob der Workflow relevant, die Grenzen sicher und die erwarteten Ergebnisse für deine Aufgabe geeignet sind."
-        },
-        {
-          title: "Skill oder Plugin? Der Bedarf entscheidet",
-          subtitle: "Prozess = Skill · Verbundenes Tool oder Information = Plugin",
-          blocks: [
-            {
-              type: "security",
-              columns: [
+              "type": "agentFlow",
+              "equalHeight": true,
+              "equalColumns": true,
+              "showArrows": false,
+              "intro": null,
+              "columns": [
                 {
-                  label: "Skill",
-                  tone: "orange",
-                  items: [
+                  "title": "Wie nutzen?",
+                  "layout": "list",
+                  "size": "mini",
+                  "items": [
+                    {
+                      "icon": "tool",
+                      "color": "#f97316",
+                      "label": "Passendes Tool für\ndie Aufgabe auswählen"
+                    },
+                    {
+                      "icon": "check",
+                      "color": "#f97316",
+                      "label": "Zugriff prüfen und\nErgebnis kontrollieren"
+                    }
+                  ]
+                }
+              ],
+              "keyIdeaLabel": "Sicherheit",
+              "keyIdea": "Tools machen Risiko real. Prüfe alles, was löscht, veröffentlicht, Nachrichten sendet, Software installiert, externe Dienste nutzt oder Daten teilt."
+            }
+          ],
+          "composition": "flow",
+          "palette": "white"
+        },
+        {
+          "title": "Plugin installieren",
+          "subtitle": "Plugins öffnen -> Zugriffe prüfen -> Installieren",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/include-plugins-de.png",
+              "alt": "Vollständiges Codex Plugin-Verzeichnis mit Plugin-Navigation, verfügbaren Plugins, Installieren-Schaltfläche und Datenzugriffshinweis"
+            }
+          ],
+          "notes": "Plugins sind installierbare Pakete. Prüfe die angeforderten Zugriffe vor der Installation. In der CLI: /plugins ausführen, aus einem konfigurierten Marketplace installieren und eine neue Session starten.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Öffne vor der Installation die Plugin-Details",
+          "subtitle": "Wähle das Plugin aus, das du prüfen möchtest",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/check-plugin-access-skills-1-de.png",
+              "alt": "Google Calendar ist vor der Installation im Codex Plugin-Verzeichnis hervorgehoben"
+            }
+          ],
+          "notes": "Installiere nicht allein aus der Verzeichnisansicht. Öffne die Plugin-Details, damit du den Inhalt des Pakets und seine Zugriffe prüfen kannst.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Prüfe den Inhalt des Plugins",
+          "subtitle": "Kontrolliere jede enthaltene App und jeden Skill",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/check-plugin-access-skills-2-de.png",
+              "alt": "Google-Calendar-Plugin mit hervorgehobener App und fünf enthaltenen Skills"
+            }
+          ],
+          "notes": "Ein Plugin kann Apps und Skills bündeln. Prüfe jede enthaltene Fähigkeit und verlasse dich nicht nur auf den Namen oder die Kurzbeschreibung des Plugins.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Prüfe die Aktionen der App",
+          "subtitle": "Achte besonders auf Schreib- und Löschaktionen",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/check-plugin-access-skills-3-de.png",
+              "alt": "Aktionsliste der Google-Calendar-App mit Erstellen, Löschen, Antworten und Aktualisieren von Terminen"
+            }
+          ],
+          "notes": "Prüfe, welche Aktionen nur Informationen lesen und welche Daten erstellen, ändern, löschen oder senden können. Erlaube nur Zugriffe, die deine Aufgabe wirklich benötigt.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Lies den enthaltenen Skill vor der Nutzung",
+          "subtitle": "Prüfe Workflow, Grenzen und erwartetes Ergebnis",
+          "layout": "codex-screenshot-full",
+          "blocks": [
+            {
+              "type": "screenshot",
+              "src": "assets/codex-pictures/check-plugin-access-skills-4-de.png",
+              "alt": "Details des Google-Calendar-Skills mit Übersicht, bevorzugten Ergebnissen und Workflow"
+            }
+          ],
+          "notes": "Lies die Skill-Anweisungen, bevor du ihnen vertraust. Prüfe, ob der Workflow relevant, die Grenzen sicher und die erwarteten Ergebnisse für deine Aufgabe geeignet sind.",
+          "composition": "media",
+          "palette": "yellow"
+        },
+        {
+          "title": "Skill oder Plugin? Der Bedarf entscheidet",
+          "subtitle": "Prozess = Skill · Verbundenes Tool oder Information = Plugin",
+          "blocks": [
+            {
+              "type": "security",
+              "columns": [
+                {
+                  "label": "Skill",
+                  "tone": "orange",
+                  "items": [
                     "Bringt Codex euren wiederholbaren Prozess bei",
                     "Nutzen für konsistente Regeln, Reihenfolge, Ton oder Format",
                     "$ drücken und den Skill auswählen",
@@ -3727,9 +5188,9 @@
                   ]
                 },
                 {
-                  label: "Plugin",
-                  tone: "green",
-                  items: [
+                  "label": "Plugin",
+                  "tone": "green",
+                  "items": [
                     "Verbindet Codex mit anderen Tools und Informationen",
                     "Nutzen für Google Drive, E-Mail oder einen anderen Dienst",
                     "Plugins öffnen, Zugriff prüfen und installieren",
@@ -3737,31 +5198,65 @@
                   ]
                 }
               ]
-            },
-            {
-              type: "callout",
-              label: "Beides nutzen",
-              text: "Kombiniere Skill und Plugin, wenn dein Prozess Informationen aus einem verbundenen Tool braucht."
             }
           ],
-          notes: "Quelle: OpenAI Academy — Plugins and skills, https://openai.com/academy/codex-plugins-and-skills/. Die Faustregel: Plugin für Informationen aus einem anderen Tool, Skill für den eigenen Prozess und beides, wenn der Prozess verbundene Informationen nutzt."
+          "notes": "Quelle: OpenAI Academy — Plugins and skills, https://openai.com/academy/codex-plugins-and-skills/. Die Faustregel: Plugin für Informationen aus einem anderen Tool, Skill für den eigenen Prozess und beides, wenn der Prozess verbundene Informationen nutzt.",
+          "composition": "security",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Top 10 AI-Sicherheitstipps",
-          subtitle: "Einfache Regeln für den Arbeitsalltag",
-          blocks: [
+          "title": "Skill und Plugin kombinieren",
+          "subtitle": "Prozess = Skill · Verbundenes Tool oder Information = Plugin",
+          "blocks": [
             {
-              type: "security",
-              columns: [
+              "type": "callout",
+              "label": "Beides nutzen",
+              "text": "Kombiniere Skill und Plugin, wenn dein Prozess Informationen aus einem verbundenen Tool braucht."
+            }
+          ],
+          "notes": "Quelle: OpenAI Academy — Plugins and skills, https://openai.com/academy/codex-plugins-and-skills/. Die Faustregel: Plugin für Informationen aus einem anderen Tool, Skill für den eigenen Prozess und beides, wenn der Prozess verbundene Informationen nutzt.",
+          "composition": "standard",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "Top 10 AI-Sicherheitstipps",
+          "subtitle": "Einfache Regeln für den Arbeitsalltag",
+          "blocks": [
+            {
+              "type": "security",
+              "columns": [
                 {
-                  label: "10 einfache Regeln",
-                  tone: "red",
-                  items: [
+                  "label": "10 einfache Regeln · 1–5",
+                  "tone": "red",
+                  "items": [
                     "1. Nur freigegebenes Material nutzen — Firmenbilder statt kopierter Google-Bilder verwenden",
                     "2. So wenig wie möglich teilen — Kundennamen, Adressen und private Notizen entfernen",
                     "3. Passwörter geheim halten — Passwörter oder Zugangscodes nie in einen AI-Chat kopieren",
                     "4. Nur Nötiges öffnen — einen Kampagnenordner statt des ganzen Drives freigeben",
-                    "5. Verbundene Apps prüfen — wissen, was ein AI-Tool lesen, ändern oder senden darf",
+                    "5. Verbundene Apps prüfen — wissen, was ein AI-Tool lesen, ändern oder senden darf"
+                  ]
+                }
+              ]
+            }
+          ],
+          "notes": "Diese Regeln gelten für den Marketing-Alltag. Die Kernidee: weniger teilen, Zugriffe prüfen, letzte Entscheidungen bei Menschen lassen, AI-Ergebnisse kontrollieren und bei Auffälligkeiten stoppen.",
+          "composition": "safety",
+          "palette": "white",
+          "density": "compact"
+        },
+        {
+          "title": "AI-Sicherheitstipps: Prüfen und Handeln",
+          "subtitle": "Einfache Regeln für den Arbeitsalltag",
+          "blocks": [
+            {
+              "type": "security",
+              "columns": [
+                {
+                  "label": "10 einfache Regeln · 6–10",
+                  "tone": "red",
+                  "items": [
                     "6. Letzte Entscheidungen bei Menschen lassen — vor Senden, Veröffentlichen, Löschen oder Geldausgeben prüfen",
                     "7. Nicht jeder Anweisung vertrauen — eine Datei oder Website kann die AI zum Teilen von Informationen verleiten",
                     "8. Ergebnis kontrollieren — Namen, Fakten, Preise, Daten, Links, Quellen und Markenton prüfen",
@@ -3772,66 +5267,170 @@
               ]
             }
           ],
-          notes: "Diese Regeln gelten für den Marketing-Alltag. Die Kernidee: weniger teilen, Zugriffe prüfen, letzte Entscheidungen bei Menschen lassen, AI-Ergebnisse kontrollieren und bei Auffälligkeiten stoppen."
+          "notes": "Diese Regeln gelten für den Marketing-Alltag. Die Kernidee: weniger teilen, Zugriffe prüfen, letzte Entscheidungen bei Menschen lassen, AI-Ergebnisse kontrollieren und bei Auffälligkeiten stoppen.",
+          "composition": "safety",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Zusammenfassung: Projekte & Planmodus",
-          subtitle: "Wörter rund um Workspace und Planung",
-          layout: "summary",
-          blocks: [
+          "title": "Zusammenfassung: Projekte & Planmodus",
+          "subtitle": "Wörter rund um Workspace und Planung",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Wort", "Bedeutung", "Metapher"],
-              rows: [
-                ["Projekt", "Ein eigener Workspace mit Dateien, Kontext und Regeln für einen Arbeitsbereich.", "🏪 Restaurant"],
-                ["Zugriffsmodus", "Steuert, was der Agent tun darf und wann er eine Freigabe braucht.", "🔑 Küchenschlüssel"],
-                ["Dateien und Ordner", "Das fokussierte Aufgabenmaterial, das Codex als Kontext erhält.", "🧺 Zutatenkorb"],
-                ["Planmodus", "Codex sammelt Kontext, stellt Rückfragen und schlägt vor der Umsetzung einen Plan vor.", "📝 Vorbereitungsplan"],
-                ["Klärende Rückfrage", "Klärt eine wichtige offene Entscheidung, bevor die Arbeit startet.", "🙋 Koch fragt den Gast"],
-                ["Plan umsetzen", "Startet die Arbeit, nachdem der vorgeschlagene Weg geprüft wurde.", "▶️ Kochen starten"]
+              "type": "table",
+              "headers": [
+                "Wort",
+                "Bedeutung",
+                "Metapher"
+              ],
+              "rows": [
+                [
+                  "Projekt",
+                  "Ein eigener Workspace mit Dateien, Kontext und Regeln für einen Arbeitsbereich.",
+                  {"emojis": ["🏪"], "text": "Restaurant"}
+                ],
+                [
+                  "Zugriffsmodus",
+                  "Steuert, was der Agent tun darf und wann er eine Freigabe braucht.",
+                  {"emojis": ["🔑"], "text": "Küchenschlüssel"}
+                ],
+                [
+                  "Dateien und Ordner",
+                  "Das fokussierte Aufgabenmaterial, das Codex als Kontext erhält.",
+                  {"emojis": ["🧺"], "text": "Zutatenkorb"}
+                ],
+                [
+                  "Planmodus",
+                  "Codex sammelt Kontext, stellt Rückfragen und schlägt vor der Umsetzung einen Plan vor.",
+                  {"emojis": ["📝"], "text": "Vorbereitungsplan"}
+                ],
+                [
+                  "Klärende Rückfrage",
+                  "Klärt eine wichtige offene Entscheidung, bevor die Arbeit startet.",
+                  {"emojis": ["🙋"], "text": "Koch fragt den Gast"}
+                ],
+                [
+                  "Plan umsetzen",
+                  "Startet die Arbeit, nachdem der vorgeschlagene Weg geprüft wurde.",
+                  {"emojis": ["▶️"], "text": "Kochen starten"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Zusammenfassung: Skills & Tools",
-          subtitle: "Wiederverwendbare Prozesse und Fähigkeiten",
-          layout: "summary",
-          blocks: [
+          "title": "Zusammenfassung: Skills & Tools",
+          "subtitle": "Wiederverwendbare Prozesse und Fähigkeiten",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Wort", "Bedeutung", "Metapher"],
-              rows: [
-                ["Skill", "Eine wiederverwendbare Anleitung, die Codex eine fokussierte Aufgabe beibringt.", "📘 Rezeptkarte"],
-                ["SKILL.md", "Die Hauptdatei mit Trigger, Workflow und Grenzen des Skills.", "📖 Rezept"],
-                ["openai.yaml", "Metadaten, die Darstellung und Start eines lokalen Skills steuern.", "🏷️ Rezeptetikett"],
-                ["Tool", "Ein Programm oder eine Schnittstelle, mit der Codex Informationen abruft oder handelt.", "🛠️ Küchenwerkzeug"],
-                ["Plugin", "Ein installierbares Paket mit Apps, Skills und verbundenen Fähigkeiten.", "🧰 Werkzeugkiste"],
-                ["App-Aktion", "Eine verbundene Aktion, die Daten lesen, erstellen, ändern, löschen oder senden kann.", "🔌 Verbundenes Küchengerät"],
-                ["Skill + Plugin", "Ein wiederholbarer Prozess, der Informationen oder Aktionen aus einem anderen Tool nutzt.", "📘 Rezept + Vorratskammer"]
+              "type": "table",
+              "headers": [
+                "Wort",
+                "Bedeutung",
+                "Metapher"
+              ],
+              "rows": [
+                [
+                  "Skill",
+                  "Eine wiederverwendbare Anleitung, die Codex eine fokussierte Aufgabe beibringt.",
+                  {"emojis": ["📘"], "text": "Rezeptkarte"}
+                ],
+                [
+                  "SKILL.md",
+                  "Die Hauptdatei mit Trigger, Workflow und Grenzen des Skills.",
+                  {"emojis": ["📖"], "text": "Rezept"}
+                ],
+                [
+                  "openai.yaml",
+                  "Metadaten, die Darstellung und Start eines lokalen Skills steuern.",
+                  {"emojis": ["🏷️"], "text": "Rezeptetikett"}
+                ],
+                [
+                  "Tool",
+                  "Ein Programm oder eine Schnittstelle, mit der Codex Informationen abruft oder handelt.",
+                  {"emojis": ["🛠️"], "text": "Küchenwerkzeug"}
+                ],
+                [
+                  "Plugin",
+                  "Ein installierbares Paket mit Apps, Skills und verbundenen Fähigkeiten.",
+                  {"emojis": ["🧰"], "text": "Werkzeugkiste"}
+                ],
+                [
+                  "App-Aktion",
+                  "Eine verbundene Aktion, die Daten lesen, erstellen, ändern, löschen oder senden kann.",
+                  {"emojis": ["🔌"], "text": "Verbundenes Küchengerät"}
+                ],
+                [
+                  "Skill + Plugin",
+                  "Ein wiederholbarer Prozess, der Informationen oder Aktionen aus einem anderen Tool nutzt.",
+                  {"emojis": ["📘"], "text": "Rezept + Vorratskammer"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         },
         {
-          title: "Zusammenfassung: Sicher arbeiten",
-          subtitle: "Sicherheitsregeln und Metaphern für den Alltag",
-          layout: "summary",
-          blocks: [
+          "title": "Zusammenfassung: Sicher arbeiten",
+          "subtitle": "Sicherheitsregeln und Metaphern für den Alltag",
+          "layout": "summary",
+          "blocks": [
             {
-              type: "table",
-              headers: ["Regel", "Bedeutung", "Metapher"],
-              rows: [
-                ["Wenigster Zugriff", "Wähle den engsten Zugriff, mit dem die Aufgabe noch möglich ist.", "🔑 Ein Küchenschlüssel"],
-                ["Minimaler Kontext", "Füge nur Dateien und Ordner hinzu, die die Aufgabe wirklich braucht.", "🥕 Zutaten für ein Gericht"],
-                ["Vertrauenswürdige Quellen", "Prüfe Skills, Plugins, Anweisungen und angeforderte Zugriffe vor der Nutzung.", "✅ Freigegebener Lieferant"],
-                ["Freigabe durch Menschen", "Ein Mensch entscheidet vor Senden, Veröffentlichen, Löschen oder Geldausgeben.", "🧑‍🍳 Küchenchef gibt frei"],
-                ["Ergebnis prüfen", "Kontrolliere Fakten, Namen, Preise, Daten, Links, Quellen und Markenton.", "👅 Geschmackstest"],
-                ["Mit einer Kopie testen", "Prüfe Änderungen in der Vorschau und sichere das Original.", "🍽️ Probeteller + Reserve"],
-                ["Stoppen und melden", "Trenne das Tool und informiere die verantwortliche Person, wenn etwas auffällig ist.", "🛑 Not-Aus"]
+              "type": "table",
+              "headers": [
+                "Regel",
+                "Bedeutung",
+                "Metapher"
+              ],
+              "rows": [
+                [
+                  "Wenigster Zugriff",
+                  "Wähle den engsten Zugriff, mit dem die Aufgabe noch möglich ist.",
+                  {"emojis": ["🔑"], "text": "Ein Küchenschlüssel"}
+                ],
+                [
+                  "Minimaler Kontext",
+                  "Füge nur Dateien und Ordner hinzu, die die Aufgabe wirklich braucht.",
+                  {"emojis": ["🥕"], "text": "Zutaten für ein Gericht"}
+                ],
+                [
+                  "Vertrauenswürdige Quellen",
+                  "Prüfe Skills, Plugins, Anweisungen und angeforderte Zugriffe vor der Nutzung.",
+                  {"emojis": ["✅"], "text": "Freigegebener Lieferant"}
+                ],
+                [
+                  "Freigabe durch Menschen",
+                  "Ein Mensch entscheidet vor Senden, Veröffentlichen, Löschen oder Geldausgeben.",
+                  {"emojis": ["🧑‍🍳"], "text": "Küchenchef gibt frei"}
+                ],
+                [
+                  "Ergebnis prüfen",
+                  "Kontrolliere Fakten, Namen, Preise, Daten, Links, Quellen und Markenton.",
+                  {"emojis": ["👅"], "text": "Geschmackstest"}
+                ],
+                [
+                  "Mit einer Kopie testen",
+                  "Prüfe Änderungen in der Vorschau und sichere das Original.",
+                  {"emojis": ["🍽️"], "text": "Probeteller + Reserve"}
+                ],
+                [
+                  "Stoppen und melden",
+                  "Trenne das Tool und informiere die verantwortliche Person, wenn etwas auffällig ist.",
+                  {"emojis": ["🛑"], "text": "Not-Aus"}
+                ]
               ]
             }
-          ]
+          ],
+          "composition": "reference",
+          "palette": "white",
+          "density": "compact"
         }
       ]
     }

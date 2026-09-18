@@ -33,13 +33,14 @@ class HwWorkshopTemplate extends HTMLElement {
 
   render() {
     const surface = document.createElement("hw-surface");
-    const controls = document.createElement("div");
+    const controls = document.createElement("hw-settings-menu");
     const themeSwitch = document.createElement("hw-theme-switch");
     const localeSwitch = document.createElement("hw-locale-switch");
     const hero = document.createElement("hw-workshop-hero");
     const brand = createPageBrand(this.getAttribute("brand-aria-label"));
 
     controls.className = "page-controls";
+    controls.setAttribute("label", this.getAttribute("locale") === "de" ? "Einstellungen" : "Settings");
 
     copyAttributes(this, themeSwitch, ["dark-label", "light-label", "use-dark-label", "use-light-label"]);
     copyAttributes(this, localeSwitch, [["locale", "locale"], ["locale-aria-label", "aria-label"], ["locale-en-label", "en-label"], ["locale-de-label", "de-label"]]);

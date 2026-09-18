@@ -53,12 +53,7 @@ hw-button[variant="compact"] button {
   padding: var(--space-none) var(--space-14);
   font-size: 0.88rem;
   line-height: 1;
-  box-shadow: var(--space-2) var(--space-2) var(--space-none) var(--color-accent);
-}
-
-hw-button[variant="compact"] button:hover,
-hw-button[variant="compact"] button:focus-visible {
-  box-shadow: var(--space-7) var(--space-7) var(--space-none) var(--color-accent);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) var(--space-none) var(--color-accent);
 }
 
 hw-link {
@@ -83,15 +78,21 @@ hw-link a {
 hw-link a:hover,
 hw-link a:focus-visible {
   outline: none;
-  transform: translateY(var(--lift-distance));
+  transform: translate(var(--button-hover-offset), var(--button-hover-offset));
   box-shadow: var(--shadow-button-hover-x) var(--shadow-button-hover-y) var(--space-none) var(--color-accent);
 }
 
 hw-button button:hover,
 hw-button button:focus-visible {
   outline: none;
-  transform: translateY(var(--lift-distance));
+  transform: translate(var(--button-hover-offset), var(--button-hover-offset));
   box-shadow: var(--shadow-button-hover-x) var(--shadow-button-hover-y) var(--space-none) var(--color-accent);
+}
+
+hw-button button:active,
+hw-link a:active {
+  transform: translate(var(--shadow-button-x), var(--shadow-button-y));
+  box-shadow: none;
 }
 
 hw-button button.pop {
@@ -135,4 +136,105 @@ hw-idea {
   hw-button[variant="compact"] button {
     width: auto;
   }
+}
+
+.hw-index hw-surface {
+  padding: var(--space-88) var(--deck-gutter);
+}
+
+.hw-index hw-title {
+  letter-spacing: var(--deck-tracking);
+  overflow-wrap: anywhere;
+}
+
+.hw-index hw-idea {
+  color: var(--deck-card-muted);
+  font-weight: var(--deck-body-weight);
+}
+
+.hw-index :is(hw-button button, hw-link a):is(:hover, :focus-visible) {
+  transform: translateY(var(--lift-distance));
+  box-shadow: var(--deck-card-shadow);
+}
+
+.hw-index :is(a, button):focus-visible {
+  outline: var(--deck-focus) solid var(--deck-yellow);
+  outline-offset: var(--space-7);
+}
+
+@media (max-width: 600px) {
+  .hw-index hw-surface {
+    place-items: center;
+    padding: var(--space-88) var(--space-24);
+    padding-bottom: calc(var(--space-88) + var(--space-24));
+  }
+}
+
+/* All deck text uses these roles, independent of the layout containing it. */
+.hw-slides .hw-deck-heading {
+  margin: 0;
+  color: var(--deck-text);
+  font-family: var(--font-heading);
+  font-size: var(--deck-subheading);
+  font-weight: var(--deck-heading-weight);
+  line-height: var(--deck-heading-leading);
+  letter-spacing: var(--deck-tracking);
+  text-transform: none;
+  overflow-wrap: break-word;
+}
+.hw-slides .hw-deck-heading-component {
+  line-height: var(--deck-component-leading);
+  letter-spacing: var(--deck-component-tracking);
+}
+.hw-slides .hw-deck-heading-slide { font-size: var(--deck-heading); }
+.hw-slides .hw-deck-heading-display { font-size: var(--deck-display); }
+.hw-slides .hw-deck-title-line { display: block; }
+.hw-slides .hw-deck-title-line + .hw-deck-title-line { color: var(--deck-text); }
+.hw-slides .hw-deck-copy {
+  margin: 0;
+  font: var(--deck-body-weight) var(--deck-body)/var(--deck-body-leading) var(--font-body);
+  letter-spacing: normal;
+  color: var(--deck-text);
+}
+.hw-slides .hw-deck-label {
+  font: var(--deck-meta-weight) var(--deck-meta)/var(--deck-body-leading) var(--font-body);
+  color: var(--deck-muted);
+}
+.hw-slides .hw-deck-icon {
+  display: block;
+  width: var(--deck-icon);
+  height: var(--deck-icon);
+  flex: 0 0 auto;
+  object-fit: contain;
+  filter: var(--deck-icon-filter);
+}
+.hw-slides :is(a, button, [tabindex]):focus-visible {
+  outline: var(--deck-focus) solid var(--deck-link);
+  outline-offset: var(--deck-space-xs);
+}
+.hw-slides hw-surface {
+  background-color: var(--deck-bg);
+  background-image: var(--deck-canvas);
+  background-size: var(--grid-size) var(--grid-size);
+}
+.hw-slides hw-button button {
+  box-shadow: var(--deck-control-shadow);
+  border-width: var(--deck-card-rule);
+  border-radius: var(--deck-radius);
+  font-family: var(--font-body);
+  font-weight: var(--deck-label-weight);
+}
+.hw-slides hw-button[variant="compact"] button {
+  font-size: var(--deck-meta);
+  background: var(--deck-text);
+  color: var(--deck-bg);
+  border-color: var(--deck-text);
+}
+.hw-slides hw-button button:is(:hover, :focus-visible) {
+  transform: translate(var(--deck-control-hover-offset), var(--deck-control-hover-offset));
+  box-shadow: var(--deck-control-hover-shadow);
+}
+.hw-slides hw-button button:active {
+  transform: translate(var(--deck-card-shadow-offset), var(--deck-card-shadow-offset));
+  box-shadow: none;
 }
