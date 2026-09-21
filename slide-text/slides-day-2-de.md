@@ -450,8 +450,7 @@ _Wiederverwendbare Prozesse und Fähigkeiten_
 | openai.yaml | Metadaten, die Darstellung und Start eines lokalen Skills steuern. | 🏷️ Rezeptetikett |
 | Tool | Ein Programm oder eine Schnittstelle, mit der Codex Informationen abruft oder handelt. | 🛠️ Küchenwerkzeug |
 | Plugin | Ein installierbares Paket mit Apps, Skills und verbundenen Fähigkeiten. | 🧰 Werkzeugkiste |
-| App-Aktion | Eine verbundene Aktion, die Daten lesen, erstellen, ändern, löschen oder senden kann. | 🔌 Verbundenes Küchengerät |
-| Skill + Plugin | Ein wiederholbarer Prozess, der Informationen oder Aktionen aus einem anderen Tool nutzt. | 📘 Rezept + Vorratskammer |
+| Skill + Plugin | Ein wiederholbarer Prozess, der Informationen oder Aktionen aus einem anderen Tool nutzt. | 📘 Rezept + Werkzeugkiste |
 
 ## Slide 40: Zusammenfassung: Sicher arbeiten
 
@@ -459,7 +458,7 @@ _Sicherheitsregeln und Metaphern für den Alltag_
 
 | Regel | Bedeutung | Metapher |
 | --- | --- | --- |
-| Wenigster Zugriff | Wähle den engsten Zugriff, mit dem die Aufgabe noch möglich ist. | 🔑 Ein Küchenschlüssel |
+| Geringste Berechtigungen | Wähle den engsten Zugriff, mit dem die Aufgabe noch möglich ist. | 🔑 Ein Küchenschlüssel |
 | Minimaler Kontext | Füge nur Dateien und Ordner hinzu, die die Aufgabe wirklich braucht. | 🥕 Zutaten für ein Gericht |
 | Vertrauenswürdige Quellen | Prüfe Skills, Plugins, Anweisungen und angeforderte Zugriffe vor der Nutzung. | ✅ Freigegebener Lieferant |
 | Freigabe durch Menschen | Ein Mensch entscheidet vor Senden, Veröffentlichen, Löschen oder Geldausgeben. | 🧑‍🍳 Küchenchef gibt frei |

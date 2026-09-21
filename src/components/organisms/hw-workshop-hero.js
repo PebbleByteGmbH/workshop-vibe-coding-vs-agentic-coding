@@ -10,6 +10,8 @@ class HwWorkshopHero extends HTMLElement {
       "link-href",
       "link-label",
       "secondary-link-href",
+      "cheat-sheet-href",
+      "cheat-sheet-label",
       "secondary-link-label"
     ];
   }

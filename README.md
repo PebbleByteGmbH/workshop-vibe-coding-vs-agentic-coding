@@ -75,6 +75,14 @@ Open `src/index.html` in a browser.
 
 That is the whole runtime contract. No install step, no terminal command, no Docker, no Node.js, no npm, no framework.
 
+## Cheat sheets
+
+Use **Cheat Sheets** on the homepage or in either slide deck's settings menu.
+Each workshop day has a German and English A4 portrait reference sheet, with a
+responsive preview and direct PDF download. You can also open
+`src/workshop-cheat-sheets.html` directly. See the [cheat-sheet guide](docs/cheat-sheets.md)
+for content editing, PDF regeneration, and verification.
+
 ## Slide design system
 
 Both workshop decks echo the index page with a subtle grid, bold Geist headings,

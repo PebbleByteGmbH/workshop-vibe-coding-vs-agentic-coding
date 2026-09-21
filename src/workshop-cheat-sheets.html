@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Coding - Cheat Sheets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components/atoms/atoms.css">
+    <link rel="stylesheet" href="components/molecules/molecules.css">
+    <link rel="stylesheet" href="components/molecules/cheat-sheets.css">
+    <script src="workshop-copy.js" defer></script>
+    <script src="i18n.js" defer></script>
+    <script src="workshop-cheat-sheet-copy.js" defer></script>
+    <script src="components/molecules/hw-theme-switch.js" defer></script>
+    <script src="components/molecules/hw-locale-switch.js" defer></script>
+    <script src="components/molecules/hw-cheat-sheet.js" defer></script>
+    <script src="workshop-cheat-sheets.js" defer></script>
+  </head>
+  <body class="theme-light hw-cheat-sheets">
+    <header class="hw-sheet-toolbar">
+      <nav class="hw-sheet-back-links" aria-label="Workshop">
+        <a data-sheet-home href="index.html">Startseite</a>
+        <a data-sheet-slides href="workshop-slides.html">Folien öffnen</a>
+      </nav>
+      <div class="hw-sheet-toolbar-row">
+        <div><p class="hw-sheet-toolbar-title">Cheat Sheets</p><p data-sheet-format></p></div>
+        <div class="hw-sheet-preferences"><hw-locale-switch></hw-locale-switch><hw-theme-switch></hw-theme-switch></div>
+      </div>
+      <div class="hw-sheet-toolbar-row">
+        <nav class="hw-sheet-day-switch" data-sheet-days></nav>
+        <a class="hw-sheet-download" data-sheet-download>PDF herunterladen</a>
+      </div>
+    </header>
+    <main class="hw-sheet-preview"><hw-cheat-sheet></hw-cheat-sheet></main>
+    <noscript>Bitte JavaScript aktivieren / Enable JavaScript to view the cheat sheets.
+      <a href="assets/cheat-sheets/ai-workshop-day-1-de.pdf">Tag 1 DE</a>
+      <a href="assets/cheat-sheets/ai-workshop-day-2-de.pdf">Tag 2 DE</a>
+      <a href="assets/cheat-sheets/ai-workshop-day-1-en.pdf">Day 1 EN</a>
+      <a href="assets/cheat-sheets/ai-workshop-day-2-en.pdf">Day 2 EN</a>
+    </noscript>
+  </body>
+</html>

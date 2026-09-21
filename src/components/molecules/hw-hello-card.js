@@ -10,6 +10,8 @@ class HwHelloCard extends HTMLElement {
       "link-href",
       "link-label",
       "secondary-link-href",
+      "cheat-sheet-href",
+      "cheat-sheet-label",
       "secondary-link-label"
     ];
   }
@@ -81,7 +83,8 @@ class HwHelloCard extends HTMLElement {
   get links() {
     return [
       { href: this.linkHref, label: this.linkLabel },
-      { href: this.secondaryLinkHref, label: this.secondaryLinkLabel }
+      { href: this.secondaryLinkHref, label: this.secondaryLinkLabel },
+      { href: this.getAttribute("cheat-sheet-href"), label: this.getAttribute("cheat-sheet-label") }
     ].filter((link) => link.href);
   }
 }

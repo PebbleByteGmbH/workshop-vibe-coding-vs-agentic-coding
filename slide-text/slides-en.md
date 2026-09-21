@@ -66,25 +66,23 @@ We create cheat sheets, product information pages, and sales partner pitch decks
 
 Customer reviews contain strong marketing language, but are rarely analyzed systematically.
 
-Review mining app: collects reviews from G2, Trustpilot, App Store, Amazon, or support tickets and extracts pain points, value propositions, objections, and reusable copy.
+**Review mining app:** collects reviews from G2, Trustpilot, App Store, Amazon, or support tickets and extracts pain points, value propositions, objections, and reusable copy.
 
 **Designers**
 
 Checking desktop, tablet, and mobile layouts takes time.
 
-Responsive screenshot reviewer: enter a URL, generate breakpoint screenshots, and flag overflow, broken layouts, tiny text, or clipped buttons.
-
-## Slide 6: Starter Idea: Project Management
+**Responsive screenshot reviewer:** enter a URL, generate breakpoint screenshots, and flag overflow, broken layouts, tiny text, or clipped buttons.
 
 **Project Management**
 
 Requirements, user flows, and acceptance criteria often stay abstract and are interpreted differently by developers.
 
-Prototype-as-acceptance app: turns a briefing into a working browser prototype with user flows, states, edge cases, and testable acceptance criteria as an executable reference for implementation.
+**Prototype-as-acceptance app:** turns a briefing into a working browser prototype with user flows, states, edge cases, and testable acceptance criteria as an executable reference for implementation.
 
 [Small example](https://excalidraw.com/#room=ea1db8fc739eedf79aa2,UVhiaqFZYp8kMExx7z64zA)
 
-## Slide 7: What We'll Cover
+## Slide 6: What We'll Cover
 
 _Agenda_
 
@@ -93,7 +91,7 @@ _Agenda_
 - Choosing a good first use case
 - Exercises: inputs, steps, rules, task design, and error cases
 
-## Slide 8: LLM / Chatbot / Agent
+## Slide 7: LLM / Chatbot / Agent
 
 _From Brain to Action_
 
@@ -118,7 +116,7 @@ Uses tools and takes action
 Metaphor: hands, arms, feet
 
 
-## Slide 9: LLM
+## Slide 8: LLM
 
 _Input -> LLM (Computer program) -> Output_
 
@@ -138,13 +136,13 @@ A simple way to think about what happens inside a Large Language Model.
 
 - "The sky is blue."
 
-## Slide 10: LLM: The Key Idea
+## Slide 9: LLM: The Key Idea
 
 **High level**
 
 It does not understand like a human. It uses patterns from many texts to predict likely next tokens. Tokens are small text pieces: word parts, whole words, or character strings.
 
-## Slide 11: Chatbot
+## Slide 10: Chatbot
 
 _Human -> Website -> Server with LLM -> Answer_
 
@@ -170,7 +168,7 @@ A chatbot is a website or app that sends your message to an LLM and shows the an
 
 The chatbot is the interface and connection. The LLM usually runs on a server; your computer shows the conversation.
 
-## Slide 12: Agent
+## Slide 11: Agent
 
 _Goal -> Agent (LLM + programs) -> Result_
 
@@ -191,7 +189,7 @@ An agent gets a goal and can use tools to work through steps.
 
 - Changed deck plus short summary
 
-## Slide 13: Agent: The Key Idea
+## Slide 12: Agent: The Key Idea
 
 _Goal -> Agent (LLM + programs) -> Result_
 
@@ -199,7 +197,7 @@ _Goal -> Agent (LLM + programs) -> Result_
 
 An agent does not stop at a text answer. It can plan steps, use tools, read and edit files, check results, and keep working until the task is done.
 
-## Slide 14: From Recipe to Chef
+## Slide 13: From Recipe to Chef
 
 _Prompting / Vibe Coding / Agentic Coding_
 
@@ -223,7 +221,7 @@ Same AI, different way of steering it: ask, improvise, or guide execution.
 - Agent plans, edits, tests, and improves
 - Metaphor: chef in the kitchen
 
-## Slide 15: From Recipe to Chef: Key Idea
+## Slide 14: From Recipe to Chef: Key Idea
 
 _Prompting / Vibe Coding / Agentic Coding_
 
@@ -231,7 +229,7 @@ _Prompting / Vibe Coding / Agentic Coding_
 
 Prompting asks, Vibe Coding experiments. With Agentic Coding, you set the goal and context – the agent plans, implements, and checks; you give feedback and make the decisions.
 
-## Slide 16: AI Agent Landscape
+## Slide 15: AI Agent Landscape
 
 _Six examples across different use cases and domains_
 
@@ -242,61 +240,61 @@ _Six examples across different use cases and domains_
 - Zapier Agents
 - OpenClaw
 
-## Slide 17: Install Codex
+## Slide 16: Install Codex
 
 _Setup_
 
 [https://openai.com/codex/](https://openai.com/codex/)
 
-## Slide 18: First Open Codex
+## Slide 17: First Open Codex
 
 _Launch_
 
 ![Codex first open screen](../src/assets/codex-pictures/first-open-codex-en-de.png)
 
-## Slide 19: Click Sign In
+## Slide 18: Click Sign In
 
 _First opening_
 
 ![Codex sign-in button](../src/assets/codex-pictures/first-open-codex-click-signin-en-de.png)
 
-## Slide 20: Continue Sign-In
+## Slide 19: Continue Sign-In
 
 _First opening_
 
 ![Codex continue sign-in screen](../src/assets/codex-pictures/first-open-codex-continue-sign-in-en-de.png)
 
-## Slide 21: Sign-In Successful
+## Slide 20: Sign-In Successful
 
 _First opening_
 
 ![Codex successful sign-in screen](../src/assets/codex-pictures/first-open-codex-sign-in-successful-en-de.png)
 
-## Slide 22: Codex Home
+## Slide 21: Codex Home
 
 _After first login_
 
 ![Codex home screen after first login](../src/assets/codex-pictures/how-codex-looks-first-login-en.png)
 
-## Slide 23: Create New Project
+## Slide 22: Create New Project
 
 _Project setup_
 
 ![Codex create new project screen](../src/assets/codex-pictures/create-new-project-en.png)
 
-## Slide 24: Name the Project
+## Slide 23: Name the Project
 
 _Project setup_
 
 ![Codex project name screen](../src/assets/codex-pictures/create-project-name-en.png)
 
-## Slide 25: Select a Project
+## Slide 24: Select a Project
 
 _Where to choose the project_
 
 ![Codex project selector](../src/assets/codex-pictures/select-project-codex-en.png)
 
-## Slide 26: Quick Practice Run – Coding
+## Slide 25: Quick Practice Run – Coding
 
 _Before we start with your own use cases_
 
@@ -316,7 +314,7 @@ Good for practicing layout, typography, colors, spacing, and responsive details.
 
 [Ideas](https://excalidraw.com/#room=fae440cad3935c8cd21e,5SXK_ml_xSQCC_sP_CaovQ)
 
-## Slide 27: Quick Practice Run – Everyday Tasks
+## Slide 26: Quick Practice Run – Everyday Tasks
 
 _Before we start with your own use cases_
 
@@ -334,7 +332,7 @@ Turn three bullet points into an email, enter your own address, check the draft,
 Practice using a mail app and checking the recipient, subject, and message.
 
 
-## Slide 28: OpenAI Models at a Glance
+## Slide 27: OpenAI Models at a Glance
 
 _GPT-6 & GPT-5.6 · Everyday work & creative tasks · Checked 16 Sep 2026_
 
@@ -350,7 +348,7 @@ Reasoning = how much effort the model puts into working through your task. A qui
 Speaker notes: Selected API models; availability in the Codex model picker may differ. Context figures are API limits. Arrows abbreviate supported effort levels. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. Source: https://developers.openai.com/api/docs/models
 Typical uses are illustrative applications of the official model positioning: Astra for the hardest end-to-end work, Sol for complex professional work, Terra for balancing intelligence and cost, and Luna for cost-sensitive high-volume workloads. They are not exclusive capabilities or benchmark-based task rankings.
 
-## Slide 29: OpenAI Models: Context and Knowledge
+## Slide 28: OpenAI Models: Context and Knowledge
 
 _GPT-6 & GPT-5.6 · Everyday work & creative tasks · Checked 16 Sep 2026_
 
@@ -366,7 +364,7 @@ Context = what fits on the model’s desk at once: conversation, briefing and do
 Speaker notes: Selected API models; availability in the Codex model picker may differ. Context figures are API limits. Arrows abbreviate supported effort levels. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. Source: https://developers.openai.com/api/docs/models
 Typical uses are illustrative applications of the official model positioning: Astra for the hardest end-to-end work, Sol for complex professional work, Terra for balancing intelligence and cost, and Luna for cost-sensitive high-volume workloads. They are not exclusive capabilities or benchmark-based task rankings.
 
-## Slide 30: OpenAI Models: API Pricing
+## Slide 29: OpenAI Models: API Pricing
 
 _GPT-6 & GPT-5.6 · Everyday work & creative tasks · Checked 16 Sep 2026_
 
@@ -386,7 +384,7 @@ Prices in USD per 1M tokens: standard API rates for short context and uncached i
 Speaker notes: Selected API models; availability in the Codex model picker may differ. Context figures are API limits. Arrows abbreviate supported effort levels. GPT-6 Astra: low, medium, high, xhigh, max. GPT-5.6 Sol/Terra/Luna: none, low, medium, high, xhigh, max. Source: https://developers.openai.com/api/docs/models
 Typical uses are illustrative applications of the official model positioning: Astra for the hardest end-to-end work, Sol for complex professional work, Terra for balancing intelligence and cost, and Luna for cost-sensitive high-volume workloads. They are not exclusive capabilities or benchmark-based task rankings.
 
-## Slide 31: How Does Reasoning Work?
+## Slide 30: How Does Reasoning Work?
 
 _An internal working draft before the answer_
 
@@ -404,7 +402,7 @@ More reasoning = more computation for these steps. It can help with difficult ta
 
 Speaker notes: Simplified explanation of the documented mechanism. Internal reasoning tokens are not directly exposed; displayed summaries are not the complete internal process. Reasoning may also occur between tool calls. Source: https://developers.openai.com/api/docs/guides/reasoning
 
-## Slide 32: Reasoning and Agents
+## Slide 31: Reasoning and Agents
 
 _An internal working draft before the answer_
 
@@ -416,25 +414,25 @@ Example: reasoning helps weigh a campaign budget. An agent can also open the bud
 
 Speaker notes: Simplified explanation of the documented mechanism. Internal reasoning tokens are not directly exposed; displayed summaries are not the complete internal process. Reasoning may also occur between tool calls. Source: https://developers.openai.com/api/docs/guides/reasoning
 
-## Slide 33: Select a Model
+## Slide 32: Select a Model
 
 _Where to choose the model_
 
 ![Codex model selector](../src/assets/codex-pictures/select-llm-model-en.png)
 
-## Slide 34: Select Workspace
+## Slide 33: Select Workspace
 
 _Where the agent works_
 
 ![Codex workspace selector](../src/assets/codex-pictures/select-where-agent-works-en.png)
 
-## Slide 35: Include Plugins
+## Slide 34: Include Plugins
 
 _Available tools_
 
 ![Codex plugin selection](../src/assets/codex-pictures/include-plugins-en.png)
 
-## Slide 36: What Is an Automation?
+## Slide 35: What Is an Automation?
 
 _Tasks on a schedule_
 
@@ -463,19 +461,19 @@ Set it up once. Run it at every scheduled time.
 
 Speaker notes: The time is an example, not an actual running automation. Explain the trigger, the saved instructions, and the result. The return arrow means a new run at the next scheduled time, not a task that runs continuously. Other automations can start from an event instead of a schedule.
 
-## Slide 37: Create Automations
+## Slide 36: Create Automations
 
 _Automation setup_
 
 ![Codex create automations screen](../src/assets/codex-pictures/create-automations-1-en.png)
 
-## Slide 38: Configure Automations
+## Slide 37: Configure Automations
 
 _Automation setup_
 
 ![Codex automation configuration screen](../src/assets/codex-pictures/create-automations-2-en.png)
 
-## Slide 39: Daily Research
+## Slide 38: Daily Research
 
 _Automated every day at 09:00 AM_
 
@@ -491,19 +489,19 @@ Check selected customers’ websites and public news for announcements, projects
 
 Result: a brief summary per customer, with source links and possible topics for your next conversation.
 
-## Slide 40: Find Usage
+## Slide 39: Find Usage
 
 _Account usage_
 
 ![Codex usage navigation](../src/assets/codex-pictures/where-to-find-usage-1-en.png)
 
-## Slide 41: Usage Details
+## Slide 40: Usage Details
 
 _Account usage_
 
 ![Codex usage details](../src/assets/codex-pictures/where-to-find-usage-2-en.png)
 
-## Slide 42: Which Use Cases Are Good Starting Points?
+## Slide 41: Which Use Cases Are Good Starting Points?
 
 _Start small, create real value_
 
@@ -515,13 +513,47 @@ _Start small, create real value_
 | low-risk | mistakes are easy to spot and correct |
 | context-rich | examples, files, and rules are available |
 
-## Slide 43: Use Case Board
+## Slide 42: What About My Data?
+
+_Can I give OpenAI my data directly? A safer workflow in three steps._
+
+**1. Create demo data**
+
+Use fictional records with the same structure as your real dataset. **The agent can create the demo data, too.**
+
+**2. Build an offline cleaner**
+
+Let the agent build an app that removes identifying data. Run it locally on real data. **The app works offline; no LLM is used.**
+
+**3. Use the cleaned data**
+
+Check the output for remaining identifiers and revealing details. **Use only the cleaned data in the LLM.**
+
+Removing names alone does not guarantee anonymity. Check free text and combinations of details, too.
+
+## Slide 43: Let the Agent Code Your Application
+
+_Build with demo data. Use the finished app offline with real data._
+
+**1. Create demo data**
+
+Prepare fictional records with the same structure as the real data. Add examples of inputs and desired results. **The agent can create the demo data, too.**
+
+**2. Build with demo data**
+
+Let the agent code and test your application using demo data. **The final app works offline; no LLM is used.**
+
+**3. Use real data offline**
+
+Run the finished app on your computer with real data. **The data stays local, and the app processes it offline and runs offline itself.**
+
+## Slide 44: Use Case Board
 
 _Excalidraw_
 
 [Find your usecase](https://excalidraw.com/#room=3f7fb564ea3a699c6fd3,sDK2_w9L9RRcSUgP1PYFTA)
 
-## Slide 44: Exercise 1: Define Input and Output
+## Slide 45: Exercise 1: Define Input and Output
 
 _Duration: 5 minutes_
 
@@ -541,7 +573,7 @@ _Duration: 5 minutes_
 
 **Examples:** Input can be a file, a note, a URL, a CSV file, or other material.
 
-## Slide 45: Exercise 2: Break Down the Process
+## Slide 46: Exercise 2: Break Down the Process
 
 _Duration: 5 minutes_
 
@@ -556,7 +588,7 @@ Goal: describe the task in small, clear steps that an agent can follow.
 5. Gather results: put the findings together and flag missing or unclear information.
 6. Create output: produce a list, CSV file, Excel spreadsheet, or PowerPoint presentation, send the result by email, or turn it into a website.
 
-## Slide 46: Exercise 3: Collect Rules and Examples
+## Slide 47: Exercise 3: Collect Rules and Examples
 
 _Duration: 5 minutes_
 
@@ -578,7 +610,7 @@ Write 3–5 specific rules: what must the result contain, what should it look li
 - Flag missing or unclear information and ask questions when needed.
 - Check the result for completeness, contradictions, and remaining placeholders.
 
-## Slide 47: Summary: Basics
+## Slide 48: Summary: Basics
 
 _Important words and metaphors_
 
@@ -592,7 +624,7 @@ _Important words and metaphors_
 | Vibe Coding | Loosely describing software, trying it, and adjusting by feel. | 🍝 "Something pasta-ish" |
 | Agentic Coding | Giving goal, context, files, rules, and boundaries so an agent can implement. | 🍲 Chef in the kitchen |
 
-## Slide 48: Summary: Codex
+## Slide 49: Summary: Codex
 
 _Setup words and metaphors_
 
@@ -607,7 +639,7 @@ _Setup words and metaphors_
 | Automation | A repeatable agent task that can run on a configured trigger. | ⏲️ Kitchen timer |
 | Usage | The account area where you can see how much Codex has been used. | 💸 Salary for the cook |
 
-## Slide 49: Summary: Use Cases
+## Slide 50: Summary: Use Cases
 
 _Instructions and metaphors_
 
@@ -621,7 +653,7 @@ _Instructions and metaphors_
 | Error Case | A situation where the input or result is missing, wrong, or unclear. | ❓ Missing ingredient |
 | Human Approval | A decision that stays with a person, such as publishing or deleting data. | ✅ Chef signs off |
 
-## Slide 50: Summary: Choosing a Good Use Case
+## Slide 51: Summary: Choosing a Good Use Case
 
 _Instructions and metaphors_
 

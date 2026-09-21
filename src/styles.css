@@ -97,6 +97,33 @@
   --z-slide-control: 40;
   --z-slide-brand: 45;
 
+  /* Fixed paper geometry, shared by the cheat-sheet preview and PDF. */
+  --sheet-width: 210mm;
+  --sheet-height: 297mm;
+  /* A small rounding allowance keeps the exported PDF inside 10mm. */
+  --sheet-margin: 10.2mm;
+  --sheet-gap: 3.5mm;
+  --sheet-pad: 2.5mm;
+  --sheet-row-pad: 0.8mm;
+  --sheet-day-two-row-pad: 2mm;
+  --sheet-paper: #ffffff;
+  --sheet-ink: #080808;
+  --sheet-muted: #505050;
+  --sheet-rule: #dedede;
+  --sheet-grid-line: #08080805;
+  --sheet-body-size: 10pt;
+  --sheet-small-size: 9pt;
+  --sheet-spacious-body-size: 11pt;
+  --sheet-spacious-small-size: 10pt;
+  --sheet-title-size: 29pt;
+  --sheet-heading-size: 13pt;
+  --sheet-leading: 1.2;
+  --sheet-border: 0.4mm;
+  --sheet-shadow: 1.2mm;
+  --sheet-brand-size: 16pt;
+  --sheet-logo-size: 8mm;
+  --sheet-grid-size: 8mm;
+
   font-family: var(--font-body);
   font-size: var(--font-size-root);
   line-height: var(--line-height-body);
@@ -143,6 +170,7 @@ button {
 
 /* Landing-page shapes and typography with the slide deck's brand palette. */
 .hw-slides,
+.hw-cheat-sheets,
 .hw-index {
   --font-body: "Geist Sans", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Geist Sans", ui-sans-serif, system-ui, sans-serif;
@@ -235,6 +263,7 @@ button {
 }
 
 .hw-slides.theme-dark,
+.hw-cheat-sheets.theme-dark,
 .hw-index.theme-dark {
   --deck-card-surface: #151515;
   --deck-card-muted: #c3c3c3;

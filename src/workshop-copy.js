@@ -48,6 +48,7 @@
       "slidesPage": {
         "bylineAriaLabel": "{byline} on LinkedIn",
         "exportPdfLabel": "Export PDF",
+        "cheatSheetLabel": "Cheat Sheets",
         "fallbackLogoAlt": "{name} logo",
         "keyIdeaLabel": "Key idea"
       },
@@ -198,6 +199,7 @@
                   "icon": "search",
                   "accent": "#5b7cfa",
                   "description": "Customer reviews contain strong marketing language, but are rarely analyzed systematically.",
+                  "metaphorEmphasis": "Review mining app:",
                   "metaphor": "Review mining app: collects reviews from G2, Trustpilot, App Store, Amazon, or support tickets and extracts pain points, value propositions, objections, and reusable copy."
                 },
                 {
@@ -205,26 +207,15 @@
                   "icon": "pencil",
                   "accent": "#16b85f",
                   "description": "Checking desktop, tablet, and mobile layouts takes time.",
+                  "metaphorEmphasis": "Responsive screenshot reviewer:",
                   "metaphor": "Responsive screenshot reviewer: enter a URL, generate breakpoint screenshots, and flag overflow, broken layouts, tiny text, or clipped buttons."
-                }
-              ]
-            }
-          ],
-          "composition": "concepts-dense",
-          "palette": "white",
-          "density": "compact"
-        },
-        {
-          "title": "Starter Idea: Project Management",
-          "blocks": [
-            {
-              "type": "conceptCards",
-              "items": [
+                },
                 {
                   "title": "Project Management",
                   "icon": "clipboard-list",
                   "accent": "#f97316",
                   "description": "Requirements, user flows, and acceptance criteria often stay abstract and are interpreted differently by developers.",
+                  "metaphorEmphasis": "Prototype-as-acceptance app:",
                   "metaphor": "Prototype-as-acceptance app: turns a briefing into a working browser prototype with user flows, states, edge cases, and testable acceptance criteria as an executable reference for implementation."
                 }
               ]
@@ -1330,6 +1321,72 @@
           "composition": "reference",
           "palette": "white",
           "density": "compact"
+        },
+        {
+          "title": "What About My Data?",
+          "subtitle": "Can I give OpenAI my data directly? A safer workflow in three steps.",
+          "blocks": [
+            {
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "1. Create demo data",
+                  "icon": "file",
+                  "description": "Use fictional records with the same structure as your real dataset. The agent can create the demo data, too.",
+                  "descriptionEmphasis": "The agent can create the demo data, too."
+                },
+                {
+                  "title": "2. Build an offline cleaner",
+                  "icon": "lock",
+                  "description": "Let the agent build an app that removes identifying data. Run it locally on real data. The app works offline; no LLM is used.",
+                  "descriptionEmphasis": "The app works offline; no LLM is used."
+                },
+                {
+                  "title": "3. Use the cleaned data",
+                  "icon": "brain",
+                  "description": "Check the output for remaining identifiers and revealing details. Use only the cleaned data in the LLM.",
+                  "descriptionEmphasis": "Use only the cleaned data in the LLM."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "Removing names alone does not guarantee anonymity. Check free text and combinations of details, too."
+            }
+          ],
+          "composition": "concepts",
+          "palette": "white"
+        },
+        {
+          "title": "Let the Agent Code Your Application",
+          "subtitle": "Build with demo data. Use the finished app offline with real data.",
+          "blocks": [
+            {
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "1. Create demo data",
+                  "icon": "file",
+                  "description": "Prepare fictional records with the same structure as the real data. Add examples of inputs and desired results. The agent can create the demo data, too.",
+                  "descriptionEmphasis": "The agent can create the demo data, too."
+                },
+                {
+                  "title": "2. Build with demo data",
+                  "icon": "robot",
+                  "description": "Let the agent code and test your application using demo data. The final app works offline; no LLM is used.",
+                  "descriptionEmphasis": "The final app works offline; no LLM is used."
+                },
+                {
+                  "title": "3. Use real data offline",
+                  "icon": "lock",
+                  "description": "Run the finished app on your computer with real data. The data stays local, and the app processes it offline and runs offline itself.",
+                  "descriptionEmphasis": "The data stays local, and the app processes it offline and runs offline itself."
+                }
+              ]
+            }
+          ],
+          "composition": "concepts",
+          "palette": "white"
         },
         {
           "title": "Use Case Board",
@@ -2644,14 +2701,9 @@
                   {"emojis": ["🧰"], "text": "Toolbox"}
                 ],
                 [
-                  "App action",
-                  "A connected operation that can read, create, update, delete, or send data.",
-                  {"emojis": ["🔌"], "text": "Connected appliance"}
-                ],
-                [
                   "Skill + plugin",
                   "A repeatable process that uses information or actions from another tool.",
-                  {"emojis": ["📘"], "text": "Recipe + pantry"}
+                  {"emojis": ["📘"], "text": "Recipe + toolbox"}
                 ]
               ]
             }
@@ -2765,6 +2817,7 @@
       "slidesPage": {
         "bylineAriaLabel": "{byline} auf LinkedIn",
         "exportPdfLabel": "PDF exportieren",
+        "cheatSheetLabel": "Cheat Sheets",
         "fallbackLogoAlt": "{name}-Logo",
         "keyIdeaLabel": "Kernidee"
       },
@@ -2915,6 +2968,7 @@
                   "icon": "search",
                   "accent": "#5b7cfa",
                   "description": "Kundenbewertungen enthalten starke Marketing-Sprache, werden aber selten systematisch analysiert.",
+                  "metaphorEmphasis": "Review-Mining-App:",
                   "metaphor": "Review-Mining-App: sammelt Reviews aus G2, Trustpilot, App Store, Amazon oder Support-Tickets und extrahiert Pain Points, Nutzenversprechen, Einwände und wiederverwendbare Formulierungen."
                 },
                 {
@@ -2922,26 +2976,15 @@
                   "icon": "pencil",
                   "accent": "#16b85f",
                   "description": "Desktop-, Tablet- und Mobile-Layouts zu prüfen kostet regelmäßig Zeit und viel manuelle Aufmerksamkeit.",
+                  "metaphorEmphasis": "Responsive-Screenshot-Reviewer:",
                   "metaphor": "Responsive-Screenshot-Reviewer: URL eingeben, Breakpoint-Screenshots erzeugen und Overflow, kaputte Layouts, winzige Schrift oder abgeschnittene Buttons markieren."
-                }
-              ]
-            }
-          ],
-          "composition": "concepts-dense",
-          "palette": "white",
-          "density": "compact"
-        },
-        {
-          "title": "Starter-Idee: Projektmanagement",
-          "blocks": [
-            {
-              "type": "conceptCards",
-              "items": [
+                },
                 {
                   "title": "Projektmanagement",
                   "icon": "clipboard-list",
                   "accent": "#f97316",
                   "description": "Anforderungen, User Flows und Akzeptanzkriterien bleiben oft unterschiedlich interpretierbar.",
+                  "metaphorEmphasis": "Prototype-as-Acceptance-App:",
                   "metaphor": "Prototype-as-Acceptance-App: macht aus einem Briefing einen Browser-Prototypen mit User Flows, Zuständen, Edge Cases und Akzeptanzkriterien als ausführbare Entwickler:innen-Referenz."
                 }
               ]
@@ -2969,7 +3012,7 @@
                 "LLMs, Chatbots, Agenten und Agentic Coding",
                 "AI-Agenten-Landschaft und Codex-Setup",
                 "Einen guten ersten Use Case finden",
-                "Übungen: Input, Schritte, Regeln, Auftragsdesign und Fehlerfälle"
+                "Übungen: Input, Schritte, Regeln, Auftrag, Fehlerfälle und Sicherheit"
               ]
             }
           ],
@@ -3817,20 +3860,24 @@
           "title": "Reasoning und Agenten",
           "subtitle": "Ein interner Arbeitsentwurf vor der Antwort",
           "layout": "reasoning-info",
+          "composition": "callout-pair",
           "blocks": [
             {
               "type": "callout",
-              "label": "Reasoning & Agenten",
+              "label": "Reasoning",
+              "icon": "brain",
               "tone": "plain",
-              "text": "Reasoning ist eine Fähigkeit des Modells, Aufgaben zu durchdenken. Ein Agent nutzt ein Modell und Werkzeuge, um zu handeln, Ergebnisse zu prüfen und weiterzuarbeiten."
+              "text": "Reasoning ist die Fähigkeit, Aufgaben zu durchdenken und in Teilprobleme zu zerlegen."
             },
             {
-              "type": "text",
-              "text": "Beispiel: Reasoning hilft, ein Kampagnenbudget abzuwägen. Ein Agent kann zusätzlich die Budgetdatei öffnen und den Plan als Dokument speichern."
+              "type": "callout",
+              "label": "Agent",
+              "icon": "robot",
+              "tone": "plain",
+              "text": "Ein Agent nutzt ein Modell und Programme (PowerPoint, Excel, Word, Browser …), um Dokumente zu bearbeiten oder Dateien zu erstellen."
             }
           ],
           "notes": "Vereinfachte Erklärung des dokumentierten Ablaufs. Interne Reasoning-Tokens sind nicht direkt einsehbar; angezeigte Zusammenfassungen sind nicht der vollständige interne Prozess. Reasoning kann auch zwischen Tool-Aufrufen stattfinden. Quelle: https://developers.openai.com/api/docs/guides/reasoning",
-          "composition": "standard",
           "palette": "white",
           "density": "compact"
         },
@@ -4047,6 +4094,72 @@
           "composition": "reference",
           "palette": "white",
           "density": "compact"
+        },
+        {
+          "title": "Was ist mit meinen Daten?",
+          "subtitle": "Daten direkt an OpenAI geben? Ein sichererer Ablauf in drei Schritten.",
+          "blocks": [
+            {
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "1. Demodaten erstellen",
+                  "icon": "file",
+                  "description": "Erfundene Datensätze mit derselben Struktur wie die echten Daten verwenden. Auch die Demodaten kann der Agent erstellen.",
+                  "descriptionEmphasis": "Auch die Demodaten kann der Agent erstellen."
+                },
+                {
+                  "title": "2. Bereinigungs-App bauen",
+                  "icon": "lock",
+                  "description": "Den Agenten eine App bauen lassen, die identifizierende Daten entfernt. Lokal mit echten Daten ausführen. Die App funktioniert offline; sie nutzt kein LLM.",
+                  "descriptionEmphasis": "Die App funktioniert offline; sie nutzt kein LLM."
+                },
+                {
+                  "title": "3. Bereinigte Daten nutzen",
+                  "icon": "brain",
+                  "description": "Das Ergebnis auf verbliebene Merkmale und verräterische Details prüfen. Nur die bereinigten Daten im LLM nutzen.",
+                  "descriptionEmphasis": "Nur die bereinigten Daten im LLM nutzen."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "Namen zu entfernen garantiert keine Anonymität. Auch Freitext und Kombinationen von Merkmalen prüfen."
+            }
+          ],
+          "composition": "concepts",
+          "palette": "white"
+        },
+        {
+          "title": "Den Agenten die Anwendung programmieren lassen",
+          "subtitle": "Mit Demodaten entwickeln. Die fertige App offline mit echten Daten nutzen.",
+          "blocks": [
+            {
+              "type": "conceptCards",
+              "items": [
+                {
+                  "title": "1. Demodaten erstellen",
+                  "icon": "file",
+                  "description": "Erfundene Datensätze mit derselben Struktur wie die echten Daten vorbereiten. Beispiele für Eingaben und gewünschte Ergebnisse ergänzen. Auch die Demodaten kann der Agent erstellen.",
+                  "descriptionEmphasis": "Auch die Demodaten kann der Agent erstellen."
+                },
+                {
+                  "title": "2. Mit Demodaten bauen",
+                  "icon": "robot",
+                  "description": "Den Agenten die Anwendung mit Demodaten programmieren und testen lassen. Die fertige App funktioniert offline; sie nutzt kein LLM.",
+                  "descriptionEmphasis": "Die fertige App funktioniert offline; sie nutzt kein LLM."
+                },
+                {
+                  "title": "3. Echte Daten offline nutzen",
+                  "icon": "lock",
+                  "description": "Die fertige App auf dem eigenen Computer mit echten Daten ausführen. Die Daten bleiben lokal, die App verarbeitet sie offline und läuft selbst offline.",
+                  "descriptionEmphasis": "Die Daten bleiben lokal, die App verarbeitet sie offline und läuft selbst offline."
+                }
+              ]
+            }
+          ],
+          "composition": "concepts",
+          "palette": "white"
         },
         {
           "title": "Use-Case-Board",
@@ -5361,14 +5474,9 @@
                   {"emojis": ["🧰"], "text": "Werkzeugkiste"}
                 ],
                 [
-                  "App-Aktion",
-                  "Eine verbundene Aktion, die Daten lesen, erstellen, ändern, löschen oder senden kann.",
-                  {"emojis": ["🔌"], "text": "Verbundenes Küchengerät"}
-                ],
-                [
                   "Skill + Plugin",
                   "Ein wiederholbarer Prozess, der Informationen oder Aktionen aus einem anderen Tool nutzt.",
-                  {"emojis": ["📘"], "text": "Rezept + Vorratskammer"}
+                  {"emojis": ["📘"], "text": "Rezept + Werkzeugkiste"}
                 ]
               ]
             }
@@ -5391,7 +5499,7 @@
               ],
               "rows": [
                 [
-                  "Wenigster Zugriff",
+                  "Geringste Berechtigungen",
                   "Wähle den engsten Zugriff, mit dem die Aufgabe noch möglich ist.",
                   {"emojis": ["🔑"], "text": "Ein Küchenschlüssel"}
                 ],

@@ -51,6 +51,20 @@ hw-settings-menu .settings-panel {
 hw-settings-menu .settings-panel[hidden] { display: none; }
 .hw-slides hw-settings-menu hw-theme-switch .switch-label { display: inline; }
 
+.hw-sheet-menu-link {
+  display: block;
+  padding: var(--space-10) var(--space-14);
+  color: var(--color-text);
+  font-weight: var(--font-weight-label);
+  border: var(--deck-card-rule) solid var(--color-text);
+  border-radius: var(--deck-radius);
+  text-decoration: none;
+}
+.hw-sheet-menu-link:focus-visible {
+  outline: var(--deck-focus) solid var(--deck-yellow);
+  outline-offset: var(--space-2);
+}
+
 hw-theme-switch {
   min-height: var(--size-button-sm);
   display: inline-flex;
@@ -755,6 +769,11 @@ hw-workshop-slides-deck [data-composition="callout-pair"] .slide-content { grid-
 hw-workshop-slides-deck [data-composition="model-details"] .slide-table { table-layout: auto; }
 hw-workshop-slides-deck [data-composition="concepts-dense"] .concept-card-grid { gap: var(--deck-space-lg); }
 hw-workshop-slides-deck [data-composition="concepts-dense"] .concept-card { --deck-icon: 32px; }
+hw-workshop-slides-deck [data-composition="concepts-dense"][data-density="compact"] .concept-card-metaphor {
+  font-size: var(--deck-meta);
+  border-top: var(--deck-rule) solid var(--deck-card-border);
+  padding-top: var(--deck-space-sm);
+}
 hw-workshop-slides-deck [data-composition="models"] .slide-content { gap: var(--deck-space-xs); }
 hw-workshop-slides-deck [data-composition="models"] .slide-table { table-layout: fixed; }
 hw-workshop-slides-deck [data-composition="models"] .slide-table :is(th,td) { padding: 2px 6px; font-size: var(--deck-detail); }
@@ -886,4 +905,13 @@ html.hw-print-pdf hw-workshop-slides-deck img:not(.hw-deck-icon, .hw-deck-automa
   @page { size: A4 landscape; margin: 0; }
   .hw-slides { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .hw-slides :is(.page-controls, .controls, .progress) { display: none !important; }
+}
+
+/* Keep key promises readable in both slide themes using the brand accent. */
+hw-workshop-slides-deck .hw-deck-description-emphasis {
+  color: var(--deck-ink);
+  background: var(--deck-yellow);
+  font-weight: var(--deck-heading-weight);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }

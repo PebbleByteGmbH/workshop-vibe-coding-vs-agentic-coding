@@ -450,8 +450,7 @@ _Reusable processes and capabilities_
 | openai.yaml | Metadata that controls how a local skill appears and starts. | 🏷️ Recipe label |
 | Tool | A program or interface Codex can use to retrieve information or take action. | 🛠️ Kitchen tool |
 | Plugin | An installable bundle that can provide apps, skills, and connected capabilities. | 🧰 Toolbox |
-| App action | A connected operation that can read, create, update, delete, or send data. | 🔌 Connected appliance |
-| Skill + plugin | A repeatable process that uses information or actions from another tool. | 📘 Recipe + pantry |
+| Skill + plugin | A repeatable process that uses information or actions from another tool. | 📘 Recipe + toolbox |
 
 ## Slide 40: Summary: Safe Work
 

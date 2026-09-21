@@ -8,7 +8,7 @@ the existing CDN; fonts and assets are local.
 
 ## Content preservation and slide boundaries
 
-Day 1 has **51 slides** and day 2 has **41 slides**, in both English and German.
+Day 1 has **49 slides** and day 2 has **41 slides**, in both English and German.
 Split dense content across consecutive slides at meaningful topic boundaries.
 Preserve the wording, links, images, table cells, and notes; do not hide details,
 move them into notes, or shrink text to solve overflow. Keep corresponding English

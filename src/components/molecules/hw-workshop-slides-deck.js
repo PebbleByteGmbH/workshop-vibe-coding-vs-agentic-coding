@@ -408,12 +408,36 @@ function createConceptCards(block) {
       const description = HwDeckUI.paragraph(item.description);
       description.className += " " + "concept-card-description";
 
+      if (item.descriptionEmphasis && item.description.includes(item.descriptionEmphasis)) {
+        const start = item.description.indexOf(item.descriptionEmphasis);
+        const emphasis = document.createElement("strong");
+        emphasis.className = "hw-deck-description-emphasis";
+        emphasis.textContent = item.descriptionEmphasis;
+        description.replaceChildren(
+          document.createTextNode(item.description.slice(0, start)),
+          emphasis,
+          document.createTextNode(item.description.slice(start + item.descriptionEmphasis.length))
+        );
+      }
+
       children.push(description);
     }
 
     if (item.metaphor) {
       const metaphor = HwDeckUI.paragraph(item.metaphor);
       metaphor.className += " " + "concept-card-metaphor";
+
+      if (item.metaphorEmphasis && item.metaphor.includes(item.metaphorEmphasis)) {
+        const start = item.metaphor.indexOf(item.metaphorEmphasis);
+        const emphasis = document.createElement("strong");
+        emphasis.className = "hw-deck-description-emphasis";
+        emphasis.textContent = item.metaphorEmphasis;
+        metaphor.replaceChildren(
+          document.createTextNode(item.metaphor.slice(0, start)),
+          emphasis,
+          document.createTextNode(item.metaphor.slice(start + item.metaphorEmphasis.length))
+        );
+      }
 
       children.push(metaphor);
     }

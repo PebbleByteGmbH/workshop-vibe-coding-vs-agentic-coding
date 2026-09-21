@@ -40,6 +40,9 @@ function applySlidesPageCopy(element, pageCopy, currentLocale) {
   element.setAttribute("locale-en-label", pageCopy.localeSwitch.enLabel);
   element.setAttribute("locale-de-label", pageCopy.localeSwitch.deLabel);
   element.setAttribute("export-pdf-label", pageCopy.slidesPage.exportPdfLabel);
+  element.setAttribute("cheat-sheet-label", pageCopy.slidesPage.cheatSheetLabel);
+  const day = element.getAttribute("slide-set") === "day2" ? 2 : 1;
+  element.setAttribute("cheat-sheet-href", window.HwI18n.localizeHref(`workshop-cheat-sheets.html?day=${day}`, currentLocale));
 }
 
 function initializePdfExport() {

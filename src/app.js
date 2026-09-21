@@ -34,6 +34,8 @@ function applyWorkshopPageCopy(element, pageCopy, currentLocale) {
   element.setAttribute("idea", hero.idea);
   element.setAttribute("link-href", window.HwI18n.localizeHref(hero.linkHref, currentLocale));
   element.setAttribute("link-label", hero.linkLabel);
+  element.setAttribute("cheat-sheet-href", window.HwI18n.localizeHref("workshop-cheat-sheets.html?day=1", currentLocale));
+  element.setAttribute("cheat-sheet-label", pageCopy.slidesPage.cheatSheetLabel);
 
   if (hero.secondaryLinkHref) {
     element.setAttribute("secondary-link-href", window.HwI18n.localizeHref(hero.secondaryLinkHref, currentLocale));
