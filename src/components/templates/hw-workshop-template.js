@@ -10,9 +10,11 @@ class HwWorkshopTemplate extends HTMLElement {
       "link-href",
       "link-label",
       "secondary-link-href",
+      "secondary-link-label",
+      "tertiary-link-href",
+      "tertiary-link-label",
       "cheat-sheet-href",
       "cheat-sheet-label",
-      "secondary-link-label",
       "dark-label",
       "light-label",
       "use-dark-label",
@@ -56,9 +58,11 @@ class HwWorkshopTemplate extends HTMLElement {
       "link-href",
       "link-label",
       "secondary-link-href",
+      "secondary-link-label",
+      "tertiary-link-href",
+      "tertiary-link-label",
       "cheat-sheet-href",
-      "cheat-sheet-label",
-      "secondary-link-label"
+      "cheat-sheet-label"
     ]);
     controls.append(themeSwitch, localeSwitch);
 

@@ -78,6 +78,10 @@ class HwWorkshopSlidesDeck extends HTMLElement {
 }
 
 function getSlideSet(pageCopy, slideSet) {
+  if (slideSet && pageCopy.slideSets?.[slideSet]) {
+    return pageCopy.slideSets[slideSet];
+  }
+
   if (slideSet === "day2") {
     return pageCopy.slidesDay2 || [];
   }
@@ -248,6 +252,7 @@ function createBlock(block, labels) {
     emojiOnly: createEmojiOnly,
     link: createLink,
     ordered: createOrderedList,
+    processFlow: createProcessFlow,
     profile: createProfile,
     prompt: createPrompt,
     screenshot: createScreenshot,
@@ -258,6 +263,96 @@ function createBlock(block, labels) {
   };
 
   return builders[block.type](block, labels);
+}
+
+function createProcessFlow(block) {
+  if (block.layout === "handoff" || block.layout === "feedback") {
+    return createFeedbackFlow(block);
+  }
+
+  const flow = document.createElement("div");
+  flow.className = block.revealItems ? "hw-deck-process" : "hw-deck-process fragment";
+  if (block.loop) flow.classList.add("hw-deck-process-loop");
+
+  if (block.label) {
+    const label = HwDeckUI.heading(block.label);
+    label.className += " hw-deck-process-label";
+    flow.append(label);
+  }
+
+  const steps = document.createElement("ol");
+  steps.className = "hw-deck-process-steps";
+  const columns = Math.max(1, Math.min(Number(block.columns) || block.steps.length, block.steps.length));
+  steps.style.setProperty("--hw-deck-process-columns", columns);
+  if (columns >= 8) steps.dataset.density = "dense";
+
+  steps.append(...block.steps.map((item, index) => {
+    const step = HwDeckUI.card("hw-deck-process-step", "neutral", "li");
+    if (block.revealItems) step.classList.add("fragment");
+    if (item.emphasis) step.dataset.emphasis = "true";
+    if ((index + 1) % columns === 0 && index < block.steps.length - 1) {
+      step.dataset.rowEnd = "true";
+    }
+
+    const title = HwDeckUI.heading(item.label);
+    step.append(title);
+    return HwDeckUI.sectionCard(step, HwDeckUI.icon(item.icon || "apps"));
+  }));
+
+  flow.append(steps);
+
+  if (block.loop) {
+    const loop = document.createElement("div");
+    loop.className = "hw-deck-process-loop-mark";
+    if (block.revealItems) loop.classList.add("fragment");
+    loop.setAttribute("aria-hidden", "true");
+    loop.append(HwDeckUI.icon("refresh"));
+    flow.append(loop);
+  }
+
+  return flow;
+}
+
+// Text-first diagrams keep long handoff chains readable without nine tall cards.
+// The default processFlow layout above remains unchanged for existing decks.
+function createFeedbackFlow(block) {
+  const diagram = document.createElement("div");
+  diagram.className = `hw-deck-feedback hw-deck-feedback-${block.layout}`;
+  if (!block.revealItems) diagram.classList.add("fragment");
+  diagram.style.setProperty("--hw-deck-feedback-columns", block.steps.length);
+
+  if (block.label) diagram.append(HwDeckUI.heading(block.label));
+  if (block.customerLabel) {
+    const customer = HwDeckUI.paragraph(block.customerLabel);
+    customer.className += " hw-deck-feedback-customer";
+    diagram.append(customer);
+  }
+
+  const path = document.createElement("div");
+  path.className = "hw-deck-feedback-path";
+  const steps = document.createElement("ol");
+  steps.className = "hw-deck-feedback-steps";
+  for (const item of block.steps) {
+    const step = document.createElement("li");
+    step.className = "hw-deck-feedback-step";
+    if (block.revealItems) step.classList.add("fragment");
+    step.textContent = item.label;
+    steps.append(step);
+  }
+  const route = document.createElement("div");
+  route.className = "hw-deck-feedback-route";
+  route.append(steps);
+  if (block.loop) route.classList.add("hw-deck-feedback-route-loop");
+  path.append(route);
+
+  if (block.loop) {
+    const returnPath = HwDeckUI.paragraph(block.returnLabel);
+    returnPath.className += " hw-deck-feedback-return";
+    if (block.revealItems) returnPath.classList.add("fragment");
+    path.append(returnPath);
+  }
+  diagram.append(path);
+  return diagram;
 }
 
 function createAutomationFlow(block) {
@@ -339,7 +434,7 @@ function createEmojiOnly(block) {
 
   list.append(...block.items.map((item) => {
     const emoji = document.createElement("div");
-    emoji.className = "slide-emoji-item fragment";
+    emoji.className = block.reveal === false ? "slide-emoji-item" : "slide-emoji-item fragment";
 
     const symbols = HwDeckUI.icon(item);
 
@@ -395,7 +490,8 @@ function createAgentLogos(block, labels) {
 function createConceptCards(block) {
   const grid = document.createElement("div");
   grid.className = "concept-card-grid";
-  grid.style.setProperty("--hw-deck-columns", Math.min(block.items.length, 3));
+  const columns = Math.max(1, Math.min(Number(block.columns) || 3, block.items.length, 5));
+  grid.style.setProperty("--hw-deck-columns", columns);
 
   grid.append(...block.items.map((item, index) => {
     const card = HwDeckUI.card("concept-card fragment", cardVisualVariant(item, index));
@@ -620,6 +716,9 @@ function formatLabel(template, values) {
 function createText(block) {
   const paragraph = HwDeckUI.paragraph(block.text);
   paragraph.className += " " + "slide-text fragment";
+  if (["lead", "takeaway", "label"].includes(block.variant)) {
+    paragraph.classList.add(`hw-deck-text-${block.variant}`);
+  }
 
   return paragraph;
 }
@@ -681,6 +780,7 @@ function createScreenshot(block) {
 
   const image = document.createElement("img");
   image.src = block.src;
+  if (block.pdfSrc) image.dataset.pdfSrc = block.pdfSrc;
   image.alt = block.alt || "";
   image.loading = "eager";
   image.decoding = "async";
@@ -773,6 +873,7 @@ function createSkillAnatomy(block) {
 function createBullets(block) {
   const wrapper = document.createElement("div");
   wrapper.className = block.reveal === false ? "slide-list-block" : "slide-list-block fragment";
+  if (block.variant === "sources") wrapper.classList.add("hw-deck-sources");
 
   if (block.label) {
     const label = HwDeckUI.heading(block.label);

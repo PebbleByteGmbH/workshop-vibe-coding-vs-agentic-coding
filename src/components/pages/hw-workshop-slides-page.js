@@ -41,11 +41,15 @@ class HwWorkshopSlidesPage extends HTMLElement {
     copyAttributes(this, deck, ["locale", "slide-count", "slide-set"]);
     exportPdfButton.setAttribute("variant", "compact");
     exportPdfButton.setAttribute("data-action", "export-pdf");
-    const cheatSheetLink = document.createElement("a");
-    cheatSheetLink.className = "hw-sheet-menu-link";
-    cheatSheetLink.textContent = this.getAttribute("cheat-sheet-label") || "Cheat Sheets";
-    cheatSheetLink.href = this.getAttribute("cheat-sheet-href") || "workshop-cheat-sheets.html";
-    controls.append(themeSwitch, localeSwitch, exportPdfButton, cheatSheetLink);
+    controls.append(themeSwitch, localeSwitch, exportPdfButton);
+
+    if (this.hasAttribute("cheat-sheet-href")) {
+      const cheatSheetLink = document.createElement("a");
+      cheatSheetLink.className = "hw-sheet-menu-link";
+      cheatSheetLink.textContent = this.getAttribute("cheat-sheet-label") || "Cheat Sheets";
+      cheatSheetLink.href = this.getAttribute("cheat-sheet-href");
+      controls.append(cheatSheetLink);
+    }
 
     surface.append(
       controls,

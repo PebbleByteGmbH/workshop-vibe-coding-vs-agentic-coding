@@ -1,7 +1,8 @@
 const locale = window.HwI18n.getLocale();
 const copy = window.HwI18n.getCopy(locale);
 const slidesPage = document.querySelector("hw-workshop-slides-page");
-const pageName = slidesPage?.getAttribute("slide-set") === "day2" ? "slidesDay2" : "slides";
+const pageName = slidesPage?.getAttribute("page-name")
+  || (slidesPage?.getAttribute("slide-set") === "day2" ? "slidesDay2" : "slides");
 const isPrintPdf = isPrintPdfRequest();
 
 window.HwI18n.applyDocument(pageName, locale);
@@ -40,9 +41,15 @@ function applySlidesPageCopy(element, pageCopy, currentLocale) {
   element.setAttribute("locale-en-label", pageCopy.localeSwitch.enLabel);
   element.setAttribute("locale-de-label", pageCopy.localeSwitch.deLabel);
   element.setAttribute("export-pdf-label", pageCopy.slidesPage.exportPdfLabel);
-  element.setAttribute("cheat-sheet-label", pageCopy.slidesPage.cheatSheetLabel);
-  const day = element.getAttribute("slide-set") === "day2" ? 2 : 1;
-  element.setAttribute("cheat-sheet-href", window.HwI18n.localizeHref(`workshop-cheat-sheets.html?day=${day}`, currentLocale));
+
+  if (element.hasAttribute("hide-cheat-sheet")) {
+    element.removeAttribute("cheat-sheet-label");
+    element.removeAttribute("cheat-sheet-href");
+  } else {
+    element.setAttribute("cheat-sheet-label", pageCopy.slidesPage.cheatSheetLabel);
+    const day = element.getAttribute("slide-set") === "day2" ? 2 : 1;
+    element.setAttribute("cheat-sheet-href", window.HwI18n.localizeHref(`workshop-cheat-sheets.html?day=${day}`, currentLocale));
+  }
 }
 
 function initializePdfExport() {
@@ -132,6 +139,7 @@ async function preparePdfExport() {
   installA4PageStyle();
   await waitForFonts();
   await waitForImages();
+  await loadPdfImages();
   await waitForAnimationFrames(2);
   installA4PageStyle();
   installPdfGrids();
@@ -140,6 +148,24 @@ async function preparePdfExport() {
   window.addEventListener("beforeprint", installA4PageStyle, { once: true });
   window.addEventListener("afterprint", finishPdfExport, { once: true });
   window.print();
+}
+
+async function loadPdfImages() {
+  // Bundled copies also work from file://, where canvas image conversion can
+  // be blocked. Decode each replacement first so a missing copy keeps the original.
+  await Promise.all(Array.from(document.querySelectorAll("img[data-pdf-src]"), async (image) => {
+    const originalSrc = image.src;
+    const replacement = new Image();
+    replacement.src = image.dataset.pdfSrc;
+    try {
+      await replacement.decode();
+      image.src = replacement.src;
+      await image.decode();
+    } catch {
+      image.src = originalSrc;
+      await image.decode().catch(() => undefined);
+    }
+  }));
 }
 
 function installPdfGrids() {

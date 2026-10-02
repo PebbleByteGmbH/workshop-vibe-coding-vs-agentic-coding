@@ -25,8 +25,8 @@
         "page": {
           "eyebrow": "Agentic Coding",
           "title": "Hello Workshop",
-          "buttonLabel": "Tap for a tiny idea",
-          "idea": "Pick one real workflow annoyance and turn it into a small local app.",
+          "buttonLabel": "Tap for a small idea",
+          "idea": "Take a real workflow annoyance and turn it into a small local app.",
           "linkHref": "workshop-slides.html",
           "linkLabel": "Seminar slides day 1",
           "secondaryLinkHref": "workshop-slides-day-2.html",
@@ -798,6 +798,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-new-project-en.png",
+              "pdfSrc": "assets/pdf-screenshots/create-new-project-en.jpg",
               "alt": "Codex create new project screen"
             }
           ],
@@ -812,6 +813,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-project-name-en.png",
+              "pdfSrc": "assets/pdf-screenshots/create-project-name-en.jpg",
               "alt": "Codex project name screen"
             }
           ],
@@ -826,6 +828,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/select-project-codex-en.png",
+              "pdfSrc": "assets/pdf-screenshots/select-project-codex-en.jpg",
               "alt": "Codex project selector"
             }
           ],
@@ -1144,6 +1147,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/include-plugins-en.png",
+              "pdfSrc": "assets/pdf-screenshots/include-plugins-en.jpg",
               "alt": "Codex plugin selection"
             }
           ],
@@ -1917,6 +1921,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-new-project-en.png",
+              "pdfSrc": "assets/pdf-screenshots/create-new-project-en.jpg",
               "alt": "Create a new project in Codex"
             }
           ],
@@ -1931,6 +1936,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-project-name-en.png",
+              "pdfSrc": "assets/pdf-screenshots/create-project-name-en.jpg",
               "alt": "Name a new project in Codex"
             }
           ],
@@ -1945,6 +1951,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/select-project-codex-en.png",
+              "pdfSrc": "assets/pdf-screenshots/select-project-codex-en.jpg",
               "alt": "Select a project in Codex"
             }
           ],
@@ -1959,6 +1966,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/project-and-agent-security-1-en.png",
+              "pdfSrc": "assets/pdf-screenshots/project-and-agent-security-1-en.jpg",
               "alt": "Codex approval menu with Ask for approval, Approve for me, and Full access options"
             }
           ],
@@ -2046,6 +2054,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/planmode-en-1.png",
+              "pdfSrc": "assets/pdf-screenshots/planmode-en-1.jpg",
               "alt": "Plan mode highlighted in the Codex add menu"
             }
           ],
@@ -2061,6 +2070,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/add-documents-and-folders-en-1.png",
+              "pdfSrc": "assets/pdf-screenshots/add-documents-and-folders-en-1.jpg",
               "alt": "Files and folders highlighted in the Codex add menu"
             }
           ],
@@ -2076,6 +2086,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/add-documents-and-folders-2-en-de.png",
+              "pdfSrc": "assets/pdf-screenshots/add-documents-and-folders-2-en-de.jpg",
               "alt": "System file picker opened from Codex"
             }
           ],
@@ -2091,6 +2102,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/add-documents-and-folders-3-en.png",
+              "pdfSrc": "assets/pdf-screenshots/add-documents-and-folders-3-en.jpg",
               "alt": "A PDF attached to a Codex prompt"
             }
           ],
@@ -2106,6 +2118,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/planmode-clarifiying-en-2.png",
+              "pdfSrc": "assets/pdf-screenshots/planmode-clarifiying-en-2.jpg",
               "alt": "Codex asks a multiple-choice clarifying question in Plan Mode"
             }
           ],
@@ -2121,6 +2134,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/planmode-implement-1-en.png",
+              "pdfSrc": "assets/pdf-screenshots/planmode-implement-1-en.jpg",
               "alt": "Codex asks for confirmation to implement the completed plan"
             }
           ],
@@ -2222,6 +2236,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-skill-en.png",
+              "pdfSrc": "assets/pdf-screenshots/create-skill-en.jpg",
               "alt": "Select Skill Creator in Codex by entering $skill in the prompt field"
             }
           ],
@@ -2237,6 +2252,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-skill-2-en.png",
+              "pdfSrc": "assets/pdf-screenshots/create-skill-2-en.jpg",
               "alt": "Example prompt for creating a local Frontend Developer skill with Skill Creator"
             }
           ],
@@ -2252,6 +2268,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-skill-3-en.png",
+              "pdfSrc": "assets/pdf-screenshots/create-skill-3-en.jpg",
               "alt": "Validated local skill result in Codex with the generated SKILL.md highlighted"
             }
           ],
@@ -2267,6 +2284,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-skill-4-en.png",
+              "pdfSrc": "assets/pdf-screenshots/create-skill-4-en.jpg",
               "alt": "Generated agents/openai.yaml with the skill display name, description, and default prompt"
             }
           ],
@@ -2282,6 +2300,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-skill-5-en.png",
+              "pdfSrc": "assets/pdf-screenshots/create-skill-5-en.jpg",
               "alt": "Generated SKILL.md with its trigger description, required stack, and workflow"
             }
           ],
@@ -2443,6 +2462,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/include-plugins-en.png",
+              "pdfSrc": "assets/pdf-screenshots/include-plugins-en.jpg",
               "alt": "Full Codex plugin directory showing the Plugins navigation item, available plugins, an Install button, and a data-access warning"
             }
           ],
@@ -2458,6 +2478,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/check-plugin-access-skills-1-en.png",
+              "pdfSrc": "assets/pdf-screenshots/check-plugin-access-skills-1-en.jpg",
               "alt": "Google Calendar highlighted in the Codex plugin directory before installation"
             }
           ],
@@ -2473,6 +2494,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/check-plugin-access-skills-2-en.png",
+              "pdfSrc": "assets/pdf-screenshots/check-plugin-access-skills-2-en.jpg",
               "alt": "Google Calendar plugin detail page with its included app and five skills highlighted"
             }
           ],
@@ -2488,6 +2510,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/check-plugin-access-skills-3-en.png",
+              "pdfSrc": "assets/pdf-screenshots/check-plugin-access-skills-3-en.jpg",
               "alt": "Google Calendar app action list showing create, delete, respond, and update event actions"
             }
           ],
@@ -2503,6 +2526,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/check-plugin-access-skills-4-en.png",
+              "pdfSrc": "assets/pdf-screenshots/check-plugin-access-skills-4-en.jpg",
               "alt": "Google Calendar skill details showing its overview, preferred deliverables, and workflow"
             }
           ],
@@ -3567,6 +3591,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-new-project-de.png",
+              "pdfSrc": "assets/pdf-screenshots/create-new-project-de.jpg",
               "alt": "Codex neues Projekt erstellen"
             }
           ],
@@ -3581,6 +3606,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-project-name-de.png",
+              "pdfSrc": "assets/pdf-screenshots/create-project-name-de.jpg",
               "alt": "Codex Projekt benennen"
             }
           ],
@@ -3595,6 +3621,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/select-project-codex-de.png",
+              "pdfSrc": "assets/pdf-screenshots/select-project-codex-de.jpg",
               "alt": "Codex Projektauswahl"
             }
           ],
@@ -3917,6 +3944,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/include-plugins-de.png",
+              "pdfSrc": "assets/pdf-screenshots/include-plugins-de.jpg",
               "alt": "Codex Plugin-Auswahl"
             }
           ],
@@ -4690,6 +4718,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-new-project-de.png",
+              "pdfSrc": "assets/pdf-screenshots/create-new-project-de.jpg",
               "alt": "Ein neues Projekt in Codex erstellen"
             }
           ],
@@ -4704,6 +4733,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-project-name-de.png",
+              "pdfSrc": "assets/pdf-screenshots/create-project-name-de.jpg",
               "alt": "Ein neues Projekt in Codex benennen"
             }
           ],
@@ -4718,6 +4748,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/select-project-codex-de.png",
+              "pdfSrc": "assets/pdf-screenshots/select-project-codex-de.jpg",
               "alt": "Ein Projekt in Codex auswählen"
             }
           ],
@@ -4732,6 +4763,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/project-and-agent-security-1-de.png",
+              "pdfSrc": "assets/pdf-screenshots/project-and-agent-security-1-de.jpg",
               "alt": "Codex-Freigabemenü mit Genehmigung anfordern, Für mich genehmigen und Vollzugriff"
             }
           ],
@@ -4819,6 +4851,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/planmode-de-1.png",
+              "pdfSrc": "assets/pdf-screenshots/planmode-de-1.jpg",
               "alt": "Planmodus ist im Hinzufügen-Menü von Codex hervorgehoben"
             }
           ],
@@ -4834,6 +4867,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/add-documents-and-folders-de-1.png",
+              "pdfSrc": "assets/pdf-screenshots/add-documents-and-folders-de-1.jpg",
               "alt": "Dateien und Ordner ist im Hinzufügen-Menü von Codex hervorgehoben"
             }
           ],
@@ -4849,6 +4883,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/add-documents-and-folders-2-en-de.png",
+              "pdfSrc": "assets/pdf-screenshots/add-documents-and-folders-2-en-de.jpg",
               "alt": "System-Dateiauswahl, die aus Codex geöffnet wurde"
             }
           ],
@@ -4864,6 +4899,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/add-documents-and-folders-3-de.png",
+              "pdfSrc": "assets/pdf-screenshots/add-documents-and-folders-3-de.jpg",
               "alt": "Eine PDF-Datei ist an einen Codex-Prompt angehängt"
             }
           ],
@@ -4879,6 +4915,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/planmode-clarifiying-de-2.png",
+              "pdfSrc": "assets/pdf-screenshots/planmode-clarifiying-de-2.jpg",
               "alt": "Codex stellt im Planmodus eine klärende Multiple-Choice-Frage"
             }
           ],
@@ -4894,6 +4931,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/planmode-implement-1-de.png",
+              "pdfSrc": "assets/pdf-screenshots/planmode-implement-1-de.jpg",
               "alt": "Codex bittet um Bestätigung, den fertigen Plan zu implementieren"
             }
           ],
@@ -4995,6 +5033,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-skill-de.png",
+              "pdfSrc": "assets/pdf-screenshots/create-skill-de.jpg",
               "alt": "Skill Creator in Codex auswählen, indem $skill in das Prompt-Feld eingegeben wird"
             }
           ],
@@ -5010,6 +5049,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-skill-2-de.png",
+              "pdfSrc": "assets/pdf-screenshots/create-skill-2-de.jpg",
               "alt": "Beispiel-Prompt zum Erstellen eines lokalen Frontend-Entwickler-Skills mit Skill Creator"
             }
           ],
@@ -5025,6 +5065,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-skill-3-de.png",
+              "pdfSrc": "assets/pdf-screenshots/create-skill-3-de.jpg",
               "alt": "Validiertes Ergebnis eines lokalen Skills in Codex mit hervorgehobener SKILL.md"
             }
           ],
@@ -5040,6 +5081,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-skill-4-de.png",
+              "pdfSrc": "assets/pdf-screenshots/create-skill-4-de.jpg",
               "alt": "Erzeugte agents/openai.yaml mit Anzeigename, Kurzbeschreibung und Standard-Prompt"
             }
           ],
@@ -5055,6 +5097,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/create-skill-5-de.png",
+              "pdfSrc": "assets/pdf-screenshots/create-skill-5-de.jpg",
               "alt": "Erzeugte SKILL.md mit Trigger-Beschreibung, Vorgaben und Workflow"
             }
           ],
@@ -5216,6 +5259,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/include-plugins-de.png",
+              "pdfSrc": "assets/pdf-screenshots/include-plugins-de.jpg",
               "alt": "Vollständiges Codex Plugin-Verzeichnis mit Plugin-Navigation, verfügbaren Plugins, Installieren-Schaltfläche und Datenzugriffshinweis"
             }
           ],
@@ -5231,6 +5275,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/check-plugin-access-skills-1-de.png",
+              "pdfSrc": "assets/pdf-screenshots/check-plugin-access-skills-1-de.jpg",
               "alt": "Google Calendar ist vor der Installation im Codex Plugin-Verzeichnis hervorgehoben"
             }
           ],
@@ -5246,6 +5291,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/check-plugin-access-skills-2-de.png",
+              "pdfSrc": "assets/pdf-screenshots/check-plugin-access-skills-2-de.jpg",
               "alt": "Google-Calendar-Plugin mit hervorgehobener App und fünf enthaltenen Skills"
             }
           ],
@@ -5261,6 +5307,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/check-plugin-access-skills-3-de.png",
+              "pdfSrc": "assets/pdf-screenshots/check-plugin-access-skills-3-de.jpg",
               "alt": "Aktionsliste der Google-Calendar-App mit Erstellen, Löschen, Antworten und Aktualisieren von Terminen"
             }
           ],
@@ -5276,6 +5323,7 @@
             {
               "type": "screenshot",
               "src": "assets/codex-pictures/check-plugin-access-skills-4-de.png",
+              "pdfSrc": "assets/pdf-screenshots/check-plugin-access-skills-4-de.jpg",
               "alt": "Details des Google-Calendar-Skills mit Übersicht, bevorzugten Ergebnissen und Workflow"
             }
           ],

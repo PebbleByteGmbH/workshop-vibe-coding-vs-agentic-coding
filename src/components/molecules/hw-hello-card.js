@@ -10,9 +10,11 @@ class HwHelloCard extends HTMLElement {
       "link-href",
       "link-label",
       "secondary-link-href",
+      "secondary-link-label",
+      "tertiary-link-href",
+      "tertiary-link-label",
       "cheat-sheet-href",
-      "cheat-sheet-label",
-      "secondary-link-label"
+      "cheat-sheet-label"
     ];
   }
 
@@ -80,10 +82,19 @@ class HwHelloCard extends HTMLElement {
     return this.getAttribute("secondary-link-label") || "Seminar slides day 2";
   }
 
+  get tertiaryLinkHref() {
+    return this.getAttribute("tertiary-link-href") || "";
+  }
+
+  get tertiaryLinkLabel() {
+    return this.getAttribute("tertiary-link-label") || "";
+  }
+
   get links() {
     return [
       { href: this.linkHref, label: this.linkLabel },
       { href: this.secondaryLinkHref, label: this.secondaryLinkLabel },
+      { href: this.tertiaryLinkHref, label: this.tertiaryLinkLabel },
       { href: this.getAttribute("cheat-sheet-href"), label: this.getAttribute("cheat-sheet-label") }
     ].filter((link) => link.href);
   }

@@ -121,6 +121,28 @@ native headers, focusable scroll regions, and existing fragment behavior.
 
 ## Screen, mobile, and PDF
 
+The DevOps Culture webinar has 22 aligned English and German slides in
+`src/webinar-copy.js`. Preserve the supplied English wording and slide boundaries,
+with a faithful German translation. It has no speaker notes; sources remain visible
+on slide 22. The webinar borrows the AI workshop's icon cards, connected process
+steps, numbered agenda rows, and outlined comparison panels. Its cover pairs a
+two-line title with decorative collaboration, feedback, and code icons, visible
+immediately through `emojiOnly`'s optional `reveal: false`. Paired
+lists use `exercise-columns`; dense slides use the shared compact typography.
+Concept cards accept optional `columns` (1–5, default up to 3). Text blocks accept
+optional `variant: "lead"`, `"takeaway"`, or `"label"`; bullet blocks can use
+`variant: "sources"` for a compact, wrapping source list. The final slide uses
+`culture-finale`. Webinar-specific layouts are scoped to `slide-set="devopsCulture"`
+so the workshop decks keep their existing appearance. Card grids stack on phones
+and use two columns on tablets; desktop and PDF retain their specified columns.
+
+The shared `processFlow` blocks also support optional `layout: "handoff"` (a compact vertical
+list) and `layout: "feedback"` (a connected cycle). A feedback flow can provide
+`customerLabel` above the steps and `returnLabel` with `loop: true` for an explicit
+return path. These layouts use semantic HTML and molecule CSS; omitting `layout`
+keeps the original card flow. Feedback cycles stack with a return path on narrow
+screens and remain horizontal in print.
+
 Desktop uses one 1280×720 composition scaled uniformly by Reveal.js, including at
 1920×1080. Center each complete composition vertically within the padded content
 area above the footer, including covers, interludes, and profile text and portraits.
@@ -132,6 +154,28 @@ The slide count and boundaries never change at a responsive breakpoint.
 PDF export retains A4 landscape pages with a centered 1280×720 composition and one
 constant scale. It waits for fonts and images, reveals all fragments, hides controls,
 and disables motion. There must be exactly one page per slide.
+
+Screenshot blocks can provide an optional `pdfSrc` alongside their original `src`.
+Only PDF export loads this copy; presentations continue using the original.
+The print dialog waits for the copies to decode, and a missing or unreadable copy
+falls back to the original. Bundled files work when opening the HTML directly.
+
+Tag 2 screenshots have export copies in `src/assets/pdf-screenshots/`, also used
+where the same screenshots appear in Tag 1. These preserve the full image, with
+a maximum dimension of 1920 pixels (no upscaling), JPEG quality 94 and 4:4:4 color
+sampling to retain colored text edges. This gives roughly 240–280 dpi at their
+current printed size. Slide text, logos, and diagrams retain their original form.
+When replacing a screenshot, regenerate its export copy or remove `pdfSrc` until
+the copy is updated. For maintainers with ImageMagick available, use:
+
+```sh
+magick source.png -background white -alpha remove -alpha off \
+  -resize '1920x1920>' -sampling-factor 4:4:4 -quality 94 -strip export.jpg
+```
+
+ImageMagick is only an asset authoring tool; viewing slides and exporting PDFs
+require no additional installation. Verify small screenshot text in the exported
+PDF after changing image settings.
 
 ## Verification
 
